@@ -1,0 +1,11 @@
+node_id,node_name,node_type
+P001,fever,symptom
+P002,cough,symptom
+P003,chest pain,symptom
+P004,headache,symptom
+P005,fatigue,symptom
+P006,shortness of breath,symptom
+P007,sore throat,symptom
+P008,nausea,symptom
+P009,vomiting,symptom
+P010,dizziness,symptom

@@ -1,0 +1,7 @@
+-r requirements.txt
+
+# Production model path (set NLP_USE_TRANSFORMERS=true after installation)
+transformers>=4.38,<5
+sentence-transformers>=2.5,<4
+torch>=2.2,<3
+numpy>=1.26,<3
