@@ -1,0 +1,381 @@
+{
+  "start": {
+    "session_id": "48273e5de5e5442f8b0eff22f80b3a99",
+    "positive_symptoms": [
+      {
+        "kg_id": "DEMO:cough",
+        "kg_name": "cough"
+      }
+    ],
+    "negative_symptoms": [],
+    "uncertain_symptoms": [],
+    "evidence": [
+      {
+        "kg_id": "DEMO:cough",
+        "kg_name": "cough",
+        "original_text": "cough",
+        "confidence": 1.0,
+        "status": "present",
+        "experiencer": "self",
+        "temporality": "current",
+        "start": 14,
+        "end": 19,
+        "turn": 1,
+        "source": "rules-v2",
+        "duration_text": "three days",
+        "severity_text": "mild"
+      }
+    ],
+    "evidence_history": [
+      {
+        "kg_id": "DEMO:cough",
+        "kg_name": "cough",
+        "original_text": "cough",
+        "confidence": 1.0,
+        "status": "present",
+        "experiencer": "self",
+        "temporality": "current",
+        "start": 14,
+        "end": 19,
+        "turn": 1,
+        "source": "rules-v2",
+        "duration_text": "three days",
+        "severity_text": "mild"
+      }
+    ],
+    "excluded_evidence": [],
+    "asked_symptoms": [],
+    "candidate_diseases": [
+      {
+        "id": "D001",
+        "name": "Fixture condition A",
+        "score": 0.86,
+        "evidence_ids": [
+          "DEMO:cough"
+        ],
+        "source": "mock-fixture-v1"
+      },
+      {
+        "id": "D002",
+        "name": "Fixture condition B",
+        "score": 0.78,
+        "evidence_ids": [
+          "DEMO:cough"
+        ],
+        "source": "mock-fixture-v1"
+      },
+      {
+        "id": "D003",
+        "name": "Fixture condition C",
+        "score": 0.62,
+        "evidence_ids": [
+          "DEMO:cough"
+        ],
+        "source": "mock-fixture-v1"
+      },
+      {
+        "id": "D004",
+        "name": "Fixture condition D",
+        "score": 0.55,
+        "evidence_ids": [
+          "DEMO:cough"
+        ],
+        "source": "mock-fixture-v1"
+      }
+    ],
+    "last_question": {
+      "kg_id": "DEMO:breathlessness",
+      "kg_name": "shortness of breath",
+      "heuristic_score": 0.91,
+      "rationale": "Mock fixture order: respiratory follow-up."
+    },
+    "drug_recommendations": [],
+    "messages": [
+      {
+        "id": "8c9655e1834d4842af92edbe1765b0fc",
+        "sender": "user",
+        "text": "I have a mild cough for three days."
+      },
+      {
+        "id": "a3f2001bb07a46b7aa1011af99a1f70c",
+        "sender": "assistant",
+        "text": "Are you experiencing shortness of breath? You can answer Yes, No, Not sure, or describe it in your own words."
+      }
+    ],
+    "round": 0,
+    "version": 1,
+    "status": "RUNNING",
+    "stop_reason": null,
+    "warnings": [],
+    "timings_ms": {
+      "nlp": 2891.039,
+      "recall": 0.027,
+      "search": 0.009,
+      "total": 3189.549
+    },
+    "mode": "mock",
+    "nlp_engine": "hybrid-context-llm-v2",
+    "ai_trace": {
+      "intent": "report",
+      "nlu": {
+        "candidate_ids": [
+          "DEMO:cough",
+          "DEMO:sore_throat"
+        ],
+        "candidates": [
+          {
+            "id": "DEMO:cough",
+            "title": "cough",
+            "text": "cough; coughing",
+            "bm25": 3.3691,
+            "cosine": 0.4667,
+            "rrf": 0.032787,
+            "index_version": "ad9f5b984581"
+          },
+          {
+            "id": "DEMO:sore_throat",
+            "title": "sore throat",
+            "text": "sore throat; throat hurts; throat pain",
+            "bm25": 0.0,
+            "cosine": 0.3927,
+            "rrf": 0.016129,
+            "index_version": "ad9f5b984581"
+          }
+        ],
+        "prompt_version": "nlu-v2-fewshot",
+        "slot_extractor": "single-entity-exact-span-v1",
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 369,
+          "output_tokens": 58,
+          "latency_ms": 2879.09
+        },
+        "validation": "accepted"
+      },
+      "generation": {
+        "prompt_version": "question-v2",
+        "response_mode": "template",
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 55,
+          "output_tokens": 7,
+          "latency_ms": 297.4
+        },
+        "fallback_reason": "ValueError"
+      }
+    },
+    "message": "Are you experiencing shortness of breath? You can answer Yes, No, Not sure, or describe it in your own words.",
+    "next_symptom": {
+      "kg_id": "DEMO:breathlessness",
+      "kg_name": "shortness of breath",
+      "heuristic_score": 0.91,
+      "rationale": "Mock fixture order: respiratory follow-up."
+    }
+  },
+  "reply": {
+    "session_id": "48273e5de5e5442f8b0eff22f80b3a99",
+    "positive_symptoms": [
+      {
+        "kg_id": "DEMO:cough",
+        "kg_name": "cough"
+      },
+      {
+        "kg_id": "DEMO:breathlessness",
+        "kg_name": "shortness of breath"
+      }
+    ],
+    "negative_symptoms": [],
+    "uncertain_symptoms": [],
+    "evidence": [
+      {
+        "kg_id": "DEMO:cough",
+        "kg_name": "cough",
+        "original_text": "cough",
+        "confidence": 1.0,
+        "status": "present",
+        "experiencer": "self",
+        "temporality": "current",
+        "start": 14,
+        "end": 19,
+        "turn": 1,
+        "source": "rules-v2",
+        "duration_text": "three days",
+        "severity_text": "mild"
+      },
+      {
+        "kg_id": "DEMO:breathlessness",
+        "kg_name": "shortness of breath",
+        "original_text": "That has stopped completely.",
+        "confidence": 1.0,
+        "status": "present",
+        "experiencer": "self",
+        "temporality": "current",
+        "start": 0,
+        "end": 28,
+        "turn": 2,
+        "source": "hybrid-context-llm-v2",
+        "duration_text": "",
+        "severity_text": ""
+      }
+    ],
+    "evidence_history": [
+      {
+        "kg_id": "DEMO:cough",
+        "kg_name": "cough",
+        "original_text": "cough",
+        "confidence": 1.0,
+        "status": "present",
+        "experiencer": "self",
+        "temporality": "current",
+        "start": 14,
+        "end": 19,
+        "turn": 1,
+        "source": "rules-v2",
+        "duration_text": "three days",
+        "severity_text": "mild"
+      },
+      {
+        "kg_id": "DEMO:breathlessness",
+        "kg_name": "shortness of breath",
+        "original_text": "That has stopped completely.",
+        "confidence": 1.0,
+        "status": "present",
+        "experiencer": "self",
+        "temporality": "current",
+        "start": 0,
+        "end": 28,
+        "turn": 2,
+        "source": "hybrid-context-llm-v2",
+        "duration_text": "",
+        "severity_text": ""
+      }
+    ],
+    "excluded_evidence": [],
+    "asked_symptoms": [
+      "DEMO:breathlessness"
+    ],
+    "candidate_diseases": [
+      {
+        "id": "D001",
+        "name": "Fixture condition A",
+        "score": 0.86,
+        "evidence_ids": [
+          "DEMO:cough",
+          "DEMO:breathlessness"
+        ],
+        "source": "mock-fixture-v1"
+      },
+      {
+        "id": "D002",
+        "name": "Fixture condition B",
+        "score": 0.78,
+        "evidence_ids": [
+          "DEMO:cough",
+          "DEMO:breathlessness"
+        ],
+        "source": "mock-fixture-v1"
+      },
+      {
+        "id": "D003",
+        "name": "Fixture condition C",
+        "score": 0.62,
+        "evidence_ids": [
+          "DEMO:cough",
+          "DEMO:breathlessness"
+        ],
+        "source": "mock-fixture-v1"
+      },
+      {
+        "id": "D004",
+        "name": "Fixture condition D",
+        "score": 0.55,
+        "evidence_ids": [
+          "DEMO:cough",
+          "DEMO:breathlessness"
+        ],
+        "source": "mock-fixture-v1"
+      }
+    ],
+    "last_question": {
+      "kg_id": "DEMO:chest_pain",
+      "kg_name": "chest pain",
+      "heuristic_score": 0.84,
+      "rationale": "Mock fixture order: chest symptom follow-up."
+    },
+    "drug_recommendations": [],
+    "messages": [
+      {
+        "id": "8c9655e1834d4842af92edbe1765b0fc",
+        "sender": "user",
+        "text": "I have a mild cough for three days."
+      },
+      {
+        "id": "a3f2001bb07a46b7aa1011af99a1f70c",
+        "sender": "assistant",
+        "text": "Are you experiencing shortness of breath? You can answer Yes, No, Not sure, or describe it in your own words."
+      },
+      {
+        "id": "80beb691b5e94c8a8e2b4e9866fa6f93",
+        "sender": "user",
+        "text": "That has stopped completely."
+      },
+      {
+        "id": "ae2825b371a24708a436cbfd4b75858c",
+        "sender": "assistant",
+        "text": "Do you have chest pain? You can answer Yes, No or Not sure."
+      }
+    ],
+    "round": 1,
+    "version": 2,
+    "status": "RUNNING",
+    "stop_reason": null,
+    "warnings": [],
+    "timings_ms": {
+      "nlp": 95.774,
+      "recall": 0.028,
+      "search": 0.009,
+      "total": 392.391
+    },
+    "mode": "mock",
+    "nlp_engine": "hybrid-context-llm-v2",
+    "ai_trace": {
+      "intent": "report",
+      "nlu": {
+        "candidate_ids": [
+          "DEMO:breathlessness"
+        ],
+        "candidates": [],
+        "prompt_version": "context-assertion-v1",
+        "slot_extractor": "single-entity-exact-span-v1",
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 117,
+          "output_tokens": 2,
+          "latency_ms": 87.24
+        },
+        "validation": "accepted"
+      },
+      "generation": {
+        "prompt_version": "question-v2",
+        "response_mode": "local-llm-question",
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 53,
+          "output_tokens": 7,
+          "latency_ms": 295.55
+        }
+      }
+    },
+    "message": "Do you have chest pain? You can answer Yes, No or Not sure.",
+    "next_symptom": {
+      "kg_id": "DEMO:chest_pain",
+      "kg_name": "chest pain",
+      "heuristic_score": 0.84,
+      "rationale": "Mock fixture order: chest symptom follow-up."
+    }
+  }
+}

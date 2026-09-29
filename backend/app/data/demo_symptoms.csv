@@ -1,0 +1,12 @@
+node_id,node_name,node_type,aliases
+DEMO:fever,fever,symptom,feverish|high temperature
+DEMO:cough,cough,symptom,coughing
+DEMO:chest_pain,chest pain,symptom,chest hurts|pain in my chest
+DEMO:headache,headache,symptom,head hurts|head pain
+DEMO:fatigue,fatigue,symptom,tired|exhausted
+DEMO:breathlessness,shortness of breath,symptom,breathless|difficulty breathing|short of breath
+DEMO:sore_throat,sore throat,symptom,throat hurts|throat pain
+DEMO:nausea,nausea,symptom,nauseous|queasy|sick to my stomach
+DEMO:vomiting,vomiting,symptom,throwing up|vomit
+DEMO:dizziness,dizziness,symptom,dizzy|lightheaded
+

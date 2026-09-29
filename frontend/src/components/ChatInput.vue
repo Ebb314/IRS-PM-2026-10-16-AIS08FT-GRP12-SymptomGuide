@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 
 defineProps<{ disabled: boolean; loading: boolean }>()
-const emit = defineEmits<{ send: [message: string] }>()
+const emit = defineEmits<{ send: [message: string]; composing: [] }>()
 const message = ref('')
 
 function submit() {
@@ -25,6 +25,7 @@ function submit() {
       placeholder="For example: I have fever and cough, but no chest pain."
       :disabled="disabled || loading"
       @keydown.ctrl.enter="submit"
+      @focus="emit('composing')"
     />
     <el-button type="primary" :loading="loading" :disabled="disabled || !message.trim()" @click="submit">
       Send

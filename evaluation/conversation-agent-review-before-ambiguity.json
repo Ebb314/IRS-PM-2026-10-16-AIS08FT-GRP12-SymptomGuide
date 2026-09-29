@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-09-16T11:20:27.451Z",
+  "scope": "16 targeted turns; pattern checks plus separately documented qualitative inspection, not a clinical or general NLU benchmark",
+  "checks": [
+    {
+      "name": "Mechanical checks",
+      "passed": true
+    },
+    {
+      "name": "Description repair addresses the user",
+      "passed": true
+    },
+    {
+      "name": "Short What uses conversation rather than narration",
+      "passed": true
+    },
+    {
+      "name": "Cold ambiguity acknowledged",
+      "passed": false
+    },
+    {
+      "name": "Repeated yes does not repeat an open question",
+      "passed": true
+    },
+    {
+      "name": "Knowledge and other-person dialogue does not create evidence",
+      "passed": true
+    },
+    {
+      "name": "Correction retained in saved evidence",
+      "passed": true
+    },
+    {
+      "name": "Unrelated travel redirected",
+      "passed": true
+    },
+    {
+      "name": "Real app correction control",
+      "passed": true
+    }
+  ],
+  "passed": false,
+  "model": "Qwen3-4B-Instruct-2507",
+  "quantization": "bnb-nf4-double",
+  "generation_seconds": {
+    "min": 11.65102,
+    "median": 18.7518,
+    "max": 32.43444
+  },
+  "latency_note": "Sum of generation calls; excludes cold model/index loading, retrieval, queueing and HTTP overhead.",
+  "remaining_limitations": [
+    "Small targeted sample",
+    "Same-model review can retain errors",
+    "Bounded recent-message context",
+    "Conservative evidence validation",
+    "No clinical factuality evaluation"
+  ]
+}

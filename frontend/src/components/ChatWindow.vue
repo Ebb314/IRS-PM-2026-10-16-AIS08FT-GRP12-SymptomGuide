@@ -7,7 +7,7 @@ const props = defineProps<{ messages: ChatMessage[] }>()
 const viewport = ref<HTMLElement>()
 watch(() => props.messages.length, async () => {
   await nextTick()
-  viewport.value?.scrollTo({ top: viewport.value.scrollHeight, behavior: 'smooth' })
+  viewport.value?.scrollTo({ top: viewport.value.scrollHeight, behavior: 'instant' })
 })
 </script>
 

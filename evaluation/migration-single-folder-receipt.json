@@ -1,0 +1,26 @@
+{
+  "sha256_verified": 222,
+  "updated_path_examples": [
+    "AI升级运行手册.md",
+    "AI升级验收记录.md",
+    "LLM意图路由与对话升级.md",
+    "LLM知识问答修复记录.md",
+    "NLP对话架构重构记录.md",
+    "Symptom-log显示与快捷功能移除.md",
+    "全量症状与交互修复记录.md",
+    "否定与不确定症状状态修复.md",
+    "响应速度与症状侧栏改造记录.md",
+    "开发运行测试手册.md",
+    "澄清循环与yes歧义修复.md",
+    "连续对话上下文修复记录.md",
+    "项目迁移记录.md",
+    "README.md",
+    ".env.example"
+  ],
+  "inventory_verified": true,
+  "bytes": 11654934457.0,
+  "time": "2026-09-17T15:32:15.9617933+08:00",
+  "source": "E:\\Study\\StudyAtNUS\\GC1\\_Project",
+  "files": 15943,
+  "target": "E:\\Study\\StudyAtNUS\\GC1_Project"
+}

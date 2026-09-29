@@ -1,0 +1,263 @@
+{
+  "session_id": "e99831c825e14de1862b6f34fb15eafe",
+  "dialogue_prompt": "none",
+  "clarification_attempts": 0,
+  "conversation_memory": {
+    "user_goal": "Express that they do not currently have a fever",
+    "unresolved": ""
+  },
+  "pending_evidence": [],
+  "symptom_question_active": false,
+  "knowledge_focus": {
+    "kg_id": "P835",
+    "kg_name": "Fever"
+  },
+  "positive_symptoms": [
+    {
+      "kg_id": "P835",
+      "kg_name": "Fever"
+    }
+  ],
+  "negative_symptoms": [],
+  "uncertain_symptoms": [],
+  "evidence": [
+    {
+      "kg_id": "P835",
+      "kg_name": "Fever",
+      "original_text": "I dont think i have a fever",
+      "confidence": 1.0,
+      "status": "present",
+      "experiencer": "self",
+      "temporality": "current",
+      "start": 0,
+      "end": 27,
+      "turn": 1,
+      "source": "agent-validated-proposal",
+      "duration_text": "",
+      "severity_text": ""
+    }
+  ],
+  "evidence_history": [
+    {
+      "kg_id": "P835",
+      "kg_name": "Fever",
+      "original_text": "I dont think i have a fever",
+      "confidence": 1.0,
+      "status": "present",
+      "experiencer": "self",
+      "temporality": "current",
+      "start": 0,
+      "end": 27,
+      "turn": 1,
+      "source": "agent-validated-proposal",
+      "duration_text": "",
+      "severity_text": ""
+    }
+  ],
+  "excluded_evidence": [],
+  "asked_symptoms": [],
+  "candidate_diseases": [
+    {
+      "id": "SIM:D0039",
+      "name": "Simulated disease 0039",
+      "score": 0.7804,
+      "evidence_ids": [
+        "P835"
+      ],
+      "source": "seeded-random-fixture-v1"
+    },
+    {
+      "id": "SIM:D0001",
+      "name": "Simulated disease 0001",
+      "score": 0.0986,
+      "evidence_ids": [
+        "P835"
+      ],
+      "source": "seeded-random-fixture-v1"
+    },
+    {
+      "id": "SIM:D0015",
+      "name": "Simulated disease 0015",
+      "score": 0.0522,
+      "evidence_ids": [
+        "P835"
+      ],
+      "source": "seeded-random-fixture-v1"
+    }
+  ],
+  "last_question": {
+    "kg_id": "P8870",
+    "kg_name": "Stippling of the epiphysis of the proximal phalanx of the hallux",
+    "heuristic_score": 0.4825,
+    "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+  },
+  "drug_recommendations": [],
+  "messages": [
+    {
+      "id": "a5cde4802a0b482bb8d47f8d6fa39114",
+      "sender": "user",
+      "text": "I dont think i have a fever"
+    },
+    {
+      "id": "59c272f3fa8e41aeada341684ab5e61a",
+      "sender": "assistant",
+      "text": "You're right to clarify. Since you don't feel feverish, we'll update the record. The saved entry shows \"Fever\" as present, but your current feeling contradicts that. Let's change it to \"Not sure\" or \"Absent\" if you're certain. Would you like to adjust the status?"
+    }
+  ],
+  "round": 0,
+  "version": 1,
+  "status": "RUNNING",
+  "stop_reason": null,
+  "warnings": [],
+  "timings_ms": {
+    "understanding": 8683.364,
+    "recall": 0.086,
+    "search": 3.436,
+    "reply": 7064.559,
+    "total": 27720.118
+  },
+  "mode": "random",
+  "nlp_engine": "conversation-agent-v1",
+  "ai_trace": {
+    "engine": "conversation-agent-v1",
+    "response_mode": "multi-turn-llm",
+    "understanding": {
+      "engine": "contextual-evidence-proposals",
+      "candidates": [
+        {
+          "id": "P835",
+          "title": "Fever",
+          "text": "fever",
+          "bm25": 13.2602,
+          "cosine": 0.7568,
+          "rrf": 0.032787,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P4407",
+          "title": "Periodic fever",
+          "text": "periodic fever",
+          "bm25": 11.8072,
+          "cosine": 0.6021,
+          "rrf": 0.031258,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P4232",
+          "title": "Recurrent fever",
+          "text": "recurrent fever",
+          "bm25": 11.8072,
+          "cosine": 0.5492,
+          "rrf": 0.031054,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P12931",
+          "title": "Quotidian fever",
+          "text": "quotidian fever",
+          "bm25": 11.8072,
+          "cosine": 0.5522,
+          "rrf": 0.030536,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P12939",
+          "title": "Inappropriate absence of fever",
+          "text": "inappropriate absence of fever",
+          "bm25": 10.6412,
+          "cosine": 0.6107,
+          "rrf": 0.030366,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P9256",
+          "title": "Low-grade fever",
+          "text": "low-grade fever",
+          "bm25": 10.6412,
+          "cosine": 0.603,
+          "rrf": 0.030331,
+          "index_version": "3a7603e7d654"
+        }
+      ],
+      "accepted": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever",
+          "original_text": "I dont think i have a fever",
+          "confidence": 1.0,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 0,
+          "end": 27,
+          "turn": 1,
+          "source": "agent-validated-proposal",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "rejected": [],
+      "model_call": {
+        "model": "Qwen3-4B-Instruct-2507",
+        "device": "cuda",
+        "quantization": "bnb-nf4-double",
+        "input_tokens": 409,
+        "output_tokens": 85,
+        "latency_ms": 8617.38,
+        "context_messages": 1,
+        "dropped_messages": 0,
+        "sampling": false,
+        "seed": null
+      },
+      "interpretation": {
+        "user_goal": "Express that they do not currently have a fever",
+        "reference_resolution": "The user is indicating a lack of current fever symptoms",
+        "unresolved": "",
+        "possible_meanings": []
+      },
+      "validation": "proposal-validation-complete"
+    },
+    "context_policy": "recent-16-messages-plus-validated-records",
+    "source_context": [
+      {
+        "id": "nhs-fever",
+        "text": "In adults, a temperature of 38 degrees Celsius or higher is generally described as a fever. Body temperature varies between people and over the day. Feeling hot or shivery can matter even when a reading is lower."
+      }
+    ],
+    "citations": [],
+    "reply_pipeline": "direct",
+    "model_calls": [
+      {
+        "model": "Qwen3-4B-Instruct-2507",
+        "device": "cuda",
+        "quantization": "bnb-nf4-double",
+        "input_tokens": 645,
+        "output_tokens": 66,
+        "latency_ms": 7056.17,
+        "context_messages": 1,
+        "dropped_messages": 0,
+        "sampling": true,
+        "seed": 20260916
+      }
+    ],
+    "model_call": {
+      "model": "Qwen3-4B-Instruct-2507",
+      "device": "cuda",
+      "quantization": "bnb-nf4-double",
+      "input_tokens": 645,
+      "output_tokens": 66,
+      "latency_ms": 7056.17,
+      "context_messages": 1,
+      "dropped_messages": 0,
+      "sampling": true,
+      "seed": 20260916
+    }
+  },
+  "message": "You're right to clarify. Since you don't feel feverish, we'll update the record. The saved entry shows \"Fever\" as present, but your current feeling contradicts that. Let's change it to \"Not sure\" or \"Absent\" if you're certain. Would you like to adjust the status?",
+  "next_symptom": {
+    "kg_id": "P8870",
+    "kg_name": "Stippling of the epiphysis of the proximal phalanx of the hallux",
+    "heuristic_score": 0.4825,
+    "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+  }
+}

@@ -1,0 +1,46 @@
+param(
+    [int]$Port = 8000,
+    [string]$Python = '',
+    [ValidateSet('local','offline')][string]$Profile = 'local'
+)
+$ErrorActionPreference = 'Stop'
+$projectRoot = Split-Path $PSScriptRoot
+if (!$Python) {
+    if ($env:CONDA_PREFIX -and (Test-Path (Join-Path $env:CONDA_PREFIX 'python.exe'))) {
+        $Python = Join-Path $env:CONDA_PREFIX 'python.exe'
+    } elseif (Test-Path (Join-Path $projectRoot '.venv/Scripts/python.exe')) {
+        $Python = Join-Path $projectRoot '.venv/Scripts/python.exe'
+    } else {
+        $command = Get-Command python -ErrorAction SilentlyContinue
+        if (!$command) { throw 'Activate your existing Conda environment, or pass -Python with its python.exe path.' }
+        $Python = $command.Source
+    }
+}
+if (!(Test-Path (Join-Path $projectRoot 'frontend/dist/index.html'))) {
+    throw 'Build the frontend first: cd frontend; npm run build'
+}
+$env:AI_PROFILE = $Profile
+$env:DIALOGUE_ENGINE = 'agent'
+$env:NLP_ENGINE = 'rules'
+$env:NLP_USE_TRANSFORMERS = 'false'
+if (!$env:AGENT_REPLY_PIPELINE) { $env:AGENT_REPLY_PIPELINE = 'direct' }
+if (!$env:REASONING_MODE) { $env:REASONING_MODE = 'random' }
+if (!$env:KG_NODE_FILE) { $env:KG_NODE_FILE = Join-Path $projectRoot 'backend/app/data/kg_nodes.csv' }
+if ($Profile -eq 'local') {
+    if (!$env:LOCAL_MODEL_PATH) { $env:LOCAL_MODEL_PATH = Join-Path $projectRoot 'models/Qwen3-4B-Instruct-2507' }
+    if (!$env:EMBEDDING_MODEL_PATH) { $env:EMBEDDING_MODEL_PATH = Join-Path $projectRoot 'models/all-MiniLM-L6-v2' }
+    foreach ($modelPath in @($env:LOCAL_MODEL_PATH, $env:EMBEDDING_MODEL_PATH)) {
+        if (!(Test-Path -LiteralPath $modelPath -PathType Container)) { throw "Local model directory missing: $modelPath" }
+    }
+    if (!$env:LOCAL_MODEL_4BIT) { $env:LOCAL_MODEL_4BIT = 'true' }
+    $env:HF_HUB_OFFLINE = '1'
+}
+Push-Location $projectRoot
+try {
+    Write-Host "Python: $Python"
+    Write-Host "Profile: $Profile | Dialogue: agent | Adapters: $env:REASONING_MODE"
+    Write-Host "Open http://127.0.0.1:$Port/ . Keep this terminal open; Ctrl+C stops the server."
+    & $Python -m uvicorn app.main:app --app-dir backend --host 127.0.0.1 --port $Port --no-access-log
+    if ($LASTEXITCODE -ne 0) { throw "Server exited with code $LASTEXITCODE. Check the selected Python environment and port." }
+} finally { Pop-Location }
+

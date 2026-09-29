@@ -1,0 +1,89 @@
+[
+  {
+    "id": "nhs-fever",
+    "title": "High temperature in adults",
+    "text": "In adults, a temperature of 38 degrees Celsius or higher is generally described as a fever. Body temperature varies between people and over the day. Feeling hot or shivery can matter even when a reading is lower.",
+    "url": "https://www.nhs.uk/symptoms/fever-in-adults/",
+    "concepts": [
+      "DEMO:fever"
+    ],
+    "reviewed_at": "2026-09-15",
+    "kind": "source_summary"
+  },
+  {
+    "id": "nhs-cough",
+    "title": "Cough and possible causes",
+    "text": "A cough can occur with a cold or flu, allergies, reflux or other conditions. A cough alone does not establish a diagnosis. NHS guidance recommends medical review for a persistent cough lasting more than three weeks.",
+    "url": "https://www.nhs.uk/symptoms/cough/",
+    "concepts": [
+      "DEMO:cough"
+    ],
+    "reviewed_at": "2026-09-15",
+    "kind": "source_summary"
+  },
+  {
+    "id": "nhs-breath",
+    "title": "Shortness of breath",
+    "text": "Breathlessness has many possible causes. Treatment depends on the cause, so symptoms should not be used to self-diagnose. Severe breathing difficulty, such as gasping or being unable to get words out, requires immediate medical help.",
+    "url": "https://www.nhs.uk/symptoms/shortness-of-breath/",
+    "concepts": [
+      "DEMO:breathlessness"
+    ],
+    "reviewed_at": "2026-09-15",
+    "kind": "source_summary"
+  },
+  {
+    "id": "project-unknown",
+    "title": "Unknown answers and uncertainty",
+    "text": "Not sure means that the symptom has not been confirmed or denied. It is stored separately and is not passed to recall as negative evidence. A user may correct this status later using the evidence panel.",
+    "url": "",
+    "concepts": [],
+    "reviewed_at": "2026-09-15",
+    "kind": "project_documentation"
+  },
+  {
+    "id": "project-correction",
+    "title": "Correcting a symptom",
+    "text": "The evidence panel lets the user change a symptom to Present, Absent or Not sure. Corrections replace current evidence while retaining history. The application then recalculates candidate results using the updated evidence.",
+    "url": "",
+    "concepts": [],
+    "reviewed_at": "2026-09-15",
+    "kind": "project_documentation"
+  },
+  {
+    "id": "project-mock",
+    "title": "Why the chatbot asks a follow-up question",
+    "text": "In random mode a seeded simulation selects an unanswered symptom from the full catalog. In mock mode questions follow a fixed fixture order for integration testing. In remote mode the teammate search module selects the next question. Asking about a symptom does not mean the user has that symptom or a particular disease.",
+    "url": "",
+    "concepts": [],
+    "reviewed_at": "2026-09-15",
+    "kind": "project_documentation"
+  },
+  {
+    "id": "project-score",
+    "title": "Scores and diagnostic probabilities",
+    "text": "Candidate scores are ranking values returned by the selected adapter. They are not calibrated disease probabilities. Mock candidates and scores are fixtures; they do not describe the user's health.",
+    "url": "",
+    "concepts": [],
+    "reviewed_at": "2026-09-15",
+    "kind": "project_documentation"
+  },
+  {
+    "id": "project-privacy",
+    "title": "Session storage and deletion",
+    "text": "This local academic application stores conversations in a SQLite database. Use fictional data. Delete and start over removes the selected conversation and request replay records. JSON export downloads a copy that the user manages separately.",
+    "url": "",
+    "concepts": [],
+    "reviewed_at": "2026-09-15",
+    "kind": "project_documentation"
+  },
+  {
+    "id": "project-scope",
+    "title": "System scope and limitations",
+    "text": "This academic prototype demonstrates NLP, dialogue state and algorithm integration. It is not clinically validated and does not diagnose conditions or prescribe medication. Retrieval and informed search are teammate modules; local mode uses labelled fixtures.",
+    "url": "",
+    "concepts": [],
+    "reviewed_at": "2026-09-15",
+    "kind": "project_documentation"
+  }
+]

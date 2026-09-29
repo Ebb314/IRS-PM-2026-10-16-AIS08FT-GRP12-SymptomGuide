@@ -1,25 +1,35 @@
-from fastapi.testclient import TestClient
+from uuid import uuid4
+import pytest
 
-from app.main import app
+def test_health_and_flow(client):
+    assert client.get("/health").json()["mode"] == "mock"
+    assert len(client.get("/api/vocabulary").json()) == 10
+    a = client.post("/api/chat/start",json={"message":"fever"}).json()
+    assert a["next_symptom"]["kg_id"] == "DEMO:breathlessness"
+    b = client.post("/api/chat/message",json={"session_id":a["session_id"],"expected_version":a["version"],"request_id":uuid4().hex,"message":"cough"})
+    assert b.status_code == 200
+    assert client.get("/api/chat/session/"+a["session_id"]).json()["version"] == 2
+    assert client.delete("/api/chat/session/"+a["session_id"]).status_code == 204
+    assert client.get("/api/chat/session/"+a["session_id"]).status_code == 404
 
+@pytest.mark.parametrize("message", ["", "   ", "x"*2001])
+def test_invalid_text(client, message):
+    assert client.post("/api/chat/start",json={"message":message}).status_code == 422
 
-client = TestClient(app)
+def test_unknown_session_and_invalid_answer(client):
+    assert client.get("/api/chat/session/missing").status_code == 404
+    assert client.post("/api/chat/answer",json={"answer":"maybe"}).status_code == 422
 
+def test_sessions_isolated(client):
+    a = client.post("/api/chat/start",json={"message":"fever"}).json()
+    b = client.post("/api/chat/start",json={"message":"headache"}).json()
+    assert a["session_id"] != b["session_id"]
+    assert client.get("/api/chat/session/"+a["session_id"]).json()["positive_symptoms"] == a["positive_symptoms"]
 
-def test_health_and_chat_api_flow():
-    assert client.get("/health").json() == {"status": "ok"}
+def test_delete_removes_start_replay(client):
+    payload = {"message":"fever","request_id":uuid4().hex}
+    a = client.post("/api/chat/start",json=payload).json()
+    client.delete("/api/chat/session/"+a["session_id"])
+    b = client.post("/api/chat/start",json=payload).json()
+    assert a["session_id"] != b["session_id"]
 
-    started = client.post("/api/chat/start", json={"message": "I have fever and cough."})
-    assert started.status_code == 200
-    body = started.json()
-    assert body["status"] == "RUNNING"
-    assert body["next_symptom"]["kg_id"] == "P006"
-
-    inspected = client.get("/api/chat/session/{}".format(body["session_id"]))
-    assert inspected.status_code == 200
-    assert len(inspected.json()["positive_symptoms"]) == 2
-
-
-def test_unknown_session_returns_404():
-    response = client.get("/api/chat/session/does-not-exist")
-    assert response.status_code == 404

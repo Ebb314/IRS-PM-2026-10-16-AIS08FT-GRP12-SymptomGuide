@@ -1,0 +1,1746 @@
+{
+  "passed": true,
+  "complete": true,
+  "count": 11,
+  "rows": [
+    {
+      "message": "I dont think i have a fever",
+      "expected": {
+        "fever": "absent"
+      },
+      "actual": {
+        "fever": "absent"
+      },
+      "passed": true,
+      "answer": "Since you don\u2019t think you have a fever and your record shows \"absent,\" that\u2019s consistent with your current feeling. Fever is defined as a temperature of 38\u00b0C or higher, but body temperature can vary. If you feel hot or shivery, that doesn\u2019t always mean a fever. Your record remains as absent.",
+      "wall_ms": 47611.6,
+      "partitions": {
+        "positive_symptoms": [],
+        "negative_symptoms": [
+          "fever"
+        ],
+        "uncertain_symptoms": []
+      },
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P835",
+              "title": "Fever",
+              "text": "fever",
+              "bm25": 13.2602,
+              "cosine": 0.7568,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4407",
+              "title": "Periodic fever",
+              "text": "periodic fever",
+              "bm25": 11.8072,
+              "cosine": 0.6021,
+              "rrf": 0.031258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4232",
+              "title": "Recurrent fever",
+              "text": "recurrent fever",
+              "bm25": 11.8072,
+              "cosine": 0.5492,
+              "rrf": 0.031054,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P12931",
+              "title": "Quotidian fever",
+              "text": "quotidian fever",
+              "bm25": 11.8072,
+              "cosine": 0.5522,
+              "rrf": 0.030536,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P12939",
+              "title": "Inappropriate absence of fever",
+              "text": "inappropriate absence of fever",
+              "bm25": 10.6412,
+              "cosine": 0.6107,
+              "rrf": 0.030366,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P9256",
+              "title": "Low-grade fever",
+              "text": "low-grade fever",
+              "bm25": 10.6412,
+              "cosine": 0.603,
+              "rrf": 0.030331,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [
+            {
+              "kg_id": "P835",
+              "kg_name": "Fever",
+              "original_text": "I dont think i have a fever",
+              "confidence": 1.0,
+              "status": "absent",
+              "experiencer": "self",
+              "temporality": "current",
+              "start": 0,
+              "end": 27,
+              "turn": 1,
+              "source": "agent-validated-proposal",
+              "duration_text": "",
+              "severity_text": ""
+            }
+          ],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 487,
+            "output_tokens": 71,
+            "latency_ms": 8879.04,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": false,
+            "seed": null
+          },
+          "interpretation": {
+            "user_goal": "Express uncertainty about having a fever",
+            "reference_resolution": "",
+            "unresolved": "",
+            "possible_meanings": []
+          },
+          "proposed": [
+            {
+              "concept_id": "P835",
+              "quote": "I dont think i have a fever",
+              "status": "absent"
+            }
+          ],
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [
+          {
+            "id": "nhs-fever",
+            "text": "In adults, a temperature of 38 degrees Celsius or higher is generally described as a fever. Body temperature varies between people and over the day. Feeling hot or shivery can matter even when a reading is lower."
+          }
+        ],
+        "citations": [],
+        "reply_pipeline": "direct",
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 633,
+            "output_tokens": 68,
+            "latency_ms": 8425.03,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": true,
+            "seed": 20260916
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 633,
+          "output_tokens": 68,
+          "latency_ms": 8425.03,
+          "context_messages": 1,
+          "dropped_messages": 0,
+          "sampling": true,
+          "seed": 20260916
+        }
+      }
+    },
+    {
+      "message": "I dont have Drowsiness.",
+      "expected": {
+        "drowsiness": "absent"
+      },
+      "actual": {
+        "drowsiness": "absent"
+      },
+      "passed": true,
+      "answer": "Your record shows \"Drowsiness\" as absent, which matches your statement. No changes needed. The app uses this status for tracking, not diagnosis. Let me know if you'd like to update another symptom.",
+      "wall_ms": 12575.7,
+      "partitions": {
+        "positive_symptoms": [],
+        "negative_symptoms": [
+          "drowsiness"
+        ],
+        "uncertain_symptoms": []
+      },
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P986",
+              "title": "Drowsiness",
+              "text": "drowsiness",
+              "bm25": 16.0776,
+              "cosine": 0.8005,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P5842",
+              "title": "Paroxysmal drowsiness",
+              "text": "paroxysmal drowsiness",
+              "bm25": 14.3159,
+              "cosine": 0.7047,
+              "rrf": 0.032258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P321",
+              "title": "Restlessness",
+              "text": "restlessness",
+              "bm25": 0.0,
+              "cosine": 0.502,
+              "rrf": 0.015873,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P15073",
+              "title": "Maintenance insomnia",
+              "text": "maintenance insomnia",
+              "bm25": 0.0,
+              "cosine": 0.4762,
+              "rrf": 0.015625,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P10038",
+              "title": "Chronic fatigue",
+              "text": "chronic fatigue",
+              "bm25": 0.0,
+              "cosine": 0.4735,
+              "rrf": 0.015385,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P13037",
+              "title": "Cognitive fatigue",
+              "text": "cognitive fatigue",
+              "bm25": 0.0,
+              "cosine": 0.4645,
+              "rrf": 0.015152,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [
+            {
+              "kg_id": "P986",
+              "kg_name": "Drowsiness",
+              "original_text": "I dont have Drowsiness.",
+              "confidence": 1.0,
+              "status": "absent",
+              "experiencer": "self",
+              "temporality": "current",
+              "start": 0,
+              "end": 23,
+              "turn": 1,
+              "source": "agent-validated-proposal",
+              "duration_text": "",
+              "severity_text": ""
+            }
+          ],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 485,
+            "output_tokens": 63,
+            "latency_ms": 7357.17,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": false,
+            "seed": null
+          },
+          "interpretation": {
+            "user_goal": "",
+            "reference_resolution": "",
+            "unresolved": "",
+            "possible_meanings": []
+          },
+          "proposed": [
+            {
+              "concept_id": "P986",
+              "quote": "I dont have Drowsiness.",
+              "status": "absent"
+            }
+          ],
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "reply_pipeline": "direct",
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 569,
+            "output_tokens": 44,
+            "latency_ms": 5142.84,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": true,
+            "seed": 20260916
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 569,
+          "output_tokens": 44,
+          "latency_ms": 5142.84,
+          "context_messages": 1,
+          "dropped_messages": 0,
+          "sampling": true,
+          "seed": 20260916
+        }
+      }
+    },
+    {
+      "message": "Drowsiness is uncertain.",
+      "expected": {
+        "drowsiness": "uncertain"
+      },
+      "actual": {
+        "drowsiness": "uncertain"
+      },
+      "passed": true,
+      "answer": "Your record shows \"Drowsiness\" as uncertain. This means you're unsure whether you're experiencing drowsiness or not. No action needed\u2014this status is already saved and will remain until you update it. Let me know if you'd like help describing drowsiness or tracking it differently.",
+      "wall_ms": 13799.4,
+      "partitions": {
+        "positive_symptoms": [],
+        "negative_symptoms": [],
+        "uncertain_symptoms": [
+          "drowsiness"
+        ]
+      },
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P986",
+              "title": "Drowsiness",
+              "text": "drowsiness",
+              "bm25": 16.0776,
+              "cosine": 0.7973,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P5842",
+              "title": "Paroxysmal drowsiness",
+              "text": "paroxysmal drowsiness",
+              "bm25": 14.3159,
+              "cosine": 0.758,
+              "rrf": 0.032258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P321",
+              "title": "Restlessness",
+              "text": "restlessness",
+              "bm25": 0.0,
+              "cosine": 0.5336,
+              "rrf": 0.015873,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P15073",
+              "title": "Maintenance insomnia",
+              "text": "maintenance insomnia",
+              "bm25": 0.0,
+              "cosine": 0.5126,
+              "rrf": 0.015625,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P563",
+              "title": "Sleep disturbance",
+              "text": "sleep disturbance",
+              "bm25": 0.0,
+              "cosine": 0.5119,
+              "rrf": 0.015385,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P13037",
+              "title": "Cognitive fatigue",
+              "text": "cognitive fatigue",
+              "bm25": 0.0,
+              "cosine": 0.4921,
+              "rrf": 0.015152,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [
+            {
+              "kg_id": "P986",
+              "kg_name": "Drowsiness",
+              "original_text": "Drowsiness is uncertain.",
+              "confidence": 1.0,
+              "status": "uncertain",
+              "experiencer": "self",
+              "temporality": "current",
+              "start": 0,
+              "end": 24,
+              "turn": 1,
+              "source": "agent-validated-proposal",
+              "duration_text": "",
+              "severity_text": ""
+            }
+          ],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 480,
+            "output_tokens": 62,
+            "latency_ms": 6901.85,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": false,
+            "seed": null
+          },
+          "interpretation": {
+            "user_goal": "",
+            "reference_resolution": "",
+            "unresolved": "",
+            "possible_meanings": []
+          },
+          "proposed": [
+            {
+              "concept_id": "P986",
+              "quote": "Drowsiness is uncertain.",
+              "status": "uncertain"
+            }
+          ],
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "reply_pipeline": "direct",
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 567,
+            "output_tokens": 61,
+            "latency_ms": 6807.55,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": true,
+            "seed": 20260916
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 567,
+          "output_tokens": 61,
+          "latency_ms": 6807.55,
+          "context_messages": 1,
+          "dropped_messages": 0,
+          "sampling": true,
+          "seed": 20260916
+        }
+      }
+    },
+    {
+      "message": "Drowsiness? I'm not sure.",
+      "expected": {
+        "drowsiness": "uncertain"
+      },
+      "actual": {
+        "drowsiness": "uncertain"
+      },
+      "passed": true,
+      "answer": "Your drowsiness is currently recorded as \"uncertain.\" If you'd like to update it later, you can choose a status like Present, Absent, or Not sure in the symptom log. Let me know if you'd like help describing it differently.",
+      "wall_ms": 14362.4,
+      "partitions": {
+        "positive_symptoms": [],
+        "negative_symptoms": [],
+        "uncertain_symptoms": [
+          "drowsiness"
+        ]
+      },
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P986",
+              "title": "Drowsiness",
+              "text": "drowsiness",
+              "bm25": 16.0776,
+              "cosine": 0.8937,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P5842",
+              "title": "Paroxysmal drowsiness",
+              "text": "paroxysmal drowsiness",
+              "bm25": 14.3159,
+              "cosine": 0.7543,
+              "rrf": 0.032258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P321",
+              "title": "Restlessness",
+              "text": "restlessness",
+              "bm25": 0.0,
+              "cosine": 0.5864,
+              "rrf": 0.015873,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P7008",
+              "title": "Monoclonal immunoglobulin M proteinemia",
+              "text": "monoclonal immunoglobulin m proteinemia",
+              "bm25": 12.4313,
+              "cosine": 0.156,
+              "rrf": 0.015873,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P3484",
+              "title": "Fatigue",
+              "text": "fatigue",
+              "bm25": 0.0,
+              "cosine": 0.5818,
+              "rrf": 0.015625,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P7724",
+              "title": "Areas of hypopigmentation and hyperpigmentation that do not follow Blaschko lines",
+              "text": "areas of hypopigmentation and hyperpigmentation that do not follow blaschko lines",
+              "bm25": 9.7912,
+              "cosine": 0.1199,
+              "rrf": 0.015625,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [
+            {
+              "kg_id": "P986",
+              "kg_name": "Drowsiness",
+              "original_text": "Drowsiness? I'm not sure.",
+              "confidence": 1.0,
+              "status": "uncertain",
+              "experiencer": "self",
+              "temporality": "current",
+              "start": 0,
+              "end": 25,
+              "turn": 1,
+              "source": "agent-validated-proposal",
+              "duration_text": "",
+              "severity_text": ""
+            }
+          ],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 509,
+            "output_tokens": 65,
+            "latency_ms": 7190.04,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": false,
+            "seed": null
+          },
+          "interpretation": {
+            "user_goal": "",
+            "reference_resolution": "",
+            "unresolved": "",
+            "possible_meanings": []
+          },
+          "proposed": [
+            {
+              "concept_id": "P986",
+              "quote": "Drowsiness? I'm not sure.",
+              "status": "uncertain"
+            }
+          ],
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "reply_pipeline": "direct",
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 573,
+            "output_tokens": 53,
+            "latency_ms": 7063.96,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": true,
+            "seed": 20260916
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 573,
+          "output_tokens": 53,
+          "latency_ms": 7063.96,
+          "context_messages": 1,
+          "dropped_messages": 0,
+          "sampling": true,
+          "seed": 20260916
+        }
+      }
+    },
+    {
+      "message": "I have Drowsiness.",
+      "expected": {
+        "drowsiness": "present"
+      },
+      "actual": {
+        "drowsiness": "present"
+      },
+      "passed": true,
+      "answer": "Drowsiness is confirmed as a current symptom. It is recorded as \"Present\" in your symptom log. Your saved record shows drowsiness is currently present. No action needed\u2014this status is already updated.",
+      "wall_ms": 17318.8,
+      "partitions": {
+        "positive_symptoms": [
+          "drowsiness"
+        ],
+        "negative_symptoms": [],
+        "uncertain_symptoms": []
+      },
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P986",
+              "title": "Drowsiness",
+              "text": "drowsiness",
+              "bm25": 16.0776,
+              "cosine": 0.8655,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P5842",
+              "title": "Paroxysmal drowsiness",
+              "text": "paroxysmal drowsiness",
+              "bm25": 14.3159,
+              "cosine": 0.7514,
+              "rrf": 0.032258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P321",
+              "title": "Restlessness",
+              "text": "restlessness",
+              "bm25": 0.0,
+              "cosine": 0.5395,
+              "rrf": 0.015873,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P13037",
+              "title": "Cognitive fatigue",
+              "text": "cognitive fatigue",
+              "bm25": 0.0,
+              "cosine": 0.5317,
+              "rrf": 0.015625,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P10038",
+              "title": "Chronic fatigue",
+              "text": "chronic fatigue",
+              "bm25": 0.0,
+              "cosine": 0.5292,
+              "rrf": 0.015385,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P5197",
+              "title": "Irritability",
+              "text": "irritability",
+              "bm25": 0.0,
+              "cosine": 0.5135,
+              "rrf": 0.015152,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [
+            {
+              "kg_id": "P986",
+              "kg_name": "Drowsiness",
+              "original_text": "I have Drowsiness.",
+              "confidence": 1.0,
+              "status": "present",
+              "experiencer": "self",
+              "temporality": "current",
+              "start": 0,
+              "end": 18,
+              "turn": 1,
+              "source": "agent-validated-proposal",
+              "duration_text": "",
+              "severity_text": ""
+            }
+          ],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 484,
+            "output_tokens": 98,
+            "latency_ms": 11913.05,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": false,
+            "seed": null
+          },
+          "interpretation": {
+            "user_goal": "To confirm or report the presence of drowsiness as a current symptom",
+            "reference_resolution": "The user explicitly states they have drowsiness, which matches candidate P986 'Drowsiness'",
+            "unresolved": "",
+            "possible_meanings": []
+          },
+          "proposed": [
+            {
+              "concept_id": "P986",
+              "quote": "I have Drowsiness.",
+              "status": "present"
+            }
+          ],
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "reply_pipeline": "direct",
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 602,
+            "output_tokens": 44,
+            "latency_ms": 5299.31,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": true,
+            "seed": 20260916
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 602,
+          "output_tokens": 44,
+          "latency_ms": 5299.31,
+          "context_messages": 1,
+          "dropped_messages": 0,
+          "sampling": true,
+          "seed": 20260916
+        }
+      }
+    },
+    {
+      "message": "I don't have Drowsiness.",
+      "expected": {
+        "drowsiness": "absent"
+      },
+      "actual": {
+        "drowsiness": "absent"
+      },
+      "passed": true,
+      "answer": "Drowsiness is now correctly recorded as \"Absent\" in your symptom log. Your saved record reflects this update. No further action is needed\u2014the status has been adjusted to match your current experience.",
+      "wall_ms": 15906.5,
+      "partitions": {
+        "positive_symptoms": [],
+        "negative_symptoms": [
+          "drowsiness"
+        ],
+        "uncertain_symptoms": []
+      },
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P986",
+              "title": "Drowsiness",
+              "text": "drowsiness",
+              "bm25": 16.0776,
+              "cosine": 0.783,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P5842",
+              "title": "Paroxysmal drowsiness",
+              "text": "paroxysmal drowsiness",
+              "bm25": 14.3159,
+              "cosine": 0.6977,
+              "rrf": 0.032258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P321",
+              "title": "Restlessness",
+              "text": "restlessness",
+              "bm25": 0.0,
+              "cosine": 0.5173,
+              "rrf": 0.015873,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P1867",
+              "title": "T lymphocytopenia",
+              "text": "t lymphocytopenia",
+              "bm25": 8.6289,
+              "cosine": 0.0196,
+              "rrf": 0.015873,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P1255",
+              "title": "T-wave inversion",
+              "text": "t-wave inversion",
+              "bm25": 7.7767,
+              "cosine": 0.0436,
+              "rrf": 0.015625,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P13037",
+              "title": "Cognitive fatigue",
+              "text": "cognitive fatigue",
+              "bm25": 0.0,
+              "cosine": 0.4756,
+              "rrf": 0.015625,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [
+            {
+              "kg_id": "P986",
+              "kg_name": "Drowsiness",
+              "original_text": "I don't have Drowsiness.",
+              "confidence": 1.0,
+              "status": "absent",
+              "experiencer": "self",
+              "temporality": "current",
+              "start": 0,
+              "end": 24,
+              "turn": 2,
+              "source": "agent-validated-proposal",
+              "duration_text": "",
+              "severity_text": ""
+            }
+          ],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 579,
+            "output_tokens": 100,
+            "latency_ms": 11089.53,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": false,
+            "seed": null
+          },
+          "interpretation": {
+            "user_goal": "To correct the symptom status of Drowsiness from present to absent.",
+            "reference_resolution": "The user explicitly negates the previous assertion of having drowsiness, indicating a current absence of the symptom.",
+            "unresolved": "",
+            "possible_meanings": []
+          },
+          "proposed": [
+            {
+              "concept_id": "P986",
+              "quote": "I don't have Drowsiness.",
+              "status": "absent"
+            }
+          ],
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "reply_pipeline": "direct",
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 721,
+            "output_tokens": 40,
+            "latency_ms": 4681.4,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": true,
+            "seed": 20260916
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 721,
+          "output_tokens": 40,
+          "latency_ms": 4681.4,
+          "context_messages": 1,
+          "dropped_messages": 0,
+          "sampling": true,
+          "seed": 20260916
+        }
+      }
+    },
+    {
+      "message": "I'm not sure whether I have Drowsiness",
+      "expected": {
+        "drowsiness": "uncertain"
+      },
+      "actual": {
+        "drowsiness": "uncertain"
+      },
+      "passed": true,
+      "answer": "Drowsiness is currently listed as \"uncertain\" in your symptom log. Since you're unsure whether you have it, this status reflects your current feeling accurately. No action is needed\u2014the record remains as \"uncertain\" to match your hesitation.",
+      "wall_ms": 17418.2,
+      "partitions": {
+        "positive_symptoms": [],
+        "negative_symptoms": [],
+        "uncertain_symptoms": [
+          "drowsiness"
+        ]
+      },
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P986",
+              "title": "Drowsiness",
+              "text": "drowsiness",
+              "bm25": 16.0776,
+              "cosine": 0.8545,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P5842",
+              "title": "Paroxysmal drowsiness",
+              "text": "paroxysmal drowsiness",
+              "bm25": 14.3159,
+              "cosine": 0.7399,
+              "rrf": 0.032258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P321",
+              "title": "Restlessness",
+              "text": "restlessness",
+              "bm25": 0.0,
+              "cosine": 0.5668,
+              "rrf": 0.015873,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P7008",
+              "title": "Monoclonal immunoglobulin M proteinemia",
+              "text": "monoclonal immunoglobulin m proteinemia",
+              "bm25": 12.4313,
+              "cosine": 0.1588,
+              "rrf": 0.015873,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P7724",
+              "title": "Areas of hypopigmentation and hyperpigmentation that do not follow Blaschko lines",
+              "text": "areas of hypopigmentation and hyperpigmentation that do not follow blaschko lines",
+              "bm25": 9.7912,
+              "cosine": 0.1026,
+              "rrf": 0.015625,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P13037",
+              "title": "Cognitive fatigue",
+              "text": "cognitive fatigue",
+              "bm25": 0.0,
+              "cosine": 0.5328,
+              "rrf": 0.015625,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [
+            {
+              "kg_id": "P986",
+              "kg_name": "Drowsiness",
+              "original_text": "I'm not sure whether I have Drowsiness",
+              "confidence": 1.0,
+              "status": "uncertain",
+              "experiencer": "self",
+              "temporality": "current",
+              "start": 0,
+              "end": 38,
+              "turn": 3,
+              "source": "agent-validated-proposal",
+              "duration_text": "",
+              "severity_text": ""
+            }
+          ],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 674,
+            "output_tokens": 100,
+            "latency_ms": 11209.08,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": false,
+            "seed": null
+          },
+          "interpretation": {
+            "user_goal": "To clarify the current status of drowsiness as uncertain",
+            "reference_resolution": "The user is unsure about having drowsiness, indicating a lack of confidence in their current symptom status",
+            "unresolved": "",
+            "possible_meanings": []
+          },
+          "proposed": [
+            {
+              "concept_id": "P986",
+              "quote": "I'm not sure whether I have Drowsiness",
+              "status": "uncertain"
+            }
+          ],
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "reply_pipeline": "direct",
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 789,
+            "output_tokens": 51,
+            "latency_ms": 6051.95,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": true,
+            "seed": 20260916
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 789,
+          "output_tokens": 51,
+          "latency_ms": 6051.95,
+          "context_messages": 1,
+          "dropped_messages": 0,
+          "sampling": true,
+          "seed": 20260916
+        }
+      }
+    },
+    {
+      "message": "I have a cough, no fever, and I'm not sure about headache.",
+      "expected": {
+        "cough": "present",
+        "fever": "absent",
+        "headache": "uncertain"
+      },
+      "actual": {
+        "cough": "present",
+        "fever": "absent",
+        "headache": "uncertain"
+      },
+      "passed": true,
+      "answer": "You're reporting a cough (present), no fever (absent), and uncertainty about headache. Your saved record reflects this accurately. No changes needed. The app uses \"uncertain\" for headache when the feeling is unclear. Let me know if you'd like to update any status.",
+      "wall_ms": 23975.2,
+      "partitions": {
+        "positive_symptoms": [
+          "cough"
+        ],
+        "negative_symptoms": [
+          "fever"
+        ],
+        "uncertain_symptoms": [
+          "headache"
+        ]
+      },
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P835",
+              "title": "Fever",
+              "text": "fever",
+              "bm25": 13.2602,
+              "cosine": 0.5739,
+              "rrf": 0.032266,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P885",
+              "title": "Headache",
+              "text": "headache",
+              "bm25": 14.622,
+              "cosine": 0.5372,
+              "rrf": 0.032018,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P11437",
+              "title": "Thunderclap headache",
+              "text": "thunderclap headache",
+              "bm25": 13.0197,
+              "cosine": 0.4762,
+              "rrf": 0.03031,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P9911",
+              "title": "Tension-type headache",
+              "text": "tension-type headache",
+              "bm25": 11.734,
+              "cosine": 0.5641,
+              "rrf": 0.029116,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4232",
+              "title": "Recurrent fever",
+              "text": "recurrent fever",
+              "bm25": 11.8072,
+              "cosine": 0.438,
+              "rrf": 0.028169,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P5843",
+              "title": "Recurrent paroxysmal headache",
+              "text": "recurrent paroxysmal headache",
+              "bm25": 11.734,
+              "cosine": 0.4759,
+              "rrf": 0.027864,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [
+            {
+              "kg_id": "P4018",
+              "kg_name": "Cough",
+              "original_text": "I have a cough",
+              "confidence": 1.0,
+              "status": "present",
+              "experiencer": "self",
+              "temporality": "current",
+              "start": 0,
+              "end": 14,
+              "turn": 1,
+              "source": "agent-validated-proposal",
+              "duration_text": "",
+              "severity_text": ""
+            },
+            {
+              "kg_id": "P835",
+              "kg_name": "Fever",
+              "original_text": "no fever",
+              "confidence": 1.0,
+              "status": "absent",
+              "experiencer": "self",
+              "temporality": "current",
+              "start": 16,
+              "end": 24,
+              "turn": 1,
+              "source": "agent-validated-proposal",
+              "duration_text": "",
+              "severity_text": ""
+            },
+            {
+              "kg_id": "P885",
+              "kg_name": "Headache",
+              "original_text": "I'm not sure about headache",
+              "confidence": 1.0,
+              "status": "uncertain",
+              "experiencer": "self",
+              "temporality": "current",
+              "start": 30,
+              "end": 57,
+              "turn": 1,
+              "source": "agent-validated-proposal",
+              "duration_text": "",
+              "severity_text": ""
+            }
+          ],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 520,
+            "output_tokens": 155,
+            "latency_ms": 16628.84,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": false,
+            "seed": null
+          },
+          "interpretation": {
+            "user_goal": "To report current symptoms including cough and uncertainty about headache",
+            "reference_resolution": "The user confirms having a cough and explicitly states no fever, with uncertainty about headache",
+            "unresolved": "",
+            "possible_meanings": []
+          },
+          "proposed": [
+            {
+              "concept_id": "P4018",
+              "quote": "I have a cough",
+              "status": "present"
+            },
+            {
+              "concept_id": "P835",
+              "quote": "no fever",
+              "status": "absent"
+            },
+            {
+              "concept_id": "P885",
+              "quote": "I'm not sure about headache",
+              "status": "uncertain"
+            }
+          ],
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [
+          {
+            "id": "nhs-cough",
+            "text": "A cough can occur with a cold or flu, allergies, reflux or other conditions. A cough alone does not establish a diagnosis. NHS guidance recommends medical review for a persistent cough lasting more than three weeks."
+          }
+        ],
+        "citations": [],
+        "reply_pipeline": "direct",
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 725,
+            "output_tokens": 58,
+            "latency_ms": 7166.1,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": true,
+            "seed": 20260916
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 725,
+          "output_tokens": 58,
+          "latency_ms": 7166.1,
+          "context_messages": 1,
+          "dropped_messages": 0,
+          "sampling": true,
+          "seed": 20260916
+        }
+      }
+    },
+    {
+      "message": "What is fever?",
+      "expected": {},
+      "actual": {},
+      "passed": true,
+      "answer": "Fever is a rise in body temperature, typically defined as 38\u00b0C (100.4\u00b0F) or higher in adults. It's often a sign that your body is fighting an infection. Body temperature can vary between people and throughout the day. Even if the thermometer reading is lower, you might feel hot or shivery.",
+      "wall_ms": 13819.0,
+      "partitions": {
+        "positive_symptoms": [],
+        "negative_symptoms": [],
+        "uncertain_symptoms": []
+      },
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P835",
+              "title": "Fever",
+              "text": "fever",
+              "bm25": 13.2602,
+              "cosine": 0.8957,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4407",
+              "title": "Periodic fever",
+              "text": "periodic fever",
+              "bm25": 11.8072,
+              "cosine": 0.7448,
+              "rrf": 0.032002,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4232",
+              "title": "Recurrent fever",
+              "text": "recurrent fever",
+              "bm25": 11.8072,
+              "cosine": 0.6721,
+              "rrf": 0.030835,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P12931",
+              "title": "Quotidian fever",
+              "text": "quotidian fever",
+              "bm25": 11.8072,
+              "cosine": 0.6818,
+              "rrf": 0.030769,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P9256",
+              "title": "Low-grade fever",
+              "text": "low-grade fever",
+              "bm25": 10.6412,
+              "cosine": 0.7029,
+              "rrf": 0.030331,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P13160",
+              "title": "Persistent fever",
+              "text": "persistent fever",
+              "bm25": 11.8072,
+              "cosine": 0.6741,
+              "rrf": 0.030077,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 476,
+            "output_tokens": 53,
+            "latency_ms": 5853.38,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": false,
+            "seed": null
+          },
+          "interpretation": {
+            "user_goal": "Understand the definition or explanation of fever",
+            "reference_resolution": "The user is asking for a general explanation of what fever is, without indicating any personal symptom or current health status.",
+            "unresolved": "",
+            "possible_meanings": []
+          },
+          "proposed": [],
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [
+          {
+            "id": "nhs-fever",
+            "text": "In adults, a temperature of 38 degrees Celsius or higher is generally described as a fever. Body temperature varies between people and over the day. Feeling hot or shivery can matter even when a reading is lower."
+          }
+        ],
+        "citations": [],
+        "reply_pipeline": "direct",
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 620,
+            "output_tokens": 70,
+            "latency_ms": 7853.79,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": true,
+            "seed": 20260916
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 620,
+          "output_tokens": 70,
+          "latency_ms": 7853.79,
+          "context_messages": 1,
+          "dropped_messages": 0,
+          "sampling": true,
+          "seed": 20260916
+        }
+      }
+    },
+    {
+      "message": "My sister has fever.",
+      "expected": {},
+      "actual": {},
+      "passed": true,
+      "answer": "A fever is a common symptom where the body raises its temperature to fight off infections. It can be caused by viruses, bacteria, or other illnesses. If your sister has a fever, monitor her temperature, check for other symptoms like chills, fatigue, or body aches, and ensure she drinks fluids. If the fever persists or worsens, consult a healthcare provider.",
+      "wall_ms": 16658.8,
+      "partitions": {
+        "positive_symptoms": [],
+        "negative_symptoms": [],
+        "uncertain_symptoms": []
+      },
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P835",
+              "title": "Fever",
+              "text": "fever",
+              "bm25": 13.2602,
+              "cosine": 0.708,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4232",
+              "title": "Recurrent fever",
+              "text": "recurrent fever",
+              "bm25": 11.8072,
+              "cosine": 0.5411,
+              "rrf": 0.030835,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P11029",
+              "title": "Intrapartum fever",
+              "text": "intrapartum fever",
+              "bm25": 11.8072,
+              "cosine": 0.5451,
+              "rrf": 0.03055,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P12931",
+              "title": "Quotidian fever",
+              "text": "quotidian fever",
+              "bm25": 11.8072,
+              "cosine": 0.5611,
+              "rrf": 0.030536,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P13160",
+              "title": "Persistent fever",
+              "text": "persistent fever",
+              "bm25": 11.8072,
+              "cosine": 0.5676,
+              "rrf": 0.030536,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4407",
+              "title": "Periodic fever",
+              "text": "periodic fever",
+              "bm25": 11.8072,
+              "cosine": 0.5319,
+              "rrf": 0.030366,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [],
+          "rejected": [
+            {
+              "concept_id": "P835",
+              "reason": "non-current-or-other-person"
+            }
+          ],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 481,
+            "output_tokens": 70,
+            "latency_ms": 7728.17,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": false,
+            "seed": null
+          },
+          "interpretation": {
+            "user_goal": "To get information about a fever in their sister",
+            "reference_resolution": "",
+            "unresolved": "",
+            "possible_meanings": []
+          },
+          "proposed": [
+            {
+              "concept_id": "P835",
+              "quote": "My sister has fever.",
+              "status": "present"
+            }
+          ],
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "reply_pipeline": "direct",
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 543,
+            "output_tokens": 76,
+            "latency_ms": 8854.03,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": true,
+            "seed": 20260916
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 543,
+          "output_tokens": 76,
+          "latency_ms": 8854.03,
+          "context_messages": 1,
+          "dropped_messages": 0,
+          "sampling": true,
+          "seed": 20260916
+        }
+      }
+    },
+    {
+      "message": "I'm not sure whether I have a fever",
+      "expected": {
+        "fever": "uncertain"
+      },
+      "actual": {
+        "fever": "uncertain"
+      },
+      "passed": true,
+      "answer": "You're right to be unsure. A fever is typically defined as a body temperature of 38\u00b0C or higher, but some people feel hot or shivery without a high reading. Since your record shows \"uncertain,\" you can update it to \"Not sure\" if you're still unsure\u2014no need to confirm a fever yet.",
+      "wall_ms": 16987.0,
+      "partitions": {
+        "positive_symptoms": [],
+        "negative_symptoms": [],
+        "uncertain_symptoms": [
+          "fever"
+        ]
+      },
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P835",
+              "title": "Fever",
+              "text": "fever",
+              "bm25": 13.2602,
+              "cosine": 0.7847,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4407",
+              "title": "Periodic fever",
+              "text": "periodic fever",
+              "bm25": 11.8072,
+              "cosine": 0.6275,
+              "rrf": 0.03101,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4232",
+              "title": "Recurrent fever",
+              "text": "recurrent fever",
+              "bm25": 11.8072,
+              "cosine": 0.5677,
+              "rrf": 0.030579,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P12939",
+              "title": "Inappropriate absence of fever",
+              "text": "inappropriate absence of fever",
+              "bm25": 10.6412,
+              "cosine": 0.672,
+              "rrf": 0.030159,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P9256",
+              "title": "Low-grade fever",
+              "text": "low-grade fever",
+              "bm25": 10.6412,
+              "cosine": 0.6459,
+              "rrf": 0.030118,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P12931",
+              "title": "Quotidian fever",
+              "text": "quotidian fever",
+              "bm25": 11.8072,
+              "cosine": 0.5854,
+              "rrf": 0.030077,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [
+            {
+              "kg_id": "P835",
+              "kg_name": "Fever",
+              "original_text": "I'm not sure whether I have a fever",
+              "confidence": 1.0,
+              "status": "uncertain",
+              "experiencer": "self",
+              "temporality": "current",
+              "start": 0,
+              "end": 35,
+              "turn": 1,
+              "source": "agent-validated-proposal",
+              "duration_text": "",
+              "severity_text": ""
+            }
+          ],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 491,
+            "output_tokens": 77,
+            "latency_ms": 8775.61,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": false,
+            "seed": null
+          },
+          "interpretation": {
+            "user_goal": "Determine if they currently have a fever or not",
+            "reference_resolution": "",
+            "unresolved": "",
+            "possible_meanings": []
+          },
+          "proposed": [
+            {
+              "concept_id": "P835",
+              "quote": "I'm not sure whether I have a fever",
+              "status": "uncertain"
+            }
+          ],
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [
+          {
+            "id": "nhs-fever",
+            "text": "In adults, a temperature of 38 degrees Celsius or higher is generally described as a fever. Body temperature varies between people and over the day. Feeling hot or shivery can matter even when a reading is lower."
+          }
+        ],
+        "citations": [],
+        "reply_pipeline": "direct",
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 641,
+            "output_tokens": 69,
+            "latency_ms": 8056.6,
+            "context_messages": 1,
+            "dropped_messages": 0,
+            "sampling": true,
+            "seed": 20260916
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 641,
+          "output_tokens": 69,
+          "latency_ms": 8056.6,
+          "context_messages": 1,
+          "dropped_messages": 0,
+          "sampling": true,
+          "seed": 20260916
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1823 @@
+{
+  "created_at": "2026-09-15T07:45:01.108417+00:00",
+  "health": {
+    "status": "ok",
+    "mode": "random",
+    "nlp_engine": "hybrid-context-llm-v2",
+    "vocabulary_size": 15135,
+    "ai_profile": "local",
+    "generator": "Qwen2.5-1.5B-Instruct"
+  },
+  "seed": 20260915,
+  "cases": 20,
+  "passed": 19,
+  "requested_count": 20,
+  "rows": [
+    {
+      "id": "P10508",
+      "text": "I have Disciform macular scar.",
+      "expected": {
+        "P10508": "present"
+      },
+      "predicted": {
+        "P10508": "present"
+      },
+      "pass": true,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P10508",
+            "P2221",
+            "P3280",
+            "P3650",
+            "P7884"
+          ],
+          "candidates": [
+            {
+              "id": "P10508",
+              "title": "Disciform macular scar",
+              "text": "disciform macular scar",
+              "bm25": 33.5499,
+              "cosine": 0.8584,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P3650",
+              "title": "Macular scar",
+              "text": "macular scar",
+              "bm25": 22.0706,
+              "cosine": 0.833,
+              "rrf": 0.032258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P7884",
+              "title": "Chorioretinal scar",
+              "text": "chorioretinal scar",
+              "bm25": 13.0197,
+              "cosine": 0.6403,
+              "rrf": 0.031746,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P3280",
+              "title": "Macular edema",
+              "text": "macular edema",
+              "bm25": 9.0509,
+              "cosine": 0.5855,
+              "rrf": 0.029857,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P2221",
+              "title": "Macular degeneration",
+              "text": "macular degeneration",
+              "bm25": 9.0509,
+              "cosine": 0.5766,
+              "rrf": 0.029631,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 433,
+            "output_tokens": 54,
+            "latency_ms": 3199.42
+          },
+          "validation": "accepted"
+        },
+        "generation": {
+          "prompt_version": "question-v2",
+          "response_mode": "template",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 58,
+            "output_tokens": 12,
+            "latency_ms": 635.05
+          },
+          "fallback_reason": "ValueError"
+        }
+      },
+      "latency_ms": 3944.3
+    },
+    {
+      "id": "P9469",
+      "text": "I do not have Upbeat nystagmus.",
+      "expected": {
+        "P9469": "absent"
+      },
+      "predicted": {
+        "P9469": "absent"
+      },
+      "pass": true,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P2202",
+            "P2294",
+            "P3071",
+            "P9014",
+            "P9469"
+          ],
+          "candidates": [
+            {
+              "id": "P9469",
+              "title": "Upbeat nystagmus",
+              "text": "upbeat nystagmus",
+              "bm25": 26.1813,
+              "cosine": 0.8252,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P2202",
+              "title": "Horizontal nystagmus",
+              "text": "horizontal nystagmus",
+              "bm25": 11.0257,
+              "cosine": 0.4754,
+              "rrf": 0.031281,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P9014",
+              "title": "Downbeat nystagmus",
+              "text": "downbeat nystagmus",
+              "bm25": 11.0257,
+              "cosine": 0.6036,
+              "rrf": 0.031054,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P3071",
+              "title": "Vertical nystagmus",
+              "text": "vertical nystagmus",
+              "bm25": 11.0257,
+              "cosine": 0.4756,
+              "rrf": 0.030769,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P2294",
+              "title": "Congenital nystagmus",
+              "text": "congenital nystagmus",
+              "bm25": 11.0257,
+              "cosine": 0.4443,
+              "rrf": 0.029911,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 443,
+            "output_tokens": 44,
+            "latency_ms": 2117.79
+          },
+          "validation": "fallback",
+          "error_type": "ModelFailure"
+        },
+        "generation": {
+          "prompt_version": "question-v2",
+          "response_mode": "template",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 57,
+            "output_tokens": 10,
+            "latency_ms": 482.25
+          },
+          "fallback_reason": "ValueError"
+        }
+      },
+      "latency_ms": 2698.42
+    },
+    {
+      "id": "P11489",
+      "text": "I am not sure whether I have Pancreas divisum.",
+      "expected": {
+        "P11489": "uncertain"
+      },
+      "predicted": {
+        "P11489": "uncertain"
+      },
+      "pass": true,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P11489",
+            "P1159",
+            "P2023",
+            "P5670",
+            "P744"
+          ],
+          "candidates": [
+            {
+              "id": "P11489",
+              "title": "Pancreas divisum",
+              "text": "pancreas divisum",
+              "bm25": 26.8257,
+              "cosine": 0.7386,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P1159",
+              "title": "Abnormality of the pancreas",
+              "text": "abnormality of the pancreas",
+              "bm25": 11.6701,
+              "cosine": 0.6114,
+              "rrf": 0.031754,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P744",
+              "title": "Abnormality of pancreas physiology",
+              "text": "abnormality of pancreas physiology",
+              "bm25": 10.5176,
+              "cosine": 0.6016,
+              "rrf": 0.030536,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P5670",
+              "title": "Annular pancreas",
+              "text": "annular pancreas",
+              "bm25": 11.6701,
+              "cosine": 0.5778,
+              "rrf": 0.029911,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P2023",
+              "title": "Abnormal pancreas size",
+              "text": "abnormal pancreas size",
+              "bm25": 10.5176,
+              "cosine": 0.5867,
+              "rrf": 0.028986,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 444,
+            "output_tokens": 45,
+            "latency_ms": 2000.59
+          },
+          "validation": "fallback",
+          "error_type": "ModelFailure"
+        },
+        "generation": {}
+      },
+      "latency_ms": 2108.34
+    },
+    {
+      "id": "P1698",
+      "text": "I have Abnormality of frontalis muscle belly.",
+      "expected": {
+        "P1698": "present"
+      },
+      "predicted": {
+        "P1698": "present"
+      },
+      "pass": true,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P14671",
+            "P1698",
+            "P4991",
+            "P6584",
+            "P6660"
+          ],
+          "candidates": [
+            {
+              "id": "P1698",
+              "title": "Abnormality of frontalis muscle belly",
+              "text": "abnormality of frontalis muscle belly",
+              "bm25": 32.367,
+              "cosine": 0.8956,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P6660",
+              "title": "Frontalis muscle weakness",
+              "text": "frontalis muscle weakness",
+              "bm25": 18.3337,
+              "cosine": 0.6804,
+              "rrf": 0.032258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P6584",
+              "title": "Hyperostosis frontalis interna",
+              "text": "hyperostosis frontalis interna",
+              "bm25": 12.4036,
+              "cosine": 0.5232,
+              "rrf": 0.026861,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P14671",
+              "title": "Abnormality of procerus muscle",
+              "text": "abnormality of procerus muscle",
+              "bm25": 10.2577,
+              "cosine": 0.5579,
+              "rrf": 0.026316,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4991",
+              "title": "Abnormality of occipitofrontalis muscle",
+              "text": "abnormality of occipitofrontalis muscle",
+              "bm25": 10.2577,
+              "cosine": 0.5334,
+              "rrf": 0.02607,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 453,
+            "output_tokens": 33,
+            "latency_ms": 1561.94
+          },
+          "validation": "accepted"
+        },
+        "generation": {
+          "prompt_version": "question-v2",
+          "response_mode": "template",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 55,
+            "output_tokens": 13,
+            "latency_ms": 619.52
+          },
+          "fallback_reason": "ValueError"
+        }
+      },
+      "latency_ms": 2275.15
+    },
+    {
+      "id": "P12010",
+      "text": "I do not have Fully accomodative esotropia.",
+      "expected": {
+        "P12010": "absent"
+      },
+      "predicted": {
+        "P12010": "absent"
+      },
+      "pass": true,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P12010",
+            "P12011",
+            "P4118",
+            "P4130",
+            "P499"
+          ],
+          "candidates": [
+            {
+              "id": "P12010",
+              "title": "Fully accomodative esotropia",
+              "text": "fully accomodative esotropia",
+              "bm25": 36.3602,
+              "cosine": 0.7994,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4118",
+              "title": "Non-accomodative esotropia",
+              "text": "non-accomodative esotropia",
+              "bm25": 22.7013,
+              "cosine": 0.7974,
+              "rrf": 0.032258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P12011",
+              "title": "Partially accomodative esotropia",
+              "text": "partially accomodative esotropia",
+              "bm25": 22.7013,
+              "cosine": 0.7715,
+              "rrf": 0.031746,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P499",
+              "title": "Esotropia",
+              "text": "esotropia",
+              "bm25": 12.8323,
+              "cosine": 0.6622,
+              "rrf": 0.03101,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4130",
+              "title": "Accommodative esotropia",
+              "text": "accommodative esotropia",
+              "bm25": 11.4261,
+              "cosine": 0.7472,
+              "rrf": 0.03101,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 455,
+            "output_tokens": 63,
+            "latency_ms": 4043.97
+          },
+          "validation": "fallback",
+          "error_type": "ModelFailure"
+        },
+        "generation": {
+          "prompt_version": "question-v2",
+          "response_mode": "template",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 60,
+            "output_tokens": 14,
+            "latency_ms": 749.61
+          },
+          "fallback_reason": "ValueError"
+        }
+      },
+      "latency_ms": 4901.9
+    },
+    {
+      "id": "P3381",
+      "text": "I am not sure whether I have Abnormal circulating non-proteinogenic amino acid concentration.",
+      "expected": {
+        "P3381": "uncertain"
+      },
+      "predicted": {
+        "P3381": "uncertain"
+      },
+      "pass": true,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P1305",
+            "P1621",
+            "P1628",
+            "P3381",
+            "P4409"
+          ],
+          "candidates": [
+            {
+              "id": "P3381",
+              "title": "Abnormal circulating non-proteinogenic amino acid concentration",
+              "text": "abnormal circulating non-proteinogenic amino acid concentration",
+              "bm25": 36.878,
+              "cosine": 0.8948,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P1621",
+              "title": "Abnormal circulating proteinogenic amino acid concentration",
+              "text": "abnormal circulating proteinogenic amino acid concentration",
+              "bm25": 32.9452,
+              "cosine": 0.8547,
+              "rrf": 0.032258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P1305",
+              "title": "Abnormal circulating proteinogenic amino acid derivative concentration",
+              "text": "abnormal circulating proteinogenic amino acid derivative concentration",
+              "bm25": 30.613,
+              "cosine": 0.7701,
+              "rrf": 0.031498,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4409",
+              "title": "Abnormal circulating amino acid concentration",
+              "text": "abnormal circulating amino acid concentration",
+              "bm25": 26.0702,
+              "cosine": 0.8372,
+              "rrf": 0.031258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P1628",
+              "title": "Abnormal circulating branched chain amino acid concentration",
+              "text": "abnormal circulating branched chain amino acid concentration",
+              "bm25": 22.3791,
+              "cosine": 0.7541,
+              "rrf": 0.029644,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 463,
+            "output_tokens": 28,
+            "latency_ms": 1238.57
+          },
+          "validation": "fallback",
+          "error_type": "ValueError"
+        },
+        "generation": {}
+      },
+      "latency_ms": 1491.3
+    },
+    {
+      "id": "P1683",
+      "text": "I have Fused cervical vertebrae.",
+      "expected": {
+        "P1683": "present"
+      },
+      "predicted": {
+        "P1683": "present"
+      },
+      "pass": true,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P10896",
+            "P10897",
+            "P1683",
+            "P6655",
+            "P8136"
+          ],
+          "candidates": [
+            {
+              "id": "P1683",
+              "title": "Fused cervical vertebrae",
+              "text": "fused cervical vertebrae",
+              "bm25": 27.5486,
+              "cosine": 0.8389,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P10897",
+              "title": "Fused lumbar vertebrae",
+              "text": "fused lumbar vertebrae",
+              "bm25": 19.2125,
+              "cosine": 0.7333,
+              "rrf": 0.031746,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P10896",
+              "title": "Fused thoracic vertebrae",
+              "text": "fused thoracic vertebrae",
+              "bm25": 19.2125,
+              "cosine": 0.6938,
+              "rrf": 0.031054,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P6655",
+              "title": "Cervical C5/C6 vertebrae fusion",
+              "text": "cervical c5/c6 vertebrae fusion",
+              "bm25": 14.4881,
+              "cosine": 0.7189,
+              "rrf": 0.030777,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P8136",
+              "title": "Hypoplastic cervical vertebrae",
+              "text": "hypoplastic cervical vertebrae",
+              "bm25": 17.3496,
+              "cosine": 0.6301,
+              "rrf": 0.028783,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 453,
+            "output_tokens": 31,
+            "latency_ms": 1359.83
+          },
+          "validation": "accepted"
+        },
+        "generation": {
+          "prompt_version": "question-v2",
+          "response_mode": "template",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 59,
+            "output_tokens": 12,
+            "latency_ms": 532.6
+          },
+          "fallback_reason": "ValueError"
+        }
+      },
+      "latency_ms": 1972.01
+    },
+    {
+      "id": "P14363",
+      "text": "I do not have Positive stool barbiturate test.",
+      "expected": {
+        "P14363": "absent"
+      },
+      "predicted": {
+        "P14363": "absent"
+      },
+      "pass": true,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P14361",
+            "P14362",
+            "P14363",
+            "P14364",
+            "P14577"
+          ],
+          "candidates": [
+            {
+              "id": "P14363",
+              "title": "Positive stool barbiturate test",
+              "text": "positive stool barbiturate test",
+              "bm25": 35.187,
+              "cosine": 0.9126,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P14361",
+              "title": "Positive meconium barbiturate test",
+              "text": "positive meconium barbiturate test",
+              "bm25": 24.9259,
+              "cosine": 0.672,
+              "rrf": 0.031514,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P14577",
+              "title": "Positive urine barbiturate test",
+              "text": "positive urine barbiturate test",
+              "bm25": 24.9259,
+              "cosine": 0.726,
+              "rrf": 0.031498,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P14364",
+              "title": "Positive gastric fluid barbiturate test",
+              "text": "positive gastric fluid barbiturate test",
+              "bm25": 22.8703,
+              "cosine": 0.7424,
+              "rrf": 0.031054,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P14362",
+              "title": "Positive hair barbiturate test",
+              "text": "positive hair barbiturate test",
+              "bm25": 24.9259,
+              "cosine": 0.6419,
+              "rrf": 0.031025,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 452,
+            "output_tokens": 45,
+            "latency_ms": 1968.91
+          },
+          "validation": "fallback",
+          "error_type": "ModelFailure"
+        },
+        "generation": {
+          "prompt_version": "question-v2",
+          "response_mode": "local-llm-question",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 55,
+            "output_tokens": 9,
+            "latency_ms": 386.21
+          }
+        }
+      },
+      "latency_ms": 2459.65
+    },
+    {
+      "id": "P5459",
+      "text": "I am not sure whether I have Prominent sternum.",
+      "expected": {
+        "P5459": "uncertain"
+      },
+      "predicted": {
+        "P5459": "uncertain"
+      },
+      "pass": true,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P14799",
+            "P345",
+            "P5457",
+            "P5459",
+            "P8921"
+          ],
+          "candidates": [
+            {
+              "id": "P5459",
+              "title": "Prominent sternum",
+              "text": "prominent sternum",
+              "bm25": 21.7899,
+              "cosine": 0.7975,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P5457",
+              "title": "Short sternum",
+              "text": "short sternum",
+              "bm25": 12.5099,
+              "cosine": 0.6742,
+              "rrf": 0.031754,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P345",
+              "title": "Abnormal sternum morphology",
+              "text": "abnormal sternum morphology",
+              "bm25": 11.2745,
+              "cosine": 0.7414,
+              "rrf": 0.031514,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P8921",
+              "title": "Bifid sternum",
+              "text": "bifid sternum",
+              "bm25": 12.5099,
+              "cosine": 0.6066,
+              "rrf": 0.030579,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P14799",
+              "title": "Pectus excavatum of inferior sternum",
+              "text": "pectus excavatum of inferior sternum",
+              "bm25": 10.2611,
+              "cosine": 0.6072,
+              "rrf": 0.029851,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 441,
+            "output_tokens": 28,
+            "latency_ms": 1259.68
+          },
+          "validation": "fallback",
+          "error_type": "ValueError"
+        },
+        "generation": {}
+      },
+      "latency_ms": 1365.1
+    },
+    {
+      "id": "P11790",
+      "text": "I have Abnormal sex hormone-binding globulin level.",
+      "expected": {
+        "P11790": "present"
+      },
+      "predicted": {
+        "P11790": "present"
+      },
+      "pass": true,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P11779",
+            "P11790",
+            "P3709",
+            "P3738",
+            "P4547"
+          ],
+          "candidates": [
+            {
+              "id": "P11790",
+              "title": "Abnormal sex hormone-binding globulin level",
+              "text": "abnormal sex hormone-binding globulin level",
+              "bm25": 38.1761,
+              "cosine": 0.856,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P3738",
+              "title": "Abnormal circulating globulin level",
+              "text": "abnormal circulating globulin level",
+              "bm25": 18.3402,
+              "cosine": 0.69,
+              "rrf": 0.031754,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P3709",
+              "title": "Abnormal circulating beta globulin level",
+              "text": "abnormal circulating beta globulin level",
+              "bm25": 16.8277,
+              "cosine": 0.6741,
+              "rrf": 0.031025,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P11779",
+              "title": "Reduced sex -hormone binding protein level",
+              "text": "reduced sex -hormone binding protein level",
+              "bm25": 26.6421,
+              "cosine": 0.6015,
+              "rrf": 0.030622,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4547",
+              "title": "Decreased circulating globulin level",
+              "text": "decreased circulating globulin level",
+              "bm25": 14.994,
+              "cosine": 0.6414,
+              "rrf": 0.028958,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 453,
+            "output_tokens": 34,
+            "latency_ms": 1488.85
+          },
+          "validation": "accepted"
+        },
+        "generation": {
+          "prompt_version": "question-v2",
+          "response_mode": "template",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 58,
+            "output_tokens": 17,
+            "latency_ms": 708.36
+          },
+          "fallback_reason": "ValueError"
+        }
+      },
+      "latency_ms": 2315.83
+    },
+    {
+      "id": "P279",
+      "text": "I do not have Retinal degeneration.",
+      "expected": {
+        "P279": "absent"
+      },
+      "predicted": {
+        "P279": "absent"
+      },
+      "pass": true,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P2221",
+            "P2265",
+            "P279",
+            "P4829",
+            "P7962"
+          ],
+          "candidates": [
+            {
+              "id": "P279",
+              "title": "Retinal degeneration",
+              "text": "retinal degeneration",
+              "bm25": 18.1175,
+              "cosine": 0.818,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P2265",
+              "title": "Peripheral retinal degeneration",
+              "text": "peripheral retinal degeneration",
+              "bm25": 16.3283,
+              "cosine": 0.7699,
+              "rrf": 0.032258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P7962",
+              "title": "Lattice retinal degeneration",
+              "text": "lattice retinal degeneration",
+              "bm25": 16.3283,
+              "cosine": 0.6137,
+              "rrf": 0.030798,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P2221",
+              "title": "Macular degeneration",
+              "text": "macular degeneration",
+              "bm25": 9.7376,
+              "cosine": 0.6388,
+              "rrf": 0.03031,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4829",
+              "title": "Corneal degeneration",
+              "text": "corneal degeneration",
+              "bm25": 9.7376,
+              "cosine": 0.5781,
+              "rrf": 0.027826,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 435,
+            "output_tokens": 41,
+            "latency_ms": 1837.13
+          },
+          "validation": "fallback",
+          "error_type": "ModelFailure"
+        },
+        "generation": {
+          "prompt_version": "question-v2",
+          "response_mode": "template",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 56,
+            "output_tokens": 10,
+            "latency_ms": 434.17
+          },
+          "fallback_reason": "ValueError"
+        }
+      },
+      "latency_ms": 2354.22
+    },
+    {
+      "id": "P13939",
+      "text": "I am not sure whether I have Aplasia of the proximal phalanx of the 4th toe.",
+      "expected": {
+        "P13939": "uncertain"
+      },
+      "predicted": {
+        "P13939": "uncertain"
+      },
+      "pass": true,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P13933",
+            "P13936",
+            "P13939",
+            "P4726",
+            "P8958"
+          ],
+          "candidates": [
+            {
+              "id": "P13939",
+              "title": "Aplasia of the proximal phalanx of the 4th toe",
+              "text": "aplasia of the proximal phalanx of the 4th toe",
+              "bm25": 22.0732,
+              "cosine": 0.915,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4726",
+              "title": "Aplasia/hypoplasia of the proximal phalanx of the 4th toe",
+              "text": "aplasia/hypoplasia of the proximal phalanx of the 4th toe",
+              "bm25": 20.3916,
+              "cosine": 0.8687,
+              "rrf": 0.031281,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P13933",
+              "title": "Aplasia of the distal phalanx of the 4th toe",
+              "text": "aplasia of the distal phalanx of the 4th toe",
+              "bm25": 17.6041,
+              "cosine": 0.8705,
+              "rrf": 0.03125,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P13936",
+              "title": "Aplasia of the middle phalanx of the 4th toe",
+              "text": "aplasia of the middle phalanx of the 4th toe",
+              "bm25": 17.6041,
+              "cosine": 0.8699,
+              "rrf": 0.030769,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P8958",
+              "title": "Aplasia of the proximal phalanx of the 2nd toe",
+              "text": "aplasia of the proximal phalanx of the 2nd toe",
+              "bm25": 16.964,
+              "cosine": 0.9048,
+              "rrf": 0.029643,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 514,
+            "output_tokens": 35,
+            "latency_ms": 1607.17
+          },
+          "validation": "fallback",
+          "error_type": "ModelFailure"
+        },
+        "generation": {}
+      },
+      "latency_ms": 1748.61
+    },
+    {
+      "id": "P6623",
+      "text": "I have Pear-shaped vertebrae.",
+      "expected": {
+        "P6623": "present"
+      },
+      "predicted": {
+        "P6623": "present"
+      },
+      "pass": true,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P1687",
+            "P2409",
+            "P2424",
+            "P6154",
+            "P6623"
+          ],
+          "candidates": [
+            {
+              "id": "P6623",
+              "title": "Pear-shaped vertebrae",
+              "text": "pear-shaped vertebrae",
+              "bm25": 28.4451,
+              "cosine": 0.8002,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P6154",
+              "title": "Block vertebrae",
+              "text": "block vertebrae",
+              "bm25": 10.0012,
+              "cosine": 0.5992,
+              "rrf": 0.03055,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P2424",
+              "title": "Poorly ossified vertebrae",
+              "text": "poorly ossified vertebrae",
+              "bm25": 9.0135,
+              "cosine": 0.6322,
+              "rrf": 0.029958,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P1687",
+              "title": "Abnormally ossified vertebrae",
+              "text": "abnormally ossified vertebrae",
+              "bm25": 9.0135,
+              "cosine": 0.6177,
+              "rrf": 0.029877,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P2409",
+              "title": "Supernumerary vertebrae",
+              "text": "supernumerary vertebrae",
+              "bm25": 10.0012,
+              "cosine": 0.56,
+              "rrf": 0.02886,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 441,
+            "output_tokens": 30,
+            "latency_ms": 1405.26
+          },
+          "validation": "accepted"
+        },
+        "generation": {
+          "prompt_version": "question-v2",
+          "response_mode": "template",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 59,
+            "output_tokens": 15,
+            "latency_ms": 653.18
+          },
+          "fallback_reason": "ValueError"
+        }
+      },
+      "latency_ms": 2146.27
+    },
+    {
+      "id": "P12716",
+      "text": "I do not have Focal impaired awareness sensory seizure with vestibular features.",
+      "expected": {
+        "P12716": "absent"
+      },
+      "predicted": {
+        "P12716": "absent"
+      },
+      "pass": true,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P12711",
+            "P12716",
+            "P12717",
+            "P12774",
+            "P4343"
+          ],
+          "candidates": [
+            {
+              "id": "P12716",
+              "title": "Focal impaired awareness sensory seizure with vestibular features",
+              "text": "focal impaired awareness sensory seizure with vestibular features",
+              "bm25": 39.255,
+              "cosine": 0.8765,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4343",
+              "title": "Focal sensory seizure with vestibular features",
+              "text": "focal sensory seizure with vestibular features",
+              "bm25": 33.5118,
+              "cosine": 0.8088,
+              "rrf": 0.032002,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P12717",
+              "title": "Focal impaired awareness sensory seizure with visual features",
+              "text": "focal impaired awareness sensory seizure with visual features",
+              "bm25": 32.132,
+              "cosine": 0.7361,
+              "rrf": 0.03101,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P12774",
+              "title": "Focal impaired awareness sensory seizure with auditory features",
+              "text": "focal impaired awareness sensory seizure with auditory features",
+              "bm25": 32.132,
+              "cosine": 0.7456,
+              "rrf": 0.03101,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P12711",
+              "title": "Focal aware sensory seizure with vestibular features",
+              "text": "focal aware sensory seizure with vestibular features",
+              "bm25": 30.9587,
+              "cosine": 0.8109,
+              "rrf": 0.030835,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 467,
+            "output_tokens": 57,
+            "latency_ms": 2435.46
+          },
+          "validation": "fallback",
+          "error_type": "ModelFailure"
+        },
+        "generation": {
+          "prompt_version": "question-v2",
+          "response_mode": "template",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 59,
+            "output_tokens": 14,
+            "latency_ms": 569.86
+          },
+          "fallback_reason": "ValueError"
+        }
+      },
+      "latency_ms": 3156.38
+    },
+    {
+      "id": "P4820",
+      "text": "I am not sure whether I have Small intestinal stenosis.",
+      "expected": {
+        "P4820": "uncertain"
+      },
+      "predicted": {
+        "P4820": "uncertain"
+      },
+      "pass": true,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P10300",
+            "P1049",
+            "P1719",
+            "P3658",
+            "P4820"
+          ],
+          "candidates": [
+            {
+              "id": "P4820",
+              "title": "Small intestinal stenosis",
+              "text": "small intestinal stenosis",
+              "bm25": 24.3939,
+              "cosine": 0.8734,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P1719",
+              "title": "Small intestinal polyposis",
+              "text": "small intestinal polyposis",
+              "bm25": 15.9739,
+              "cosine": 0.5194,
+              "rrf": 0.030415,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P10300",
+              "title": "Small intestinal bleeding",
+              "text": "small intestinal bleeding",
+              "bm25": 15.9739,
+              "cosine": 0.5121,
+              "rrf": 0.029514,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P1049",
+              "title": "Intestinal obstruction",
+              "text": "intestinal obstruction",
+              "bm25": 9.7376,
+              "cosine": 0.5434,
+              "rrf": 0.029274,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P3658",
+              "title": "Abnormal small intestinal mucosa morphology",
+              "text": "abnormal small intestinal mucosa morphology",
+              "bm25": 13.3393,
+              "cosine": 0.5225,
+              "rrf": 0.028986,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 440,
+            "output_tokens": 6,
+            "latency_ms": 325.81
+          },
+          "validation": "accepted"
+        },
+        "generation": {}
+      },
+      "latency_ms": 440.11
+    },
+    {
+      "id": "P2143",
+      "text": "I have Muscle stiffness.",
+      "expected": {
+        "P2143": "present"
+      },
+      "predicted": {
+        "P2143": "present"
+      },
+      "pass": true,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P1817",
+            "P2143",
+            "P7564",
+            "P8328",
+            "P8329"
+          ],
+          "candidates": [
+            {
+              "id": "P2143",
+              "title": "Muscle stiffness",
+              "text": "muscle stiffness",
+              "bm25": 18.7011,
+              "cosine": 0.8606,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P8329",
+              "title": "Leg muscle stiffness",
+              "text": "leg muscle stiffness",
+              "bm25": 16.8543,
+              "cosine": 0.8127,
+              "rrf": 0.032002,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P7564",
+              "title": "Axial muscle stiffness",
+              "text": "axial muscle stiffness",
+              "bm25": 16.8543,
+              "cosine": 0.689,
+              "rrf": 0.031514,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P8328",
+              "title": "Exercise-induced muscle stiffness",
+              "text": "exercise-induced muscle stiffness",
+              "bm25": 15.3394,
+              "cosine": 0.7186,
+              "rrf": 0.030777,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P1817",
+              "title": "Joint stiffness",
+              "text": "joint stiffness",
+              "bm25": 12.1213,
+              "cosine": 0.6774,
+              "rrf": 0.030077,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 424,
+            "output_tokens": 51,
+            "latency_ms": 2186.81
+          },
+          "validation": "accepted"
+        },
+        "generation": {
+          "prompt_version": "question-v2",
+          "response_mode": "template",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 55,
+            "output_tokens": 8,
+            "latency_ms": 359.08
+          },
+          "fallback_reason": "ValueError"
+        }
+      },
+      "latency_ms": 2631.38
+    },
+    {
+      "id": "P9165",
+      "text": "I do not have Delayed fine motor development.",
+      "expected": {
+        "P9165": "absent"
+      },
+      "predicted": {
+        "P9165": "absent"
+      },
+      "pass": true,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P3705",
+            "P599",
+            "P7604",
+            "P9165",
+            "P936"
+          ],
+          "candidates": [
+            {
+              "id": "P9165",
+              "title": "Delayed fine motor development",
+              "text": "delayed fine motor development",
+              "bm25": 35.5462,
+              "cosine": 0.7911,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P3705",
+              "title": "Delayed gross motor development",
+              "text": "delayed gross motor development",
+              "bm25": 24.5963,
+              "cosine": 0.7038,
+              "rrf": 0.032258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P7604",
+              "title": "Poor fine motor coordination",
+              "text": "poor fine motor coordination",
+              "bm25": 18.152,
+              "cosine": 0.4564,
+              "rrf": 0.03055,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P936",
+              "title": "Motor delay",
+              "text": "motor delay",
+              "bm25": 8.7804,
+              "cosine": 0.5312,
+              "rrf": 0.028373,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P599",
+              "title": "Delayed speech and language development",
+              "text": "delayed speech and language development",
+              "bm25": 17.3943,
+              "cosine": 0.373,
+              "rrf": 0.028205,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 430,
+            "output_tokens": 55,
+            "latency_ms": 2534.12
+          },
+          "validation": "fallback",
+          "error_type": "ModelFailure"
+        },
+        "generation": {
+          "prompt_version": "question-v2",
+          "response_mode": "template",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 61,
+            "output_tokens": 15,
+            "latency_ms": 640.73
+          },
+          "fallback_reason": "ValueError"
+        }
+      },
+      "latency_ms": 3284.08
+    },
+    {
+      "id": "P7342",
+      "text": "I am not sure whether I have Limited knee flexion.",
+      "expected": {
+        "P7342": "uncertain"
+      },
+      "predicted": {
+        "P6049": "uncertain",
+        "P7342": "uncertain"
+      },
+      "pass": false,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P1782",
+            "P6049",
+            "P6819",
+            "P7336",
+            "P7342"
+          ],
+          "candidates": [
+            {
+              "id": "P7342",
+              "title": "Limited knee flexion",
+              "text": "limited knee flexion",
+              "bm25": 28.3653,
+              "cosine": 0.8334,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P6819",
+              "title": "Limited knee flexion/extension",
+              "text": "limited knee flexion/extension",
+              "bm25": 25.8159,
+              "cosine": 0.7731,
+              "rrf": 0.032258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P6049",
+              "title": "Limited knee extension",
+              "text": "limited knee extension",
+              "bm25": 19.3518,
+              "cosine": 0.6892,
+              "rrf": 0.031498,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P7336",
+              "title": "Knee flexion contracture",
+              "text": "knee flexion contracture",
+              "bm25": 19.1198,
+              "cosine": 0.6631,
+              "rrf": 0.03101,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P1782",
+              "title": "Limited elbow flexion",
+              "text": "limited elbow flexion",
+              "bm25": 18.259,
+              "cosine": 0.6094,
+              "rrf": 0.03031,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 438,
+            "output_tokens": 29,
+            "latency_ms": 1283.1
+          },
+          "validation": "accepted"
+        },
+        "generation": {}
+      },
+      "latency_ms": 1396.4
+    },
+    {
+      "id": "P11716",
+      "text": "I have Fatty replacement of ventricular myocardial tissue.",
+      "expected": {
+        "P11716": "present"
+      },
+      "predicted": {
+        "P11716": "present"
+      },
+      "pass": true,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P10105",
+            "P11716",
+            "P3400",
+            "P7481",
+            "P7484"
+          ],
+          "candidates": [
+            {
+              "id": "P11716",
+              "title": "Fatty replacement of ventricular myocardial tissue",
+              "text": "fatty replacement of ventricular myocardial tissue",
+              "bm25": 41.1535,
+              "cosine": 0.8482,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P10105",
+              "title": "Fatty replacement of skeletal muscle",
+              "text": "fatty replacement of skeletal muscle",
+              "bm25": 20.9404,
+              "cosine": 0.5572,
+              "rrf": 0.032258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P7484",
+              "title": "Myocardial steatosis",
+              "text": "myocardial steatosis",
+              "bm25": 11.3165,
+              "cosine": 0.4712,
+              "rrf": 0.030798,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P3400",
+              "title": "Neoplasm of fatty tissue",
+              "text": "neoplasm of fatty tissue",
+              "bm25": 18.2877,
+              "cosine": 0.4632,
+              "rrf": 0.030579,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P7481",
+              "title": "Myocardial calcification",
+              "text": "myocardial calcification",
+              "bm25": 11.3165,
+              "cosine": 0.4667,
+              "rrf": 0.030303,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 449,
+            "output_tokens": 58,
+            "latency_ms": 2514.87
+          },
+          "validation": "accepted"
+        },
+        "generation": {
+          "prompt_version": "question-v2",
+          "response_mode": "template",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 63,
+            "output_tokens": 17,
+            "latency_ms": 699.64
+          },
+          "fallback_reason": "ValueError"
+        }
+      },
+      "latency_ms": 3314.55
+    },
+    {
+      "id": "P2611",
+      "text": "I do not have Small epiphyses of the 4th finger.",
+      "expected": {
+        "P2611": "absent"
+      },
+      "predicted": {
+        "P2611": "absent"
+      },
+      "pass": true,
+      "trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P2537",
+            "P2602",
+            "P2611",
+            "P2671",
+            "P2731"
+          ],
+          "candidates": [
+            {
+              "id": "P2611",
+              "title": "Small epiphyses of the 4th finger",
+              "text": "small epiphyses of the 4th finger",
+              "bm25": 22.2213,
+              "cosine": 0.9124,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P2671",
+              "title": "Small epiphyses of the 3rd finger",
+              "text": "small epiphyses of the 3rd finger",
+              "bm25": 16.6529,
+              "cosine": 0.8879,
+              "rrf": 0.031754,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P2602",
+              "title": "Absent epiphyses of the 4th finger",
+              "text": "absent epiphyses of the 4th finger",
+              "bm25": 15.6704,
+              "cosine": 0.8628,
+              "rrf": 0.030777,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P2731",
+              "title": "Small epiphyses of the 2nd finger",
+              "text": "small epiphyses of the 2nd finger",
+              "bm25": 16.6529,
+              "cosine": 0.8595,
+              "rrf": 0.030769,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P2537",
+              "title": "Small epiphyses of the 5th finger",
+              "text": "small epiphyses of the 5th finger",
+              "bm25": 16.6529,
+              "cosine": 0.8489,
+              "rrf": 0.030579,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 468,
+            "output_tokens": 50,
+            "latency_ms": 2131.43
+          },
+          "validation": "fallback",
+          "error_type": "ModelFailure"
+        },
+        "generation": {
+          "prompt_version": "question-v2",
+          "response_mode": "template",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 53,
+            "output_tokens": 7,
+            "latency_ms": 296.55
+          },
+          "fallback_reason": "ValueError"
+        }
+      },
+      "latency_ms": 2535.66
+    }
+  ],
+  "scope": "Real local LLM integration on canonical templates. count=0 selects the entire CSV; default is a seeded sample, separate from exhaustive offline coverage."
+}

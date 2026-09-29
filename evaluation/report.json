@@ -1,0 +1,678 @@
+{
+  "generated_at": "2026-09-15T07:47:07.245206+00:00",
+  "python": "3.11.16",
+  "dataset_note": "Author-curated English functional regression and challenge cases; not a held-out clinical dataset. Gold labels describe text semantics only. Written during development.",
+  "results": {
+    "keywords-v1": {
+      "all": {
+        "cases": 54,
+        "tp": 21,
+        "fp": 35,
+        "fn": 41,
+        "micro_f1": 0.3559,
+        "exact_match": 0.2407
+      },
+      "functional": {
+        "cases": 46,
+        "tp": 20,
+        "fp": 28,
+        "fn": 33,
+        "micro_f1": 0.396,
+        "exact_match": 0.2826
+      },
+      "challenge": {
+        "cases": 8,
+        "tp": 1,
+        "fp": 7,
+        "fn": 8,
+        "micro_f1": 0.1176,
+        "exact_match": 0.0
+      },
+      "by_category": {
+        "alias": {
+          "cases": 8,
+          "tp": 0,
+          "fp": 0,
+          "fn": 11,
+          "micro_f1": 0.0,
+          "exact_match": 0.0
+        },
+        "challenge": {
+          "cases": 8,
+          "tp": 1,
+          "fp": 7,
+          "fn": 8,
+          "micro_f1": 0.1176,
+          "exact_match": 0.0
+        },
+        "conflict": {
+          "cases": 2,
+          "tp": 0,
+          "fp": 2,
+          "fn": 2,
+          "micro_f1": 0.0,
+          "exact_match": 0.0
+        },
+        "correction": {
+          "cases": 2,
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "micro_f1": 0.5,
+          "exact_match": 0.5
+        },
+        "experiencer": {
+          "cases": 4,
+          "tp": 3,
+          "fp": 3,
+          "fn": 0,
+          "micro_f1": 0.6667,
+          "exact_match": 0.25
+        },
+        "history": {
+          "cases": 4,
+          "tp": 1,
+          "fp": 4,
+          "fn": 0,
+          "micro_f1": 0.3333,
+          "exact_match": 0.0
+        },
+        "negation": {
+          "cases": 10,
+          "tp": 5,
+          "fp": 11,
+          "fn": 12,
+          "micro_f1": 0.303,
+          "exact_match": 0.1
+        },
+        "simple": {
+          "cases": 6,
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "micro_f1": 1.0,
+          "exact_match": 1.0
+        },
+        "uncertainty": {
+          "cases": 6,
+          "tp": 0,
+          "fp": 7,
+          "fn": 7,
+          "micro_f1": 0.0,
+          "exact_match": 0.0
+        },
+        "unmatched": {
+          "cases": 4,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "micro_f1": 1.0,
+          "exact_match": 1.0
+        }
+      },
+      "single_pass_latency_ms": {
+        "median": 0.026,
+        "max": 0.399
+      },
+      "failures": [
+        {
+          "id": "case-007",
+          "category": "alias",
+          "text": "I'm coughing.",
+          "expected": {
+            "cough": "present"
+          },
+          "predicted": {}
+        },
+        {
+          "id": "case-008",
+          "category": "alias",
+          "text": "I feel feverish and tired.",
+          "expected": {
+            "fever": "present",
+            "fatigue": "present"
+          },
+          "predicted": {}
+        },
+        {
+          "id": "case-009",
+          "category": "alias",
+          "text": "My throat hurts.",
+          "expected": {
+            "sore throat": "present"
+          },
+          "predicted": {}
+        },
+        {
+          "id": "case-010",
+          "category": "alias",
+          "text": "I feel queasy and lightheaded.",
+          "expected": {
+            "nausea": "present",
+            "dizziness": "present"
+          },
+          "predicted": {}
+        },
+        {
+          "id": "case-011",
+          "category": "alias",
+          "text": "I am throwing up.",
+          "expected": {
+            "vomiting": "present"
+          },
+          "predicted": {}
+        },
+        {
+          "id": "case-012",
+          "category": "alias",
+          "text": "My head hurts and my chest hurts.",
+          "expected": {
+            "headache": "present",
+            "chest pain": "present"
+          },
+          "predicted": {}
+        },
+        {
+          "id": "case-013",
+          "category": "alias",
+          "text": "I have difficulty breathing.",
+          "expected": {
+            "shortness of breath": "present"
+          },
+          "predicted": {}
+        },
+        {
+          "id": "case-014",
+          "category": "alias",
+          "text": "I feel exhausted.",
+          "expected": {
+            "fatigue": "present"
+          },
+          "predicted": {}
+        },
+        {
+          "id": "case-015",
+          "category": "negation",
+          "text": "No fever.",
+          "expected": {
+            "fever": "absent"
+          },
+          "predicted": {
+            "fever": "present"
+          }
+        },
+        {
+          "id": "case-016",
+          "category": "negation",
+          "text": "I deny cough and chest pain.",
+          "expected": {
+            "cough": "absent",
+            "chest pain": "absent"
+          },
+          "predicted": {
+            "cough": "present",
+            "chest pain": "present"
+          }
+        },
+        {
+          "id": "case-017",
+          "category": "negation",
+          "text": "Without nausea or vomiting.",
+          "expected": {
+            "nausea": "absent",
+            "vomiting": "absent"
+          },
+          "predicted": {
+            "nausea": "present",
+            "vomiting": "present"
+          }
+        },
+        {
+          "id": "case-018",
+          "category": "negation",
+          "text": "I don't have a headache.",
+          "expected": {
+            "headache": "absent"
+          },
+          "predicted": {
+            "headache": "present"
+          }
+        },
+        {
+          "id": "case-019",
+          "category": "negation",
+          "text": "No fever but I am coughing.",
+          "expected": {
+            "fever": "absent",
+            "cough": "present"
+          },
+          "predicted": {
+            "fever": "present"
+          }
+        },
+        {
+          "id": "case-020",
+          "category": "negation",
+          "text": "No cough. I have fatigue.",
+          "expected": {
+            "cough": "absent",
+            "fatigue": "present"
+          },
+          "predicted": {
+            "cough": "present",
+            "fatigue": "present"
+          }
+        },
+        {
+          "id": "case-021",
+          "category": "negation",
+          "text": "I have no fever and I have dizziness.",
+          "expected": {
+            "fever": "absent",
+            "dizziness": "present"
+          },
+          "predicted": {
+            "fever": "present",
+            "dizziness": "present"
+          }
+        },
+        {
+          "id": "case-022",
+          "category": "negation",
+          "text": "Fever is absent.",
+          "expected": {
+            "fever": "absent"
+          },
+          "predicted": {
+            "fever": "present"
+          }
+        },
+        {
+          "id": "case-024",
+          "category": "negation",
+          "text": "No headache; I have a sore throat.",
+          "expected": {
+            "headache": "absent",
+            "sore throat": "present"
+          },
+          "predicted": {
+            "headache": "present",
+            "sore throat": "present"
+          }
+        },
+        {
+          "id": "case-025",
+          "category": "uncertainty",
+          "text": "Maybe fever.",
+          "expected": {
+            "fever": "uncertain"
+          },
+          "predicted": {
+            "fever": "present"
+          }
+        },
+        {
+          "id": "case-026",
+          "category": "uncertainty",
+          "text": "I am not sure if I have cough.",
+          "expected": {
+            "cough": "uncertain"
+          },
+          "predicted": {
+            "cough": "present"
+          }
+        },
+        {
+          "id": "case-027",
+          "category": "uncertainty",
+          "text": "I might have a headache.",
+          "expected": {
+            "headache": "uncertain"
+          },
+          "predicted": {
+            "headache": "present"
+          }
+        },
+        {
+          "id": "case-028",
+          "category": "uncertainty",
+          "text": "I don't know whether I have fever.",
+          "expected": {
+            "fever": "uncertain"
+          },
+          "predicted": {
+            "fever": "present"
+          }
+        },
+        {
+          "id": "case-029",
+          "category": "uncertainty",
+          "text": "Perhaps nausea, but no vomiting.",
+          "expected": {
+            "nausea": "uncertain",
+            "vomiting": "absent"
+          },
+          "predicted": {
+            "nausea": "present",
+            "vomiting": "present"
+          }
+        },
+        {
+          "id": "case-030",
+          "category": "uncertainty",
+          "text": "Possibly fatigue.",
+          "expected": {
+            "fatigue": "uncertain"
+          },
+          "predicted": {
+            "fatigue": "present"
+          }
+        },
+        {
+          "id": "case-031",
+          "category": "experiencer",
+          "text": "My father has fever.",
+          "expected": {},
+          "predicted": {
+            "fever": "present"
+          }
+        },
+        {
+          "id": "case-032",
+          "category": "experiencer",
+          "text": "My mother has cough. I have headache.",
+          "expected": {
+            "headache": "present"
+          },
+          "predicted": {
+            "cough": "present",
+            "headache": "present"
+          }
+        },
+        {
+          "id": "case-034",
+          "category": "experiencer",
+          "text": "She has fever and I have cough.",
+          "expected": {
+            "cough": "present"
+          },
+          "predicted": {
+            "fever": "present",
+            "cough": "present"
+          }
+        },
+        {
+          "id": "case-035",
+          "category": "history",
+          "text": "I used to have fever.",
+          "expected": {},
+          "predicted": {
+            "fever": "present"
+          }
+        },
+        {
+          "id": "case-036",
+          "category": "history",
+          "text": "I had cough last year. I have headache.",
+          "expected": {
+            "headache": "present"
+          },
+          "predicted": {
+            "cough": "present",
+            "headache": "present"
+          }
+        },
+        {
+          "id": "case-037",
+          "category": "history",
+          "text": "Previously I had nausea.",
+          "expected": {},
+          "predicted": {
+            "nausea": "present"
+          }
+        },
+        {
+          "id": "case-038",
+          "category": "history",
+          "text": "My history of vomiting is documented.",
+          "expected": {},
+          "predicted": {
+            "vomiting": "present"
+          }
+        },
+        {
+          "id": "case-040",
+          "category": "correction",
+          "text": "I have cough. Sorry, no cough.",
+          "expected": {
+            "cough": "absent"
+          },
+          "predicted": {
+            "cough": "present"
+          }
+        },
+        {
+          "id": "case-041",
+          "category": "conflict",
+          "text": "I have fever. I have no fever.",
+          "expected": {
+            "fever": "uncertain"
+          },
+          "predicted": {
+            "fever": "present"
+          }
+        },
+        {
+          "id": "case-042",
+          "category": "conflict",
+          "text": "Cough. No cough.",
+          "expected": {
+            "cough": "uncertain"
+          },
+          "predicted": {
+            "cough": "present"
+          }
+        },
+        {
+          "id": "case-047",
+          "category": "challenge",
+          "text": "Fever isn't present.",
+          "expected": {
+            "fever": "absent"
+          },
+          "predicted": {
+            "fever": "present"
+          }
+        },
+        {
+          "id": "case-048",
+          "category": "challenge",
+          "text": "I have a headache-free day.",
+          "expected": {
+            "headache": "absent"
+          },
+          "predicted": {
+            "headache": "present"
+          }
+        },
+        {
+          "id": "case-049",
+          "category": "challenge",
+          "text": "My son has a cough.",
+          "expected": {},
+          "predicted": {
+            "cough": "present"
+          }
+        },
+        {
+          "id": "case-050",
+          "category": "challenge",
+          "text": "I have been coughing since last month.",
+          "expected": {
+            "cough": "present"
+          },
+          "predicted": {}
+        },
+        {
+          "id": "case-051",
+          "category": "challenge",
+          "text": "No fever or cough, just nausea.",
+          "expected": {
+            "fever": "absent",
+            "cough": "absent",
+            "nausea": "present"
+          },
+          "predicted": {
+            "fever": "present",
+            "cough": "present",
+            "nausea": "present"
+          }
+        },
+        {
+          "id": "case-052",
+          "category": "challenge",
+          "text": "I feel sick to my stomach.",
+          "expected": {
+            "nausea": "present"
+          },
+          "predicted": {}
+        },
+        {
+          "id": "case-053",
+          "category": "challenge",
+          "text": "Cough? I don't think so.",
+          "expected": {
+            "cough": "absent"
+          },
+          "predicted": {
+            "cough": "present"
+          }
+        },
+        {
+          "id": "case-054",
+          "category": "challenge",
+          "text": "I had fever yesterday, which is gone now.",
+          "expected": {
+            "fever": "absent"
+          },
+          "predicted": {
+            "fever": "present"
+          }
+        }
+      ]
+    },
+    "rules-v2": {
+      "all": {
+        "cases": 54,
+        "tp": 62,
+        "fp": 0,
+        "fn": 0,
+        "micro_f1": 1.0,
+        "exact_match": 1.0
+      },
+      "functional": {
+        "cases": 46,
+        "tp": 53,
+        "fp": 0,
+        "fn": 0,
+        "micro_f1": 1.0,
+        "exact_match": 1.0
+      },
+      "challenge": {
+        "cases": 8,
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "micro_f1": 1.0,
+        "exact_match": 1.0
+      },
+      "by_category": {
+        "alias": {
+          "cases": 8,
+          "tp": 11,
+          "fp": 0,
+          "fn": 0,
+          "micro_f1": 1.0,
+          "exact_match": 1.0
+        },
+        "challenge": {
+          "cases": 8,
+          "tp": 9,
+          "fp": 0,
+          "fn": 0,
+          "micro_f1": 1.0,
+          "exact_match": 1.0
+        },
+        "conflict": {
+          "cases": 2,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "micro_f1": 1.0,
+          "exact_match": 1.0
+        },
+        "correction": {
+          "cases": 2,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "micro_f1": 1.0,
+          "exact_match": 1.0
+        },
+        "experiencer": {
+          "cases": 4,
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "micro_f1": 1.0,
+          "exact_match": 1.0
+        },
+        "history": {
+          "cases": 4,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "micro_f1": 1.0,
+          "exact_match": 1.0
+        },
+        "negation": {
+          "cases": 10,
+          "tp": 17,
+          "fp": 0,
+          "fn": 0,
+          "micro_f1": 1.0,
+          "exact_match": 1.0
+        },
+        "simple": {
+          "cases": 6,
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "micro_f1": 1.0,
+          "exact_match": 1.0
+        },
+        "uncertainty": {
+          "cases": 6,
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "micro_f1": 1.0,
+          "exact_match": 1.0
+        },
+        "unmatched": {
+          "cases": 4,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "micro_f1": 1.0,
+          "exact_match": 1.0
+        }
+      },
+      "single_pass_latency_ms": {
+        "median": 0.046,
+        "max": 0.997
+      },
+      "failures": []
+    }
+  }
+}

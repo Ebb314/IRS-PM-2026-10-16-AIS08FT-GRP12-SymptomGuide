@@ -1,0 +1,528 @@
+[
+  {
+    "user": "I dont have Drowsiness.",
+    "answer": "The record shows \"Drowsiness\" as present, but you've clarified it's not currently experienced. I'll update the status to \"Absent\" to reflect your input. Let me know if you'd like to adjust any other symptoms.",
+    "evidence": [
+      [
+        "Drowsiness",
+        "present"
+      ]
+    ],
+    "pending": [],
+    "analysis": {
+      "engine": "contextual-evidence-proposals",
+      "candidates": [
+        {
+          "id": "P986",
+          "title": "Drowsiness",
+          "text": "drowsiness",
+          "bm25": 16.0776,
+          "cosine": 0.8005,
+          "rrf": 0.032787,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P5842",
+          "title": "Paroxysmal drowsiness",
+          "text": "paroxysmal drowsiness",
+          "bm25": 14.3159,
+          "cosine": 0.7047,
+          "rrf": 0.032258,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P321",
+          "title": "Restlessness",
+          "text": "restlessness",
+          "bm25": 0.0,
+          "cosine": 0.502,
+          "rrf": 0.015873,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P15073",
+          "title": "Maintenance insomnia",
+          "text": "maintenance insomnia",
+          "bm25": 0.0,
+          "cosine": 0.4762,
+          "rrf": 0.015625,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P10038",
+          "title": "Chronic fatigue",
+          "text": "chronic fatigue",
+          "bm25": 0.0,
+          "cosine": 0.4735,
+          "rrf": 0.015385,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P13037",
+          "title": "Cognitive fatigue",
+          "text": "cognitive fatigue",
+          "bm25": 0.0,
+          "cosine": 0.4645,
+          "rrf": 0.015152,
+          "index_version": "3a7603e7d654"
+        }
+      ],
+      "accepted": [
+        {
+          "kg_id": "P986",
+          "kg_name": "Drowsiness",
+          "original_text": "I dont have Drowsiness.",
+          "confidence": 1.0,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 0,
+          "end": 23,
+          "turn": 1,
+          "source": "agent-validated-proposal",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "rejected": [],
+      "model_call": {
+        "model": "Qwen3-4B-Instruct-2507",
+        "device": "cuda",
+        "quantization": "bnb-nf4-double",
+        "input_tokens": 407,
+        "output_tokens": 93,
+        "latency_ms": 10697.43,
+        "context_messages": 1,
+        "dropped_messages": 0,
+        "sampling": false,
+        "seed": null
+      },
+      "interpretation": {
+        "user_goal": "The user is clarifying that they do not currently experience drowsiness.",
+        "reference_resolution": "The user explicitly denies having drowsiness, referencing the symptom by name.",
+        "unresolved": "",
+        "possible_meanings": []
+      },
+      "validation": "proposal-validation-complete"
+    },
+    "warnings": []
+  },
+  {
+    "user": "Drowsiness is uncertain.",
+    "answer": "The saved record shows drowsiness as \"present.\" Since you're indicating uncertainty, would you like to update it to \"Not sure\" or keep it as \"present\"? The app allows you to change the status using the dropdown. Let me know how you'd like to adjust it.",
+    "evidence": [
+      [
+        "Drowsiness",
+        "present"
+      ]
+    ],
+    "pending": [],
+    "analysis": {
+      "engine": "contextual-evidence-proposals",
+      "candidates": [
+        {
+          "id": "P986",
+          "title": "Drowsiness",
+          "text": "drowsiness",
+          "bm25": 16.0776,
+          "cosine": 0.7973,
+          "rrf": 0.032787,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P5842",
+          "title": "Paroxysmal drowsiness",
+          "text": "paroxysmal drowsiness",
+          "bm25": 14.3159,
+          "cosine": 0.758,
+          "rrf": 0.032258,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P321",
+          "title": "Restlessness",
+          "text": "restlessness",
+          "bm25": 0.0,
+          "cosine": 0.5336,
+          "rrf": 0.015873,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P15073",
+          "title": "Maintenance insomnia",
+          "text": "maintenance insomnia",
+          "bm25": 0.0,
+          "cosine": 0.5126,
+          "rrf": 0.015625,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P563",
+          "title": "Sleep disturbance",
+          "text": "sleep disturbance",
+          "bm25": 0.0,
+          "cosine": 0.5119,
+          "rrf": 0.015385,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P13037",
+          "title": "Cognitive fatigue",
+          "text": "cognitive fatigue",
+          "bm25": 0.0,
+          "cosine": 0.4921,
+          "rrf": 0.015152,
+          "index_version": "3a7603e7d654"
+        }
+      ],
+      "accepted": [
+        {
+          "kg_id": "P986",
+          "kg_name": "Drowsiness",
+          "original_text": "Drowsiness is uncertain.",
+          "confidence": 1.0,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 0,
+          "end": 24,
+          "turn": 1,
+          "source": "agent-validated-proposal",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "rejected": [],
+      "model_call": {
+        "model": "Qwen3-4B-Instruct-2507",
+        "device": "cuda",
+        "quantization": "bnb-nf4-double",
+        "input_tokens": 402,
+        "output_tokens": 73,
+        "latency_ms": 8496.89,
+        "context_messages": 1,
+        "dropped_messages": 0,
+        "sampling": false,
+        "seed": null
+      },
+      "interpretation": {
+        "user_goal": "The user is indicating uncertainty about experiencing drowsiness.",
+        "reference_resolution": "",
+        "unresolved": "",
+        "possible_meanings": []
+      },
+      "validation": "proposal-validation-complete"
+    },
+    "warnings": []
+  },
+  {
+    "user": "Drowsiness? I'm not sure.",
+    "answer": "You're not alone in feeling uncertain. Drowsiness can vary\u2014like feeling slightly heavy-headed or needing more rest. If you're unsure, you can record it as \"Not sure\" in the app. Would you like a simple example of how to describe it?",
+    "evidence": [],
+    "pending": [],
+    "analysis": {
+      "engine": "contextual-evidence-proposals",
+      "candidates": [
+        {
+          "id": "P986",
+          "title": "Drowsiness",
+          "text": "drowsiness",
+          "bm25": 16.0776,
+          "cosine": 0.8937,
+          "rrf": 0.032787,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P5842",
+          "title": "Paroxysmal drowsiness",
+          "text": "paroxysmal drowsiness",
+          "bm25": 14.3159,
+          "cosine": 0.7543,
+          "rrf": 0.032258,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P321",
+          "title": "Restlessness",
+          "text": "restlessness",
+          "bm25": 0.0,
+          "cosine": 0.5864,
+          "rrf": 0.015873,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P7008",
+          "title": "Monoclonal immunoglobulin M proteinemia",
+          "text": "monoclonal immunoglobulin m proteinemia",
+          "bm25": 12.4313,
+          "cosine": 0.156,
+          "rrf": 0.015873,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P3484",
+          "title": "Fatigue",
+          "text": "fatigue",
+          "bm25": 0.0,
+          "cosine": 0.5818,
+          "rrf": 0.015625,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P7724",
+          "title": "Areas of hypopigmentation and hyperpigmentation that do not follow Blaschko lines",
+          "text": "areas of hypopigmentation and hyperpigmentation that do not follow blaschko lines",
+          "bm25": 9.7912,
+          "cosine": 0.1199,
+          "rrf": 0.015625,
+          "index_version": "3a7603e7d654"
+        }
+      ],
+      "accepted": [],
+      "rejected": [
+        {
+          "concept_id": "P986",
+          "reason": "question-not-an-assertion"
+        }
+      ],
+      "model_call": {
+        "model": "Qwen3-4B-Instruct-2507",
+        "device": "cuda",
+        "quantization": "bnb-nf4-double",
+        "input_tokens": 431,
+        "output_tokens": 98,
+        "latency_ms": 11107.11,
+        "context_messages": 1,
+        "dropped_messages": 0,
+        "sampling": false,
+        "seed": null
+      },
+      "interpretation": {
+        "user_goal": "The user is uncertain about whether they currently experience drowsiness.",
+        "reference_resolution": "The user directly references 'drowsiness' as a possible symptom but expresses uncertainty about its presence.",
+        "unresolved": "",
+        "possible_meanings": []
+      },
+      "validation": "proposal-validation-complete"
+    },
+    "warnings": []
+  },
+  {
+    "user": "I have Drowsiness.",
+    "answer": "You've recorded drowsiness as present. This symptom reflects feeling sleepy or sluggish. Your symptom log shows drowsiness is currently active. No further action needed unless you'd like to update its status or add details.",
+    "evidence": [
+      [
+        "Drowsiness",
+        "present"
+      ]
+    ],
+    "pending": [],
+    "analysis": {
+      "engine": "contextual-evidence-proposals",
+      "candidates": [
+        {
+          "id": "P986",
+          "title": "Drowsiness",
+          "text": "drowsiness",
+          "bm25": 16.0776,
+          "cosine": 0.8655,
+          "rrf": 0.032787,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P5842",
+          "title": "Paroxysmal drowsiness",
+          "text": "paroxysmal drowsiness",
+          "bm25": 14.3159,
+          "cosine": 0.7514,
+          "rrf": 0.032258,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P321",
+          "title": "Restlessness",
+          "text": "restlessness",
+          "bm25": 0.0,
+          "cosine": 0.5395,
+          "rrf": 0.015873,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P13037",
+          "title": "Cognitive fatigue",
+          "text": "cognitive fatigue",
+          "bm25": 0.0,
+          "cosine": 0.5317,
+          "rrf": 0.015625,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P10038",
+          "title": "Chronic fatigue",
+          "text": "chronic fatigue",
+          "bm25": 0.0,
+          "cosine": 0.5292,
+          "rrf": 0.015385,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P5197",
+          "title": "Irritability",
+          "text": "irritability",
+          "bm25": 0.0,
+          "cosine": 0.5135,
+          "rrf": 0.015152,
+          "index_version": "3a7603e7d654"
+        }
+      ],
+      "accepted": [
+        {
+          "kg_id": "P986",
+          "kg_name": "Drowsiness",
+          "original_text": "I have Drowsiness.",
+          "confidence": 1.0,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 0,
+          "end": 18,
+          "turn": 1,
+          "source": "agent-validated-proposal",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "rejected": [],
+      "model_call": {
+        "model": "Qwen3-4B-Instruct-2507",
+        "device": "cuda",
+        "quantization": "bnb-nf4-double",
+        "input_tokens": 406,
+        "output_tokens": 96,
+        "latency_ms": 10444.09,
+        "context_messages": 1,
+        "dropped_messages": 0,
+        "sampling": false,
+        "seed": null
+      },
+      "interpretation": {
+        "user_goal": "The user is indicating they currently experience drowsiness.",
+        "reference_resolution": "The user directly states they have drowsiness, which matches the candidate P986 'Drowsiness'.",
+        "unresolved": "",
+        "possible_meanings": []
+      },
+      "validation": "proposal-validation-complete"
+    },
+    "warnings": []
+  },
+  {
+    "user": "I don't have Drowsiness.",
+    "answer": "Drowsiness is no longer present. Your symptom log has been updated to reflect this change. The status for drowsiness is now marked as absent. You can adjust it further if needed.",
+    "evidence": [
+      [
+        "Drowsiness",
+        "uncertain"
+      ]
+    ],
+    "pending": [],
+    "analysis": {
+      "engine": "contextual-evidence-proposals",
+      "candidates": [
+        {
+          "id": "P986",
+          "title": "Drowsiness",
+          "text": "drowsiness",
+          "bm25": 16.0776,
+          "cosine": 0.783,
+          "rrf": 0.032787,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P5842",
+          "title": "Paroxysmal drowsiness",
+          "text": "paroxysmal drowsiness",
+          "bm25": 14.3159,
+          "cosine": 0.6977,
+          "rrf": 0.032258,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P321",
+          "title": "Restlessness",
+          "text": "restlessness",
+          "bm25": 0.0,
+          "cosine": 0.5173,
+          "rrf": 0.015873,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P1867",
+          "title": "T lymphocytopenia",
+          "text": "t lymphocytopenia",
+          "bm25": 8.6289,
+          "cosine": 0.0196,
+          "rrf": 0.015873,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P1255",
+          "title": "T-wave inversion",
+          "text": "t-wave inversion",
+          "bm25": 7.7767,
+          "cosine": 0.0436,
+          "rrf": 0.015625,
+          "index_version": "3a7603e7d654"
+        },
+        {
+          "id": "P13037",
+          "title": "Cognitive fatigue",
+          "text": "cognitive fatigue",
+          "bm25": 0.0,
+          "cosine": 0.4756,
+          "rrf": 0.015625,
+          "index_version": "3a7603e7d654"
+        }
+      ],
+      "accepted": [
+        {
+          "kg_id": "P986",
+          "kg_name": "Drowsiness",
+          "original_text": "I don't have Drowsiness.",
+          "confidence": 1.0,
+          "status": "absent",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 0,
+          "end": 24,
+          "turn": 2,
+          "source": "agent-validated-proposal",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "rejected": [],
+      "model_call": {
+        "model": "Qwen3-4B-Instruct-2507",
+        "device": "cuda",
+        "quantization": "bnb-nf4-double",
+        "input_tokens": 502,
+        "output_tokens": 102,
+        "latency_ms": 11149.8,
+        "context_messages": 1,
+        "dropped_messages": 0,
+        "sampling": false,
+        "seed": null
+      },
+      "interpretation": {
+        "user_goal": "The user wants to update their symptom status, specifically indicating that drowsiness is no longer present.",
+        "reference_resolution": "The user explicitly states they no longer have drowsiness, correcting the previously recorded symptom.",
+        "unresolved": "",
+        "possible_meanings": []
+      },
+      "validation": "proposal-validation-complete"
+    },
+    "warnings": [
+      "Please confirm the changed status of Drowsiness in the evidence panel."
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-09-15T07:44:26.633Z",
+  "browser": "152.0.7977.84",
+  "passed": 11,
+  "checks": [
+    "Initial alias and negation rendered",
+    "Unknown preserved, no repeated question",
+    "Complete multi-turn mock integration",
+    "Evidence correction and recalculation",
+    "Free-text correction and reload recovery",
+    "Network failure and same-request retry",
+    "JSON export contains current session",
+    "Mobile width and screenshot",
+    "Delete removes backend state",
+    "Unmatched input can continue without creating another session",
+    "No browser JavaScript errors"
+  ],
+  "errors": []
+}

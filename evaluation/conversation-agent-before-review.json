@@ -1,0 +1,1533 @@
+{
+  "created_at": "2026-09-16T06:26:36.029Z",
+  "mechanical_checks_passed": true,
+  "failures": [],
+  "quality_review_required": true,
+  "rows": [
+    {
+      "scenario": "description-and-meaning",
+      "message": "How to describe?",
+      "answer": "I'm here to help you describe your symptoms clearly. Could you tell me what you're feeling or what's happening in your body? For example: \"My chest feels tight\" or \"I have a headache that starts behind my eyes.\" Just say what you notice.",
+      "evidence": [],
+      "pending": [],
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P11893",
+              "title": "Unhappy demeanor",
+              "text": "unhappy demeanor",
+              "bm25": 0,
+              "cosine": 0.4093,
+              "rrf": 0.016393,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P10290",
+              "title": "Unilateral",
+              "text": "unilateral",
+              "bm25": 0,
+              "cosine": 0.3974,
+              "rrf": 0.016129,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P3697",
+              "title": "Recurrent",
+              "text": "recurrent",
+              "bm25": 0,
+              "cosine": 0.377,
+              "rrf": 0.015873,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P13426",
+              "title": "Happy demeanor",
+              "text": "happy demeanor",
+              "bm25": 0,
+              "cosine": 0.3753,
+              "rrf": 0.015625,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P9230",
+              "title": "Gemination",
+              "text": "gemination",
+              "bm25": 0,
+              "cosine": 0.3725,
+              "rrf": 0.015385,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P11014",
+              "title": "Semantic dementia",
+              "text": "semantic dementia",
+              "bm25": 0,
+              "cosine": 0.3696,
+              "rrf": 0.015152,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 355,
+            "output_tokens": 46,
+            "latency_ms": 6133.59,
+            "context_messages": 1,
+            "dropped_messages": 0
+          },
+          "interpretation": {
+            "user_goal": "The user is seeking guidance on how to describe a symptom or condition, possibly in the context of a list of candidate conditions.",
+            "reference_resolution": "",
+            "unresolved": ""
+          },
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 580,
+            "output_tokens": 55,
+            "latency_ms": 7076.01,
+            "context_messages": 1,
+            "dropped_messages": 0
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 580,
+          "output_tokens": 55,
+          "latency_ms": 7076.01,
+          "context_messages": 1,
+          "dropped_messages": 0
+        }
+      }
+    },
+    {
+      "scenario": "description-and-meaning",
+      "message": "I feel bad but i dont know how to say",
+      "answer": "My head feels heavy and foggy since this morning.",
+      "evidence": [],
+      "pending": [],
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P8047",
+              "title": "Insulin-dependent but ketosis-resistant diabetes",
+              "text": "insulin-dependent but ketosis-resistant diabetes",
+              "bm25": 10.5371,
+              "cosine": 0.0119,
+              "rrf": 0.016393,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 365,
+            "output_tokens": 34,
+            "latency_ms": 3973.97,
+            "context_messages": 1,
+            "dropped_messages": 0
+          },
+          "interpretation": {
+            "user_goal": "To express their current discomfort without knowing how to describe it clearly",
+            "reference_resolution": "",
+            "unresolved": ""
+          },
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 654,
+            "output_tokens": 12,
+            "latency_ms": 1881.04,
+            "context_messages": 3,
+            "dropped_messages": 0
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 654,
+          "output_tokens": 12,
+          "latency_ms": 1881.04,
+          "context_messages": 3,
+          "dropped_messages": 0
+        }
+      }
+    },
+    {
+      "scenario": "description-and-meaning",
+      "message": "What?",
+      "answer": "I feel tired and my mind feels foggy, like I can't think clearly. Since when?",
+      "evidence": [],
+      "pending": [],
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [],
+          "accepted": [],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 368,
+            "output_tokens": 29,
+            "latency_ms": 3631.02,
+            "context_messages": 1,
+            "dropped_messages": 0
+          },
+          "interpretation": {
+            "user_goal": "To express or clarify their current symptoms",
+            "reference_resolution": "",
+            "unresolved": ""
+          },
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 677,
+            "output_tokens": 21,
+            "latency_ms": 2763.7,
+            "context_messages": 5,
+            "dropped_messages": 0
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 677,
+          "output_tokens": 21,
+          "latency_ms": 2763.7,
+          "context_messages": 5,
+          "dropped_messages": 0
+        }
+      }
+    },
+    {
+      "scenario": "description-and-meaning",
+      "message": "Whats fever",
+      "answer": "A fever is when your body temperature rises to 38°C (100.4°F) or higher. It’s often a sign your body is fighting an infection. Even if you don’t feel hot, you might have a fever if your temperature is high. Do you feel hot, shivery, or just tired?",
+      "evidence": [],
+      "pending": [],
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P835",
+              "title": "Fever",
+              "text": "fever",
+              "bm25": 13.2602,
+              "cosine": 0.883,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4407",
+              "title": "Periodic fever",
+              "text": "periodic fever",
+              "bm25": 11.8072,
+              "cosine": 0.7092,
+              "rrf": 0.031746,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4232",
+              "title": "Recurrent fever",
+              "text": "recurrent fever",
+              "bm25": 11.8072,
+              "cosine": 0.6733,
+              "rrf": 0.031281,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P13160",
+              "title": "Persistent fever",
+              "text": "persistent fever",
+              "bm25": 11.8072,
+              "cosine": 0.6765,
+              "rrf": 0.030536,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P9256",
+              "title": "Low-grade fever",
+              "text": "low-grade fever",
+              "bm25": 10.6412,
+              "cosine": 0.689,
+              "rrf": 0.030331,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P12931",
+              "title": "Quotidian fever",
+              "text": "quotidian fever",
+              "bm25": 11.8072,
+              "cosine": 0.65,
+              "rrf": 0.03031,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 521,
+            "output_tokens": 55,
+            "latency_ms": 6639.05,
+            "context_messages": 1,
+            "dropped_messages": 0
+          },
+          "interpretation": {
+            "user_goal": "Understand what fever is in the context of describing symptoms",
+            "reference_resolution": "The user is asking for clarification on what fever means, likely to determine if they or someone else has it",
+            "unresolved": ""
+          },
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [
+          {
+            "id": "nhs-fever",
+            "text": "In adults, a temperature of 38 degrees Celsius or higher is generally described as a fever. Body temperature varies between people and over the day. Feeling hot or shivery can matter even when a reading is lower."
+          }
+        ],
+        "citations": [],
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 766,
+            "output_tokens": 68,
+            "latency_ms": 8305.33,
+            "context_messages": 7,
+            "dropped_messages": 0
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 766,
+          "output_tokens": 68,
+          "latency_ms": 8305.33,
+          "context_messages": 7,
+          "dropped_messages": 0
+        }
+      }
+    },
+    {
+      "scenario": "description-and-meaning",
+      "message": "Whats cold",
+      "answer": "A cold is a common illness caused by viruses that affects your nose, throat, and sometimes your lungs. It usually starts with a runny nose, sore throat, cough, and fatigue. Do you have a runny nose, sore throat, or feel tired?",
+      "evidence": [],
+      "pending": [],
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P14324",
+              "title": "Cold urticaria",
+              "text": "cold urticaria",
+              "bm25": 11.8072,
+              "cosine": 0.5921,
+              "rrf": 0.032258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P10577",
+              "title": "Triggered by cold",
+              "text": "triggered by cold",
+              "bm25": 10.6412,
+              "cosine": 0.6026,
+              "rrf": 0.032018,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P11754",
+              "title": "Cold paresis",
+              "text": "cold paresis",
+              "bm25": 11.8072,
+              "cosine": 0.4555,
+              "rrf": 0.031545,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P10628",
+              "title": "Cold-induced sweating",
+              "text": "cold-induced sweating",
+              "bm25": 10.6412,
+              "cosine": 0.4934,
+              "rrf": 0.03101,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P10336",
+              "title": "Cold-sensitive myotonia",
+              "text": "cold-sensitive myotonia",
+              "bm25": 10.6412,
+              "cosine": 0.4356,
+              "rrf": 0.030798,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P1359",
+              "title": "Cold-induced muscle cramps",
+              "text": "cold-induced muscle cramps",
+              "bm25": 9.6848,
+              "cosine": 0.4208,
+              "rrf": 0.029211,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 544,
+            "output_tokens": 65,
+            "latency_ms": 7849.29,
+            "context_messages": 1,
+            "dropped_messages": 0
+          },
+          "interpretation": {
+            "user_goal": "To understand what a cold is in the context of possible medical conditions",
+            "reference_resolution": "The user is asking for an explanation of 'cold' as a medical or physiological term, likely in relation to symptoms or conditions triggered by cold exposure",
+            "unresolved": ""
+          },
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 788,
+            "output_tokens": 54,
+            "latency_ms": 6838.08,
+            "context_messages": 9,
+            "dropped_messages": 0
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 788,
+          "output_tokens": 54,
+          "latency_ms": 6838.08,
+          "context_messages": 9,
+          "dropped_messages": 0
+        }
+      }
+    },
+    {
+      "scenario": "description-and-meaning",
+      "message": "I mean feeling cold, not catching a cold.",
+      "answer": "Got it. You mean feeling cold — like your body feels chilly or your hands and feet are cold — not catching a cold. Is that right?",
+      "evidence": [],
+      "pending": [
+        {
+          "kg_id": "P10336",
+          "kg_name": "Cold-sensitive myotonia",
+          "original_text": "I mean feeling cold, not catching a cold.",
+          "confidence": 1,
+          "status": "uncertain",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 0,
+          "end": 0,
+          "turn": 6,
+          "source": "unconfirmed-agent-proposal",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P10577",
+              "title": "Triggered by cold",
+              "text": "triggered by cold",
+              "bm25": 21.2823,
+              "cosine": 0.6298,
+              "rrf": 0.032018,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P14324",
+              "title": "Cold urticaria",
+              "text": "cold urticaria",
+              "bm25": 23.6144,
+              "cosine": 0.5629,
+              "rrf": 0.031754,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P10628",
+              "title": "Cold-induced sweating",
+              "text": "cold-induced sweating",
+              "bm25": 21.2823,
+              "cosine": 0.5995,
+              "rrf": 0.031514,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P11754",
+              "title": "Cold paresis",
+              "text": "cold paresis",
+              "bm25": 23.6144,
+              "cosine": 0.4928,
+              "rrf": 0.031099,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P1359",
+              "title": "Cold-induced muscle cramps",
+              "text": "cold-induced muscle cramps",
+              "bm25": 19.3695,
+              "cosine": 0.5423,
+              "rrf": 0.03031,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P10336",
+              "title": "Cold-sensitive myotonia",
+              "text": "cold-sensitive myotonia",
+              "bm25": 21.2823,
+              "cosine": 0.4532,
+              "rrf": 0.030159,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [],
+          "rejected": [
+            {
+              "concept_id": "P10336",
+              "reason": "unconfirmed-semantic-link"
+            }
+          ],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 592,
+            "output_tokens": 95,
+            "latency_ms": 11187.44,
+            "context_messages": 1,
+            "dropped_messages": 0
+          },
+          "interpretation": {
+            "user_goal": "Clarify whether the user is referring to feeling cold as in body temperature, not catching a cold.",
+            "reference_resolution": "The user explicitly corrected the assistant's misunderstanding by stating 'I mean feeling cold, not catching a cold.'",
+            "unresolved": ""
+          },
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [
+          {
+            "id": "nhs-cough",
+            "text": "A cough can occur with a cold or flu, allergies, reflux or other conditions. A cough alone does not establish a diagnosis. NHS guidance recommends medical review for a persistent cough lasting more than three weeks."
+          }
+        ],
+        "citations": [],
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 941,
+            "output_tokens": 31,
+            "latency_ms": 4359.44,
+            "context_messages": 11,
+            "dropped_messages": 0
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 941,
+          "output_tokens": 31,
+          "latency_ms": 4359.44,
+          "context_messages": 11,
+          "dropped_messages": 0
+        }
+      }
+    },
+    {
+      "scenario": "repeated-acknowledgment",
+      "message": "I dont get waht you said",
+      "answer": "I'm sorry if I wasn't clear. Let's start over simply. Can you tell me one thing you're feeling or experiencing right now? For example: \"My head feels heavy\" or \"I have a sore throat.\" Just one small detail.",
+      "evidence": [],
+      "pending": [],
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [],
+          "accepted": [],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 257,
+            "output_tokens": 28,
+            "latency_ms": 3278.34,
+            "context_messages": 1,
+            "dropped_messages": 0
+          },
+          "interpretation": {
+            "user_goal": "Understand what was said previously",
+            "reference_resolution": "",
+            "unresolved": ""
+          },
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 583,
+            "output_tokens": 52,
+            "latency_ms": 6329.56,
+            "context_messages": 1,
+            "dropped_messages": 0
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 583,
+          "output_tokens": 52,
+          "latency_ms": 6329.56,
+          "context_messages": 1,
+          "dropped_messages": 0
+        }
+      }
+    },
+    {
+      "scenario": "repeated-acknowledgment",
+      "message": "yes",
+      "answer": "Okay, thanks. Can you describe one sensation you're feeling right now? For example: \"my chest feels tight,\" or \"my arm feels numb.\" Just one thing, please.",
+      "evidence": [],
+      "pending": [],
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P10291",
+              "title": "Right",
+              "text": "right",
+              "bm25": 0,
+              "cosine": 0.357,
+              "rrf": 0.016393,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 341,
+            "output_tokens": 34,
+            "latency_ms": 3987.97,
+            "context_messages": 1,
+            "dropped_messages": 0
+          },
+          "interpretation": {
+            "user_goal": "To clarify or confirm if there is a current symptom being reported",
+            "reference_resolution": "",
+            "unresolved": ""
+          },
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 645,
+            "output_tokens": 38,
+            "latency_ms": 4919.82,
+            "context_messages": 3,
+            "dropped_messages": 0
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 645,
+          "output_tokens": 38,
+          "latency_ms": 4919.82,
+          "context_messages": 3,
+          "dropped_messages": 0
+        }
+      }
+    },
+    {
+      "scenario": "repeated-acknowledgment",
+      "message": "yes",
+      "answer": "Got it. Can you tell me what part of your body feels different or what you're experiencing right now? For example: \"my back aches\" or \"my hands feel warm.\" Just one thing.",
+      "evidence": [],
+      "pending": [],
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P10291",
+              "title": "Right",
+              "text": "right",
+              "bm25": 0,
+              "cosine": 0.357,
+              "rrf": 0.016393,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 401,
+            "output_tokens": 32,
+            "latency_ms": 4008.57,
+            "context_messages": 1,
+            "dropped_messages": 0
+          },
+          "interpretation": {
+            "user_goal": "To express that they understand or are ready to proceed",
+            "reference_resolution": "",
+            "unresolved": ""
+          },
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 693,
+            "output_tokens": 43,
+            "latency_ms": 5424.21,
+            "context_messages": 5,
+            "dropped_messages": 0
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 693,
+          "output_tokens": 43,
+          "latency_ms": 5424.21,
+          "context_messages": 5,
+          "dropped_messages": 0
+        }
+      }
+    },
+    {
+      "scenario": "repeated-acknowledgment",
+      "message": "Can you give me an example instead of asking again?",
+      "answer": "Sure. Example: \"My chest feels tight and heavy since I ate lunch.\"  \nCan you share a similar feeling you’ve had recently?",
+      "evidence": [],
+      "pending": [],
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [],
+          "accepted": [],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 468,
+            "output_tokens": 41,
+            "latency_ms": 4845.6,
+            "context_messages": 1,
+            "dropped_messages": 0
+          },
+          "interpretation": {
+            "user_goal": "To receive an example of a bodily sensation or experience to better understand what the assistant is referring to",
+            "reference_resolution": "",
+            "unresolved": ""
+          },
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 756,
+            "output_tokens": 29,
+            "latency_ms": 3964.54,
+            "context_messages": 7,
+            "dropped_messages": 0
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 756,
+          "output_tokens": 29,
+          "latency_ms": 3964.54,
+          "context_messages": 7,
+          "dropped_messages": 0
+        }
+      }
+    },
+    {
+      "scenario": "report-correct-explain",
+      "message": "I have Drowsiness.",
+      "answer": "We recorded \"Drowsiness\" as present. Is that correct, or would you like to adjust the status?",
+      "evidence": [
+        {
+          "kg_id": "P986",
+          "kg_name": "Drowsiness",
+          "original_text": "I have Drowsiness.",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 0,
+          "end": 18,
+          "turn": 1,
+          "source": "agent-validated-proposal",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "pending": [],
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P986",
+              "title": "Drowsiness",
+              "text": "drowsiness",
+              "bm25": 16.0776,
+              "cosine": 0.8655,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P5842",
+              "title": "Paroxysmal drowsiness",
+              "text": "paroxysmal drowsiness",
+              "bm25": 14.3159,
+              "cosine": 0.7514,
+              "rrf": 0.032258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P321",
+              "title": "Restlessness",
+              "text": "restlessness",
+              "bm25": 0,
+              "cosine": 0.5395,
+              "rrf": 0.015873,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P13037",
+              "title": "Cognitive fatigue",
+              "text": "cognitive fatigue",
+              "bm25": 0,
+              "cosine": 0.5317,
+              "rrf": 0.015625,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P10038",
+              "title": "Chronic fatigue",
+              "text": "chronic fatigue",
+              "bm25": 0,
+              "cosine": 0.5292,
+              "rrf": 0.015385,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P5197",
+              "title": "Irritability",
+              "text": "irritability",
+              "bm25": 0,
+              "cosine": 0.5135,
+              "rrf": 0.015152,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [
+            {
+              "kg_id": "P986",
+              "kg_name": "Drowsiness",
+              "original_text": "I have Drowsiness.",
+              "confidence": 1,
+              "status": "present",
+              "experiencer": "self",
+              "temporality": "current",
+              "start": 0,
+              "end": 18,
+              "turn": 1,
+              "source": "agent-validated-proposal",
+              "duration_text": "",
+              "severity_text": ""
+            }
+          ],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 364,
+            "output_tokens": 84,
+            "latency_ms": 9666.11,
+            "context_messages": 1,
+            "dropped_messages": 0
+          },
+          "interpretation": {
+            "user_goal": "To confirm or clarify the presence of drowsiness as a current symptom",
+            "reference_resolution": "The user explicitly states they have drowsiness, which matches the candidate P986: Drowsiness",
+            "unresolved": ""
+          },
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 601,
+            "output_tokens": 24,
+            "latency_ms": 3216.49,
+            "context_messages": 1,
+            "dropped_messages": 0
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 601,
+          "output_tokens": 24,
+          "latency_ms": 3216.49,
+          "context_messages": 1,
+          "dropped_messages": 0
+        }
+      }
+    },
+    {
+      "scenario": "report-correct-explain",
+      "message": "Actually, I no longer have Drowsiness.",
+      "answer": "The status for \"Drowsiness\" is now updated to absent. Any other symptoms you'd like to add or clarify?",
+      "evidence": [
+        {
+          "kg_id": "P986",
+          "kg_name": "Drowsiness",
+          "original_text": "Actually, I no longer have Drowsiness.",
+          "confidence": 1,
+          "status": "absent",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 0,
+          "end": 38,
+          "turn": 2,
+          "source": "agent-validated-proposal",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "pending": [],
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P986",
+              "title": "Drowsiness",
+              "text": "drowsiness",
+              "bm25": 16.0776,
+              "cosine": 0.7544,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P5842",
+              "title": "Paroxysmal drowsiness",
+              "text": "paroxysmal drowsiness",
+              "bm25": 14.3159,
+              "cosine": 0.6881,
+              "rrf": 0.032258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P8174",
+              "title": "No permanent dentition",
+              "text": "no permanent dentition",
+              "bm25": 10.9242,
+              "cosine": 0.1918,
+              "rrf": 0.015873,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P10038",
+              "title": "Chronic fatigue",
+              "text": "chronic fatigue",
+              "bm25": 0,
+              "cosine": 0.5006,
+              "rrf": 0.015873,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P8266",
+              "title": "No social interaction",
+              "text": "no social interaction",
+              "bm25": 10.9242,
+              "cosine": 0.1956,
+              "rrf": 0.015625,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P13037",
+              "title": "Cognitive fatigue",
+              "text": "cognitive fatigue",
+              "bm25": 0,
+              "cosine": 0.4924,
+              "rrf": 0.015625,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [
+            {
+              "kg_id": "P986",
+              "kg_name": "Drowsiness",
+              "original_text": "Actually, I no longer have Drowsiness.",
+              "confidence": 1,
+              "status": "absent",
+              "experiencer": "self",
+              "temporality": "current",
+              "start": 0,
+              "end": 38,
+              "turn": 2,
+              "source": "agent-validated-proposal",
+              "duration_text": "",
+              "severity_text": ""
+            }
+          ],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 444,
+            "output_tokens": 89,
+            "latency_ms": 10499.07,
+            "context_messages": 1,
+            "dropped_messages": 0
+          },
+          "interpretation": {
+            "user_goal": "Update the status of Drowsiness from present to absent",
+            "reference_resolution": "Confirmed that the user no longer has Drowsiness",
+            "unresolved": ""
+          },
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 645,
+            "output_tokens": 26,
+            "latency_ms": 3500.94,
+            "context_messages": 3,
+            "dropped_messages": 0
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 645,
+          "output_tokens": 26,
+          "latency_ms": 3500.94,
+          "context_messages": 3,
+          "dropped_messages": 0
+        }
+      }
+    },
+    {
+      "scenario": "report-correct-explain",
+      "message": "What have you recorded about me?",
+      "answer": "We recorded: Drowsiness (now absent). Is there anything else you'd like to add or correct?",
+      "evidence": [
+        {
+          "kg_id": "P986",
+          "kg_name": "Drowsiness",
+          "original_text": "Actually, I no longer have Drowsiness.",
+          "confidence": 1,
+          "status": "absent",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 0,
+          "end": 38,
+          "turn": 2,
+          "source": "agent-validated-proposal",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "pending": [],
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P5314",
+              "title": "Whistling appearance",
+              "text": "whistling appearance",
+              "bm25": 0,
+              "cosine": 0.3291,
+              "rrf": 0.016393,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4498",
+              "title": "Birth history",
+              "text": "birth history",
+              "bm25": 0,
+              "cosine": 0.3281,
+              "rrf": 0.016129,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P5651",
+              "title": "High pitched voice",
+              "text": "high pitched voice",
+              "bm25": 0,
+              "cosine": 0.3145,
+              "rrf": 0.015873,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P13426",
+              "title": "Happy demeanor",
+              "text": "happy demeanor",
+              "bm25": 0,
+              "cosine": 0.3063,
+              "rrf": 0.015625,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [],
+          "rejected": [
+            {
+              "concept_id": "P986",
+              "reason": "quote-not-unique-in-current-message"
+            }
+          ],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 470,
+            "output_tokens": 105,
+            "latency_ms": 12743.99,
+            "context_messages": 1,
+            "dropped_messages": 0
+          },
+          "interpretation": {
+            "user_goal": "Ask for a summary of the symptoms recorded about the user",
+            "reference_resolution": "Confirmed that Drowsiness was previously recorded as present but is now absent; no other symptoms were explicitly mentioned or confirmed in the conversation",
+            "unresolved": ""
+          },
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 687,
+            "output_tokens": 23,
+            "latency_ms": 3167.3,
+            "context_messages": 5,
+            "dropped_messages": 0
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 687,
+          "output_tokens": 23,
+          "latency_ms": 3167.3,
+          "context_messages": 5,
+          "dropped_messages": 0
+        }
+      }
+    },
+    {
+      "scenario": "other-person-and-topic-change",
+      "message": "My sister has a fever. I just want to understand the word.",
+      "answer": "A fever is when your body temperature rises above normal, usually due to an infection. It's a sign that your immune system is working to fight off illness. Does your sister have a fever of 100.4°F (38°C) or higher?",
+      "evidence": [],
+      "pending": [],
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P835",
+              "title": "Fever",
+              "text": "fever",
+              "bm25": 13.2602,
+              "cosine": 0.6589,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4407",
+              "title": "Periodic fever",
+              "text": "periodic fever",
+              "bm25": 11.8072,
+              "cosine": 0.5598,
+              "rrf": 0.03125,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4232",
+              "title": "Recurrent fever",
+              "text": "recurrent fever",
+              "bm25": 11.8072,
+              "cosine": 0.521,
+              "rrf": 0.031025,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P12931",
+              "title": "Quotidian fever",
+              "text": "quotidian fever",
+              "bm25": 11.8072,
+              "cosine": 0.5684,
+              "rrf": 0.031025,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P11029",
+              "title": "Intrapartum fever",
+              "text": "intrapartum fever",
+              "bm25": 11.8072,
+              "cosine": 0.508,
+              "rrf": 0.03031,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P9256",
+              "title": "Low-grade fever",
+              "text": "low-grade fever",
+              "bm25": 10.6412,
+              "cosine": 0.5441,
+              "rrf": 0.029877,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 379,
+            "output_tokens": 65,
+            "latency_ms": 7684.76,
+            "context_messages": 1,
+            "dropped_messages": 0
+          },
+          "interpretation": {
+            "user_goal": "Understand what the term 'fever' means in the context of a sibling having a fever.",
+            "reference_resolution": "The user is seeking a basic explanation of the word 'fever' rather than medical details about specific types of fever.",
+            "unresolved": ""
+          },
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 590,
+            "output_tokens": 55,
+            "latency_ms": 6887.38,
+            "context_messages": 1,
+            "dropped_messages": 0
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 590,
+          "output_tokens": 55,
+          "latency_ms": 6887.38,
+          "context_messages": 1,
+          "dropped_messages": 0
+        }
+      }
+    },
+    {
+      "scenario": "other-person-and-topic-change",
+      "message": "Can you plan a trip to Tokyo?",
+      "answer": "I can't plan trips or provide travel advice. However, I can help you understand symptoms or health-related questions. Let me know if you'd like assistance with that instead.",
+      "evidence": [],
+      "pending": [],
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P12907",
+              "title": "Impaired ability to plan",
+              "text": "impaired ability to plan",
+              "bm25": 13.6589,
+              "cosine": 0.2315,
+              "rrf": 0.016393,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 367,
+            "output_tokens": 29,
+            "latency_ms": 3645.85,
+            "context_messages": 1,
+            "dropped_messages": 0
+          },
+          "interpretation": {
+            "user_goal": "To have a trip planned to Tokyo",
+            "reference_resolution": "",
+            "unresolved": ""
+          },
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 662,
+            "output_tokens": 36,
+            "latency_ms": 4706.32,
+            "context_messages": 3,
+            "dropped_messages": 0
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 662,
+          "output_tokens": 36,
+          "latency_ms": 4706.32,
+          "context_messages": 3,
+          "dropped_messages": 0
+        }
+      }
+    },
+    {
+      "scenario": "other-person-and-topic-change",
+      "message": "Never mind the trip. How do I change an answer in this app?",
+      "answer": "To change an answer, look for the dropdown next to each symptom that says \"Present/Absent/Not sure\" and select the correct one. Let me know if you need help finding it!",
+      "evidence": [],
+      "pending": [],
+      "trace": {
+        "engine": "conversation-agent-v1",
+        "response_mode": "multi-turn-llm",
+        "understanding": {
+          "engine": "contextual-evidence-proposals",
+          "candidates": [
+            {
+              "id": "P12833",
+              "title": "Tubular microcystic change",
+              "text": "tubular microcystic change",
+              "bm25": 12.9021,
+              "cosine": 0.0694,
+              "rrf": 0.016393,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P14812",
+              "title": "Minimal change glomerulonephritis",
+              "text": "minimal change glomerulonephritis",
+              "bm25": 12.9021,
+              "cosine": 0.0717,
+              "rrf": 0.016129,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "accepted": [],
+          "rejected": [],
+          "model_call": {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 473,
+            "output_tokens": 32,
+            "latency_ms": 4044.44,
+            "context_messages": 1,
+            "dropped_messages": 0
+          },
+          "interpretation": {
+            "user_goal": "Understand how to change an answer in the app",
+            "reference_resolution": "",
+            "unresolved": ""
+          },
+          "validation": "proposal-validation-complete"
+        },
+        "context_policy": "recent-16-messages-plus-validated-records",
+        "source_context": [],
+        "citations": [],
+        "model_calls": [
+          {
+            "model": "Qwen3-4B-Instruct-2507",
+            "device": "cuda",
+            "quantization": "bnb-nf4-double",
+            "input_tokens": 722,
+            "output_tokens": 41,
+            "latency_ms": 5411.24,
+            "context_messages": 5,
+            "dropped_messages": 0
+          }
+        ],
+        "model_call": {
+          "model": "Qwen3-4B-Instruct-2507",
+          "device": "cuda",
+          "quantization": "bnb-nf4-double",
+          "input_tokens": 722,
+          "output_tokens": 41,
+          "latency_ms": 5411.24,
+          "context_messages": 5,
+          "dropped_messages": 0
+        }
+      }
+    }
+  ]
+}

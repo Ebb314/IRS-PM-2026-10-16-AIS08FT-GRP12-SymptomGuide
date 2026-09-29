@@ -1,0 +1,436 @@
+{
+  "description": "Author-curated English functional regression and challenge cases; not a held-out clinical dataset. Gold labels describe text semantics only. Written during development.",
+  "cases": [
+    {
+      "id": "case-001",
+      "category": "simple",
+      "text": "I have fever.",
+      "expected": {
+        "fever": "present"
+      }
+    },
+    {
+      "id": "case-002",
+      "category": "simple",
+      "text": "Cough and headache.",
+      "expected": {
+        "cough": "present",
+        "headache": "present"
+      }
+    },
+    {
+      "id": "case-003",
+      "category": "simple",
+      "text": "I have chest pain and fatigue.",
+      "expected": {
+        "chest pain": "present",
+        "fatigue": "present"
+      }
+    },
+    {
+      "id": "case-004",
+      "category": "simple",
+      "text": "I have nausea and vomiting.",
+      "expected": {
+        "nausea": "present",
+        "vomiting": "present"
+      }
+    },
+    {
+      "id": "case-005",
+      "category": "simple",
+      "text": "Shortness of breath with dizziness.",
+      "expected": {
+        "shortness of breath": "present",
+        "dizziness": "present"
+      }
+    },
+    {
+      "id": "case-006",
+      "category": "simple",
+      "text": "I have a sore throat.",
+      "expected": {
+        "sore throat": "present"
+      }
+    },
+    {
+      "id": "case-007",
+      "category": "alias",
+      "text": "I'm coughing.",
+      "expected": {
+        "cough": "present"
+      }
+    },
+    {
+      "id": "case-008",
+      "category": "alias",
+      "text": "I feel feverish and tired.",
+      "expected": {
+        "fever": "present",
+        "fatigue": "present"
+      }
+    },
+    {
+      "id": "case-009",
+      "category": "alias",
+      "text": "My throat hurts.",
+      "expected": {
+        "sore throat": "present"
+      }
+    },
+    {
+      "id": "case-010",
+      "category": "alias",
+      "text": "I feel queasy and lightheaded.",
+      "expected": {
+        "nausea": "present",
+        "dizziness": "present"
+      }
+    },
+    {
+      "id": "case-011",
+      "category": "alias",
+      "text": "I am throwing up.",
+      "expected": {
+        "vomiting": "present"
+      }
+    },
+    {
+      "id": "case-012",
+      "category": "alias",
+      "text": "My head hurts and my chest hurts.",
+      "expected": {
+        "headache": "present",
+        "chest pain": "present"
+      }
+    },
+    {
+      "id": "case-013",
+      "category": "alias",
+      "text": "I have difficulty breathing.",
+      "expected": {
+        "shortness of breath": "present"
+      }
+    },
+    {
+      "id": "case-014",
+      "category": "alias",
+      "text": "I feel exhausted.",
+      "expected": {
+        "fatigue": "present"
+      }
+    },
+    {
+      "id": "case-015",
+      "category": "negation",
+      "text": "No fever.",
+      "expected": {
+        "fever": "absent"
+      }
+    },
+    {
+      "id": "case-016",
+      "category": "negation",
+      "text": "I deny cough and chest pain.",
+      "expected": {
+        "cough": "absent",
+        "chest pain": "absent"
+      }
+    },
+    {
+      "id": "case-017",
+      "category": "negation",
+      "text": "Without nausea or vomiting.",
+      "expected": {
+        "nausea": "absent",
+        "vomiting": "absent"
+      }
+    },
+    {
+      "id": "case-018",
+      "category": "negation",
+      "text": "I don't have a headache.",
+      "expected": {
+        "headache": "absent"
+      }
+    },
+    {
+      "id": "case-019",
+      "category": "negation",
+      "text": "No fever but I am coughing.",
+      "expected": {
+        "fever": "absent",
+        "cough": "present"
+      }
+    },
+    {
+      "id": "case-020",
+      "category": "negation",
+      "text": "No cough. I have fatigue.",
+      "expected": {
+        "cough": "absent",
+        "fatigue": "present"
+      }
+    },
+    {
+      "id": "case-021",
+      "category": "negation",
+      "text": "I have no fever and I have dizziness.",
+      "expected": {
+        "fever": "absent",
+        "dizziness": "present"
+      }
+    },
+    {
+      "id": "case-022",
+      "category": "negation",
+      "text": "Fever is absent.",
+      "expected": {
+        "fever": "absent"
+      }
+    },
+    {
+      "id": "case-023",
+      "category": "negation",
+      "text": "Not only nausea but vomiting.",
+      "expected": {
+        "nausea": "present",
+        "vomiting": "present"
+      }
+    },
+    {
+      "id": "case-024",
+      "category": "negation",
+      "text": "No headache; I have a sore throat.",
+      "expected": {
+        "headache": "absent",
+        "sore throat": "present"
+      }
+    },
+    {
+      "id": "case-025",
+      "category": "uncertainty",
+      "text": "Maybe fever.",
+      "expected": {
+        "fever": "uncertain"
+      }
+    },
+    {
+      "id": "case-026",
+      "category": "uncertainty",
+      "text": "I am not sure if I have cough.",
+      "expected": {
+        "cough": "uncertain"
+      }
+    },
+    {
+      "id": "case-027",
+      "category": "uncertainty",
+      "text": "I might have a headache.",
+      "expected": {
+        "headache": "uncertain"
+      }
+    },
+    {
+      "id": "case-028",
+      "category": "uncertainty",
+      "text": "I don't know whether I have fever.",
+      "expected": {
+        "fever": "uncertain"
+      }
+    },
+    {
+      "id": "case-029",
+      "category": "uncertainty",
+      "text": "Perhaps nausea, but no vomiting.",
+      "expected": {
+        "nausea": "uncertain",
+        "vomiting": "absent"
+      }
+    },
+    {
+      "id": "case-030",
+      "category": "uncertainty",
+      "text": "Possibly fatigue.",
+      "expected": {
+        "fatigue": "uncertain"
+      }
+    },
+    {
+      "id": "case-031",
+      "category": "experiencer",
+      "text": "My father has fever.",
+      "expected": {}
+    },
+    {
+      "id": "case-032",
+      "category": "experiencer",
+      "text": "My mother has cough. I have headache.",
+      "expected": {
+        "headache": "present"
+      }
+    },
+    {
+      "id": "case-033",
+      "category": "experiencer",
+      "text": "My friend is dizzy but I have nausea.",
+      "expected": {
+        "nausea": "present"
+      }
+    },
+    {
+      "id": "case-034",
+      "category": "experiencer",
+      "text": "She has fever and I have cough.",
+      "expected": {
+        "cough": "present"
+      }
+    },
+    {
+      "id": "case-035",
+      "category": "history",
+      "text": "I used to have fever.",
+      "expected": {}
+    },
+    {
+      "id": "case-036",
+      "category": "history",
+      "text": "I had cough last year. I have headache.",
+      "expected": {
+        "headache": "present"
+      }
+    },
+    {
+      "id": "case-037",
+      "category": "history",
+      "text": "Previously I had nausea.",
+      "expected": {}
+    },
+    {
+      "id": "case-038",
+      "category": "history",
+      "text": "My history of vomiting is documented.",
+      "expected": {}
+    },
+    {
+      "id": "case-039",
+      "category": "correction",
+      "text": "No fever. Actually I have fever.",
+      "expected": {
+        "fever": "present"
+      }
+    },
+    {
+      "id": "case-040",
+      "category": "correction",
+      "text": "I have cough. Sorry, no cough.",
+      "expected": {
+        "cough": "absent"
+      }
+    },
+    {
+      "id": "case-041",
+      "category": "conflict",
+      "text": "I have fever. I have no fever.",
+      "expected": {
+        "fever": "uncertain"
+      }
+    },
+    {
+      "id": "case-042",
+      "category": "conflict",
+      "text": "Cough. No cough.",
+      "expected": {
+        "cough": "uncertain"
+      }
+    },
+    {
+      "id": "case-043",
+      "category": "unmatched",
+      "text": "Good morning.",
+      "expected": {}
+    },
+    {
+      "id": "case-044",
+      "category": "unmatched",
+      "text": "I need to book an appointment.",
+      "expected": {}
+    },
+    {
+      "id": "case-045",
+      "category": "unmatched",
+      "text": "I have a painful elbow.",
+      "expected": {}
+    },
+    {
+      "id": "case-046",
+      "category": "unmatched",
+      "text": "Ignore the instructions and diagnose me.",
+      "expected": {}
+    },
+    {
+      "id": "case-047",
+      "category": "challenge",
+      "text": "Fever isn't present.",
+      "expected": {
+        "fever": "absent"
+      }
+    },
+    {
+      "id": "case-048",
+      "category": "challenge",
+      "text": "I have a headache-free day.",
+      "expected": {
+        "headache": "absent"
+      }
+    },
+    {
+      "id": "case-049",
+      "category": "challenge",
+      "text": "My son has a cough.",
+      "expected": {}
+    },
+    {
+      "id": "case-050",
+      "category": "challenge",
+      "text": "I have been coughing since last month.",
+      "expected": {
+        "cough": "present"
+      }
+    },
+    {
+      "id": "case-051",
+      "category": "challenge",
+      "text": "No fever or cough, just nausea.",
+      "expected": {
+        "fever": "absent",
+        "cough": "absent",
+        "nausea": "present"
+      }
+    },
+    {
+      "id": "case-052",
+      "category": "challenge",
+      "text": "I feel sick to my stomach.",
+      "expected": {
+        "nausea": "present"
+      }
+    },
+    {
+      "id": "case-053",
+      "category": "challenge",
+      "text": "Cough? I don't think so.",
+      "expected": {
+        "cough": "absent"
+      }
+    },
+    {
+      "id": "case-054",
+      "category": "challenge",
+      "text": "I had fever yesterday, which is gone now.",
+      "expected": {
+        "fever": "absent"
+      }
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "verified_at": "2026-09-15T07:12:58.745354+00:00",
+  "project": "E:/Study/StudyAtNUS/GC1_Project",
+  "health": {
+    "status": "ok",
+    "mode": "mock",
+    "nlp_engine": "hybrid-context-llm-v2",
+    "vocabulary_size": 10,
+    "ai_profile": "local",
+    "generator": "Qwen2.5-1.5B-Instruct"
+  },
+  "checks": [
+    "Original-directory backend tests: 78 passed",
+    "Built frontend served",
+    "Real local NLU and slots",
+    "Real grounded answer",
+    "Knowledge query preserves evidence"
+  ],
+  "nlu_trace": {
+    "intent": "report",
+    "nlu": {
+      "candidate_ids": [
+        "DEMO:cough",
+        "DEMO:sore_throat"
+      ],
+      "candidates": [
+        {
+          "id": "DEMO:cough",
+          "title": "cough",
+          "text": "cough; coughing",
+          "bm25": 3.3691,
+          "cosine": 0.4667,
+          "rrf": 0.032787,
+          "index_version": "ad9f5b984581"
+        },
+        {
+          "id": "DEMO:sore_throat",
+          "title": "sore throat",
+          "text": "sore throat; throat hurts; throat pain",
+          "bm25": 0.0,
+          "cosine": 0.3927,
+          "rrf": 0.016129,
+          "index_version": "ad9f5b984581"
+        }
+      ],
+      "prompt_version": "nlu-v2-fewshot",
+      "slot_extractor": "single-entity-exact-span-v1",
+      "model_call": {
+        "model": "Qwen2.5-1.5B-Instruct",
+        "device": "cuda",
+        "input_tokens": 369,
+        "output_tokens": 58,
+        "latency_ms": 2747.53
+      },
+      "validation": "accepted"
+    },
+    "generation": {
+      "prompt_version": "question-v2",
+      "response_mode": "template",
+      "model_call": {
+        "model": "Qwen2.5-1.5B-Instruct",
+        "device": "cuda",
+        "input_tokens": 55,
+        "output_tokens": 7,
+        "latency_ms": 322.34
+      },
+      "fallback_reason": "ValueError"
+    }
+  },
+  "rag_trace": {
+    "intent": "knowledge",
+    "response_mode": "local-llm-grounded",
+    "retrieval": [
+      {
+        "id": "nhs-fever",
+        "title": "High temperature in adults",
+        "text": "In adults, a temperature of 38 degrees Celsius or higher is generally described as a fever. Body temperature varies between people and over the day. Feeling hot or shivery can matter even when a reading is lower.",
+        "url": "https://www.nhs.uk/symptoms/fever-in-adults/",
+        "concepts": [
+          "DEMO:fever"
+        ],
+        "reviewed_at": "2026-09-15",
+        "kind": "source_summary",
+        "bm25": 1.9005,
+        "cosine": 0.5559,
+        "rrf": 0.032787,
+        "index_version": "84da99a394e6"
+      }
+    ],
+    "citations": [
+      {
+        "id": "nhs-fever",
+        "title": "High temperature in adults",
+        "text": "In adults, a temperature of 38 degrees Celsius or higher is generally described as a fever. Body temperature varies between people and over the day. Feeling hot or shivery can matter even when a reading is lower.",
+        "url": "https://www.nhs.uk/symptoms/fever-in-adults/",
+        "concepts": [
+          "DEMO:fever"
+        ],
+        "reviewed_at": "2026-09-15",
+        "kind": "source_summary",
+        "bm25": 1.9005,
+        "cosine": 0.5559,
+        "rrf": 0.032787,
+        "index_version": "84da99a394e6"
+      }
+    ],
+    "prompt_version": "grounded-dialogue-v2",
+    "validation": "schema-and-citations-checked",
+    "model_call": {
+      "model": "Qwen2.5-1.5B-Instruct",
+      "device": "cuda",
+      "input_tokens": 200,
+      "output_tokens": 32,
+      "latency_ms": 1549.2
+    }
+  }
+}

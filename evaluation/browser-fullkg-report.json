@@ -1,0 +1,2359 @@
+{
+  "created_at": "2026-09-15T07:55:03.489Z",
+  "health": {
+    "status": "ok",
+    "mode": "random",
+    "nlp_engine": "hybrid-context-llm-v2",
+    "vocabulary_size": 15135,
+    "ai_profile": "local",
+    "generator": "Qwen2.5-1.5B-Instruct"
+  },
+  "passed": 10,
+  "checks": [
+    "Full catalog health and actual P IDs with random disease fixtures",
+    "Explicit free-text mode and direct composer focus hide choices; reversible",
+    "Free-text report advances evidence and old choices remain hidden",
+    "Knowledge button resolves B Cough after A Fever without consuming question",
+    "Knowledge button resolves C Headache with explicit missing-definition notice",
+    "Latest knowledge topic survives reload",
+    "Revisiting an existing symptom updates latest topic by event order",
+    "Full vocabulary searchable with bounded rendering",
+    "Updated controls fit mobile viewport",
+    "No browser JavaScript errors"
+  ],
+  "traces": [
+    {
+      "session_id": "37b4e28815c94c37be2d16b466e75e0d",
+      "knowledge_focus": {
+        "kg_id": "P835",
+        "kg_name": "Fever"
+      },
+      "positive_symptoms": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever"
+        }
+      ],
+      "negative_symptoms": [],
+      "uncertain_symptoms": [],
+      "evidence": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever",
+          "original_text": "Fever",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 1,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "evidence_history": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever",
+          "original_text": "Fever",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 1,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "excluded_evidence": [],
+      "asked_symptoms": [],
+      "candidate_diseases": [
+        {
+          "id": "SIM:D0039",
+          "name": "Simulated disease 0039",
+          "score": 0.7804,
+          "evidence_ids": [
+            "P835"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0001",
+          "name": "Simulated disease 0001",
+          "score": 0.0986,
+          "evidence_ids": [
+            "P835"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0015",
+          "name": "Simulated disease 0015",
+          "score": 0.0522,
+          "evidence_ids": [
+            "P835"
+          ],
+          "source": "seeded-random-fixture-v1"
+        }
+      ],
+      "last_question": {
+        "kg_id": "P8870",
+        "kg_name": "Stippling of the epiphysis of the proximal phalanx of the hallux",
+        "heuristic_score": 0.4825,
+        "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+      },
+      "drug_recommendations": [],
+      "messages": [
+        {
+          "id": "3fb20169fd8c4c1a97a765f8f96bddce",
+          "sender": "user",
+          "text": "I have Fever."
+        },
+        {
+          "id": "35ece2c91db24e05bc409e36ed15568b",
+          "sender": "assistant",
+          "text": "Are you experiencing Stippling of the epiphysis of the proximal phalanx of the hallux? You can answer Yes, No, Not sure, or describe it in your own words."
+        }
+      ],
+      "round": 0,
+      "version": 1,
+      "status": "RUNNING",
+      "stop_reason": null,
+      "warnings": [],
+      "timings_ms": {
+        "nlp": 1651.379,
+        "recall": 0.14,
+        "search": 4.558,
+        "total": 2673.223
+      },
+      "mode": "random",
+      "nlp_engine": "hybrid-context-llm-v2",
+      "ai_trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P12931",
+            "P13160",
+            "P4232",
+            "P4407",
+            "P835"
+          ],
+          "candidates": [
+            {
+              "id": "P835",
+              "title": "Fever",
+              "text": "fever",
+              "bm25": 13.2602,
+              "cosine": 0.8559,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4407",
+              "title": "Periodic fever",
+              "text": "periodic fever",
+              "bm25": 11.8072,
+              "cosine": 0.6523,
+              "rrf": 0.031746,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4232",
+              "title": "Recurrent fever",
+              "text": "recurrent fever",
+              "bm25": 11.8072,
+              "cosine": 0.6003,
+              "rrf": 0.030835,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P12931",
+              "title": "Quotidian fever",
+              "text": "quotidian fever",
+              "bm25": 11.8072,
+              "cosine": 0.6024,
+              "rrf": 0.03031,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P13160",
+              "title": "Persistent fever",
+              "text": "persistent fever",
+              "bm25": 11.8072,
+              "cosine": 0.6186,
+              "rrf": 0.030303,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 422,
+            "output_tokens": 27,
+            "latency_ms": 1580.07
+          },
+          "validation": "accepted"
+        },
+        "generation": {
+          "prompt_version": "question-v2",
+          "response_mode": "template",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 70,
+            "output_tokens": 24,
+            "latency_ms": 1014.51
+          },
+          "fallback_reason": "ValueError"
+        }
+      },
+      "message": "Are you experiencing Stippling of the epiphysis of the proximal phalanx of the hallux? You can answer Yes, No, Not sure, or describe it in your own words.",
+      "next_symptom": {
+        "kg_id": "P8870",
+        "kg_name": "Stippling of the epiphysis of the proximal phalanx of the hallux",
+        "heuristic_score": 0.4825,
+        "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+      }
+    },
+    {
+      "session_id": "37b4e28815c94c37be2d16b466e75e0d",
+      "knowledge_focus": {
+        "kg_id": "P4018",
+        "kg_name": "Cough"
+      },
+      "positive_symptoms": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever"
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough"
+        }
+      ],
+      "negative_symptoms": [],
+      "uncertain_symptoms": [],
+      "evidence": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever",
+          "original_text": "Fever",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 1,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough",
+          "original_text": "Cough",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 2,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "evidence_history": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever",
+          "original_text": "Fever",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 1,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough",
+          "original_text": "Cough",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 2,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "excluded_evidence": [],
+      "asked_symptoms": [],
+      "candidate_diseases": [
+        {
+          "id": "SIM:D0019",
+          "name": "Simulated disease 0019",
+          "score": 0.9653,
+          "evidence_ids": [
+            "P4018",
+            "P835"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0018",
+          "name": "Simulated disease 0018",
+          "score": 0.8041,
+          "evidence_ids": [
+            "P4018",
+            "P835"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0045",
+          "name": "Simulated disease 0045",
+          "score": 0.5798,
+          "evidence_ids": [
+            "P4018",
+            "P835"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0048",
+          "name": "Simulated disease 0048",
+          "score": 0.3551,
+          "evidence_ids": [
+            "P4018",
+            "P835"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0038",
+          "name": "Simulated disease 0038",
+          "score": 0.2308,
+          "evidence_ids": [
+            "P4018",
+            "P835"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0043",
+          "name": "Simulated disease 0043",
+          "score": 0.1434,
+          "evidence_ids": [
+            "P4018",
+            "P835"
+          ],
+          "source": "seeded-random-fixture-v1"
+        }
+      ],
+      "last_question": {
+        "kg_id": "P6729",
+        "kg_name": "Impaired ADP-induced platelet aggregation",
+        "heuristic_score": 0.254,
+        "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+      },
+      "drug_recommendations": [],
+      "messages": [
+        {
+          "id": "3fb20169fd8c4c1a97a765f8f96bddce",
+          "sender": "user",
+          "text": "I have Fever."
+        },
+        {
+          "id": "35ece2c91db24e05bc409e36ed15568b",
+          "sender": "assistant",
+          "text": "Are you experiencing Stippling of the epiphysis of the proximal phalanx of the hallux? You can answer Yes, No, Not sure, or describe it in your own words."
+        },
+        {
+          "id": "8b836b0f54944597ba3a72239b36abbe",
+          "sender": "user",
+          "text": "I have Cough."
+        },
+        {
+          "id": "60deb447370c4c83b835a90c5360af53",
+          "sender": "assistant",
+          "text": "Are you experiencing Impaired ADP-induced platelet aggregation? You can answer Yes, No, Not sure, or describe it in your own words."
+        }
+      ],
+      "round": 1,
+      "version": 2,
+      "status": "RUNNING",
+      "stop_reason": null,
+      "warnings": [],
+      "timings_ms": {
+        "nlp": 2209.214,
+        "recall": 0.121,
+        "search": 3.675,
+        "total": 2697.488
+      },
+      "mode": "random",
+      "nlp_engine": "hybrid-context-llm-v2",
+      "ai_trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P11665",
+            "P11666",
+            "P11667",
+            "P12951",
+            "P4018",
+            "P8870"
+          ],
+          "candidates": [
+            {
+              "id": "P11665",
+              "title": "Productive cough",
+              "text": "productive cough",
+              "bm25": 13.0197,
+              "cosine": 0.6158,
+              "rrf": 0.032522,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4018",
+              "title": "Cough",
+              "text": "cough",
+              "bm25": 14.622,
+              "cosine": 0.5691,
+              "rrf": 0.031778,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P11667",
+              "title": "Whooping cough",
+              "text": "whooping cough",
+              "bm25": 13.0197,
+              "cosine": 0.6107,
+              "rrf": 0.031754,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P11666",
+              "title": "Nonproductive cough",
+              "text": "nonproductive cough",
+              "bm25": 13.0197,
+              "cosine": 0.5861,
+              "rrf": 0.031498,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P12951",
+              "title": "Barking cough",
+              "text": "barking cough",
+              "bm25": 13.0197,
+              "cosine": 0.5464,
+              "rrf": 0.03031,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 487,
+            "output_tokens": 50,
+            "latency_ms": 2168.29
+          },
+          "validation": "accepted"
+        },
+        "generation": {
+          "prompt_version": "question-v2",
+          "response_mode": "template",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 59,
+            "output_tokens": 12,
+            "latency_ms": 481.37
+          },
+          "fallback_reason": "ValueError"
+        }
+      },
+      "message": "Are you experiencing Impaired ADP-induced platelet aggregation? You can answer Yes, No, Not sure, or describe it in your own words.",
+      "next_symptom": {
+        "kg_id": "P6729",
+        "kg_name": "Impaired ADP-induced platelet aggregation",
+        "heuristic_score": 0.254,
+        "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+      }
+    },
+    {
+      "session_id": "37b4e28815c94c37be2d16b466e75e0d",
+      "knowledge_focus": {
+        "kg_id": "P4018",
+        "kg_name": "Cough"
+      },
+      "positive_symptoms": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever"
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough"
+        }
+      ],
+      "negative_symptoms": [],
+      "uncertain_symptoms": [],
+      "evidence": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever",
+          "original_text": "Fever",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 1,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough",
+          "original_text": "Cough",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 2,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "evidence_history": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever",
+          "original_text": "Fever",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 1,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough",
+          "original_text": "Cough",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 2,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "excluded_evidence": [],
+      "asked_symptoms": [],
+      "candidate_diseases": [
+        {
+          "id": "SIM:D0019",
+          "name": "Simulated disease 0019",
+          "score": 0.9653,
+          "evidence_ids": [
+            "P4018",
+            "P835"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0018",
+          "name": "Simulated disease 0018",
+          "score": 0.8041,
+          "evidence_ids": [
+            "P4018",
+            "P835"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0045",
+          "name": "Simulated disease 0045",
+          "score": 0.5798,
+          "evidence_ids": [
+            "P4018",
+            "P835"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0048",
+          "name": "Simulated disease 0048",
+          "score": 0.3551,
+          "evidence_ids": [
+            "P4018",
+            "P835"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0038",
+          "name": "Simulated disease 0038",
+          "score": 0.2308,
+          "evidence_ids": [
+            "P4018",
+            "P835"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0043",
+          "name": "Simulated disease 0043",
+          "score": 0.1434,
+          "evidence_ids": [
+            "P4018",
+            "P835"
+          ],
+          "source": "seeded-random-fixture-v1"
+        }
+      ],
+      "last_question": {
+        "kg_id": "P6729",
+        "kg_name": "Impaired ADP-induced platelet aggregation",
+        "heuristic_score": 0.254,
+        "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+      },
+      "drug_recommendations": [],
+      "messages": [
+        {
+          "id": "3fb20169fd8c4c1a97a765f8f96bddce",
+          "sender": "user",
+          "text": "I have Fever."
+        },
+        {
+          "id": "35ece2c91db24e05bc409e36ed15568b",
+          "sender": "assistant",
+          "text": "Are you experiencing Stippling of the epiphysis of the proximal phalanx of the hallux? You can answer Yes, No, Not sure, or describe it in your own words."
+        },
+        {
+          "id": "8b836b0f54944597ba3a72239b36abbe",
+          "sender": "user",
+          "text": "I have Cough."
+        },
+        {
+          "id": "60deb447370c4c83b835a90c5360af53",
+          "sender": "assistant",
+          "text": "Are you experiencing Impaired ADP-induced platelet aggregation? You can answer Yes, No, Not sure, or describe it in your own words."
+        },
+        {
+          "id": "8ba1e13012084c8f947dd64bfd4e873a",
+          "sender": "user",
+          "text": "Tell me about my latest symptom."
+        },
+        {
+          "id": "1f948d5ee133410c8aac2747dbb5893c",
+          "sender": "assistant",
+          "text": "A cough is a common symptom that may be caused by various factors such as a cold, flu, allergies, reflux, or other underlying health issues. It typically lasts longer than three weeks without medical intervention."
+        }
+      ],
+      "round": 1,
+      "version": 3,
+      "status": "RUNNING",
+      "stop_reason": null,
+      "warnings": [],
+      "timings_ms": {
+        "total": 2429.384
+      },
+      "mode": "random",
+      "nlp_engine": "hybrid-context-llm-v2",
+      "ai_trace": {
+        "intent": "knowledge",
+        "response_mode": "local-llm-grounded",
+        "retrieval": [
+          {
+            "id": "nhs-cough",
+            "title": "Cough and possible causes",
+            "text": "A cough can occur with a cold or flu, allergies, reflux or other conditions. A cough alone does not establish a diagnosis. NHS guidance recommends medical review for a persistent cough lasting more than three weeks.",
+            "url": "https://www.nhs.uk/symptoms/cough/",
+            "concepts": [
+              "DEMO:cough"
+            ],
+            "reviewed_at": "2026-09-15",
+            "kind": "source_summary",
+            "bm25": 3.4764,
+            "cosine": 0.6091,
+            "rrf": 0.032787,
+            "index_version": "e7797076d6dc"
+          }
+        ],
+        "citations": [
+          {
+            "id": "nhs-cough",
+            "title": "Cough and possible causes",
+            "text": "A cough can occur with a cold or flu, allergies, reflux or other conditions. A cough alone does not establish a diagnosis. NHS guidance recommends medical review for a persistent cough lasting more than three weeks.",
+            "url": "https://www.nhs.uk/symptoms/cough/",
+            "concepts": [
+              "DEMO:cough"
+            ],
+            "reviewed_at": "2026-09-15",
+            "kind": "source_summary",
+            "bm25": 3.4764,
+            "cosine": 0.6091,
+            "rrf": 0.032787,
+            "index_version": "e7797076d6dc"
+          }
+        ],
+        "prompt_version": "grounded-dialogue-v3",
+        "validation": "schema-and-citations-checked",
+        "topic": {
+          "kg_id": "P4018",
+          "kg_name": "Cough"
+        },
+        "topic_resolution": "latest-reported",
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 198,
+          "output_tokens": 54,
+          "latency_ms": 2414.64
+        }
+      },
+      "message": "A cough is a common symptom that may be caused by various factors such as a cold, flu, allergies, reflux, or other underlying health issues. It typically lasts longer than three weeks without medical intervention.",
+      "next_symptom": {
+        "kg_id": "P6729",
+        "kg_name": "Impaired ADP-induced platelet aggregation",
+        "heuristic_score": 0.254,
+        "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+      }
+    },
+    {
+      "session_id": "37b4e28815c94c37be2d16b466e75e0d",
+      "knowledge_focus": {
+        "kg_id": "P885",
+        "kg_name": "Headache"
+      },
+      "positive_symptoms": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever"
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough"
+        },
+        {
+          "kg_id": "P885",
+          "kg_name": "Headache"
+        }
+      ],
+      "negative_symptoms": [],
+      "uncertain_symptoms": [],
+      "evidence": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever",
+          "original_text": "Fever",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 1,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough",
+          "original_text": "Cough",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 2,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P885",
+          "kg_name": "Headache",
+          "original_text": "Headache",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 15,
+          "turn": 4,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "evidence_history": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever",
+          "original_text": "Fever",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 1,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough",
+          "original_text": "Cough",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 2,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P885",
+          "kg_name": "Headache",
+          "original_text": "Headache",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 15,
+          "turn": 4,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "excluded_evidence": [],
+      "asked_symptoms": [],
+      "candidate_diseases": [
+        {
+          "id": "SIM:D0001",
+          "name": "Simulated disease 0001",
+          "score": 0.853,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0038",
+          "name": "Simulated disease 0038",
+          "score": 0.5547,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0022",
+          "name": "Simulated disease 0022",
+          "score": 0.5451,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0023",
+          "name": "Simulated disease 0023",
+          "score": 0.2466,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0027",
+          "name": "Simulated disease 0027",
+          "score": 0.0596,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        }
+      ],
+      "last_question": {
+        "kg_id": "P13614",
+        "kg_name": "Fractured right clavicle",
+        "heuristic_score": 0.0216,
+        "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+      },
+      "drug_recommendations": [],
+      "messages": [
+        {
+          "id": "3fb20169fd8c4c1a97a765f8f96bddce",
+          "sender": "user",
+          "text": "I have Fever."
+        },
+        {
+          "id": "35ece2c91db24e05bc409e36ed15568b",
+          "sender": "assistant",
+          "text": "Are you experiencing Stippling of the epiphysis of the proximal phalanx of the hallux? You can answer Yes, No, Not sure, or describe it in your own words."
+        },
+        {
+          "id": "8b836b0f54944597ba3a72239b36abbe",
+          "sender": "user",
+          "text": "I have Cough."
+        },
+        {
+          "id": "60deb447370c4c83b835a90c5360af53",
+          "sender": "assistant",
+          "text": "Are you experiencing Impaired ADP-induced platelet aggregation? You can answer Yes, No, Not sure, or describe it in your own words."
+        },
+        {
+          "id": "8ba1e13012084c8f947dd64bfd4e873a",
+          "sender": "user",
+          "text": "Tell me about my latest symptom."
+        },
+        {
+          "id": "1f948d5ee133410c8aac2747dbb5893c",
+          "sender": "assistant",
+          "text": "A cough is a common symptom that may be caused by various factors such as a cold, flu, allergies, reflux, or other underlying health issues. It typically lasts longer than three weeks without medical intervention."
+        },
+        {
+          "id": "f790e0a0ef204962b8b086f2e51d2e6d",
+          "sender": "user",
+          "text": "I have Headache."
+        },
+        {
+          "id": "0084fe727e9648b19640dc00558ab67d",
+          "sender": "assistant",
+          "text": "Are you experiencing Fractured right clavicle? You can answer Yes, No, Not sure, or describe it in your own words."
+        }
+      ],
+      "round": 2,
+      "version": 4,
+      "status": "RUNNING",
+      "stop_reason": null,
+      "warnings": [],
+      "timings_ms": {
+        "nlp": 2337.663,
+        "recall": 0.108,
+        "search": 4.594,
+        "total": 2800.786
+      },
+      "mode": "random",
+      "nlp_engine": "hybrid-context-llm-v2",
+      "ai_trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P11437",
+            "P5843",
+            "P6729",
+            "P885",
+            "P9896",
+            "P9911"
+          ],
+          "candidates": [
+            {
+              "id": "P885",
+              "title": "Headache",
+              "text": "headache",
+              "bm25": 14.622,
+              "cosine": 0.7677,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P9911",
+              "title": "Tension-type headache",
+              "text": "tension-type headache",
+              "bm25": 11.734,
+              "cosine": 0.6347,
+              "rrf": 0.031514,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P9896",
+              "title": "Cluster headache",
+              "text": "cluster headache",
+              "bm25": 13.0197,
+              "cosine": 0.5151,
+              "rrf": 0.031281,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P11437",
+              "title": "Thunderclap headache",
+              "text": "thunderclap headache",
+              "bm25": 13.0197,
+              "cosine": 0.5198,
+              "rrf": 0.031258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P5843",
+              "title": "Recurrent paroxysmal headache",
+              "text": "recurrent paroxysmal headache",
+              "bm25": 11.734,
+              "cosine": 0.5636,
+              "rrf": 0.03125,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 466,
+            "output_tokens": 49,
+            "latency_ms": 2293.76
+          },
+          "validation": "accepted"
+        },
+        "generation": {
+          "prompt_version": "question-v2",
+          "response_mode": "template",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 58,
+            "output_tokens": 11,
+            "latency_ms": 456.58
+          },
+          "fallback_reason": "ValueError"
+        }
+      },
+      "message": "Are you experiencing Fractured right clavicle? You can answer Yes, No, Not sure, or describe it in your own words.",
+      "next_symptom": {
+        "kg_id": "P13614",
+        "kg_name": "Fractured right clavicle",
+        "heuristic_score": 0.0216,
+        "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+      }
+    },
+    {
+      "session_id": "37b4e28815c94c37be2d16b466e75e0d",
+      "knowledge_focus": {
+        "kg_id": "P885",
+        "kg_name": "Headache"
+      },
+      "positive_symptoms": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever"
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough"
+        },
+        {
+          "kg_id": "P885",
+          "kg_name": "Headache"
+        }
+      ],
+      "negative_symptoms": [],
+      "uncertain_symptoms": [],
+      "evidence": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever",
+          "original_text": "Fever",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 1,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough",
+          "original_text": "Cough",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 2,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P885",
+          "kg_name": "Headache",
+          "original_text": "Headache",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 15,
+          "turn": 4,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "evidence_history": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever",
+          "original_text": "Fever",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 1,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough",
+          "original_text": "Cough",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 2,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P885",
+          "kg_name": "Headache",
+          "original_text": "Headache",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 15,
+          "turn": 4,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "excluded_evidence": [],
+      "asked_symptoms": [],
+      "candidate_diseases": [
+        {
+          "id": "SIM:D0001",
+          "name": "Simulated disease 0001",
+          "score": 0.853,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0038",
+          "name": "Simulated disease 0038",
+          "score": 0.5547,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0022",
+          "name": "Simulated disease 0022",
+          "score": 0.5451,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0023",
+          "name": "Simulated disease 0023",
+          "score": 0.2466,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0027",
+          "name": "Simulated disease 0027",
+          "score": 0.0596,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        }
+      ],
+      "last_question": {
+        "kg_id": "P13614",
+        "kg_name": "Fractured right clavicle",
+        "heuristic_score": 0.0216,
+        "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+      },
+      "drug_recommendations": [],
+      "messages": [
+        {
+          "id": "3fb20169fd8c4c1a97a765f8f96bddce",
+          "sender": "user",
+          "text": "I have Fever."
+        },
+        {
+          "id": "35ece2c91db24e05bc409e36ed15568b",
+          "sender": "assistant",
+          "text": "Are you experiencing Stippling of the epiphysis of the proximal phalanx of the hallux? You can answer Yes, No, Not sure, or describe it in your own words."
+        },
+        {
+          "id": "8b836b0f54944597ba3a72239b36abbe",
+          "sender": "user",
+          "text": "I have Cough."
+        },
+        {
+          "id": "60deb447370c4c83b835a90c5360af53",
+          "sender": "assistant",
+          "text": "Are you experiencing Impaired ADP-induced platelet aggregation? You can answer Yes, No, Not sure, or describe it in your own words."
+        },
+        {
+          "id": "8ba1e13012084c8f947dd64bfd4e873a",
+          "sender": "user",
+          "text": "Tell me about my latest symptom."
+        },
+        {
+          "id": "1f948d5ee133410c8aac2747dbb5893c",
+          "sender": "assistant",
+          "text": "A cough is a common symptom that may be caused by various factors such as a cold, flu, allergies, reflux, or other underlying health issues. It typically lasts longer than three weeks without medical intervention."
+        },
+        {
+          "id": "f790e0a0ef204962b8b086f2e51d2e6d",
+          "sender": "user",
+          "text": "I have Headache."
+        },
+        {
+          "id": "0084fe727e9648b19640dc00558ab67d",
+          "sender": "assistant",
+          "text": "Are you experiencing Fractured right clavicle? You can answer Yes, No, Not sure, or describe it in your own words."
+        },
+        {
+          "id": "86212fbf2501456e8008ecca0872842c",
+          "sender": "user",
+          "text": "Tell me about my latest symptom."
+        },
+        {
+          "id": "c70f087b2bf34978bd64d9fcbef03673",
+          "sender": "assistant",
+          "text": "Headache is listed as a symptom node (P885) in the project vocabulary. The CSV provides its label and type, but no medical definition. No verified explanatory passage is available for this symptom."
+        }
+      ],
+      "round": 2,
+      "version": 5,
+      "status": "RUNNING",
+      "stop_reason": null,
+      "warnings": [],
+      "timings_ms": {
+        "total": 9.132
+      },
+      "mode": "random",
+      "nlp_engine": "hybrid-context-llm-v2",
+      "ai_trace": {
+        "intent": "knowledge",
+        "response_mode": "catalog-only",
+        "citations": [
+          {
+            "id": "catalog:P885",
+            "title": "Headache — symptom catalog",
+            "url": "",
+            "text": "Headache is listed as a symptom node (P885) in the project vocabulary. The CSV provides its label and type, but no medical definition. No verified explanatory passage is available for this symptom.",
+            "kind": "catalog-metadata",
+            "source_file": "kg_nodes.csv"
+          }
+        ],
+        "topic": {
+          "kg_id": "P885",
+          "kg_name": "Headache"
+        },
+        "topic_resolution": "latest-reported"
+      },
+      "message": "Headache is listed as a symptom node (P885) in the project vocabulary. The CSV provides its label and type, but no medical definition. No verified explanatory passage is available for this symptom.",
+      "next_symptom": {
+        "kg_id": "P13614",
+        "kg_name": "Fractured right clavicle",
+        "heuristic_score": 0.0216,
+        "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+      }
+    },
+    {
+      "session_id": "37b4e28815c94c37be2d16b466e75e0d",
+      "knowledge_focus": {
+        "kg_id": "P885",
+        "kg_name": "Headache"
+      },
+      "positive_symptoms": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever"
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough"
+        },
+        {
+          "kg_id": "P885",
+          "kg_name": "Headache"
+        }
+      ],
+      "negative_symptoms": [],
+      "uncertain_symptoms": [],
+      "evidence": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever",
+          "original_text": "Fever",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 1,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough",
+          "original_text": "Cough",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 2,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P885",
+          "kg_name": "Headache",
+          "original_text": "Headache",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 15,
+          "turn": 4,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "evidence_history": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever",
+          "original_text": "Fever",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 1,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough",
+          "original_text": "Cough",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 2,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P885",
+          "kg_name": "Headache",
+          "original_text": "Headache",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 15,
+          "turn": 4,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "excluded_evidence": [],
+      "asked_symptoms": [],
+      "candidate_diseases": [
+        {
+          "id": "SIM:D0001",
+          "name": "Simulated disease 0001",
+          "score": 0.853,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0038",
+          "name": "Simulated disease 0038",
+          "score": 0.5547,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0022",
+          "name": "Simulated disease 0022",
+          "score": 0.5451,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0023",
+          "name": "Simulated disease 0023",
+          "score": 0.2466,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0027",
+          "name": "Simulated disease 0027",
+          "score": 0.0596,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        }
+      ],
+      "last_question": {
+        "kg_id": "P13614",
+        "kg_name": "Fractured right clavicle",
+        "heuristic_score": 0.0216,
+        "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+      },
+      "drug_recommendations": [],
+      "messages": [
+        {
+          "id": "3fb20169fd8c4c1a97a765f8f96bddce",
+          "sender": "user",
+          "text": "I have Fever."
+        },
+        {
+          "id": "35ece2c91db24e05bc409e36ed15568b",
+          "sender": "assistant",
+          "text": "Are you experiencing Stippling of the epiphysis of the proximal phalanx of the hallux? You can answer Yes, No, Not sure, or describe it in your own words."
+        },
+        {
+          "id": "8b836b0f54944597ba3a72239b36abbe",
+          "sender": "user",
+          "text": "I have Cough."
+        },
+        {
+          "id": "60deb447370c4c83b835a90c5360af53",
+          "sender": "assistant",
+          "text": "Are you experiencing Impaired ADP-induced platelet aggregation? You can answer Yes, No, Not sure, or describe it in your own words."
+        },
+        {
+          "id": "8ba1e13012084c8f947dd64bfd4e873a",
+          "sender": "user",
+          "text": "Tell me about my latest symptom."
+        },
+        {
+          "id": "1f948d5ee133410c8aac2747dbb5893c",
+          "sender": "assistant",
+          "text": "A cough is a common symptom that may be caused by various factors such as a cold, flu, allergies, reflux, or other underlying health issues. It typically lasts longer than three weeks without medical intervention."
+        },
+        {
+          "id": "f790e0a0ef204962b8b086f2e51d2e6d",
+          "sender": "user",
+          "text": "I have Headache."
+        },
+        {
+          "id": "0084fe727e9648b19640dc00558ab67d",
+          "sender": "assistant",
+          "text": "Are you experiencing Fractured right clavicle? You can answer Yes, No, Not sure, or describe it in your own words."
+        },
+        {
+          "id": "86212fbf2501456e8008ecca0872842c",
+          "sender": "user",
+          "text": "Tell me about my latest symptom."
+        },
+        {
+          "id": "c70f087b2bf34978bd64d9fcbef03673",
+          "sender": "assistant",
+          "text": "Headache is listed as a symptom node (P885) in the project vocabulary. The CSV provides its label and type, but no medical definition. No verified explanatory passage is available for this symptom."
+        },
+        {
+          "id": "5c3cc7580af3478782aaf36fc46a2bd8",
+          "sender": "user",
+          "text": "Tell me about my latest symptom."
+        },
+        {
+          "id": "dcd993ecf3fc411299b0b3bba4760f7d",
+          "sender": "assistant",
+          "text": "Headache is listed as a symptom node (P885) in the project vocabulary. The CSV provides its label and type, but no medical definition. No verified explanatory passage is available for this symptom."
+        }
+      ],
+      "round": 2,
+      "version": 6,
+      "status": "RUNNING",
+      "stop_reason": null,
+      "warnings": [],
+      "timings_ms": {
+        "total": 10.961
+      },
+      "mode": "random",
+      "nlp_engine": "hybrid-context-llm-v2",
+      "ai_trace": {
+        "intent": "knowledge",
+        "response_mode": "catalog-only",
+        "citations": [
+          {
+            "id": "catalog:P885",
+            "title": "Headache — symptom catalog",
+            "url": "",
+            "text": "Headache is listed as a symptom node (P885) in the project vocabulary. The CSV provides its label and type, but no medical definition. No verified explanatory passage is available for this symptom.",
+            "kind": "catalog-metadata",
+            "source_file": "kg_nodes.csv"
+          }
+        ],
+        "topic": {
+          "kg_id": "P885",
+          "kg_name": "Headache"
+        },
+        "topic_resolution": "latest-reported"
+      },
+      "message": "Headache is listed as a symptom node (P885) in the project vocabulary. The CSV provides its label and type, but no medical definition. No verified explanatory passage is available for this symptom.",
+      "next_symptom": {
+        "kg_id": "P13614",
+        "kg_name": "Fractured right clavicle",
+        "heuristic_score": 0.0216,
+        "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+      }
+    },
+    {
+      "session_id": "37b4e28815c94c37be2d16b466e75e0d",
+      "knowledge_focus": {
+        "kg_id": "P4018",
+        "kg_name": "Cough"
+      },
+      "positive_symptoms": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever"
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough"
+        },
+        {
+          "kg_id": "P885",
+          "kg_name": "Headache"
+        }
+      ],
+      "negative_symptoms": [],
+      "uncertain_symptoms": [],
+      "evidence": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever",
+          "original_text": "Fever",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 1,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough",
+          "original_text": "Cough",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 7,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P885",
+          "kg_name": "Headache",
+          "original_text": "Headache",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 15,
+          "turn": 4,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "evidence_history": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever",
+          "original_text": "Fever",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 1,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough",
+          "original_text": "Cough",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 2,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P885",
+          "kg_name": "Headache",
+          "original_text": "Headache",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 15,
+          "turn": 4,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough",
+          "original_text": "Cough",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 7,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "excluded_evidence": [],
+      "asked_symptoms": [],
+      "candidate_diseases": [
+        {
+          "id": "SIM:D0001",
+          "name": "Simulated disease 0001",
+          "score": 0.853,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0038",
+          "name": "Simulated disease 0038",
+          "score": 0.5547,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0022",
+          "name": "Simulated disease 0022",
+          "score": 0.5451,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0023",
+          "name": "Simulated disease 0023",
+          "score": 0.2466,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0027",
+          "name": "Simulated disease 0027",
+          "score": 0.0596,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        }
+      ],
+      "last_question": {
+        "kg_id": "P13614",
+        "kg_name": "Fractured right clavicle",
+        "heuristic_score": 0.0216,
+        "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+      },
+      "drug_recommendations": [],
+      "messages": [
+        {
+          "id": "3fb20169fd8c4c1a97a765f8f96bddce",
+          "sender": "user",
+          "text": "I have Fever."
+        },
+        {
+          "id": "35ece2c91db24e05bc409e36ed15568b",
+          "sender": "assistant",
+          "text": "Are you experiencing Stippling of the epiphysis of the proximal phalanx of the hallux? You can answer Yes, No, Not sure, or describe it in your own words."
+        },
+        {
+          "id": "8b836b0f54944597ba3a72239b36abbe",
+          "sender": "user",
+          "text": "I have Cough."
+        },
+        {
+          "id": "60deb447370c4c83b835a90c5360af53",
+          "sender": "assistant",
+          "text": "Are you experiencing Impaired ADP-induced platelet aggregation? You can answer Yes, No, Not sure, or describe it in your own words."
+        },
+        {
+          "id": "8ba1e13012084c8f947dd64bfd4e873a",
+          "sender": "user",
+          "text": "Tell me about my latest symptom."
+        },
+        {
+          "id": "1f948d5ee133410c8aac2747dbb5893c",
+          "sender": "assistant",
+          "text": "A cough is a common symptom that may be caused by various factors such as a cold, flu, allergies, reflux, or other underlying health issues. It typically lasts longer than three weeks without medical intervention."
+        },
+        {
+          "id": "f790e0a0ef204962b8b086f2e51d2e6d",
+          "sender": "user",
+          "text": "I have Headache."
+        },
+        {
+          "id": "0084fe727e9648b19640dc00558ab67d",
+          "sender": "assistant",
+          "text": "Are you experiencing Fractured right clavicle? You can answer Yes, No, Not sure, or describe it in your own words."
+        },
+        {
+          "id": "86212fbf2501456e8008ecca0872842c",
+          "sender": "user",
+          "text": "Tell me about my latest symptom."
+        },
+        {
+          "id": "c70f087b2bf34978bd64d9fcbef03673",
+          "sender": "assistant",
+          "text": "Headache is listed as a symptom node (P885) in the project vocabulary. The CSV provides its label and type, but no medical definition. No verified explanatory passage is available for this symptom."
+        },
+        {
+          "id": "5c3cc7580af3478782aaf36fc46a2bd8",
+          "sender": "user",
+          "text": "Tell me about my latest symptom."
+        },
+        {
+          "id": "dcd993ecf3fc411299b0b3bba4760f7d",
+          "sender": "assistant",
+          "text": "Headache is listed as a symptom node (P885) in the project vocabulary. The CSV provides its label and type, but no medical definition. No verified explanatory passage is available for this symptom."
+        },
+        {
+          "id": "7ae2bebe55c043f298283468ff019abd",
+          "sender": "user",
+          "text": "I have Cough."
+        },
+        {
+          "id": "895ffe2aac4a40239742624474507a95",
+          "sender": "assistant",
+          "text": "Are you experiencing Fractured right clavicle? You can answer Yes, No, Not sure, or describe it in your own words."
+        }
+      ],
+      "round": 3,
+      "version": 7,
+      "status": "RUNNING",
+      "stop_reason": null,
+      "warnings": [],
+      "timings_ms": {
+        "nlp": 2230.551,
+        "recall": 0.107,
+        "search": 4.216,
+        "total": 2701.748
+      },
+      "mode": "random",
+      "nlp_engine": "hybrid-context-llm-v2",
+      "ai_trace": {
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P11665",
+            "P11666",
+            "P11667",
+            "P12951",
+            "P13614",
+            "P4018"
+          ],
+          "candidates": [
+            {
+              "id": "P11665",
+              "title": "Productive cough",
+              "text": "productive cough",
+              "bm25": 13.0197,
+              "cosine": 0.6158,
+              "rrf": 0.032522,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4018",
+              "title": "Cough",
+              "text": "cough",
+              "bm25": 14.622,
+              "cosine": 0.5691,
+              "rrf": 0.031778,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P11667",
+              "title": "Whooping cough",
+              "text": "whooping cough",
+              "bm25": 13.0197,
+              "cosine": 0.6107,
+              "rrf": 0.031754,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P11666",
+              "title": "Nonproductive cough",
+              "text": "nonproductive cough",
+              "bm25": 13.0197,
+              "cosine": 0.5861,
+              "rrf": 0.031498,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P12951",
+              "title": "Barking cough",
+              "text": "barking cough",
+              "bm25": 13.0197,
+              "cosine": 0.5464,
+              "rrf": 0.03031,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 465,
+            "output_tokens": 50,
+            "latency_ms": 2189.94
+          },
+          "validation": "accepted"
+        },
+        "generation": {
+          "prompt_version": "question-v2",
+          "response_mode": "template",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 58,
+            "output_tokens": 11,
+            "latency_ms": 465.59
+          },
+          "fallback_reason": "ValueError"
+        }
+      },
+      "message": "Are you experiencing Fractured right clavicle? You can answer Yes, No, Not sure, or describe it in your own words.",
+      "next_symptom": {
+        "kg_id": "P13614",
+        "kg_name": "Fractured right clavicle",
+        "heuristic_score": 0.0216,
+        "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+      }
+    },
+    {
+      "session_id": "37b4e28815c94c37be2d16b466e75e0d",
+      "knowledge_focus": {
+        "kg_id": "P4018",
+        "kg_name": "Cough"
+      },
+      "positive_symptoms": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever"
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough"
+        },
+        {
+          "kg_id": "P885",
+          "kg_name": "Headache"
+        }
+      ],
+      "negative_symptoms": [],
+      "uncertain_symptoms": [],
+      "evidence": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever",
+          "original_text": "Fever",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 1,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough",
+          "original_text": "Cough",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 7,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P885",
+          "kg_name": "Headache",
+          "original_text": "Headache",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 15,
+          "turn": 4,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "evidence_history": [
+        {
+          "kg_id": "P835",
+          "kg_name": "Fever",
+          "original_text": "Fever",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 1,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough",
+          "original_text": "Cough",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 2,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P885",
+          "kg_name": "Headache",
+          "original_text": "Headache",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 15,
+          "turn": 4,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        },
+        {
+          "kg_id": "P4018",
+          "kg_name": "Cough",
+          "original_text": "Cough",
+          "confidence": 1,
+          "status": "present",
+          "experiencer": "self",
+          "temporality": "current",
+          "start": 7,
+          "end": 12,
+          "turn": 7,
+          "source": "rules-v2",
+          "duration_text": "",
+          "severity_text": ""
+        }
+      ],
+      "excluded_evidence": [],
+      "asked_symptoms": [],
+      "candidate_diseases": [
+        {
+          "id": "SIM:D0001",
+          "name": "Simulated disease 0001",
+          "score": 0.853,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0038",
+          "name": "Simulated disease 0038",
+          "score": 0.5547,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0022",
+          "name": "Simulated disease 0022",
+          "score": 0.5451,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0023",
+          "name": "Simulated disease 0023",
+          "score": 0.2466,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        },
+        {
+          "id": "SIM:D0027",
+          "name": "Simulated disease 0027",
+          "score": 0.0596,
+          "evidence_ids": [
+            "P4018",
+            "P835",
+            "P885"
+          ],
+          "source": "seeded-random-fixture-v1"
+        }
+      ],
+      "last_question": {
+        "kg_id": "P13614",
+        "kg_name": "Fractured right clavicle",
+        "heuristic_score": 0.0216,
+        "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+      },
+      "drug_recommendations": [],
+      "messages": [
+        {
+          "id": "3fb20169fd8c4c1a97a765f8f96bddce",
+          "sender": "user",
+          "text": "I have Fever."
+        },
+        {
+          "id": "35ece2c91db24e05bc409e36ed15568b",
+          "sender": "assistant",
+          "text": "Are you experiencing Stippling of the epiphysis of the proximal phalanx of the hallux? You can answer Yes, No, Not sure, or describe it in your own words."
+        },
+        {
+          "id": "8b836b0f54944597ba3a72239b36abbe",
+          "sender": "user",
+          "text": "I have Cough."
+        },
+        {
+          "id": "60deb447370c4c83b835a90c5360af53",
+          "sender": "assistant",
+          "text": "Are you experiencing Impaired ADP-induced platelet aggregation? You can answer Yes, No, Not sure, or describe it in your own words."
+        },
+        {
+          "id": "8ba1e13012084c8f947dd64bfd4e873a",
+          "sender": "user",
+          "text": "Tell me about my latest symptom."
+        },
+        {
+          "id": "1f948d5ee133410c8aac2747dbb5893c",
+          "sender": "assistant",
+          "text": "A cough is a common symptom that may be caused by various factors such as a cold, flu, allergies, reflux, or other underlying health issues. It typically lasts longer than three weeks without medical intervention."
+        },
+        {
+          "id": "f790e0a0ef204962b8b086f2e51d2e6d",
+          "sender": "user",
+          "text": "I have Headache."
+        },
+        {
+          "id": "0084fe727e9648b19640dc00558ab67d",
+          "sender": "assistant",
+          "text": "Are you experiencing Fractured right clavicle? You can answer Yes, No, Not sure, or describe it in your own words."
+        },
+        {
+          "id": "86212fbf2501456e8008ecca0872842c",
+          "sender": "user",
+          "text": "Tell me about my latest symptom."
+        },
+        {
+          "id": "c70f087b2bf34978bd64d9fcbef03673",
+          "sender": "assistant",
+          "text": "Headache is listed as a symptom node (P885) in the project vocabulary. The CSV provides its label and type, but no medical definition. No verified explanatory passage is available for this symptom."
+        },
+        {
+          "id": "5c3cc7580af3478782aaf36fc46a2bd8",
+          "sender": "user",
+          "text": "Tell me about my latest symptom."
+        },
+        {
+          "id": "dcd993ecf3fc411299b0b3bba4760f7d",
+          "sender": "assistant",
+          "text": "Headache is listed as a symptom node (P885) in the project vocabulary. The CSV provides its label and type, but no medical definition. No verified explanatory passage is available for this symptom."
+        },
+        {
+          "id": "7ae2bebe55c043f298283468ff019abd",
+          "sender": "user",
+          "text": "I have Cough."
+        },
+        {
+          "id": "895ffe2aac4a40239742624474507a95",
+          "sender": "assistant",
+          "text": "Are you experiencing Fractured right clavicle? You can answer Yes, No, Not sure, or describe it in your own words."
+        },
+        {
+          "id": "6b9028bf5aee4877b060a5597111bf96",
+          "sender": "user",
+          "text": "Tell me about my latest symptom."
+        },
+        {
+          "id": "d269da93a6764560badefb7648681bb8",
+          "sender": "assistant",
+          "text": "A cough is a common symptom that may be caused by various factors such as a cold, flu, allergies, reflux, or other underlying health issues. It typically lasts longer than three weeks without medical intervention."
+        }
+      ],
+      "round": 3,
+      "version": 8,
+      "status": "RUNNING",
+      "stop_reason": null,
+      "warnings": [],
+      "timings_ms": {
+        "total": 2351.139
+      },
+      "mode": "random",
+      "nlp_engine": "hybrid-context-llm-v2",
+      "ai_trace": {
+        "intent": "knowledge",
+        "response_mode": "local-llm-grounded",
+        "retrieval": [
+          {
+            "id": "nhs-cough",
+            "title": "Cough and possible causes",
+            "text": "A cough can occur with a cold or flu, allergies, reflux or other conditions. A cough alone does not establish a diagnosis. NHS guidance recommends medical review for a persistent cough lasting more than three weeks.",
+            "url": "https://www.nhs.uk/symptoms/cough/",
+            "concepts": [
+              "DEMO:cough"
+            ],
+            "reviewed_at": "2026-09-15",
+            "kind": "source_summary",
+            "bm25": 3.4764,
+            "cosine": 0.6091,
+            "rrf": 0.032787,
+            "index_version": "e7797076d6dc"
+          }
+        ],
+        "citations": [
+          {
+            "id": "nhs-cough",
+            "title": "Cough and possible causes",
+            "text": "A cough can occur with a cold or flu, allergies, reflux or other conditions. A cough alone does not establish a diagnosis. NHS guidance recommends medical review for a persistent cough lasting more than three weeks.",
+            "url": "https://www.nhs.uk/symptoms/cough/",
+            "concepts": [
+              "DEMO:cough"
+            ],
+            "reviewed_at": "2026-09-15",
+            "kind": "source_summary",
+            "bm25": 3.4764,
+            "cosine": 0.6091,
+            "rrf": 0.032787,
+            "index_version": "e7797076d6dc"
+          }
+        ],
+        "prompt_version": "grounded-dialogue-v3",
+        "validation": "schema-and-citations-checked",
+        "topic": {
+          "kg_id": "P4018",
+          "kg_name": "Cough"
+        },
+        "topic_resolution": "latest-reported",
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 198,
+          "output_tokens": 54,
+          "latency_ms": 2340.97
+        }
+      },
+      "message": "A cough is a common symptom that may be caused by various factors such as a cold, flu, allergies, reflux, or other underlying health issues. It typically lasts longer than three weeks without medical intervention.",
+      "next_symptom": {
+        "kg_id": "P13614",
+        "kg_name": "Fractured right clavicle",
+        "heuristic_score": 0.0216,
+        "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+      }
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "created_at": "2026-09-15T14:31:39.117Z",
+  "passed": true,
+  "correct": 6,
+  "total": 6,
+  "rows": [
+    {
+      "message": "Good evening, can we chat?",
+      "expected": "social",
+      "actual": "social",
+      "passed": true,
+      "answer": "Of course! Good evening. How may I assist you today?",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [
+            {
+              "text": "Hello, good morning!",
+              "intent": "social",
+              "cosine": 0.4497
+            }
+          ],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 155,
+            "output_tokens": 2,
+            "latency_ms": 89.11
+          },
+          "predicted_intent": "social",
+          "confidence": null,
+          "selected_intent": "social"
+        },
+        "intent": "social",
+        "response_mode": "local-llm-dialogue",
+        "prompt_version": "context-dialogue-v1",
+        "citations": [],
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 74,
+          "output_tokens": 14,
+          "latency_ms": 620.11
+        },
+        "validation": "length-and-scope-checked"
+      }
+    },
+    {
+      "message": "Where can I change an answer?",
+      "expected": "help",
+      "actual": "help",
+      "passed": true,
+      "answer": "To change an answer, users should navigate to the evidence panel where they can select 'Yes', 'No', or 'Not sure' from a dropdown menu next to each piece of recorded evidence.",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [
+            {
+              "text": "Where do I change my answers?",
+              "intent": "help",
+              "cosine": 0.8562
+            }
+          ],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 157,
+            "output_tokens": 2,
+            "latency_ms": 88.48
+          },
+          "predicted_intent": "explain",
+          "confidence": null,
+          "consistency_check": {
+            "example_intent": "help",
+            "model_call": {
+              "model": "Qwen2.5-1.5B-Instruct",
+              "device": "cuda",
+              "input_tokens": 52,
+              "output_tokens": 2,
+              "latency_ms": 101.17
+            },
+            "verdict": "YES"
+          },
+          "selected_intent": "help"
+        },
+        "intent": "help",
+        "response_mode": "local-llm-dialogue",
+        "prompt_version": "context-dialogue-v1",
+        "citations": [],
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 240,
+          "output_tokens": 40,
+          "latency_ms": 1873.04
+        },
+        "validation": "length-and-scope-checked"
+      }
+    },
+    {
+      "message": "Recommend a film to watch.",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "answer": "That request is outside this symptom demo. Thank you for understanding. While we're here, could you let me know how recording symptoms works?",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [
+            {
+              "text": "Suggest a movie.",
+              "intent": "out_of_scope",
+              "cosine": 0.7407
+            }
+          ],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 156,
+            "output_tokens": 4,
+            "latency_ms": 208.88
+          },
+          "predicted_intent": "out_of_scope",
+          "confidence": null,
+          "selected_intent": "out_of_scope"
+        },
+        "intent": "out_of_scope",
+        "response_mode": "local-llm-dialogue",
+        "prompt_version": "context-dialogue-v1",
+        "citations": [],
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 129,
+          "output_tokens": 21,
+          "latency_ms": 930.38
+        },
+        "scope_notice_added": true,
+        "validation": "length-and-scope-checked"
+      }
+    },
+    {
+      "message": "What is Drowsiness?",
+      "expected": "knowledge",
+      "actual": "knowledge",
+      "passed": true,
+      "answer": "Drowsiness is feeling very sleepy or tired, often leading to difficulty staying awake or concentrating. It's like when you feel really sleepy during the day but can't quite fall asleep.",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [
+            {
+              "text": "I have Drowsiness.",
+              "intent": "report",
+              "cosine": 0.7821
+            },
+            {
+              "text": "Explain the meaning of drowsiness.",
+              "intent": "knowledge",
+              "cosine": 0.9195
+            }
+          ],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 167,
+            "output_tokens": 2,
+            "latency_ms": 90.91
+          },
+          "predicted_intent": "knowledge",
+          "confidence": null,
+          "selected_intent": "knowledge"
+        },
+        "intent": "knowledge",
+        "response_mode": "local-llm-general",
+        "citations": [],
+        "answer_basis": "model-general-knowledge",
+        "prompt_version": "general-knowledge-v1",
+        "topic": {
+          "kg_id": "P986",
+          "kg_name": "Drowsiness"
+        },
+        "topic_resolution": "explicit-name",
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 156,
+          "output_tokens": 38,
+          "latency_ms": 1696.32
+        },
+        "validation": "format-and-scope-checked"
+      }
+    },
+    {
+      "message": "Something about that",
+      "expected": "clarify",
+      "actual": "clarify",
+      "passed": true,
+      "answer": "Are you here to report symptoms, seek information on a health term, or need assistance with the app?",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [
+            {
+              "text": "Something about that.",
+              "intent": "clarify",
+              "cosine": 0.8749
+            }
+          ],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 151,
+            "output_tokens": 2,
+            "latency_ms": 89.84
+          },
+          "predicted_intent": "explain",
+          "confidence": null,
+          "consistency_check": {
+            "example_intent": "clarify",
+            "model_call": {
+              "model": "Qwen2.5-1.5B-Instruct",
+              "device": "cuda",
+              "input_tokens": 46,
+              "output_tokens": 2,
+              "latency_ms": 111.34
+            },
+            "verdict": "YES"
+          },
+          "selected_intent": "clarify"
+        },
+        "intent": "clarify",
+        "response_mode": "local-llm-dialogue",
+        "prompt_version": "context-dialogue-v1",
+        "citations": [],
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 116,
+          "output_tokens": 22,
+          "latency_ms": 928.98
+        },
+        "validation": "length-and-scope-checked"
+      }
+    },
+    {
+      "message": "Thanks, that helps.",
+      "expected": "social",
+      "actual": "social",
+      "passed": true,
+      "answer": "You're welcome! If you have any other questions or need further assistance, feel free to ask.",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [
+            {
+              "text": "Thanks, that was helpful.",
+              "intent": "social",
+              "cosine": 0.739
+            }
+          ],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 154,
+            "output_tokens": 2,
+            "latency_ms": 90.65
+          },
+          "predicted_intent": "social",
+          "confidence": null,
+          "selected_intent": "social"
+        },
+        "intent": "social",
+        "response_mode": "local-llm-dialogue",
+        "prompt_version": "context-dialogue-v1",
+        "citations": [],
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 72,
+          "output_tokens": 21,
+          "latency_ms": 1005.22
+        },
+        "validation": "length-and-scope-checked"
+      }
+    }
+  ]
+}

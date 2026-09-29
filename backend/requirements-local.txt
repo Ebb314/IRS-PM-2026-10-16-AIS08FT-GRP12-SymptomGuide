@@ -1,0 +1,7 @@
+# Validated on the existing gc1 Python 3.11 environment.
+# Install the appropriate CPU/CUDA PyTorch build separately before this file.
+-r requirements.txt
+transformers==4.57.6
+sentence-transformers==3.4.1
+huggingface-hub>=0.34,<1
+numpy>=1.26,<3

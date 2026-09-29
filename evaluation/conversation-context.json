@@ -1,0 +1,531 @@
+{
+  "created_at": "2026-09-16T01:01:08.134Z",
+  "passed": true,
+  "rows": [
+    {
+      "message": "How to describe?",
+      "expected": "guide",
+      "actual": "guide",
+      "answer": "It's okay to start by describing how you're feeling. What seems unusual or different for you?",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [
+            {
+              "text": "Suggest a movie.",
+              "intent": "out_of_scope",
+              "cosine": 0.3131
+            }
+          ],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 154,
+            "output_tokens": 2,
+            "latency_ms": 431.51
+          },
+          "predicted_intent": "explain",
+          "confidence": null,
+          "selected_intent": "guide",
+          "conversation_act": "guide",
+          "selection_policy": "explicit-conversation-cue"
+        },
+        "intent": "guide",
+        "response_mode": "local-llm-support",
+        "prompt_version": "conversation-support-v1",
+        "citations": [],
+        "context_turns": 0,
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 105,
+          "output_tokens": 21,
+          "latency_ms": 998.07
+        }
+      }
+    },
+    {
+      "message": "I feel bad but i dont know how to say",
+      "expected": "guide",
+      "actual": "guide",
+      "answer": "That's understandable. Start by telling me what specifically feels off or different for you?",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [
+            {
+              "text": "I have a headache.",
+              "intent": "report",
+              "cosine": 0.3139
+            },
+            {
+              "text": "Yes, I feel that.",
+              "intent": "report",
+              "cosine": 0.2245
+            }
+          ],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 169,
+            "output_tokens": 2,
+            "latency_ms": 88.41
+          },
+          "predicted_intent": "explain",
+          "confidence": null,
+          "selected_intent": "guide",
+          "conversation_act": "guide",
+          "selection_policy": "explicit-conversation-cue"
+        },
+        "intent": "guide",
+        "response_mode": "local-llm-support",
+        "prompt_version": "conversation-support-v1",
+        "citations": [],
+        "context_turns": 2,
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 158,
+          "output_tokens": 18,
+          "latency_ms": 723.49
+        }
+      }
+    },
+    {
+      "message": "What?",
+      "expected": "repair",
+      "actual": "repair",
+      "answer": "Can you tell me about any unusual feelings or sensations you've been experiencing lately?",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 142,
+            "output_tokens": 2,
+            "latency_ms": 88.2
+          },
+          "predicted_intent": "explain",
+          "confidence": null,
+          "selected_intent": "repair",
+          "conversation_act": "repair",
+          "selection_policy": "explicit-conversation-cue"
+        },
+        "intent": "repair",
+        "response_mode": "local-llm-support",
+        "prompt_version": "conversation-support-v1",
+        "citations": [],
+        "context_turns": 4,
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 202,
+          "output_tokens": 17,
+          "latency_ms": 769.58
+        }
+      }
+    },
+    {
+      "message": "Whats fever",
+      "expected": "knowledge",
+      "actual": "knowledge",
+      "answer": "In adults, a temperature of 38 degrees Celsius or higher is generally described as a fever. Body temperature varies between people and over the day. Feeling hot or shivery can matter even when a reading is lower.",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [
+            {
+              "text": "What does fever mean?",
+              "intent": "knowledge",
+              "cosine": 0.8781
+            }
+          ],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 152,
+            "output_tokens": 2,
+            "latency_ms": 88.43
+          },
+          "predicted_intent": "knowledge",
+          "confidence": null,
+          "selected_intent": "knowledge"
+        },
+        "intent": "knowledge",
+        "response_mode": "retrieved-extract-fallback",
+        "retrieval": [
+          {
+            "id": "nhs-fever",
+            "title": "High temperature in adults",
+            "text": "In adults, a temperature of 38 degrees Celsius or higher is generally described as a fever. Body temperature varies between people and over the day. Feeling hot or shivery can matter even when a reading is lower.",
+            "url": "https://www.nhs.uk/symptoms/fever-in-adults/",
+            "concepts": [
+              "DEMO:fever"
+            ],
+            "reviewed_at": "2026-09-15",
+            "kind": "source_summary",
+            "bm25": 1.9303,
+            "cosine": 0.5226,
+            "rrf": 0.032787,
+            "index_version": "e7797076d6dc"
+          }
+        ],
+        "citations": [
+          {
+            "id": "nhs-fever",
+            "title": "High temperature in adults",
+            "text": "In adults, a temperature of 38 degrees Celsius or higher is generally described as a fever. Body temperature varies between people and over the day. Feeling hot or shivery can matter even when a reading is lower.",
+            "url": "https://www.nhs.uk/symptoms/fever-in-adults/",
+            "concepts": [
+              "DEMO:fever"
+            ],
+            "reviewed_at": "2026-09-15",
+            "kind": "source_summary",
+            "bm25": 1.9303,
+            "cosine": 0.5226,
+            "rrf": 0.032787,
+            "index_version": "e7797076d6dc"
+          }
+        ],
+        "prompt_version": "grounded-dialogue-v3",
+        "validation": "source-extract",
+        "topic": {
+          "kg_id": "P835",
+          "kg_name": "Fever"
+        },
+        "topic_resolution": "explicit-name",
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 199,
+          "output_tokens": 49,
+          "latency_ms": 2130.92
+        },
+        "fallback_reason": "ValueError"
+      }
+    },
+    {
+      "message": "Whats cold",
+      "expected": "clarify_term",
+      "actual": "clarify_term",
+      "answer": "Do you mean a common cold, or feeling cold or chilly?",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [
+            {
+              "text": "What does fever mean?",
+              "intent": "knowledge",
+              "cosine": 0.3541
+            }
+          ],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 152,
+            "output_tokens": 2,
+            "latency_ms": 89.34
+          },
+          "predicted_intent": "knowledge",
+          "confidence": null,
+          "selected_intent": "clarify_term",
+          "conversation_act": "clarify_term",
+          "selection_policy": "explicit-conversation-cue"
+        },
+        "intent": "clarify_term",
+        "response_mode": "support-fallback",
+        "prompt_version": "conversation-support-v1",
+        "citations": [],
+        "context_turns": 4,
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 210,
+          "output_tokens": 22,
+          "latency_ms": 909.75
+        },
+        "fallback_reason": "ValueError"
+      }
+    },
+    {
+      "message": "How can I describe my symptoms?",
+      "expected": "guide",
+      "actual": "guide",
+      "answer": "You don't need medical words. What feels different in your body right now?",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [
+            {
+              "text": "What symptoms have I reported so far?",
+              "intent": "summary",
+              "cosine": 0.7676
+            },
+            {
+              "text": "Tell me about my latest symptom.",
+              "intent": "knowledge",
+              "cosine": 0.6256
+            },
+            {
+              "text": "How do I correct a symptom I entered?",
+              "intent": "help",
+              "cosine": 0.453
+            },
+            {
+              "text": "What does fever mean?",
+              "intent": "knowledge",
+              "cosine": 0.3757
+            }
+          ],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 188,
+            "output_tokens": 2,
+            "latency_ms": 99.91
+          },
+          "predicted_intent": "knowledge",
+          "confidence": null,
+          "selected_intent": "guide",
+          "conversation_act": "guide",
+          "selection_policy": "explicit-conversation-cue"
+        },
+        "intent": "guide",
+        "response_mode": "support-fallback",
+        "prompt_version": "conversation-support-v1",
+        "citations": [],
+        "context_turns": 0,
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 108,
+          "output_tokens": 35,
+          "latency_ms": 1566.74
+        },
+        "fallback_reason": "ValueError"
+      }
+    },
+    {
+      "message": "I can't explain what feels wrong",
+      "expected": "guide",
+      "actual": "guide",
+      "answer": "It's okay to feel unsure. How does your body typically feel?",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [
+            {
+              "text": "Yes, I feel that.",
+              "intent": "report",
+              "cosine": 0.3582
+            },
+            {
+              "text": "Explain the meaning of drowsiness.",
+              "intent": "knowledge",
+              "cosine": 0.1766
+            }
+          ],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 169,
+            "output_tokens": 2,
+            "latency_ms": 91.72
+          },
+          "predicted_intent": "knowledge",
+          "confidence": null,
+          "selected_intent": "guide",
+          "conversation_act": "guide",
+          "selection_policy": "explicit-conversation-cue"
+        },
+        "intent": "guide",
+        "response_mode": "local-llm-support",
+        "prompt_version": "conversation-support-v1",
+        "citations": [],
+        "context_turns": 2,
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 153,
+          "output_tokens": 15,
+          "latency_ms": 702.3
+        }
+      }
+    },
+    {
+      "message": "I don't understand",
+      "expected": "repair",
+      "actual": "repair",
+      "answer": "Can you tell me about any unusual feelings or changes you've noticed lately? It might help if you could describe how these changes make you feel physically.",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 145,
+            "output_tokens": 2,
+            "latency_ms": 120.5
+          },
+          "predicted_intent": "explain",
+          "confidence": null,
+          "selected_intent": "repair",
+          "conversation_act": "repair",
+          "selection_policy": "explicit-conversation-cue"
+        },
+        "intent": "repair",
+        "response_mode": "local-llm-support",
+        "prompt_version": "conversation-support-v1",
+        "citations": [],
+        "context_turns": 4,
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 198,
+          "output_tokens": 31,
+          "latency_ms": 1248.3
+        }
+      }
+    },
+    {
+      "message": "What's fever?",
+      "expected": "knowledge",
+      "actual": "knowledge",
+      "answer": "In adults, a temperature of 38 degrees Celsius or higher is generally described as a fever. Body temperature varies between people and over the day. Feeling hot or shivery can matter even when a reading is lower.",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [
+            {
+              "text": "What does fever mean?",
+              "intent": "knowledge",
+              "cosine": 0.9249
+            }
+          ],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 152,
+            "output_tokens": 2,
+            "latency_ms": 88.49
+          },
+          "predicted_intent": "knowledge",
+          "confidence": null,
+          "selected_intent": "knowledge"
+        },
+        "intent": "knowledge",
+        "response_mode": "retrieved-extract-fallback",
+        "retrieval": [
+          {
+            "id": "nhs-fever",
+            "title": "High temperature in adults",
+            "text": "In adults, a temperature of 38 degrees Celsius or higher is generally described as a fever. Body temperature varies between people and over the day. Feeling hot or shivery can matter even when a reading is lower.",
+            "url": "https://www.nhs.uk/symptoms/fever-in-adults/",
+            "concepts": [
+              "DEMO:fever"
+            ],
+            "reviewed_at": "2026-09-15",
+            "kind": "source_summary",
+            "bm25": 1.9303,
+            "cosine": 0.5348,
+            "rrf": 0.032787,
+            "index_version": "e7797076d6dc"
+          }
+        ],
+        "citations": [
+          {
+            "id": "nhs-fever",
+            "title": "High temperature in adults",
+            "text": "In adults, a temperature of 38 degrees Celsius or higher is generally described as a fever. Body temperature varies between people and over the day. Feeling hot or shivery can matter even when a reading is lower.",
+            "url": "https://www.nhs.uk/symptoms/fever-in-adults/",
+            "concepts": [
+              "DEMO:fever"
+            ],
+            "reviewed_at": "2026-09-15",
+            "kind": "source_summary",
+            "bm25": 1.9303,
+            "cosine": 0.5348,
+            "rrf": 0.032787,
+            "index_version": "e7797076d6dc"
+          }
+        ],
+        "prompt_version": "grounded-dialogue-v3",
+        "validation": "source-extract",
+        "topic": {
+          "kg_id": "P835",
+          "kg_name": "Fever"
+        },
+        "topic_resolution": "explicit-name",
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 199,
+          "output_tokens": 44,
+          "latency_ms": 1795.94
+        },
+        "fallback_reason": "ValueError"
+      }
+    },
+    {
+      "message": "What is cold?",
+      "expected": "clarify_term",
+      "actual": "clarify_term",
+      "answer": "Do you mean a common cold, or feeling cold or chilly?",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [
+            {
+              "text": "What does fever mean?",
+              "intent": "knowledge",
+              "cosine": 0.4713
+            },
+            {
+              "text": "I do not have a cough.",
+              "intent": "report",
+              "cosine": 0.331
+            }
+          ],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 162,
+            "output_tokens": 2,
+            "latency_ms": 89.47
+          },
+          "predicted_intent": "knowledge",
+          "confidence": null,
+          "selected_intent": "clarify_term",
+          "conversation_act": "clarify_term",
+          "selection_policy": "explicit-conversation-cue"
+        },
+        "intent": "clarify_term",
+        "response_mode": "support-fallback",
+        "prompt_version": "conversation-support-v1",
+        "citations": [],
+        "context_turns": 4,
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 228,
+          "output_tokens": 23,
+          "latency_ms": 935.4
+        },
+        "fallback_reason": "ValueError"
+      }
+    }
+  ]
+}

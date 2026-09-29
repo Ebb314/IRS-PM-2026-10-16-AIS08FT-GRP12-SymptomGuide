@@ -1,0 +1,536 @@
+{
+  "created_at": "2026-09-15T14:01:00.959Z",
+  "passed": false,
+  "correct": 2,
+  "total": 10,
+  "rows": [
+    {
+      "message": "Hi there!",
+      "expected": "social",
+      "actual": "clarify",
+      "passed": false,
+      "answer": "Hello! How can I assist you today?",
+      "trace": {
+        "routing": {
+          "mode": "intent-failed",
+          "prompt_version": "intent-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 214,
+            "output_tokens": 7,
+            "latency_ms": 502.46
+          },
+          "selected_intent": "clarify",
+          "fallback_reason": "ValidationError"
+        },
+        "intent": "clarify",
+        "response_mode": "local-llm-dialogue",
+        "prompt_version": "context-dialogue-v1",
+        "citations": [],
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 244,
+          "output_tokens": 10,
+          "latency_ms": 434.51
+        },
+        "validation": "length-and-scope-checked"
+      }
+    },
+    {
+      "message": "What can you help me with?",
+      "expected": "help",
+      "actual": "clarify",
+      "passed": false,
+      "answer": "Can you please provide more details on what specific issue or symptom you're experiencing so I can better understand how I might be able to help?",
+      "trace": {
+        "routing": {
+          "mode": "intent-failed",
+          "prompt_version": "intent-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 251,
+            "output_tokens": 7,
+            "latency_ms": 315.38
+          },
+          "selected_intent": "clarify",
+          "fallback_reason": "ValidationError"
+        },
+        "intent": "clarify",
+        "response_mode": "local-llm-dialogue",
+        "prompt_version": "context-dialogue-v1",
+        "citations": [],
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 281,
+          "output_tokens": 29,
+          "latency_ms": 1240.1
+        },
+        "validation": "length-and-scope-checked"
+      }
+    },
+    {
+      "message": "I have Drowsiness.",
+      "expected": "report",
+      "actual": "report",
+      "passed": true,
+      "answer": "Are you experiencing Sleepy facial expression? You can answer Yes, No, Not sure, or describe it in your own words.",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 307,
+            "output_tokens": 13,
+            "latency_ms": 596.76
+          },
+          "predicted_intent": "report",
+          "confidence": 0.95,
+          "selected_intent": "report"
+        },
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P10038",
+            "P13037",
+            "P321",
+            "P5842",
+            "P986"
+          ],
+          "candidates": [
+            {
+              "id": "P986",
+              "title": "Drowsiness",
+              "text": "drowsiness",
+              "bm25": 16.0776,
+              "cosine": 0.8655,
+              "rrf": 0.032787,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P5842",
+              "title": "Paroxysmal drowsiness",
+              "text": "paroxysmal drowsiness",
+              "bm25": 14.3159,
+              "cosine": 0.7514,
+              "rrf": 0.032258,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P321",
+              "title": "Restlessness",
+              "text": "restlessness",
+              "bm25": 0,
+              "cosine": 0.5395,
+              "rrf": 0.015873,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P13037",
+              "title": "Cognitive fatigue",
+              "text": "cognitive fatigue",
+              "bm25": 0,
+              "cosine": 0.5317,
+              "rrf": 0.015625,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P10038",
+              "title": "Chronic fatigue",
+              "text": "chronic fatigue",
+              "bm25": 0,
+              "cosine": 0.5292,
+              "rrf": 0.015385,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 427,
+            "output_tokens": 27,
+            "latency_ms": 1219.3
+          },
+          "validation": "fallback",
+          "error_type": "ValueError"
+        },
+        "generation": {
+          "prompt_version": "question-v2",
+          "response_mode": "template",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 55,
+            "output_tokens": 9,
+            "latency_ms": 385.92
+          },
+          "fallback_reason": "ValueError"
+        }
+      }
+    },
+    {
+      "message": "Tell me about my latest symptom.",
+      "expected": "knowledge",
+      "actual": "report",
+      "passed": false,
+      "answer": "Please describe a supported current symptom, or answer the pending question. Your existing evidence has been preserved.",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 332,
+            "output_tokens": 13,
+            "latency_ms": 578.83
+          },
+          "predicted_intent": "report",
+          "confidence": 0.95,
+          "selected_intent": "report"
+        },
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P3179",
+            "P4385",
+            "P6946",
+            "P735",
+            "P860",
+            "P862"
+          ],
+          "candidates": [
+            {
+              "id": "P735",
+              "title": "Constitutional symptom",
+              "text": "constitutional symptom",
+              "bm25": 13.3496,
+              "cosine": 0.4412,
+              "rrf": 0.031778,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P3179",
+              "title": "Abnormal cellular symptom",
+              "text": "abnormal cellular symptom",
+              "bm25": 12.0313,
+              "cosine": 0.4328,
+              "rrf": 0.030777,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4385",
+              "title": "Intrusion symptom",
+              "text": "intrusion symptom",
+              "bm25": 13.3496,
+              "cosine": 0.4178,
+              "rrf": 0.029958,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P862",
+              "title": "Abdominal symptom",
+              "text": "abdominal symptom",
+              "bm25": 13.3496,
+              "cosine": 0.4056,
+              "rrf": 0.029828,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P860",
+              "title": "Nausea and vomiting",
+              "text": "nausea and vomiting",
+              "bm25": 0,
+              "cosine": 0.5398,
+              "rrf": 0.016393,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 459,
+            "output_tokens": 6,
+            "latency_ms": 317.13
+          },
+          "validation": "accepted"
+        }
+      }
+    },
+    {
+      "message": "Why did you ask that follow-up?",
+      "expected": "explain",
+      "actual": "clarify",
+      "passed": false,
+      "answer": "Could you please explain what Sleepy facial expression means so I understand better?",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 325,
+            "output_tokens": 14,
+            "latency_ms": 670.23
+          },
+          "predicted_intent": "clarify",
+          "confidence": 0.95,
+          "selected_intent": "clarify"
+        },
+        "intent": "clarify",
+        "response_mode": "local-llm-dialogue",
+        "prompt_version": "context-dialogue-v1",
+        "citations": [],
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 421,
+          "output_tokens": 16,
+          "latency_ms": 751.69
+        },
+        "validation": "length-and-scope-checked"
+      }
+    },
+    {
+      "message": "What symptoms have I reported so far?",
+      "expected": "summary",
+      "actual": "clarify",
+      "passed": false,
+      "answer": "To clarify, you've already reported drowsiness as present with a duration of unspecified. Is there anything else specific you'd like to report?",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 316,
+            "output_tokens": 14,
+            "latency_ms": 702.69
+          },
+          "predicted_intent": "clarify",
+          "confidence": 0.95,
+          "selected_intent": "clarify"
+        },
+        "intent": "clarify",
+        "response_mode": "local-llm-dialogue",
+        "prompt_version": "context-dialogue-v1",
+        "citations": [],
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 412,
+          "output_tokens": 30,
+          "latency_ms": 1423.11
+        },
+        "validation": "length-and-scope-checked"
+      }
+    },
+    {
+      "message": "How do I correct a symptom I entered?",
+      "expected": "help",
+      "actual": "report",
+      "passed": false,
+      "answer": "Please describe a supported current symptom, or answer the pending question. Your existing evidence has been preserved.",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 327,
+            "output_tokens": 13,
+            "latency_ms": 636.18
+          },
+          "predicted_intent": "report",
+          "confidence": 0.95,
+          "selected_intent": "report"
+        },
+        "intent": "report",
+        "nlu": {
+          "candidate_ids": [
+            "P3179",
+            "P4385",
+            "P5733",
+            "P6946",
+            "P735",
+            "P862"
+          ],
+          "candidates": [
+            {
+              "id": "P735",
+              "title": "Constitutional symptom",
+              "text": "constitutional symptom",
+              "bm25": 13.3496,
+              "cosine": 0.4218,
+              "rrf": 0.032522,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P4385",
+              "title": "Intrusion symptom",
+              "text": "intrusion symptom",
+              "bm25": 13.3496,
+              "cosine": 0.4871,
+              "rrf": 0.032266,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P862",
+              "title": "Abdominal symptom",
+              "text": "abdominal symptom",
+              "bm25": 13.3496,
+              "cosine": 0.3146,
+              "rrf": 0.028324,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P3179",
+              "title": "Abnormal cellular symptom",
+              "text": "abnormal cellular symptom",
+              "bm25": 12.0313,
+              "cosine": 0.3097,
+              "rrf": 0.026989,
+              "index_version": "3a7603e7d654"
+            },
+            {
+              "id": "P5733",
+              "title": "Unexplained fevers",
+              "text": "unexplained fevers",
+              "bm25": 0,
+              "cosine": 0.4185,
+              "rrf": 0.015873,
+              "index_version": "3a7603e7d654"
+            }
+          ],
+          "prompt_version": "nlu-v2-fewshot",
+          "slot_extractor": "single-entity-exact-span-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 461,
+            "output_tokens": 42,
+            "latency_ms": 1857.93
+          },
+          "validation": "fallback",
+          "error_type": "ValidationError"
+        }
+      }
+    },
+    {
+      "message": "Plan a holiday in Tokyo for me.",
+      "expected": "out_of_scope",
+      "actual": "clarify",
+      "passed": false,
+      "answer": "Could you please specify when you first noticed the drowsiness?",
+      "trace": {
+        "routing": {
+          "mode": "intent-failed",
+          "prompt_version": "intent-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 332,
+            "output_tokens": 6,
+            "latency_ms": 457.26
+          },
+          "selected_intent": "clarify",
+          "fallback_reason": "ValidationError"
+        },
+        "intent": "clarify",
+        "response_mode": "local-llm-dialogue",
+        "prompt_version": "context-dialogue-v1",
+        "citations": [],
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 428,
+          "output_tokens": 14,
+          "latency_ms": 636.41
+        },
+        "validation": "length-and-scope-checked"
+      }
+    },
+    {
+      "message": "Write me a Python sorting function.",
+      "expected": "out_of_scope",
+      "actual": "clarify",
+      "passed": false,
+      "answer": "Can you provide more details on when you first noticed the drowsiness?",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 315,
+            "output_tokens": 14,
+            "latency_ms": 674.25
+          },
+          "predicted_intent": "clarify",
+          "confidence": 0.85,
+          "selected_intent": "clarify"
+        },
+        "intent": "clarify",
+        "response_mode": "local-llm-dialogue",
+        "prompt_version": "context-dialogue-v1",
+        "citations": [],
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 411,
+          "output_tokens": 16,
+          "latency_ms": 858.35
+        },
+        "validation": "length-and-scope-checked"
+      }
+    },
+    {
+      "message": "Tell me which disease I have and prescribe a dose.",
+      "expected": "out_of_scope",
+      "actual": "out_of_scope",
+      "passed": true,
+      "answer": "The symptom described by the user matches the symptom \"drowsiness\" as listed in the EVIDENCE section. However, since the user's history includes planning a holiday and writing a Python function, these topics do not align with the provided symptom information. A suitable alternative would be to discuss travel plans or programming concepts related to holidays and software development.",
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 312,
+            "output_tokens": 15,
+            "latency_ms": 682.32
+          },
+          "predicted_intent": "out_of_scope",
+          "confidence": 0.98,
+          "selected_intent": "out_of_scope"
+        },
+        "intent": "out_of_scope",
+        "response_mode": "local-llm-dialogue",
+        "prompt_version": "context-dialogue-v1",
+        "citations": [],
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 413,
+          "output_tokens": 71,
+          "latency_ms": 3324.29
+        },
+        "validation": "length-and-scope-checked"
+      }
+    }
+  ]
+}

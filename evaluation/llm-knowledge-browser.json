@@ -1,0 +1,453 @@
+{
+  "created_at": "2026-09-15T14:31:50.955Z",
+  "passed": true,
+  "rows": [
+    {
+      "topic": "Drowsiness",
+      "response": {
+        "session_id": "187e085123fa47a783c824743d7ba212",
+        "knowledge_focus": {
+          "kg_id": "P986",
+          "kg_name": "Drowsiness"
+        },
+        "positive_symptoms": [
+          {
+            "kg_id": "P986",
+            "kg_name": "Drowsiness"
+          }
+        ],
+        "negative_symptoms": [],
+        "uncertain_symptoms": [],
+        "evidence": [
+          {
+            "kg_id": "P986",
+            "kg_name": "Drowsiness",
+            "original_text": "Drowsiness",
+            "confidence": 1,
+            "status": "present",
+            "experiencer": "self",
+            "temporality": "current",
+            "start": 7,
+            "end": 17,
+            "turn": 1,
+            "source": "rules-v2",
+            "duration_text": "",
+            "severity_text": ""
+          }
+        ],
+        "evidence_history": [
+          {
+            "kg_id": "P986",
+            "kg_name": "Drowsiness",
+            "original_text": "Drowsiness",
+            "confidence": 1,
+            "status": "present",
+            "experiencer": "self",
+            "temporality": "current",
+            "start": 7,
+            "end": 17,
+            "turn": 1,
+            "source": "rules-v2",
+            "duration_text": "",
+            "severity_text": ""
+          }
+        ],
+        "excluded_evidence": [],
+        "asked_symptoms": [],
+        "candidate_diseases": [
+          {
+            "id": "SIM:D0015",
+            "name": "Simulated disease 0015",
+            "score": 0.9583,
+            "evidence_ids": [
+              "P986"
+            ],
+            "source": "seeded-random-fixture-v1"
+          },
+          {
+            "id": "SIM:D0032",
+            "name": "Simulated disease 0032",
+            "score": 0.4221,
+            "evidence_ids": [
+              "P986"
+            ],
+            "source": "seeded-random-fixture-v1"
+          },
+          {
+            "id": "SIM:D0026",
+            "name": "Simulated disease 0026",
+            "score": 0.3658,
+            "evidence_ids": [
+              "P986"
+            ],
+            "source": "seeded-random-fixture-v1"
+          }
+        ],
+        "last_question": {
+          "kg_id": "P6946",
+          "kg_name": "Sleepy facial expression",
+          "heuristic_score": 0.4974,
+          "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+        },
+        "drug_recommendations": [],
+        "messages": [
+          {
+            "id": "ed5160d461e24c33a021c6c16bed85d0",
+            "sender": "user",
+            "text": "I have Drowsiness."
+          },
+          {
+            "id": "3d83e22da46c41b0ba3ee317e4d4e3d9",
+            "sender": "assistant",
+            "text": "Are you experiencing Sleepy facial expression? You can answer Yes, No, Not sure, or describe it in your own words."
+          },
+          {
+            "id": "22cad20809ae4095999e35f4d9eaebb5",
+            "sender": "user",
+            "text": "Tell me about my latest symptom."
+          },
+          {
+            "id": "53943dfb19cb46209a2535734feb678c",
+            "sender": "assistant",
+            "text": "Drowsiness is feeling very sleepy or tired, often leading to difficulty staying awake or concentrating. It's like when you feel really sleepy during the day but can't quite fall asleep."
+          }
+        ],
+        "round": 0,
+        "version": 2,
+        "status": "RUNNING",
+        "stop_reason": null,
+        "warnings": [],
+        "timings_ms": {
+          "total": 1743.686
+        },
+        "mode": "random",
+        "nlp_engine": "rules-v2",
+        "ai_trace": {
+          "routing": {
+            "mode": "local-llm-intent",
+            "prompt_version": "intent-v1",
+            "examples": [
+              {
+                "text": "Tell me about my latest symptom.",
+                "intent": "knowledge",
+                "cosine": 0.982
+              },
+              {
+                "text": "That symptom has stopped.",
+                "intent": "report",
+                "cosine": 0.598
+              },
+              {
+                "text": "How do I correct a symptom I entered?",
+                "intent": "help",
+                "cosine": 0.5393
+              },
+              {
+                "text": "What symptoms have I reported so far?",
+                "intent": "summary",
+                "cosine": 0.7004
+              }
+            ],
+            "model_call": {
+              "model": "Qwen2.5-1.5B-Instruct",
+              "device": "cuda",
+              "input_tokens": 193,
+              "output_tokens": 2,
+              "latency_ms": 99.65
+            },
+            "predicted_intent": "knowledge",
+            "confidence": null,
+            "selected_intent": "knowledge"
+          },
+          "intent": "knowledge",
+          "response_mode": "local-llm-general",
+          "citations": [],
+          "answer_basis": "model-general-knowledge",
+          "prompt_version": "general-knowledge-v1",
+          "topic": {
+            "kg_id": "P986",
+            "kg_name": "Drowsiness"
+          },
+          "topic_resolution": "latest-reported",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 156,
+            "output_tokens": 38,
+            "latency_ms": 1626.06
+          },
+          "validation": "format-and-scope-checked"
+        },
+        "message": "Drowsiness is feeling very sleepy or tired, often leading to difficulty staying awake or concentrating. It's like when you feel really sleepy during the day but can't quite fall asleep.",
+        "next_symptom": {
+          "kg_id": "P6946",
+          "kg_name": "Sleepy facial expression",
+          "heuristic_score": 0.4974,
+          "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+        }
+      }
+    },
+    {
+      "topic": "Headache",
+      "response": {
+        "session_id": "187e085123fa47a783c824743d7ba212",
+        "knowledge_focus": {
+          "kg_id": "P885",
+          "kg_name": "Headache"
+        },
+        "positive_symptoms": [
+          {
+            "kg_id": "P986",
+            "kg_name": "Drowsiness"
+          },
+          {
+            "kg_id": "P885",
+            "kg_name": "Headache"
+          }
+        ],
+        "negative_symptoms": [],
+        "uncertain_symptoms": [],
+        "evidence": [
+          {
+            "kg_id": "P986",
+            "kg_name": "Drowsiness",
+            "original_text": "Drowsiness",
+            "confidence": 1,
+            "status": "present",
+            "experiencer": "self",
+            "temporality": "current",
+            "start": 7,
+            "end": 17,
+            "turn": 1,
+            "source": "rules-v2",
+            "duration_text": "",
+            "severity_text": ""
+          },
+          {
+            "kg_id": "P885",
+            "kg_name": "Headache",
+            "original_text": "Headache",
+            "confidence": 1,
+            "status": "present",
+            "experiencer": "self",
+            "temporality": "current",
+            "start": 7,
+            "end": 15,
+            "turn": 3,
+            "source": "rules-v2",
+            "duration_text": "",
+            "severity_text": ""
+          }
+        ],
+        "evidence_history": [
+          {
+            "kg_id": "P986",
+            "kg_name": "Drowsiness",
+            "original_text": "Drowsiness",
+            "confidence": 1,
+            "status": "present",
+            "experiencer": "self",
+            "temporality": "current",
+            "start": 7,
+            "end": 17,
+            "turn": 1,
+            "source": "rules-v2",
+            "duration_text": "",
+            "severity_text": ""
+          },
+          {
+            "kg_id": "P885",
+            "kg_name": "Headache",
+            "original_text": "Headache",
+            "confidence": 1,
+            "status": "present",
+            "experiencer": "self",
+            "temporality": "current",
+            "start": 7,
+            "end": 15,
+            "turn": 3,
+            "source": "rules-v2",
+            "duration_text": "",
+            "severity_text": ""
+          }
+        ],
+        "excluded_evidence": [],
+        "asked_symptoms": [],
+        "candidate_diseases": [
+          {
+            "id": "SIM:D0038",
+            "name": "Simulated disease 0038",
+            "score": 0.9242,
+            "evidence_ids": [
+              "P885",
+              "P986"
+            ],
+            "source": "seeded-random-fixture-v1"
+          },
+          {
+            "id": "SIM:D0039",
+            "name": "Simulated disease 0039",
+            "score": 0.5716,
+            "evidence_ids": [
+              "P885",
+              "P986"
+            ],
+            "source": "seeded-random-fixture-v1"
+          },
+          {
+            "id": "SIM:D0001",
+            "name": "Simulated disease 0001",
+            "score": 0.4758,
+            "evidence_ids": [
+              "P885",
+              "P986"
+            ],
+            "source": "seeded-random-fixture-v1"
+          },
+          {
+            "id": "SIM:D0009",
+            "name": "Simulated disease 0009",
+            "score": 0.2695,
+            "evidence_ids": [
+              "P885",
+              "P986"
+            ],
+            "source": "seeded-random-fixture-v1"
+          },
+          {
+            "id": "SIM:D0047",
+            "name": "Simulated disease 0047",
+            "score": 0.1517,
+            "evidence_ids": [
+              "P885",
+              "P986"
+            ],
+            "source": "seeded-random-fixture-v1"
+          }
+        ],
+        "last_question": {
+          "kg_id": "P4781",
+          "kg_name": "Decreased urine output",
+          "heuristic_score": 0.9063,
+          "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+        },
+        "drug_recommendations": [],
+        "messages": [
+          {
+            "id": "ed5160d461e24c33a021c6c16bed85d0",
+            "sender": "user",
+            "text": "I have Drowsiness."
+          },
+          {
+            "id": "3d83e22da46c41b0ba3ee317e4d4e3d9",
+            "sender": "assistant",
+            "text": "Are you experiencing Sleepy facial expression? You can answer Yes, No, Not sure, or describe it in your own words."
+          },
+          {
+            "id": "22cad20809ae4095999e35f4d9eaebb5",
+            "sender": "user",
+            "text": "Tell me about my latest symptom."
+          },
+          {
+            "id": "53943dfb19cb46209a2535734feb678c",
+            "sender": "assistant",
+            "text": "Drowsiness is feeling very sleepy or tired, often leading to difficulty staying awake or concentrating. It's like when you feel really sleepy during the day but can't quite fall asleep."
+          },
+          {
+            "id": "7b4d51a6d68944e898e81ab413c60790",
+            "sender": "user",
+            "text": "I have Headache."
+          },
+          {
+            "id": "264f3dd5101344b3a169b313d43a2ddc",
+            "sender": "assistant",
+            "text": "Are you experiencing Decreased urine output? You can answer Yes, No, Not sure, or describe it in your own words."
+          },
+          {
+            "id": "311ce758b2c747168d17cce253b3b0f3",
+            "sender": "user",
+            "text": "Tell me about my latest symptom."
+          },
+          {
+            "id": "1ff8064fa47f4ba598b5aef65eeff771",
+            "sender": "assistant",
+            "text": "A headache is a pain in the head, often described as a feeling of pressure, tightness, or throbbing around the skull. It can be caused by various factors such as stress, dehydration, changes in weather, or physical exertion."
+          }
+        ],
+        "round": 1,
+        "version": 4,
+        "status": "RUNNING",
+        "stop_reason": null,
+        "warnings": [],
+        "timings_ms": {
+          "total": 2219.49
+        },
+        "mode": "random",
+        "nlp_engine": "rules-v2",
+        "ai_trace": {
+          "routing": {
+            "mode": "local-llm-intent",
+            "prompt_version": "intent-v1",
+            "examples": [
+              {
+                "text": "Tell me about my latest symptom.",
+                "intent": "knowledge",
+                "cosine": 0.982
+              },
+              {
+                "text": "That symptom has stopped.",
+                "intent": "report",
+                "cosine": 0.598
+              },
+              {
+                "text": "How do I correct a symptom I entered?",
+                "intent": "help",
+                "cosine": 0.5393
+              },
+              {
+                "text": "What symptoms have I reported so far?",
+                "intent": "summary",
+                "cosine": 0.7004
+              }
+            ],
+            "model_call": {
+              "model": "Qwen2.5-1.5B-Instruct",
+              "device": "cuda",
+              "input_tokens": 192,
+              "output_tokens": 2,
+              "latency_ms": 96.91
+            },
+            "predicted_intent": "knowledge",
+            "confidence": null,
+            "selected_intent": "knowledge"
+          },
+          "intent": "knowledge",
+          "response_mode": "local-llm-general",
+          "citations": [],
+          "answer_basis": "model-general-knowledge",
+          "prompt_version": "general-knowledge-v1",
+          "topic": {
+            "kg_id": "P885",
+            "kg_name": "Headache"
+          },
+          "topic_resolution": "latest-reported",
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 154,
+            "output_tokens": 50,
+            "latency_ms": 2103.36
+          },
+          "validation": "format-and-scope-checked"
+        },
+        "message": "A headache is a pain in the head, often described as a feeling of pressure, tightness, or throbbing around the skull. It can be caused by various factors such as stress, dehydration, changes in weather, or physical exertion.",
+        "next_symptom": {
+          "kg_id": "P4781",
+          "kg_name": "Decreased urine output",
+          "heuristic_score": 0.9063,
+          "rationale": "Random test question from the full symptom catalog; no clinical ranking."
+        }
+      }
+    }
+  ]
+}

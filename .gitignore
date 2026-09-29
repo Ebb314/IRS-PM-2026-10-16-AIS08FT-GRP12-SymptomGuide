@@ -1,8 +1,17 @@
-__pycache__/
-*.py[cod]
-.pytest_cache/
+# Generated local environments and private sessions
 .venv/
-backend/.env
-frontend/node_modules/
-frontend/dist/
+venv/
+node_modules/
+.npm-cache/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
 .DS_Store
+backend/runtime/
+.env
+frontend/.env
+frontend/dist/
+models/
+

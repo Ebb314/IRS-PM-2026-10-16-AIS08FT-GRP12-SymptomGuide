@@ -1,0 +1,260 @@
+{
+  "created_at": "2026-09-16T01:09:27.147Z",
+  "passed": true,
+  "rows": [
+    {
+      "seeded": false,
+      "message": "I dont get waht you said",
+      "answer": "I'm sorry if there was any confusion earlier. Can you tell me how you're feeling physically?",
+      "prompt": "description",
+      "attempts": 0,
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 148,
+            "output_tokens": 2,
+            "latency_ms": 311.97
+          },
+          "predicted_intent": "explain",
+          "confidence": null,
+          "selected_intent": "guide",
+          "conversation_act": "guide",
+          "selection_policy": "explicit-conversation-cue"
+        },
+        "intent": "guide",
+        "response_mode": "local-llm-support",
+        "prompt_version": "conversation-support-v1",
+        "citations": [],
+        "context_turns": 0,
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 109,
+          "output_tokens": 21,
+          "latency_ms": 860.81
+        }
+      }
+    },
+    {
+      "seeded": false,
+      "message": "yes",
+      "answer": "I cannot tell what you mean from \"yes\" alone. Please enter a short description, for example \"My head hurts\" or \"I feel tired\".",
+      "prompt": "description",
+      "attempts": 1,
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [
+            {
+              "text": "Yes, I feel that.",
+              "intent": "report",
+              "cosine": 0.2144
+            }
+          ],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 151,
+            "output_tokens": 2,
+            "latency_ms": 88.7
+          },
+          "predicted_intent": "knowledge",
+          "confidence": null,
+          "selected_intent": "clarification_retry",
+          "conversation_act": "clarification_retry",
+          "selection_policy": "explicit-conversation-cue"
+        },
+        "intent": "clarification_retry",
+        "response_mode": "clarification-fallback",
+        "citations": [],
+        "prompt_version": "clarification-state-v1",
+        "attempt": 1,
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 73,
+          "output_tokens": 29,
+          "latency_ms": 1177.33
+        },
+        "fallback_reason": "ValueError"
+      }
+    },
+    {
+      "seeded": false,
+      "message": "yes",
+      "answer": "Please provide a brief description of your condition when you're ready, such as \"My head hurts\" or \"I feel tired.\"",
+      "prompt": "description",
+      "attempts": 2,
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [
+            {
+              "text": "Yes, I feel that.",
+              "intent": "report",
+              "cosine": 0.2144
+            }
+          ],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 151,
+            "output_tokens": 2,
+            "latency_ms": 86.7
+          },
+          "predicted_intent": "knowledge",
+          "confidence": null,
+          "selected_intent": "clarification_stop",
+          "conversation_act": "clarification_stop",
+          "selection_policy": "explicit-conversation-cue"
+        },
+        "intent": "clarification_stop",
+        "response_mode": "local-llm-clarification",
+        "citations": [],
+        "prompt_version": "clarification-state-v1",
+        "attempt": 2,
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 82,
+          "output_tokens": 27,
+          "latency_ms": 1101.47
+        }
+      }
+    },
+    {
+      "seeded": true,
+      "message": "I dont get waht you said",
+      "answer": "I'm sorry if my previous response wasn't clear. Could you please tell me more about how you feel when you're drowsy?",
+      "prompt": "description",
+      "attempts": 0,
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 153,
+            "output_tokens": 2,
+            "latency_ms": 87.79
+          },
+          "predicted_intent": "explain",
+          "confidence": null,
+          "selected_intent": "repair",
+          "conversation_act": "repair",
+          "selection_policy": "explicit-conversation-cue"
+        },
+        "intent": "repair",
+        "response_mode": "local-llm-support",
+        "prompt_version": "conversation-support-v1",
+        "citations": [],
+        "context_turns": 2,
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 167,
+          "output_tokens": 29,
+          "latency_ms": 1208.34
+        }
+      }
+    },
+    {
+      "seeded": true,
+      "message": "yes",
+      "answer": "I cannot tell what you mean from \"yes\" alone. Please enter a short description, for example \"My head hurts\" or \"I feel tired\".",
+      "prompt": "description",
+      "attempts": 1,
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [
+            {
+              "text": "Yes, I feel that.",
+              "intent": "report",
+              "cosine": 0.2144
+            }
+          ],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 156,
+            "output_tokens": 2,
+            "latency_ms": 87.04
+          },
+          "predicted_intent": "report",
+          "confidence": null,
+          "selected_intent": "clarification_retry",
+          "conversation_act": "clarification_retry",
+          "selection_policy": "explicit-conversation-cue"
+        },
+        "intent": "clarification_retry",
+        "response_mode": "clarification-fallback",
+        "citations": [],
+        "prompt_version": "clarification-state-v1",
+        "attempt": 1,
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 73,
+          "output_tokens": 29,
+          "latency_ms": 1199.6
+        },
+        "fallback_reason": "ValueError"
+      }
+    },
+    {
+      "seeded": true,
+      "message": "yes",
+      "answer": "Please provide a brief description of your condition when you're ready, such as \"My head hurts\" or \"I feel tired.\"",
+      "prompt": "description",
+      "attempts": 2,
+      "trace": {
+        "routing": {
+          "mode": "local-llm-intent",
+          "prompt_version": "intent-v1",
+          "examples": [
+            {
+              "text": "Yes, I feel that.",
+              "intent": "report",
+              "cosine": 0.2144
+            }
+          ],
+          "model_call": {
+            "model": "Qwen2.5-1.5B-Instruct",
+            "device": "cuda",
+            "input_tokens": 156,
+            "output_tokens": 2,
+            "latency_ms": 91.85
+          },
+          "predicted_intent": "report",
+          "confidence": null,
+          "selected_intent": "clarification_stop",
+          "conversation_act": "clarification_stop",
+          "selection_policy": "explicit-conversation-cue"
+        },
+        "intent": "clarification_stop",
+        "response_mode": "local-llm-clarification",
+        "citations": [],
+        "prompt_version": "clarification-state-v1",
+        "attempt": 2,
+        "model_call": {
+          "model": "Qwen2.5-1.5B-Instruct",
+          "device": "cuda",
+          "input_tokens": 82,
+          "output_tokens": 27,
+          "latency_ms": 1125.71
+        }
+      }
+    }
+  ]
+}

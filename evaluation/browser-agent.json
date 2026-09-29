@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "message": "I have Drowsiness.",
+      "answer": "Drowsiness is recorded as present. Since it's already in your saved records, no action is needed unless you'd like to update details like duration or cause. Let me know if you'd like to add context (e.g., \"worsened after medication\").",
+      "engine": "conversation-agent-v1"
+    },
+    {
+      "message": "What does that word mean?",
+      "answer": "Drowsiness means feeling sleepy, sluggish, or less alert than usual—like being half-asleep or having trouble staying awake. It’s not the same as sleepiness or being tired from activity. Is that the meaning you were looking for?",
+      "engine": "conversation-agent-v1"
+    }
+  ],
+  "checks": [
+    "real model response",
+    "reference to last symptom",
+    "no unrelated Yes buttons",
+    "session restored after reload",
+    "no browser errors"
+  ]
+}

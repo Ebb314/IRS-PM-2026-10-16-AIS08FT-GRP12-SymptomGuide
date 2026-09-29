@@ -25,4 +25,4 @@ class InformedSearchService(ABC):
 class DrugService(ABC):
     @abstractmethod
     def recommend(self, candidates: List[DiseaseCandidate]) -> List[DrugRecommendation]:
-        """Recommend drugs for final disease candidates."""
+        """Return source-labelled KG drug relations, not individual treatment advice."""

@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "kind": "mocked-api-ui-contract",
+  "checks": [
+    "three status groups",
+    "status changes move groups",
+    "confirm suggestion",
+    "ignore suggestion",
+    "restore after reload",
+    "failed update retains saved status",
+    "retry preserves request ID",
+    "390px no horizontal overflow",
+    "no JS errors"
+  ],
+  "requests": [
+    {
+      "session_id": "sidebar-fixture",
+      "expected_version": 1,
+      "request_id": "e7067ae1-81df-404d-b35d-83319387e1a4",
+      "kg_id": "P986",
+      "status": "absent"
+    },
+    {
+      "session_id": "sidebar-fixture",
+      "expected_version": 2,
+      "request_id": "4149db9d-fb2b-4935-bfd0-6f7574952c7c",
+      "kg_id": "P986",
+      "status": "uncertain"
+    },
+    {
+      "session_id": "sidebar-fixture",
+      "expected_version": 3,
+      "request_id": "4ac449e7-1055-4bc5-bdcb-8ed02c05b369",
+      "kg_id": "T4",
+      "status": "present"
+    },
+    {
+      "session_id": "sidebar-fixture",
+      "expected_version": 4,
+      "request_id": "b8e874e6-1648-4e91-86e8-d161e27530de",
+      "kg_id": "T5",
+      "status": "dismiss"
+    },
+    {
+      "session_id": "sidebar-fixture",
+      "expected_version": 5,
+      "request_id": "31e0767f-38bc-4738-9adc-e3a539778e58",
+      "kg_id": "P986",
+      "status": "present"
+    },
+    {
+      "session_id": "sidebar-fixture",
+      "expected_version": 5,
+      "request_id": "31e0767f-38bc-4738-9adc-e3a539778e58",
+      "kg_id": "P986",
+      "status": "present"
+    }
+  ]
+}

@@ -1,50 +1,29 @@
-from typing import List, Optional
-
-from app.models.chat_models import DiseaseCandidate, DrugRecommendation, NextSymptom, Symptom
+"""Fixtures exercise orchestration. Scores and rankings are NOT diagnostic measurements."""
+from app.models.chat_models import DiseaseCandidate, NextSymptom
 from app.services.interfaces import DrugService, InformedSearchService, RecallService
 
-
 class MockRecallService(RecallService):
-    """Deterministic mock. Replace this class with the teammate's adapter."""
-
-    _diseases = [
-        ("D001", "Influenza", 0.86),
-        ("D002", "Pneumonia", 0.78),
-        ("D003", "Common cold", 0.62),
-        ("D004", "Bronchitis", 0.55),
-    ]
-
-    def recall(self, positive: List[Symptom], negative: List[Symptom]) -> List[DiseaseCandidate]:
-        evidence_count = len(positive) + len(negative)
-        keep = 4 if evidence_count <= 2 else 3 if evidence_count == 3 else 2
-        return [DiseaseCandidate(id=item[0], name=item[1], score=item[2]) for item in self._diseases[:keep]]
-
+    def recall(self, positive, negative):
+        if not positive and not negative:
+            return []
+        count = len(positive) + len(negative)
+        keep = 4 if count <= 2 else 3 if count == 3 else 2
+        fixtures = [("D001", "Fixture condition A", .86), ("D002", "Fixture condition B", .78),
+                    ("D003", "Fixture condition C", .62), ("D004", "Fixture condition D", .55)]
+        return [DiseaseCandidate(id=k, name=n, score=s, evidence_ids=[v.kg_id for v in positive+negative]) for k,n,s in fixtures[:keep]]
 
 class MockInformedSearchService(InformedSearchService):
     _questions = [
-        NextSymptom(kg_id="P006", kg_name="shortness of breath", heuristic_score=0.91),
-        NextSymptom(kg_id="P003", kg_name="chest pain", heuristic_score=0.84),
-        NextSymptom(kg_id="P005", kg_name="fatigue", heuristic_score=0.72),
+        NextSymptom(kg_id="DEMO:breathlessness", kg_name="shortness of breath", heuristic_score=.91, rationale="Mock fixture order: respiratory follow-up."),
+        NextSymptom(kg_id="DEMO:chest_pain", kg_name="chest pain", heuristic_score=.84, rationale="Mock fixture order: chest symptom follow-up."),
+        NextSymptom(kg_id="DEMO:fatigue", kg_name="fatigue", heuristic_score=.72, rationale="Mock fixture order: general symptom follow-up."),
     ]
-
-    def select_next(
-        self,
-        candidates: List[DiseaseCandidate],
-        positive: List[Symptom],
-        negative: List[Symptom],
-        asked_symptom_ids: List[str],
-    ) -> Optional[NextSymptom]:
-        resolved = {s.kg_id for s in positive + negative} | set(asked_symptom_ids)
-        return next((question for question in self._questions if question.kg_id not in resolved), None)
-
+    def select_next(self, candidates, positive, negative, asked_symptom_ids):
+        resolved = {s.kg_id for s in positive+negative} | set(asked_symptom_ids)
+        return next((q for q in self._questions if q.kg_id not in resolved), None)
 
 class MockDrugService(DrugService):
-    def recommend(self, candidates: List[DiseaseCandidate]) -> List[DrugRecommendation]:
-        return [
-            DrugRecommendation(
-                name="Example Drug",
-                related_disease=disease.name,
-                note="Demonstration only; a clinician must review real treatment recommendations.",
-            )
-            for disease in candidates
-        ]
+    def recommend(self, candidates):
+        # No manufactured medication information. Teammate adapter may return typed KG relations.
+        return []
+
