@@ -2,6 +2,10 @@
 
 GC1 module: NLP, chatbot orchestration, FastAPI backend and Vue frontend. The current local profile uses **Qwen3-4B-Instruct-2507 with NF4 quantization**, native multi-turn messages, open-ended goal descriptions and validated evidence proposals. It does not dispatch chat through a fixed intent enum. Concept retrieval covers **15,135 symptom nodes**; teammate reasoning remains replaceable through interfaces.
 
+**Ollama models supported:** `run.ps1 -Profile ollama` uses a model served by local Ollama (default `qwen3:8b`) instead of the bundled Qwen3-4B; no PyTorch needed. See [Ollama本地模型接入](docs/Ollama本地模型接入.md).
+
+**KG reasoning integrated (`REASONING_MODE=kg`, now the `run.ps1` default):** PrimeKG recall, the GroupWork informed search and contraindication-filtered drug relations run in-process behind the existing adapter interfaces. See [KG推理集成记录](docs/KG推理集成记录.md).
+
 **v9 performance and editable symptom panel:** [响应速度与症状侧栏改造记录](docs/响应速度与症状侧栏改造记录.md).
 
 **v8 architecture, manual setup, evaluation and limitations:** [NLP 对话架构重构记录](docs/NLP对话架构重构记录.md). Earlier change records below describe historical versions. Their model and intent-routing results do not certify the current engine.

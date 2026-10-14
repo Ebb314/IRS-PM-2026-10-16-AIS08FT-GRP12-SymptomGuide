@@ -45,7 +45,7 @@ onMounted(async () => {
     </header>
     <section class="notice"><strong>Academic demonstration.</strong> Use fictional inputs. Results are not diagnoses or treatment advice.
       <span v-if="response"> Adapter: {{ response.mode }} · NLP: {{ response.nlp_engine }}.</span>
-      <span v-else>Default setup uses random simulation adapters for integration testing.</span>
+      <span v-else>Describe how you feel to start. The reasoning adapter in use is shown after your first message.</span>
     </section>
     <div class="workspace">
       <section class="chat-panel" aria-label="Conversation">
@@ -81,11 +81,11 @@ onMounted(async () => {
         </details>
         <template v-if="response">
           <details class="trace"><summary>How this reply was generated</summary><AITrace :trace="response.ai_trace" /></details>
-          <details class="adapter-results"><summary>Algorithm adapter results ({{ response.mode }})</summary><p class="panel-help">Integration output, not confirmed conditions. Random mode uses test fixtures.</p>
+          <details class="adapter-results" :open="response.status === 'COMPLETE'"><summary>Algorithm adapter results ({{ response.mode }})</summary><p class="panel-help">{{ response.mode === 'kg' ? 'Ranked by PrimeKG knowledge-graph reasoning. Candidates are not confirmed conditions.' : 'Integration output, not confirmed conditions. Random mode uses test fixtures.' }}</p>
           <p class="round">Follow-ups {{ response.round }} · {{ response.status.toLowerCase() }}</p>
           <p v-if="response.stop_reason" class="stop-reason">Stop reason: {{ response.stop_reason.split('_').join(' ') }}</p>
-          <div v-if="response.candidate_diseases.length" class="section-title"><p class="eyebrow">{{ response.mode === 'remote' ? 'Adapter output' : 'Integration fixtures only' }}</p><h2>Candidate results</h2></div>
-          <DiseaseCard v-for="item in response.candidate_diseases" :key="item.id" :disease="item" />
+          <div v-if="response.candidate_diseases.length" class="section-title"><p class="eyebrow">{{ response.mode === 'kg' ? 'PrimeKG knowledge graph' : response.mode === 'remote' ? 'Adapter output' : 'Integration fixtures only' }}</p><h2>Candidate results</h2></div>
+          <DiseaseCard v-for="item in response.candidate_diseases" :key="item.id" :disease="item" :names="Object.fromEntries(response.evidence.map(e => [e.kg_id, e.kg_name]))" />
           <template v-if="response.drug_recommendations.length">
             <div class="section-title"><h2>KG drug relations</h2></div>
             <DrugCard v-for="item in response.drug_recommendations" :key="item.name + item.related_disease" :drug="item" />
