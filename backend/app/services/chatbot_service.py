@@ -70,13 +70,19 @@ class ChatbotService:
                         if state.last_question and any(e.kg_id==state.last_question.kg_id for e in observations):
                             state.asked_symptoms.append(state.last_question.kg_id)
                         if action=='message': state.round+=1
-                        self._advance(state)
+                        advance_message=self._advance(state)
+                    # kg mode: informed search drives the interview, so its question is
+                    # asked explicitly with Yes / No / Not sure buttons after the LLM reply.
+                    ask_kg=self.mode=='kg' and state.status==SessionStatus.RUNNING and state.last_question is not None
+                    append_kg=self.mode=='kg' and bool(observations)
                     state.nlp_engine='conversation-agent-v1'
                     t = perf_counter()
-                    message,trace=self.dialogue.reply(request.message,state,analysis)
+                    message,trace=self.dialogue.reply(request.message,state,analysis,app_will_ask=append_kg)
+                    if append_kg:
+                        message=message.rstrip()+'\n\n'+advance_message
                     state.timings_ms['reply'] = round((perf_counter()-t)*1000,3)
                     state.ai_trace=trace
-                    state.symptom_question_active=False
+                    state.symptom_question_active=ask_kg
                     state.version+=1
                     return self._commit(state,message,scope,request,fingerprint,started)
                 intent, intent_trace = self.dialogue.classify(request.message,state)

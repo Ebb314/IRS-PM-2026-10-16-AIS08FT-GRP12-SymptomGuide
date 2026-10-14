@@ -1,7 +1,7 @@
 param(
     [int]$Port = 8000,
     [string]$Python = '',
-    [ValidateSet('local','offline')][string]$Profile = 'local'
+    [ValidateSet('local','offline','ollama')][string]$Profile = 'local'
 )
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path $PSScriptRoot
@@ -19,12 +19,22 @@ if (!$Python) {
 if (!(Test-Path (Join-Path $projectRoot 'frontend/dist/index.html'))) {
     throw 'Build the frontend first: cd frontend; npm run build'
 }
-$env:AI_PROFILE = $Profile
+if ($Profile -eq 'ollama') {
+    # Local Ollama model instead of the bundled Qwen3-4B. Ollama must be running.
+    $env:AI_PROFILE = 'local'
+    $env:LLM_BACKEND = 'ollama'
+    if (!$env:OLLAMA_MODEL) { $env:OLLAMA_MODEL = 'qwen3:8b' }
+} else {
+    $env:AI_PROFILE = $Profile
+    $env:LLM_BACKEND = 'transformers'
+}
 $env:DIALOGUE_ENGINE = 'agent'
 $env:NLP_ENGINE = 'rules'
 $env:NLP_USE_TRANSFORMERS = 'false'
 if (!$env:AGENT_REPLY_PIPELINE) { $env:AGENT_REPLY_PIPELINE = 'direct' }
-if (!$env:REASONING_MODE) { $env:REASONING_MODE = 'random' }
+# kg = PrimeKG recall + informed search + drug relations (backend/app/services/kg_reasoning_service.py).
+# Set $env:REASONING_MODE='random' before running to use the old seeded test adapters.
+if (!$env:REASONING_MODE) { $env:REASONING_MODE = 'kg' }
 if (!$env:KG_NODE_FILE) { $env:KG_NODE_FILE = Join-Path $projectRoot 'backend/app/data/kg_nodes.csv' }
 if ($Profile -eq 'local') {
     if (!$env:LOCAL_MODEL_PATH) { $env:LOCAL_MODEL_PATH = Join-Path $projectRoot 'models/Qwen3-4B-Instruct-2507' }
@@ -39,6 +49,7 @@ Push-Location $projectRoot
 try {
     Write-Host "Python: $Python"
     Write-Host "Profile: $Profile | Dialogue: agent | Adapters: $env:REASONING_MODE"
+    if ($Profile -eq 'ollama') { Write-Host "Ollama model: $env:OLLAMA_MODEL | Embeddings: $(if ($env:OLLAMA_EMBED_MODEL) { $env:OLLAMA_EMBED_MODEL } else { 'none (BM25 retrieval)' })" }
     Write-Host "Open http://127.0.0.1:$Port/ . Keep this terminal open; Ctrl+C stops the server."
     & $Python -m uvicorn app.main:app --app-dir backend --host 127.0.0.1 --port $Port --no-access-log
     if ($LASTEXITCODE -ne 0) { throw "Server exited with code $LASTEXITCODE. Check the selected Python environment and port." }

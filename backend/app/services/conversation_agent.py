@@ -137,7 +137,7 @@ class ConversationAgent:
         topic=re.fullmatch(re.escape(name)+r"\s*\?\s*(?:I(?:'m| am)\s+)?(?:not sure|unsure|uncertain)[.!?\s]*",normalized,re.I)
         return not (personal or topic)
 
-    def reply(self,text,state,analysis):
+    def reply(self,text,state,analysis,app_will_ask=False):
         # Model receives genuine user/assistant turns, not a transcript to classify.
         hits=self.knowledge.search(text,k=2)
         sources=[{'id':h['id'],'text':h['text']} for h in hits if h['cosine']>=0.45 or h['bm25']>=2]
@@ -214,6 +214,10 @@ class ConversationAgent:
                         'Help describe feelings with ordinary words instead. Knowledge definitions should not end with recording instructions. '
                         'If asked: Symptom log groups saved records as Present, Absent, Not sure, each with a Change status dropdown. '
                         'Only existing unconfirmed suggestions can be confirmed or ignored; ignoring does not mean absent.')
+                if app_will_ask:
+                    review_system += (' The app itself will add the next follow-up symptom question (with Yes / No / Not sure buttons) '
+                        'right after your reply. So do NOT ask any question yourself: briefly acknowledge what the person said '
+                        'in one or two sentences and stop.')
                 # Reviewing is an editing task, not another continuation of the user's turn.
                 # A native "yes" as the last review message otherwise re-triggers the same draft.
                 review_input=json.dumps({'task':('Write a helpful final reply to the latest user. Output ONLY that reply.' if pipeline=='direct' else 'Rewrite the draft as a helpful reply to the latest user. Output ONLY the replacement reply.'),

@@ -24,11 +24,23 @@ def _build_chatbot_service():
     from app.services.dialogue_ai import DialogueAI
     dialogue = DialogueAI(vocabulary=nlp.nodes,mention_finder=nlp._mentions)
     if settings.ai_profile == "local":
-        from app.services.model_runtime import LocalGenerator
-        from app.services.retrieval_service import load_encoder
         from app.services.context_nlp import ContextNLP
-        generator = LocalGenerator(settings.local_model_path)
-        encoder = load_encoder()
+        if settings.llm_backend == "ollama":
+            # Ollama-served model (e.g. qwen3:8b); no PyTorch / transformers needed.
+            from pathlib import Path
+            from app.services.ollama_runtime import OllamaEncoder, OllamaGenerator
+            generator = OllamaGenerator(settings.ollama_model or "qwen3:8b", settings.ollama_url,
+                                        settings.ollama_timeout, settings.ollama_think).check()
+            encoder = (OllamaEncoder(settings.ollama_embed_model, settings.ollama_url, settings.ollama_timeout,
+                                     cache_dir=Path(settings.db_file).parent / "embeddings")
+                       if settings.ollama_embed_model else None)  # None: BM25-only retrieval
+        elif settings.llm_backend == "transformers":
+            from app.services.model_runtime import LocalGenerator
+            from app.services.retrieval_service import load_encoder
+            generator = LocalGenerator(settings.local_model_path)
+            encoder = load_encoder()
+        else:
+            raise ValueError("LLM_BACKEND must be transformers or ollama")
         nlp = ContextNLP(nlp, generator, encoder)
         if settings.dialogue_engine=='agent':
             from app.services.conversation_agent import ConversationAgent
@@ -52,7 +64,11 @@ def _build_chatbot_service():
     elif settings.reasoning_mode == "remote":
         gateway = RemoteGateway(settings.teammate_url, settings.adapter_timeout)
         recall, search, drugs = RemoteRecallService(gateway), RemoteSearchService(gateway), RemoteDrugService(gateway)
+    elif settings.reasoning_mode == "kg":
+        from app.services.kg_reasoning_service import build_kg_services
+        recall, search, drugs = build_kg_services(settings.kg_reasoning_file, nlp.nodes, settings.kg_top_k,
+            settings.kg_drugs_per_disease, settings.recall_symptom_whitelist or None)
     else:
-        raise ValueError("REASONING_MODE must be mock, random or remote")
+        raise ValueError("REASONING_MODE must be mock, random, remote or kg")
     return ChatbotService(nlp, SQLiteSessionService(settings.db_file), recall, search, drugs, mode=settings.reasoning_mode, dialogue=dialogue)
 
