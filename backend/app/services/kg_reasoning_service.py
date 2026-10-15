@@ -23,11 +23,18 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional
 
+import logging
+
+from app.logging_setup import fmt_scores, get_logger
 from app.models.chat_models import DiseaseCandidate, DrugRecommendation, NextSymptom
 from app.reasoning.drug_retrieval import retrieve_drugs_for_diseases
-from app.reasoning.module3_informed_search import _normalized_weights, select_best_next_symptom
+from app.reasoning.module3_informed_search import (
+    _compute_heuristics, _normalized_weights, _retrieve_candidate_symptoms, select_best_next_symptom,
+)
 from app.reasoning.state_update import filter_candidates
 from app.services.interfaces import DrugService, InformedSearchService, RecallService
+
+_recall_log, _search_log, _drug_log = get_logger("recall"), get_logger("search"), get_logger("drugs")
 
 RECALL_SOURCE = "primekg-kg-recall-v1"
 DRUG_SOURCE = "PrimeKG project KG"
@@ -76,11 +83,13 @@ class KGRecallService(RecallService):
     def recall(self, positive, negative):
         positive_ids = {s.kg_name: s.kg_id for s in positive}
         if not positive_ids:
+            _recall_log.info("kg: no present symptom yet -> no candidates")
             return []  # only denials: nothing to explain yet
         counts: Counter = Counter()
         for name in positive_ids:
             counts.update(self.data.symptom_diseases.get(name, []))
         if not counts:
+            _recall_log.info("kg: no PrimeKG disease has %s -> no candidates", sorted(positive_ids))
             return []
 
         state = {"positive": list(positive_ids), "negative": [s.kg_name for s in negative]}
@@ -91,9 +100,12 @@ class KGRecallService(RecallService):
             level_pool = [{"disease": d, "score": 0.0} for d, c in counts.items() if c == level]
             pool = [c["disease"] for c in filter_candidates(
                 level_pool, state, self.data.disease_symptoms, self.data.disease_lacks)]
+            _recall_log.info("kg: %d diseases match %d/%d present symptoms; %d removed by No answers / KG 'lacks'",
+                             len(level_pool), level, len(positive_ids), len(level_pool) - len(pool))
             if pool:
                 break
         if not pool:
+            _recall_log.info("kg: every matching disease was removed -> no candidates")
             return []
 
         def raw_score(disease):
@@ -103,6 +115,8 @@ class KGRecallService(RecallService):
 
         scored = sorted(((raw_score(d), d) for d in pool), key=lambda x: (-x[0], x[1]))[: self.top_k]
         total = sum(r for r, _ in scored) or 1.0
+        _recall_log.info("kg: kept top %d of %d by IDF specificity: %s", len(scored), len(pool),
+                         fmt_scores((d, r / total) for r, d in scored))
         return [
             DiseaseCandidate(
                 id=self.data.disease_ids[d],
@@ -132,14 +146,24 @@ class KGSearchService(InformedSearchService):
             "uncertain": [],
             "asked": [self.id_to_name[i] for i in asked_symptom_ids if i in self.id_to_name],
         }
+        if len(cands) < len(candidates):
+            _search_log.info("%d candidates have no disease-symptom entry and are ignored", len(candidates) - len(cands))
+        if _search_log.isEnabledFor(logging.DEBUG):
+            pool = _retrieve_candidate_symptoms(cands, state, self.data.disease_symptoms, self.allowed)
+            table = sorted(_compute_heuristics(pool, cands, self.data.disease_symptoms), key=lambda x: (-x[1], x[0]))
+            _search_log.debug("%d askable symptoms; top h(s)=min(P_yes,1-P_yes): %s", len(pool),
+                              ", ".join(f"{s} {h:.3f}" for s, h in table[:8]))
         result = select_best_next_symptom(cands, state, self.data.disease_symptoms,
                                           allowed_symptoms=self.allowed)
         name = result["symptom"]
         if name is None:
+            _search_log.info("no informative question left among %d candidates (all h=0, or < 2 candidates)", len(cands))
             return None
         weights = _normalized_weights(cands)
         share = sum(w for d, w in weights.items() if name in self.data.disease_symptoms.get(d, []))
         having = sum(1 for c in cands if name in self.data.disease_symptoms[c["disease"]])
+        _search_log.info("chose %s: h=%.3f, %d/%d candidates have it (%.0f%% of weight)",
+                         name, result["heuristic_score"], having, len(cands), share * 100)
         return NextSymptom(
             kg_id=self.name_to_id[name],
             kg_name=name,
@@ -162,6 +186,8 @@ class KGDrugService(DrugService):
             disease = c["disease"]
             total, kept = len(self.data.disease_drugs.get(disease, [])), safe.get(disease, [])
             removed = total - len(kept)
+            _drug_log.info("%s: %d related drugs, %d contraindicated, showing %d", disease, total, removed,
+                           min(len(kept), self.per_disease))
             for drug in kept[: self.per_disease]:
                 note = (f"Showing {min(len(kept), self.per_disease)} of {len(kept)} related drugs."
                         + (f" {removed} excluded: contraindicated for a remaining candidate." if removed else ""))

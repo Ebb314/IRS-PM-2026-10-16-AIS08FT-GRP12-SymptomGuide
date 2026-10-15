@@ -14,7 +14,10 @@ from time import perf_counter
 
 import httpx
 
+from app.logging_setup import get_logger
 from app.services.model_runtime import ModelFailure
+
+_log = get_logger("llm")
 
 THINK_BLOCK = re.compile(r"<think>.*?</think>\s*", re.S)
 
@@ -38,6 +41,8 @@ class OllamaGenerator:
         names = {m.get("name") for m in tags} | {m.get("model") for m in tags}
         if self.model not in names and f"{self.model}:latest" not in names:
             raise ModelFailure(f"Ollama model '{self.model}' is not installed. Installed: {sorted(n for n in names if n)}")
+        _log.info("ollama reachable at %s, model %s (num_ctx=%d, keep_alive=%s, think=%s)",
+                  self.client.base_url, self.model, self.num_ctx, self.keep_alive, self.think)
         return self
 
     def generate(self, system, user, max_tokens=220):
@@ -72,8 +77,12 @@ class OllamaGenerator:
             body = response.json()
             text = body["message"]["content"]
         except (httpx.HTTPError, ValueError, KeyError, TypeError) as exc:
+            _log.error("ollama request failed after %.0f ms: %s", (perf_counter() - started) * 1000, exc)
             raise ModelFailure(f"Ollama request failed: {exc}") from exc
         text = THINK_BLOCK.sub("", text).strip()
+        _log.info("ollama %s: %d messages (dropped %d), tokens in=%s out=%s, %.0f ms, sampling=%s",
+                  self.model, len(messages), dropped, body.get("prompt_eval_count"), body.get("eval_count"),
+                  (perf_counter() - started) * 1000, sampling)
         return text, {
             "model": self.name, "device": "ollama", "quantization": "ollama-managed",
             "input_tokens": int(body.get("prompt_eval_count", 0)), "output_tokens": int(body.get("eval_count", 0)),

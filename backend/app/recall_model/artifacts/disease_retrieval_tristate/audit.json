@@ -1,0 +1,45 @@
+{
+  "source": "https://github.com/mila-iqia/ddxplus",
+  "diseases": 49,
+  "binary_symptoms": 95,
+  "input_dimensions": 190,
+  "seed": 42,
+  "negative_provenance": "synthetic binary default states revealed as answers; not documented real patient denials",
+  "original_413_model": "preserved; this model supports a separate 49-disease vocabulary",
+  "sampling": "lowest seeded random priorities per disease within each official split",
+  "splits": {
+    "train": {
+      "official_rows": 1025602,
+      "sampled_rows": 94979,
+      "within_sample_duplicates": 17851,
+      "prior_split_full_evidence_overlap_removed": 0,
+      "retained_rows": 77128,
+      "missing_classes": [],
+      "projected_binary_pattern_overlap_rows": 0,
+      "zero_selected_positive_rows": 0
+    },
+    "val": {
+      "official_rows": 132448,
+      "sampled_rows": 15703,
+      "within_sample_duplicates": 1448,
+      "prior_split_full_evidence_overlap_removed": 2086,
+      "retained_rows": 12169,
+      "missing_classes": [],
+      "projected_binary_pattern_overlap_rows": 11919,
+      "zero_selected_positive_rows": 0
+    },
+    "test": {
+      "official_rows": 134529,
+      "sampled_rows": 15787,
+      "within_sample_duplicates": 1455,
+      "prior_split_full_evidence_overlap_removed": 2189,
+      "retained_rows": 12143,
+      "missing_classes": [
+        "Larygospasm"
+      ],
+      "projected_binary_pattern_overlap_rows": 11918,
+      "zero_selected_positive_rows": 0
+    }
+  },
+  "projection_overlap_note": "Distinct complete evidence states may project to identical 95-symptom vectors; retained and reported as limited-input ambiguity."
+}

@@ -1,0 +1,20 @@
+{
+  "version": "original_773_tristate_v2",
+  "diseases": 773,
+  "symptoms": 377,
+  "input_dimensions": 754,
+  "negative_policy": "synthetic_zero_assumption",
+  "authorization": "User explicitly accepted simulation on 2026-10-15",
+  "negative_provenance": "Original 0 treated as simulated absence ONLY when revealed; not clinical denial labels",
+  "view_policy": "75% positive-only; 25% add 1-3 simulated negatives; positive masking keep probability 0.2..1",
+  "pair_policy": "correct disease supervision on every row; auxiliary for 25% of rows, one 50/50 hard/random contrast; weight 0.05",
+  "pair_protection": "correct label and same KG group member candidates excluded from pair negatives; CE remains single-label",
+  "epochs": 10,
+  "batch_size": 512,
+  "learning_rate": 0.0005,
+  "seed": 42,
+  "initialization": "Warm start positive 773 model; negative input columns zero-initialized",
+  "base_weights_sha256": "7635f50e022acbaad20ee63f6f33afda26759af9de197f06a5ae9ba019a9d583",
+  "selection": "mean validation macro_MRR for same 3 positives with 0 and 2 negatives",
+  "limitations": "Synthetic-label experiment, no real-world validation; same held-out split reused as follow-up benchmark; 156 classes have no test rows."
+}

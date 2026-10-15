@@ -34,6 +34,8 @@ class Understanding(Model):
 
 class ConversationAgent:
     def __init__(self,generator,encoder=None):
+        from app.logging_setup import get_logger
+        self._log=get_logger('agent')
         self.generator=generator
         documents=json.loads((Path(__file__).parents[1]/'data/knowledge.json').read_text(encoding='utf-8-sig'))
         self.knowledge=HybridIndex(documents,encoder)
@@ -77,6 +79,7 @@ class ConversationAgent:
                     'Repair this output into valid JSON matching the provided schema. Preserve its meaning. Do not add symptom observations. Return JSON only.',
                     json.dumps({'schema':Understanding.model_json_schema(),'output':raw}),320)
                 trace['repair_call']=repair_meta
+                self._log.info('understand: LLM output was not valid JSON, used a repair call (%s ms)',repair_meta.get('latency_ms'))
                 plan=Understanding.model_validate(parse_json(repaired))
             trace['interpretation']=plan.model_dump(exclude={'observations'})
             trace['proposed']=[p.model_dump() for p in plan.observations]
@@ -115,9 +118,14 @@ class ConversationAgent:
             if pending: state.pending_evidence=pending
             elif accepted: state.pending_evidence=[e for e in state.pending_evidence if e.kg_id not in seen]
             trace['validation']='proposal-validation-complete'
+            node_name=lambda k:nlp.nodes[k].kg_name if k in nlp.nodes else k
+            self._log.info('understand: %d candidate concepts, LLM %s ms, proposed %d | accepted %s | rejected %s | needs confirmation %s',
+                len(allowed),meta.get('latency_ms'),len(plan.observations),[(e.kg_name,e.status) for e in accepted],
+                [(node_name(r['concept_id']),r['reason']) for r in trace['rejected']],[(e.kg_name,e.status) for e in pending])
             return accepted,trace
         except Exception as exc:
             trace.update(validation='no-write-on-analysis-failure',error_type=type(exc).__name__)
+            self._log.warning('understand failed (%s: %s); no symptom written this turn',type(exc).__name__,str(exc)[:200])
             if hasattr(exc,'errors'):
                 trace['schema_errors']=[{'field':list(e['loc']),'type':e['type']} for e in exc.errors()]
             return [],trace
@@ -238,11 +246,15 @@ class ConversationAgent:
                     re.match(r'^(?:my (?:chest|head|body) feels|i (?:feel|have been feeling|am experiencing))\b',answer,re.I))
                 if not invalid:
                     trace['model_call']=review_meta
+                    self._log.info('reply: %d chars, attempt %d, LLM %s ms, app_will_ask=%s, sources=%d',len(answer),attempt+1,
+                        review_meta.get('latency_ms'),app_will_ask,len(sources))
                     return answer,trace
                 trace['review_reason']='output-validation'
+                self._log.info('reply: draft %d rejected by output validation, retrying',attempt+1)
             raise ValueError('Unhelpful model output after retry')
         except Exception as exc:
             trace.update(response_mode='agent-generation-failed',error_type=type(exc).__name__)
+            self._log.warning('reply failed (%s: %s); sent fallback message',type(exc).__name__,str(exc)[:200])
             return "I couldn't produce a useful reply just now. Please try rephrasing your last message.",trace
 
     def phrase_question(self,state,fallback):

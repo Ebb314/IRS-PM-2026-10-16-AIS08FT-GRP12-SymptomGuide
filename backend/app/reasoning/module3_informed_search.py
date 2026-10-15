@@ -21,6 +21,7 @@ Module 3: Informed Search（文档 §7）
 """
 import csv
 import json
+import logging
 import pickle
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Set, Tuple
@@ -88,7 +89,7 @@ def _retrieve_candidate_symptoms(
     for item in candidate_diseases:
         d = item["disease"]
         if d not in disease_symptom_map:
-            print(f"  [Informed Search WARN] disease '{d}' 不在 disease_symptom_map 里，跳过")
+            logging.getLogger("chatbot.search").warning("disease %r 不在 disease_symptom_map 里，跳过", d)
             continue
         symptom_pool.update(disease_symptom_map[d])
 

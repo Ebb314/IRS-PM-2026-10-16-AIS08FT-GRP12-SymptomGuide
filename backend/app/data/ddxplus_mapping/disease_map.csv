@@ -1,0 +1,50 @@
+ddx_index,ddx_name,icd10,primekg_name,primekg_id,mapping_status
+DDX_000,Acute COPD exacerbation / infection,j44.1,chronic obstructive pulmonary disease,PRIMEKG:37617,draft-close
+DDX_001,Acute dystonic reactions,G24.02,,,unmapped
+DDX_002,Acute laryngitis,J04.0,,,unmapped
+DDX_003,Acute otitis media,H66.90,infectious otitis media,PRIMEKG:83829,draft-close
+DDX_004,Acute pulmonary edema,J81.0,pulmonary edema,PRIMEKG:83901,draft-close
+DDX_005,Acute rhinosinusitis,j01,sinusitis,PRIMEKG:36046,draft-close
+DDX_006,Allergic sinusitis,J30,allergic rhinitis,PRIMEKG:37888,draft-close
+DDX_007,Anaphylaxis,T78.0,anaphylaxis,PRIMEKG:39868,draft-exact
+DDX_008,Anemia,D64.9,,,unmapped
+DDX_009,Atrial fibrillation,I48.91,atrial fibrillation (disease),PRIMEKG:33618,draft-exact
+DDX_010,Boerhaave,K22.3,,,unmapped
+DDX_011,Bronchiectasis,J47,bronchiectasis,PRIMEKG:39493,draft-exact
+DDX_012,Bronchiolitis,j21,,,unmapped
+DDX_013,Bronchitis,j40,bronchitis,PRIMEKG:37830,draft-exact
+DDX_014,Bronchospasm / acute asthma exacerbation,J45,asthma,PRIMEKG:33675,draft-close
+DDX_015,Chagas,B57,Chagas disease,PRIMEKG:32504,draft-exact
+DDX_016,Chronic rhinosinusitis,j32,sinusitis,PRIMEKG:36046,draft-close
+DDX_017,Cluster headache,g44.009,cluster headache syndrome,PRIMEKG:38215,draft-exact
+DDX_018,Croup,J05.0,croup,PRIMEKG:84254,draft-exact
+DDX_019,Ebola,a98.4,Ebola hemorrhagic fever,PRIMEKG:32858,draft-exact
+DDX_020,Epiglottitis,J05.1,epiglottitis,PRIMEKG:84106,draft-exact
+DDX_021,GERD,K21,gastroesophageal reflux disease,PRIMEKG:28374,draft-exact
+DDX_022,Guillain-Barré syndrome,G61.0,,,unmapped
+DDX_023,HIV (initial infection),B20,HIV infectious disease,PRIMEKG:37805,draft-close
+DDX_024,Influenza,j11.1,influenza,PRIMEKG:37766,draft-exact
+DDX_025,Inguinal hernia,K40,,,unmapped
+DDX_026,Larygospasm,J38.5,,,unmapped
+DDX_027,Localized edema,R60.0,,,unmapped
+DDX_028,Myasthenia gravis,G70.0,myasthenia gravis,PRIMEKG:31650,draft-exact
+DDX_029,Myocarditis,I51.4,myocarditis,PRIMEKG:36041,draft-exact
+DDX_030,PSVT,I47.1,,,unmapped
+DDX_031,Pancreatic neoplasm,c25,pancreatic adenocarcinoma,PRIMEKG:36881,draft-close
+DDX_032,Panic attack,f41,,,unmapped
+DDX_033,Pericarditis,I30,pericarditis (disease),PRIMEKG:35955,draft-exact
+DDX_034,Pneumonia,"j17, j18",pneumonia,PRIMEKG:35552,draft-exact
+DDX_035,Possible NSTEMI / STEMI,I21,myocardial infarction,PRIMEKG:83824,draft-close
+DDX_036,Pulmonary embolism,i26,pulmonary embolism (disease),PRIMEKG:33699,draft-exact
+DDX_037,Pulmonary neoplasm,c34,lung cancer,PRIMEKG:31116,draft-close
+DDX_038,SLE,M32,systemic lupus erythematosus (disease),PRIMEKG:29182,draft-exact
+DDX_039,Sarcoidosis,d86,sarcoidosis,PRIMEKG:32967,draft-exact
+DDX_040,Scombroid food poisoning,T61.1,,,unmapped
+DDX_041,Spontaneous pneumothorax,J93,pneumothorax (disease),PRIMEKG:33597,draft-close
+DDX_042,Spontaneous rib fracture,S22.9,,,unmapped
+DDX_043,Stable angina,I20.9,,,unmapped
+DDX_044,Tuberculosis,a15,pulmonary tuberculosis,PRIMEKG:39696,draft-close
+DDX_045,URTI,j06.9,common cold,PRIMEKG:83897,draft-close
+DDX_046,Unstable angina,I20.0,,,unmapped
+DDX_047,Viral pharyngitis,J02.9,pharyngitis,PRIMEKG:39609,draft-close
+DDX_048,Whooping cough,A37,pertussis,PRIMEKG:84032,draft-exact

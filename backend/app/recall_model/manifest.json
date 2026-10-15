@@ -1,0 +1,107 @@
+{
+  "version": "disease_retrieval_v1",
+  "model": "ddxplus_tristate_cross_entropy",
+  "supported_diseases": 49,
+  "binary_symptoms": 95,
+  "input_dimensions": 190,
+  "kg_exact_mapped_diseases": 14,
+  "reference_kg_nodes_sha256": "6A4CE3A4E02F62D9C05D783432E265D17D5A2B9CE65569A8DDF6F52A6506ACB0",
+  "verification": "Bundle-local demo returned Top-5; all five contract tests passed using GC1 Python 3.11 environment",
+  "files": [
+    {
+      "path": "demo.py",
+      "sha256": "089EC0C25BDEB025922EA4E41755087EC0A293F03C71271B1DB4A03A8DA29804",
+      "bytes": 506
+    },
+    {
+      "path": "disease_kg_mapping.csv",
+      "sha256": "E26F13E447AF665A34A2709994C329316B3CF20FA37E0A594FC0CB000BA9F290",
+      "bytes": 2793
+    },
+    {
+      "path": "DISEASE_RETRIEVAL_DESIGN_STORY.md",
+      "sha256": "FE356BEC268C3E2B01684100126DA833791139DDD8F2F39F54D49403FD6E3435",
+      "bytes": 7264
+    },
+    {
+      "path": "DISEASE_RETRIEVAL_PAIRWISE_README.md",
+      "sha256": "4FC69CF3A8372F852CD90946B14F0D4926BB3583D427743B1BEDE05918F6BE40",
+      "bytes": 4429
+    },
+    {
+      "path": "DISEASE_RETRIEVAL_PAIRWISE_RESULTS.md",
+      "sha256": "1DC07A795EEB2406F42E8DBCDD5E6E2775AE3DCB028EE644A0E67B1FAC43392E",
+      "bytes": 1461
+    },
+    {
+      "path": "DISEASE_RETRIEVAL_TRISTATE_README.md",
+      "sha256": "6470AEE247A509AD4EFA256D7CD2103EEC6243627BCAA922F635A62A3AD9D9BA",
+      "bytes": 6012
+    },
+    {
+      "path": "DISEASE_RETRIEVAL_TRISTATE_RESULTS.md",
+      "sha256": "71C908BF2967A26337E73EA9895D1B264FCDF922040E27E35CC360330ECAB22A",
+      "bytes": 1631
+    },
+    {
+      "path": "disease_retrieval_tristate.py",
+      "sha256": "896E65E537E75D121AE9B8B4FE2A64B7FE7A8262CAC76AADBEDEC7A59EA3CA20",
+      "bytes": 17263
+    },
+    {
+      "path": "disease_retrieval.py",
+      "sha256": "24A0A518F5E219751DB746594895FEF5563EA2C979A02A42E643718698B240AD",
+      "bytes": 9727
+    },
+    {
+      "path": "environment.json",
+      "sha256": "CF46958CBE43F74299101BC8ACB05149EFE623A63335C1BCB1F702EB5A19799C",
+      "bytes": 118
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "1F813D44DD21E07C15D789CEB81A20503CDC11F061C3D13B0164F80C04D62F6A",
+      "bytes": 61
+    },
+    {
+      "path": "START_HERE.md",
+      "sha256": "AA729FB3B732BDD22786C5036AF70B66C33ECBE42562D2A532975B104BA9A8CD",
+      "bytes": 4771
+    },
+    {
+      "path": "symptom_vocabulary.csv",
+      "sha256": "9A0C60899376F7700CC64FDFBA9310CED8C035CA4F6B70900123DBE4E8F7AEB2",
+      "bytes": 9257
+    },
+    {
+      "path": "test_disease_retrieval_tristate.py",
+      "sha256": "3935E3E62229615DAAE7FF0D8D718CE38E0132DCDA96D402FF8AB0587C0487DF",
+      "bytes": 2188
+    },
+    {
+      "path": "artifacts/disease_retrieval_tristate/audit.json",
+      "sha256": "58117F5429904EAB4CB07D32FA7C4FE22454475A59892A2DA493FAD9BCFBC75A",
+      "bytes": 1671
+    },
+    {
+      "path": "artifacts/disease_retrieval_tristate/example_predictions.json",
+      "sha256": "DFC1262BD47CF9143869A5E4616E2202D4E71E8D378B70D3453032D07DBF17CF",
+      "bytes": 2735
+    },
+    {
+      "path": "artifacts/disease_retrieval_tristate/metrics.json",
+      "sha256": "5BCDBBF936487B4BBF1D3966EEB4CB910E869D4C2C0C58A26406961E96BB415D",
+      "bytes": 10995
+    },
+    {
+      "path": "artifacts/disease_retrieval_tristate/tristate.pt",
+      "sha256": "E8E859DE06C199B04AF1B61DC63FE80537138D6F76EC4919AB35B715793DF53C",
+      "bytes": 146212
+    },
+    {
+      "path": "artifacts/disease_retrieval_tristate/vocabulary.json",
+      "sha256": "FDE5F466E89BB1FA716C73D5108774C8AC24C19B320A26E53F2E5EC1B00934B9",
+      "bytes": 14032
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+evidence_id,question_en,kg_name,kg_id,mapping_status
+E_103,Have you lost your sense of smell?,Abnormality of the sense of smell,P1646,draft-close
+E_111,Do you feel like you are dying or were you afraid that you were about do die?,,,unmapped
+E_112,Do you wheeze while inhaling or is your breathing noisy after coughing spells?,Stridor,P1848,draft-close
+E_114,Are you more irritable or has your mood been very unstable recently?,Irritability,P5197,draft-exact
+E_127,Do you feel that your eyes produce excessive tears?,Increased tear production,P4121,draft-exact
+E_128,Have you ever felt like you were suffocating for a very short time associated with inability to breathe or speak?,,,unmapped
+E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",,,unmapped
+E_13,Do you find that your symptoms have worsened over the last 2 weeks and that progressively less effort is required to cause the symptoms?,,,unmapped
+E_14,Do you have chest pain even at rest?,Chest pain,P4194,draft-close
+E_140,Have you recently had stools that were black (like coal)?,Melena,P5825,draft-exact
+E_144,Do you have diffuse (widespread) muscle pain?,Myalgia,P1425,draft-exact
+E_145,Do you have very abundant or very long menstruation periods?,Menorrhagia,P5239,draft-exact
+E_148,Are you feeling nauseous or do you feel like vomiting?,Nausea,P5130,draft-exact
+E_151,Do you have swelling in one or more areas of your body?,Edema,P146,draft-exact
+E_154,Is your skin much paler than usual?,Pallor,P450,draft-exact
+E_155,"Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",Palpitations,P5735,draft-exact
+E_156,"Have you had weakness or paralysis on one side of the face, which may still be present or completely resolved?",Facial palsy,P600,draft-close
+E_157,"Have you recently had numbness, loss of sensation or tingling, in both arms and legs and around your mouth?",,,unmapped
+E_159,Did you lose consciousness?,Syncope,P3535,draft-exact
+E_161,Have you recently had a loss of appetite or do you get full more quickly then usually?,Anorexia,P5760,draft-close
+E_162,Have you had an involuntary weight loss over the last 3 months?,Weight loss,P1616,draft-exact
+E_163,Have you had any vaginal discharge?,,,unmapped
+E_164,Do you feel your heart is beating very irregularly or in a disorganized pattern?,Arrhythmia,P714,draft-close
+E_166,Did you vomit after coughing?,,,unmapped
+E_168,Do you have trouble keeping your tongue in your mouth?,Macroglossia,P3836,draft-close
+E_169,Is your nose or the back of your throat itchy?,,,unmapped
+E_170,Do you have severe itching in one or both eyes?,,,unmapped
+E_171,Do you feel like you are detached from your own body or your surroundings?,,,unmapped
+E_172,Do you have a hard time opening/raising one or both eyelids?,Bilateral ptosis,P2310,draft-close
+E_173,"Do you have a burning sensation that starts in your stomach then goes up into your throat, and can be associated with a bitter taste in your mouth?",Gastroesophageal reflux,P5177,draft-close
+E_174,Have you been unintentionally losing weight or have you lost your appetite?,Weight loss,P1616,draft-close
+E_175,"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",Fatigue,P3484,draft-close
+E_176,"Did you previously, or do you currently, have any weakness/paralysis in one or more of your limbs or in your face?",Hemiparesis,P3195,draft-close
+E_177,"Do you currently, or did you ever, have numbness, loss of sensitivity or tingling anywhere on your body?",Paresthesia,P3507,draft-close
+E_178,Have you noticed any unusual bleeding or bruising related to your consultation today?,Bruising susceptibility,P5494,draft-close
+E_179,Have you noticed light red blood or blood clots in your stool?,Hematochezia,P5077,draft-exact
+E_180,Are you unable to control the direction of your eyes?,Ophthalmoplegia,P248,draft-close
+E_181,Do you have nasal congestion or a clear runny nose?,Rhinorrhea,P11777,draft-close
+E_182,Do you have greenish or yellowish nasal discharge?,,,unmapped
+E_188,Do you have pale stools and dark urine?,Acholic stools,P9778,draft-close
+E_190,Have you noticed that you produce more saliva than usual?,Excessive salivation,P977,draft-exact
+E_192,Do you feel that muscle spasms or soreness in your neck are keeping you from turning your head to one side?,,,unmapped
+E_193,"Do you have annoying muscle spasms in your face, neck or any other part of your body?",Muscle spasm,P1365,draft-exact
+E_194,Have you noticed a high pitched sound when breathing in?,Inspiratory stridor,P1740,draft-exact
+E_201,Do you have a cough?,Cough,P4018,draft-exact
+E_202,Does the person have a whooping cough?,Whooping cough,P11667,draft-exact
+E_203,Do you have intense coughing fits?,Recurrent coughing spasms,P13131,draft-close
+E_205,Do you suddenly have difficulty or an inability to open your mouth or have jaw pain when opening it?,Trismus,P5265,draft-exact
+E_206,Do you have painful mouth ulcers or sores?,Oral ulcer,P5246,draft-exact
+E_210,Have you recently thrown up blood or something resembling coffee beans?,Hematemesis,P5824,draft-exact
+E_211,Have you vomited several times or have you made several efforts to vomit?,Vomiting,P1040,draft-exact
+E_212,"Have you noticed that the tone of your voice has become deeper, softer or hoarse?",Hoarse voice,P698,draft-exact
+E_214,Have you noticed a wheezing sound when you exhale?,Wheezing,P4167,draft-close
+E_215,Do you have symptoms that get worse after eating?,,,unmapped
+E_216,Do you have pain that is increased with movement?,,,unmapped
+E_217,Are your symptoms worse when lying down and alleviated while sitting up?,Orthopnea,P10243,draft-close
+E_218,Do you have symptoms that are increased with physical exertion but alleviated with rest?,,,unmapped
+E_219,Are your symptoms more prominent at night?,,,unmapped
+E_220,Do you have pain that is increased when you breathe in deeply?,,,unmapped
+E_221,"Are the symptoms or pain increased with coughing, with an effort like lifting a weight or from forcing a bowel movement?",,,unmapped
+E_23,Do you ever temporarily stop breathing while you’re asleep?,,,unmapped
+E_30,Do you feel your abdomen is bloated or distended (swollen due to pressure from inside)?,Abdominal distention,P674,draft-exact
+E_32,Do you have a decrease in appetite?,Poor appetite,P6566,draft-exact
+E_33,Do you have pain that improves when you lean forward?,,,unmapped
+E_38,Do you have pain or weakness in your jaw?,Jaw pain,P13527,draft-close
+E_39,Have you felt confused or disorientated lately?,Confusion,P4020,draft-exact
+E_42,Have you been in contact with or ate something that you have an allergy to?,,,unmapped
+E_43,Have you lost consciousness associated with violent and sustained muscle contractions or had an absence episode?,Seizure,P883,draft-close
+E_45,Have you been coughing up blood?,Hemoptysis,P5779,draft-exact
+E_50,Have you had significantly increased sweating?,Hyperhidrosis,P478,draft-exact
+E_51,Have you had diarrhea or an increase in stool frequency?,,,unmapped
+E_52,Do you have the perception of seeing two images of a single object seen overlapping or adjacent to each other (double vision)?,Diplopia,P5395,draft-exact
+E_53,"Do you have pain somewhere, related to your reason for consulting?",,,unmapped
+E_63,Do you have difficulty articulating words/speaking?,Dysarthria,P1018,draft-exact
+E_64,Do you feel out of breath with minimal physical effort?,Exertional dyspnea,P6002,draft-exact
+E_65,"Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",Dysphagia,P882,draft-exact
+E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,Dyspnea,P894,draft-exact
+E_67,Do you have bouts of choking or shortness of breath that wake you up at night?,,,unmapped
+E_74,Have you noticed a diffuse (widespread) redness in one or both eyes?,Conjunctival hyperemia,P3706,draft-close
+E_75,Do you feel like you are (or were) choking or suffocating?,Choking episodes,P11395,draft-close
+E_76,Do you feel slightly dizzy or lightheaded?,Presyncope,P12134,draft-close
+E_77,Do you have a cough that produces colored or more abundant sputum than usual?,Productive cough,P11665,draft-close
+E_82,Do you feel lightheaded and dizzy or do you feel like you are about to faint?,Presyncope,P12134,draft-exact
+E_83,Have you noticed weakness in your facial muscles and/or eyes?,,,unmapped
+E_84,Do you feel weakness in both arms and/or both legs?,Limb muscle weakness,P1376,draft-close
+E_88,Do you feel so tired that you are unable to do your usual activities or are you stuck in your bed all day long?,,,unmapped
+E_89,Do you constantly feel fatigued or do you have non-restful sleep?,Fatigue,P3484,draft-close
+E_9,Do you have swollen or painful lymph nodes?,Lymphadenopathy,P1097,draft-close
+E_90,Do your symptoms of muscle weakness increase with fatigue and/or stress?,Fatigable weakness,P3812,draft-exact
+E_91,Do you have a fever (either felt or measured with a thermometer)?,Fever,P835,draft-exact
+E_92,Did your cheeks suddenly turn red?,Flushing,P461,draft-close
+E_93,"Do you have numbness, loss of sensation or tingling in the feet?",,,unmapped
+E_94,Have you had chills or shivers?,Chills,P3662,draft-exact
+E_96,Have you gained weight recently?,,,unmapped
+E_97,Do you have a sore throat?,Pharyngitis,P4812,draft-close
+E_94,Have you had chills or shivers?,Shivering,P3663,draft-synonym
+E_63,Do you have difficulty articulating words/speaking?,Slurred speech,P2184,draft-synonym
+E_190,Have you noticed that you produce more saliva than usual?,Drooling,P5173,draft-synonym
+E_74,Have you noticed a diffuse (widespread) redness in one or both eyes?,Red eye,P3707,draft-synonym
+E_156,"Have you had weakness or paralysis on one side of the face, which may still be present or completely resolved?",Facial paralysis,P5163,draft-synonym

@@ -3,12 +3,16 @@ import csv
 import re
 from pathlib import Path
 from app.config import settings
+from app.logging_setup import fmt_states, get_logger
 from app.models.chat_models import ExtractedSymptom, NLPResult, Symptom
+
+_log = get_logger("nlp")
 
 BOUNDARY = re.compile(r"[.!?;\n]|\b(?:but|however|yet)\b|,\s*(?=(?:I|he|she|my|just)\b)|\band\s+(?=(?:I|he|she)\s+(?:have|feel|am|has|is)\b)", re.I)
 
 class NLPService:
-    def __init__(self, kg_node_file: Path | None = None, use_models: bool | None = None):
+    def __init__(self, kg_node_file: Path | None = None, use_models: bool | None = None,
+                 extra_vocab_file: str | None = None):
         self.path = kg_node_file or settings.kg_node_file
         self.nodes = {}
         self.aliases = {}
@@ -26,6 +30,29 @@ class NLPService:
                 for alias in [name] + row.get("aliases", "").split("|"):
                     if alias.strip():
                         self.aliases.setdefault(alias.strip().casefold(), []).append(node_id)
+        # Optional extra nodes (recall773 mode: model-only symptoms such as Diarrhea that have no
+        # precise KG phenotype node). Same CSV columns as the vocabulary; existing names win.
+        extra = settings.extra_vocab_file if extra_vocab_file is None else extra_vocab_file
+        if extra and Path(extra).is_file():
+            with Path(extra).open(encoding="utf-8-sig", newline="") as handle:
+                for row in csv.DictReader(handle):
+                    node_id, name = row.get("node_id", ""), row.get("node_name", "")
+                    if not node_id or not name or node_id in self.nodes or name.casefold() in self.aliases:
+                        continue
+                    self.nodes[node_id] = Symptom(kg_id=node_id, kg_name=name)
+                    self.aliases.setdefault(name.casefold(), []).append(node_id)
+        # Optional colloquial aliases (data/symptom_aliases.csv, "kg_name,aliases" with a|b|c).
+        # They only add phrases; an existing vocabulary name or alias always wins.
+        alias_file = settings.symptom_alias_file
+        if alias_file and Path(alias_file).is_file():
+            by_name = {n.kg_name: k for k, n in self.nodes.items()}
+            with Path(alias_file).open(encoding="utf-8-sig", newline="") as handle:
+                for row in csv.DictReader(handle):
+                    node_id = by_name.get(row.get("kg_name", ""))
+                    for alias in (row.get("aliases") or "").split("|") if node_id else []:
+                        key = alias.strip().casefold()
+                        if key and key not in self.aliases:
+                            self.aliases[key] = [node_id]
         if not self.nodes:
             raise ValueError("Vocabulary contains no supported symptom nodes")
         self.pattern = re.compile(r"(?<!\w)(?:" + "|".join(re.escape(a) for a in sorted(self.aliases, key=len, reverse=True)) + r")(?!\w)", re.I)
@@ -103,6 +130,8 @@ class NLPService:
         result.evidence = list(latest.values())
         if not result.evidence:
             result.warnings.append("No current self-reported symptom matched the supported vocabulary.")
+        _log.info("rules: %s | excluded(other person / past)=%s warnings=%d", fmt_states(result.evidence),
+                  [e.kg_name for e in result.excluded], len(result.warnings))
         return result
 
     def extract(self, text):

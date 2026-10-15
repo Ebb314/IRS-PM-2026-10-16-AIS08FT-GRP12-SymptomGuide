@@ -4,18 +4,26 @@ from app.models.chat_models import StartChatRequest, AnswerChatRequest, MessageR
 from app.services.chatbot_service import InvalidAnswerError
 from app.services.session_service import SessionNotFoundError
 from app.services.remote_adapters import AdapterError
+from app.logging_setup import get_logger
 
+_log = get_logger("flow")
 router = APIRouter(prefix="/chat", tags=["chat"])
 
 def invoke(method, request):
     try:
         return method(request)
     except SessionNotFoundError as exc:
+        _log.warning("404 session not found")
         raise HTTPException(404, "Session not found or deleted") from exc
     except InvalidAnswerError as exc:
+        _log.warning("409 %s", exc)
         raise HTTPException(409, str(exc)) from exc
     except AdapterError as exc:
+        _log.error("503 adapter error: %s", exc)
         raise HTTPException(503, str(exc)) from exc
+    except Exception:
+        _log.exception("500 unexpected error in %s", getattr(method, "__name__", method))
+        raise
 
 @router.post("/start", response_model=ChatResponse)
 def start(request: StartChatRequest, service=Depends(get_chatbot_service)):

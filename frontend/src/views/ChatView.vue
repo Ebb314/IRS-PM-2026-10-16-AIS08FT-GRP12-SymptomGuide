@@ -81,10 +81,10 @@ onMounted(async () => {
         </details>
         <template v-if="response">
           <details class="trace"><summary>How this reply was generated</summary><AITrace :trace="response.ai_trace" /></details>
-          <details class="adapter-results" :open="response.status === 'COMPLETE'"><summary>Algorithm adapter results ({{ response.mode }})</summary><p class="panel-help">{{ response.mode === 'kg' ? 'Ranked by PrimeKG knowledge-graph reasoning. Candidates are not confirmed conditions.' : 'Integration output, not confirmed conditions. Random mode uses test fixtures.' }}</p>
+          <details class="adapter-results" :open="response.status === 'COMPLETE'"><summary>Algorithm adapter results ({{ response.mode }})</summary><p class="panel-help">{{ response.mode === 'recall773' ? 'Ranked by the tri-state recall model (773 diseases); drug relations from PrimeKG. Candidates are not confirmed conditions.' : response.mode === 'ddxplus' ? 'Ranked by the DDXPlus recall model (49 diseases); drug relations from PrimeKG. Candidates are not confirmed conditions.' : response.mode === 'kg' ? 'Ranked by PrimeKG knowledge-graph reasoning. Candidates are not confirmed conditions.' : 'Integration output, not confirmed conditions. Random mode uses test fixtures.' }}</p>
           <p class="round">Follow-ups {{ response.round }} · {{ response.status.toLowerCase() }}</p>
           <p v-if="response.stop_reason" class="stop-reason">Stop reason: {{ response.stop_reason.split('_').join(' ') }}</p>
-          <div v-if="response.candidate_diseases.length" class="section-title"><p class="eyebrow">{{ response.mode === 'kg' ? 'PrimeKG knowledge graph' : response.mode === 'remote' ? 'Adapter output' : 'Integration fixtures only' }}</p><h2>Candidate results</h2></div>
+          <div v-if="response.candidate_diseases.length" class="section-title"><p class="eyebrow">{{ response.mode === 'recall773' ? '773-disease recall model + PrimeKG' : response.mode === 'ddxplus' ? 'DDXPlus recall model + PrimeKG' : response.mode === 'kg' ? 'PrimeKG knowledge graph' : response.mode === 'remote' ? 'Adapter output' : 'Integration fixtures only' }}</p><h2>Candidate results</h2></div>
           <DiseaseCard v-for="item in response.candidate_diseases" :key="item.id" :disease="item" :names="Object.fromEntries(response.evidence.map(e => [e.kg_id, e.kg_name]))" />
           <template v-if="response.drug_recommendations.length">
             <div class="section-title"><h2>KG drug relations</h2></div>

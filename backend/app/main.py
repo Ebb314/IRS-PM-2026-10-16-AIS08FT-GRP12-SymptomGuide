@@ -5,6 +5,9 @@ from fastapi.staticfiles import StaticFiles
 from app.api.chat import router
 from app.config import settings
 from app.dependencies import get_chatbot_service
+from app.logging_setup import setup_logging
+
+setup_logging()
 
 app = FastAPI(title=settings.app_name, version="2.1.0", description="Academic dialogue prototype. Mock mode is for integration testing, not clinical use.")
 app.add_middleware(CORSMiddleware, allow_origins=list(settings.cors_origins), allow_methods=["GET","POST","DELETE"], allow_headers=["Content-Type"])
