@@ -1,49 +1,49 @@
 kg_name,aliases
-Fever,feverish|high temperature|running a temperature
+Fever,feverish|high temperature|running a temperature|temperature|a temperature|high fever|febrile|burning up|feel hot
 Cough,coughing|coughs
-Dyspnea,shortness of breath|short of breath|breathless|breathlessness|difficulty breathing|trouble breathing|hard to breathe
+Dyspnea,shortness of breath|short of breath|breathless|breathlessness|difficulty breathing|trouble breathing|hard to breathe|can't catch my breath|cannot catch my breath|out of breath|winded|struggling to breathe|can't breathe|cannot breathe
 Exertional dyspnea,out of breath when walking|breathless on exertion|short of breath on exertion
-Pharyngitis,sore throat|throat pain|painful throat|my throat hurts
-Fatigue,tired|tiredness|exhausted|exhaustion|worn out|no energy|fatigued
-Chills,shivers
+Pharyngitis,sore throat|throat pain|painful throat|my throat hurts|scratchy throat
+Fatigue,tired|tiredness|exhausted|exhaustion|worn out|no energy|fatigued|always tired|lethargic|no energy at all|drained|run down|feel weak and tired
+Chills,shivers|the shivers|chilled
 Myalgia,muscle pain|muscle aches|aching muscles|body aches|sore muscles
-Rhinorrhea,runny nose|stuffy nose|blocked nose|nasal congestion
-Nausea,nauseous|nauseated|feel sick|queasy
-Vomiting,throwing up|threw up|vomited
+Rhinorrhea,runny nose|nose is running|dripping nose
+Nausea,nauseous|nauseated|feel sick|queasy|sick to my stomach|feel like throwing up|feel like vomiting|upset stomach|feel queasy
+Vomiting,throwing up|threw up|vomited|puking|puked|puke|vomit|keep vomiting|being sick
 Chest pain,pain in my chest|my chest hurts
 Palpitations,heart racing|racing heart|heart pounding|pounding heart
 Hemoptysis,coughing up blood|coughed up blood|blood in my sputum
-Productive cough,coughing up phlegm|coughing up mucus|phlegm|sputum
+Productive cough,coughing up phlegm|coughing up mucus|phlegm|sputum|cough with phlegm|mucus when i cough|wet cough
 Hoarse voice,hoarse|hoarseness|lost my voice
 Wheezing,wheeze|wheezy
 Stridor,noisy breathing
-Abdominal distention,bloated|bloating|swollen belly|swollen stomach
-Poor appetite,no appetite|loss of appetite|lost my appetite|not hungry
-Weight loss,losing weight|lost weight
-Hyperhidrosis,sweating a lot|excessive sweating|sweating heavily
+Abdominal distention,bloated|bloating|swollen belly|swollen stomach|stomach is swollen
+Poor appetite,no appetite|loss of appetite|lost my appetite|not hungry|don't feel like eating
+Weight loss,losing weight|lost weight|lost a lot of weight
+Hyperhidrosis,sweating a lot|excessive sweating|sweating heavily|sweating|sweaty|cold sweat|cold sweats
 Syncope,fainted|fainting|passed out|blacked out|lost consciousness
-Presyncope,lightheaded|light-headed|dizzy|dizziness|feel faint|about to faint
+Presyncope,lightheaded|light-headed|dizzy|dizziness|feel faint|about to faint|woozy|lightheadedness|faint
 Confusion,confused|disoriented|disorientated
-Dysphagia,difficulty swallowing|trouble swallowing|hard to swallow
-Dysarthria,difficulty speaking|trouble speaking
+Dysphagia,difficulty swallowing|trouble swallowing|hard to swallow|can't swallow
+Dysarthria,difficulty speaking|trouble speaking|slurring|slurring my words|slurring words|speech is slurred
 Diplopia,double vision|seeing double
-Edema,swelling|swollen ankles|swollen legs|swollen feet
-Pallor,pale skin|paleness
+Edema,swelling|swollen ankles|swollen legs|swollen feet|oedema
+Pallor,pale skin|paleness|look pale|very pale
 Melena,black stools|black stool|tarry stools
-Hematochezia,blood in my stool|bloody stool|blood in stool
+Hematochezia,blood in my stool|bloody stool|blood in stool|blood in my poop|bloody poop
 Hematemesis,vomiting blood|threw up blood|vomited blood
-Gastroesophageal reflux,heartburn|acid reflux
+Gastroesophageal reflux,heartburn|acid reflux|reflux|acid indigestion
 Excessive salivation,too much saliva
 Increased tear production,watery eyes|teary eyes
-Conjunctival hyperemia,red eyes|bloodshot eyes
-Lymphadenopathy,swollen glands|swollen lymph nodes
-Paresthesia,numbness|tingling|pins and needles
+Conjunctival hyperemia,red eyes|bloodshot eyes|pink eye|eye is red|eyes are red
+Lymphadenopathy,swollen glands|swollen lymph nodes|glands are swollen
+Paresthesia,numbness|tingling|pins and needles|tingly
 Limb muscle weakness,weak arms|weak legs|weakness in my arms|weakness in my legs
 Facial palsy,facial droop|face drooping
 Bilateral ptosis,droopy eyelids|drooping eyelids
 Irritability,irritable|moody
 Abnormality of the sense of smell,lost my sense of smell|loss of smell|cannot smell|can't smell
-Seizure,seizures|convulsion|convulsions
+Seizure,seizures|convulsion|convulsions|had a seizure|a fit
 Flushing,flushed|red cheeks|flushed face
 Orthopnea,can't breathe lying down|breathless lying down
 Oral ulcer,mouth ulcers|mouth sores|canker sores
@@ -53,6 +53,50 @@ Muscle spasm,muscle spasms
 Recurrent coughing spasms,coughing fits|coughing spells
 Menorrhagia,heavy periods|heavy menstrual bleeding
 Bruising susceptibility,bruise easily|bruising easily|unusual bruising
-Arrhythmia,irregular heartbeat|skipped beats|heart skipping beats
+Arrhythmia,irregular heartbeat|skipped beats|heart skipping beats|heart skips a beat
 Acholic stools,pale stools|clay colored stools
 Hemiparesis,weakness on one side|one-sided weakness
+Asthenia,feel weak|feeling weak|weak all over|no strength
+Body ache,ache all over|aching all over|achy all over|hurt all over|whole body aches|body is aching|achy
+Increased body weight,gaining weight|put on weight|gained weight
+Polydipsia,very thirsty|always thirsty|thirsty all the time|excessive thirst
+Feeling cold,always cold|feel cold|feeling cold all the time
+Headache,head hurts|my head hurts|head is killing me|pounding head|head is pounding|sore head|splitting headache|headaches|head ache
+Vertigo,room spinning|room is spinning|spinning sensation|everything is spinning
+Sensory impairment,numb|can't feel
+Itchiness of eye,itchy eyes|itchy eye|eyes are itchy|eye is itchy|eyes itch
+Blurred vision,blurry vision|vision is blurry|blurry eyes
+Hearing impairment,hard of hearing|can't hear well|hearing loss|losing my hearing
+Ear pain,earache|ear ache|my ear hurts|ear hurts|sore ear
+Nasal obstruction,stuffy nose|blocked nose|nasal congestion|stuffed up nose|nose is stuffed up|congested nose|stuffed nose|nose is blocked|blocked up nose
+Sneeze,sneezing|keep sneezing|sneezes
+Toothache,tooth pain|tooth hurts|my tooth hurts|sore tooth|teeth hurt
+Pain in gums,sore gums|gums hurt|my gums hurt
+Chest tightness,tight chest|chest feels tight|tightness in my chest
+Tachycardia,fast heartbeat|heart beating fast|rapid heartbeat|heart rate is high
+Diarrhea,the runs|loose stools|loose stool|watery stools|watery stool|diarrhoea|runny poo|frequent loose bowel movements
+Constipation,can't poop|hard stools|haven't pooped|constipated
+Abdominal pain,tummy ache|tummy hurts|tummy pain|stomach ache|stomachache|stomach pain|belly ache|belly pain|stomach hurts|my stomach hurts|abdominal ache|stomach cramps
+Upper abdominal pain,pain in my upper stomach|upper stomach pain|upper belly pain
+Lower abdominal pain,pain in my lower stomach|lower stomach pain|lower belly pain
+Regurgitation,food coming back up|bringing food back up|food comes back up
+Flatulence,passing gas|farting|lots of gas
+Anal pain,pain in my bottom|sore bottom|my bottom hurts
+Dysuria,hurts when i pee|hurts to pee|burns when i pee|burning when i pee|burning urination|pain when urinating|stings when i pee|pain when i pee
+Pollakisuria,peeing a lot|pee a lot|urinating often|need to pee often|peeing often|pee all the time
+Hematuria,blood in my urine|blood in my pee|bloody urine
+Nocturia,peeing at night|getting up at night to pee|wake up to pee|up at night to pee
+Urinary hesitancy,trouble starting to pee|hard to start peeing|trouble starting urination
+Vaginal pruritus,itchy vagina|itching down there|vaginal itch
+Dyspareunia,painful sex|pain during sex|sex is painful
+Pruritus,itchy|itchy skin|itching|itchiness|skin is itchy|itches
+Skin rash,rash|a rash|spots on my skin|skin spots|red spots
+Peripheral edema,legs are swollen|feet are swollen
+Arthralgia,joints ache|aching joints|achy joints|joints hurt|sore joints|my joints hurt
+Back pain,back hurts|my back hurts|backache|back ache|sore back
+Low back pain,lower back pain|lower back hurts|my lower back hurts
+Neck pain,sore neck|neck hurts|my neck hurts
+Knee pain,knee hurts|sore knee|my knee hurts
+Depressivity,feel depressed|feeling depressed|feeling down|feel low|depressed|sad all the time
+Anxiety,anxious|nervous|worried all the time|panicky|on edge
+Sleep disturbance,can't sleep|cannot sleep|trouble sleeping|insomnia|sleeping badly|can't fall asleep

@@ -131,10 +131,10 @@ class IntentService:
             'help':'Answer the specific app question using Project facts. For capabilities, describe symptom recording, questions and evidence correction. For correction, tell the user to change the status in the evidence panel. Do not merely offer to help.',
             'explain':'Explain the follow-up using the supplied selection method. In random mode say the question is randomly selected for integration testing and does not imply a likely condition. Do not infer priority, likelihood or clinical reasoning.',
             'summary':'Summarize only EVIDENCE and preserve present/absent/uncertain statuses. Do not infer a diagnosis.',
-            'out_of_scope':'Write a polite boundary response: this demo can record symptoms, explain health terms and explain its workflow; the requested task is outside these capabilities. Offer one of those supported activities. Do not perform the requested task.',
+            'out_of_scope':'Write a polite boundary response: this assistant can record symptoms, explain health terms and explain its workflow; the requested task is outside these capabilities. Offer one of those supported activities. Do not perform the requested task.',
             'clarify':'Write exactly one short question asking the user to choose between reporting symptoms, asking health knowledge, and help with app controls. Do not ask for clinical details or offer other capabilities.',
             'knowledge':'Give a brief general educational answer. If unclear what term is meant, ask a clarifying question. Do not diagnose or prescribe.'}
-        facts=('This is an academic prototype for recording current symptom evidence and explaining general symptom knowledge. '
+        facts=('This is a symptom-checking assistant for recording current symptoms and explaining general symptom knowledge. '
             'Users can add descriptions, answer Yes/No/Not sure, change a recorded evidence status using its dropdown (Present, Absent, Uncertain) in the evidence panel, export a session, or delete it. '
             'Sessions are stored locally in SQLite. Model inference runs locally. This does not establish a privacy or security guarantee. '
             'The current reasoning mode is '+state.mode+'. In random mode candidates are synthetic fixtures and follow-ups are random from the eligible vocabulary; scores are not probabilities. '
@@ -147,7 +147,7 @@ class IntentService:
                 ('Recorded evidence: '+json.dumps(evidence,ensure_ascii=False)+'\n' if intent=='summary' else '')+
                 ('Pending question: '+json.dumps({'symptom':state.last_question.kg_name,'selection_method':'random eligible symptom for integration testing' if state.mode=='random' else state.last_question.rationale} if state.last_question else None)+'\n' if intent=='explain' else '')+
                 'Question: '+json.dumps(text if intent not in {'out_of_scope','clarify'} else
-                    'Rephrase this message politely: That request is outside this symptom demo. I can help you record symptoms, understand health terms, or use the app.' if intent=='out_of_scope' else
+                    'Rephrase this message politely: That request is outside this symptom-checking assistant. I can help you record symptoms, understand health terms, or use the app.' if intent=='out_of_scope' else
                     'Rephrase this question: Are you reporting symptoms, asking about a health term, or looking for help using the app?',ensure_ascii=False)+'\nAnswer:',220)
             trace['model_call']=meta
             answer=raw.strip()
@@ -167,13 +167,13 @@ class IntentService:
             if intent=='clarify' and (answer.count('?')!=1 or not all(re.search(pattern,answer,re.I) for pattern in ('symptom','health|term|knowledge','app|control'))):
                 raise ValueError('Missing clarification choices')
             if intent=='out_of_scope' and not re.search(r'outside|cannot|can.t|not (?:able|within|supported)|beyond',answer,re.I):
-                answer='That request is outside this symptom demo. '+answer
+                answer='That request is outside this symptom-checking assistant. '+answer
                 trace['scope_notice_added']=True
             trace['validation']='length-and-scope-checked'
             return answer,trace
         except Exception as exc:
             trace.update(response_mode='dialogue-failed',fallback_reason=type(exc).__name__)
             if intent=='out_of_scope':
-                return 'That request is outside this symptom demo. I can help you record symptoms, understand health terms, or use the app.',trace
+                return 'That request is outside this symptom-checking assistant. I can help you record symptoms, understand health terms, or use the app.',trace
             return 'I could not interpret that reliably. Are you describing symptoms, asking a health knowledge question, or asking how this app works?',trace
 

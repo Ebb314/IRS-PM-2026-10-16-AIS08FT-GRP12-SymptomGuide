@@ -1,0 +1,110 @@
+{
+ "dataset_sha256": "8de90603ebada467fc2703db2ee4292856e52d64e94982ef926df22fa0c21320",
+ "raw_rows": 246945,
+ "split_sizes": {
+  "train": 151899,
+  "val": 18774,
+  "test": 18974
+ },
+ "test_records_sampled": 500,
+ "sample_seed": 2026,
+ "diseases_in_sample": 256,
+ "avg_present_symptoms_per_record": 5.41,
+ "model": "recall773-tristate-v2-ce/numpy",
+ "disease_symptom_table": "training-data-frequency",
+ "opening_turn": {
+  "hits@1": 0.324,
+  "hits@3": 0.59,
+  "hits@10": 0.88
+ },
+ "stop_rules_replayed": {
+  "current: top1>=0.80 and top1+top2>=0.95": {
+   "stopped_by_rule": 0.622,
+   "avg_questions": 7.49,
+   "hits@1": 0.706,
+   "hits@3": 0.87,
+   "hits@3_when_rule_fired": 0.99,
+   "hits@3_when_max_rounds": 0.672,
+   "all_no_stopped_by_rule": 0.142
+  },
+  "top-3 mass >= 0.60": {
+   "stopped_by_rule": 0.918,
+   "avg_questions": 2.78,
+   "hits@1": 0.392,
+   "hits@3": 0.754,
+   "hits@3_when_rule_fired": 0.808,
+   "hits@3_when_max_rounds": 0.146,
+   "all_no_stopped_by_rule": 0.614
+  },
+  "top-3 mass >= 0.70": {
+   "stopped_by_rule": 0.882,
+   "avg_questions": 3.55,
+   "hits@1": 0.42,
+   "hits@3": 0.804,
+   "hits@3_when_rule_fired": 0.878,
+   "hits@3_when_max_rounds": 0.254,
+   "all_no_stopped_by_rule": 0.53
+  },
+  "top-3 mass >= 0.75": {
+   "stopped_by_rule": 0.862,
+   "avg_questions": 3.95,
+   "hits@1": 0.44,
+   "hits@3": 0.822,
+   "hits@3_when_rule_fired": 0.91,
+   "hits@3_when_max_rounds": 0.275,
+   "all_no_stopped_by_rule": 0.498
+  },
+  "top-3 mass >= 0.80": {
+   "stopped_by_rule": 0.848,
+   "avg_questions": 4.38,
+   "hits@1": 0.456,
+   "hits@3": 0.836,
+   "hits@3_when_rule_fired": 0.934,
+   "hits@3_when_max_rounds": 0.289,
+   "all_no_stopped_by_rule": 0.44
+  },
+  "top-3 mass >= 0.85": {
+   "stopped_by_rule": 0.826,
+   "avg_questions": 4.73,
+   "hits@1": 0.472,
+   "hits@3": 0.864,
+   "hits@3_when_rule_fired": 0.969,
+   "hits@3_when_max_rounds": 0.368,
+   "all_no_stopped_by_rule": 0.39
+  },
+  "top-3 mass >= 0.90": {
+   "stopped_by_rule": 0.81,
+   "avg_questions": 5.01,
+   "hits@1": 0.496,
+   "hits@3": 0.87,
+   "hits@3_when_rule_fired": 0.99,
+   "hits@3_when_max_rounds": 0.358,
+   "all_no_stopped_by_rule": 0.346
+  }
+ },
+ "implemented_rule_end_to_end": {
+  "top3_mass_threshold": 0.9,
+  "stopped_by_rule": 0.778,
+  "avg_questions": 5.04,
+  "hits@1": 0.498,
+  "hits@3": 0.854,
+  "stop_reasons": {
+   "candidate_threshold": 389,
+   "max_rounds": 108,
+   "no_questions": 3
+  },
+  "hits@3_when_rule_fired": 0.987
+ },
+ "regression_floors": {
+  "hits@3": ">= 0.8",
+  "avg_questions": "<= 6.0",
+  "hits@3_when_rule_fired": ">= 0.95"
+ },
+ "regression_checks": {
+  "hits@3": true,
+  "avg_questions": true,
+  "hits@3_when_rule_fired": true
+ },
+ "duration_seconds": 40.9,
+ "notes": "Held-out TEST records of the synthetic Disease-Symptom Dataset; the simulated patient answers from the record (1 = Yes, 0 = No, the teammate's synthetic-negative assumption). Gold is the exact record label (no acceptable alternatives). In-distribution, so expect higher accuracy than the hand-written clinical vignettes."
+}

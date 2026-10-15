@@ -8,6 +8,53 @@ from app.models.chat_models import ExtractedSymptom, NLPResult, Symptom
 
 _log = get_logger("nlp")
 
+# HPO "clinical modifier" / frequency / laterality terms are vocabulary nodes but not symptoms on their own:
+# "a severe headache" must not record "Severe". They are never matched as standalone mentions.
+MODIFIER_TERMS = {
+    "all", "onset", "clinical modifier", "severity", "triggered by", "recurrent", "acute", "frequency", "progressive",
+    "slowly progressive", "rapidly progressive", "nonprogressive", "chronic", "subacute", "mild", "moderate",
+    "borderline", "severe", "profound", "bilateral", "unilateral", "right", "left", "generalized", "localized", "distal",
+    "proximal", "diffuse", "sharp", "dull", "axial", "acral", "prolonged", "nocturnal", "diurnal", "episodic", "central",
+    "peripheral", "focal", "refractory", "fluctuating", "affected", "unaffected", "healthy", "obligate", "very frequent",
+    "frequent", "occasional", "very rare", "excluded", "lateral", "laterality", "midperipheral", "migratory",
+    "multifocal", "paracentral", "pericentral", "periodic", "polycyclic", "position", "quotidian", "sporadic", "stable",
+    "tender", "transient",
+}
+# Typo tolerance (one edit) only for these common lay symptom words, and never for the real English words one edit
+# away from them ("couch" is not "cough", "thirty" is not "thirsty"). Same first letter, length >= 4.
+FUZZY_TARGETS = (
+    "fever", "feverish", "cough", "coughing", "headache", "headaches", "nausea", "nauseous", "nauseated", "vomiting",
+    "vomited", "diarrhea", "diarrhoea", "constipation", "constipated", "dizzy", "dizziness", "lightheaded", "fatigue",
+    "fatigued", "tired", "tiredness", "exhausted", "itching", "itchy", "swelling", "swollen", "wheezing", "sneezing",
+    "chills", "palpitations", "insomnia", "bloating", "bloated", "heartburn", "sweating", "numbness", "tingling",
+    "fainting", "fainted", "weakness", "earache", "toothache", "backache", "stomachache", "seizure", "seizures",
+    "jaundice", "breathless", "congestion", "cramps", "cramping", "phlegm", "sputum", "hiccups", "hoarse", "hoarseness",
+    "thirsty", "depressed", "anxious", "anxiety", "rashes", "shortness", "abdominal", "urination", "urinating",
+)
+FUZZY_EXCLUDE = {
+    "couch", "couches", "fewer", "fiver", "chill", "chilly", "tires", "tried", "tiled", "timed", "tied", "smelling",
+    "spelling", "swearing", "seating", "feint", "feinting", "acres", "horse", "horses", "ditzy", "blotted", "blotting",
+    "boating", "thirty", "tinkling", "camps", "crams", "camping", "clamping", "sneering", "wheeling", "inching",
+    "couching", "seizer", "ankles", "hoarder", "itchier", "constipate", "cramming", "swallen",
+}
+FUZZY_SCORE = 0.8
+
+
+def _one_edit(a: str, b: str) -> bool:
+    """Damerau-Levenshtein distance exactly 1 (substitution, insertion, deletion or adjacent swap)."""
+    if a == b or abs(len(a) - len(b)) > 1:
+        return False
+    if len(a) == len(b):
+        diff = [i for i in range(len(a)) if a[i] != b[i]]
+        return len(diff) == 1 or (len(diff) == 2 and diff[1] == diff[0] + 1 and a[diff[0]] == b[diff[1]] and a[diff[1]] == b[diff[0]])
+    if len(a) > len(b):
+        a, b = b, a
+    i = 0
+    while i < len(a) and a[i] == b[i]:
+        i += 1
+    return a[i:] == b[i + 1:]
+
+
 BOUNDARY = re.compile(r"[.!?;\n]|\b(?:but|however|yet)\b|,\s*(?=(?:I|he|she|my|just)\b)|\band\s+(?=(?:I|he|she)\s+(?:have|feel|am|has|is)\b)", re.I)
 
 class NLPService:
@@ -55,7 +102,12 @@ class NLPService:
                             self.aliases[key] = [node_id]
         if not self.nodes:
             raise ValueError("Vocabulary contains no supported symptom nodes")
-        self.pattern = re.compile(r"(?<!\w)(?:" + "|".join(re.escape(a) for a in sorted(self.aliases, key=len, reverse=True)) + r")(?!\w)", re.I)
+        keys = [a for a in self.aliases if a not in MODIFIER_TERMS]
+        self.pattern = re.compile(r"(?<!\w)(?:" + "|".join(re.escape(a) for a in sorted(keys, key=len, reverse=True)) + r")(?!\w)", re.I)
+        self.fuzzy = {}
+        for word in FUZZY_TARGETS:
+            if word in self.aliases and len(self.aliases[word]) == 1:
+                self.fuzzy.setdefault(word[0], []).append(word)
         self._ner = self._encoder = None
         self._node_ids = list(self.nodes)
         self.engine = "rules-v2"
@@ -70,8 +122,21 @@ class NLPService:
         self._embeddings = self._encoder.encode([self.nodes[k].kg_name for k in self._node_ids], normalize_embeddings=True)
         self.engine = "biomedical-ner+rules-v2"
 
+    def _fuzzy_mentions(self, text, taken):
+        out = []
+        for m in re.finditer(r"[A-Za-z]{4,}", text):
+            word = m.group().casefold()
+            if word in self.aliases or word in FUZZY_EXCLUDE or any(m.start() < b and m.end() > a for a, b, *_ in taken):
+                continue
+            hits = {t for t in self.fuzzy.get(word[0], []) if _one_edit(word, t)}
+            nodes = {self.aliases[t][0] for t in hits}
+            if len(nodes) == 1:
+                out.append((m.start(), m.end(), [nodes.pop()], FUZZY_SCORE))
+        return out
+
     def _mentions(self, text):
         mentions = [(m.start(), m.end(), self.aliases[m.group().casefold()], 1.0) for m in self.pattern.finditer(text)]
+        mentions += self._fuzzy_mentions(text, mentions)
         if self._ner is not None:
             import numpy as np
             for item in self._ner(text):
@@ -104,11 +169,15 @@ class NLPService:
             clause = (text[left:start]+' '+text[end:right]).lower()
             other = bool(re.search(r"\b(?:my (?:mother|father|sister|brother|friend|child|son|daughter|wife|husband)|he|she|they)\b", prefix))
             historical = bool(re.search(r"\b(?:used to|(?<!since )last (?:year|month)|previously|history of)\b", clause))
-            uncertain = bool(re.search(r"\b(?:not sure|unsure|uncertain|maybe|perhaps|might|possibly|whether|don't know|do not know)\b", prefix))
+            uncertain = bool(re.search(r"\b(?:not sure|unsure|uncertain|not certain|maybe|perhaps|might|possibly|whether|don'?t know|do not know)\b", prefix))
             neg_prefix = re.sub(r"\bnot only\b", "", prefix)
-            negative = bool(re.search(r"\b(?:no|not|never|without|denies|deny|denied)\b|\b(?:don't|doesn't|didn't)\b", neg_prefix))
+            # Contractions with or without the apostrophe (users often type "dont", "havent").
+            negative = bool(re.search(r"\b(?:no|not|never|without|denies|deny|denied|no longer|free of)\b|"
+                                      r"\b(?:do|does|did|have|has|had|is|are|was|were)n'?t\b|\bdont\b", neg_prefix))
             negative |= bool(re.match(r"(?:-free\b|\s+(?:(?:is|was)\s+)?(?:absent|gone|denied)\b|\s+(?:isn't|is not)\s+present\b|\s+(?:yesterday,?\s+)?which is gone\b)", suffix))
             negative |= bool(re.match(r"\?\s*(?:I\s+)?(?:don't think so|do not think so|no)\b", text[end:], re.I))
+            if score == FUZZY_SCORE:
+                result.warnings.append(f"Read '{text[start:end]}' as {self.nodes[ids[0]].kg_name}. Please correct it if that is wrong.")
             item = ExtractedSymptom(**self.nodes[ids[0]].model_dump(), original_text=text[start:end],
                 confidence=round(score,4), status="uncertain" if uncertain else "absent" if negative else "present",
                 experiencer="other" if other else "self", temporality="historical" if historical else "current",

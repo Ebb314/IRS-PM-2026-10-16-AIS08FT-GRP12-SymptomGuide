@@ -19,6 +19,8 @@ class ChatbotService:
         self.recall, self.search, self.drugs = recall, search, drugs
         self.mode = mode
         self.max_rounds = max_rounds or settings.max_rounds
+        # A recall service may define its own stop size (recall773: top-3 differential).
+        self.finish_threshold = getattr(recall, "finish_threshold", settings.finish_candidate_threshold)
         from app.services.dialogue_ai import DialogueAI
         self.dialogue = dialogue or DialogueAI()
 
@@ -65,6 +67,7 @@ class ChatbotService:
                     t = perf_counter()
                     observations,analysis=self.dialogue.understand(request.message,state,self.nlp)
                     state.timings_ms['understanding'] = round((perf_counter()-t)*1000,3)
+                    advance_message=None
                     if observations:
                         # The agent interprets the latest assertion in context.
                         # A clear denial updates an earlier report even without
@@ -74,10 +77,21 @@ class ChatbotService:
                             state.asked_symptoms.append(state.last_question.kg_id)
                         if action=='message': state.round+=1
                         advance_message=self._advance(state)
-                    # kg / ddxplus modes: informed search drives the interview, so its question is
+                    elif self._search_driven() and state.status==SessionStatus.RUNNING and not state.pending_evidence:
+                        # Small talk / a question / no symptom in this message: keep the interview going.
+                        # Re-ask the pending question, or pick the next one if symptoms are on record.
+                        # (Not while a suggested match waits for confirmation, and not before any symptom.)
+                        if state.last_question is not None:
+                            advance_message=self._question_text(state.last_question, again=True)
+                        elif state.positive_symptoms:
+                            advance_message=self._advance(state)
+                        if advance_message:
+                            logger.info("no new symptom in this message; %s", "re-asking the pending question"
+                                        if state.last_question else "continuing the interview")
+                    # kg / ddxplus / recall773: informed search drives the interview, so its question is
                     # asked explicitly with Yes / No / Not sure buttons after the LLM reply.
-                    ask_kg=self.mode in ('kg','ddxplus','recall773') and state.status==SessionStatus.RUNNING and state.last_question is not None
-                    append_kg=self.mode in ('kg','ddxplus','recall773') and bool(observations)
+                    ask_kg=self._search_driven() and state.status==SessionStatus.RUNNING and state.last_question is not None
+                    append_kg=self._search_driven() and advance_message is not None
                     state.nlp_engine='conversation-agent-v1'
                     t = perf_counter()
                     message,trace=self.dialogue.reply(request.message,state,analysis,app_will_ask=append_kg)
@@ -167,14 +181,20 @@ class ChatbotService:
                 state.pending_evidence = [e for e in state.pending_evidence if e.kg_id != request.kg_id]
                 state.last_question = None
                 if hasattr(self.dialogue, 'understand'):
-                    # An explicit UI edit needs no inference. Keep adapters up to date,
-                    # but do not replace the conversation with a random test question.
-                    self._advance(state)
-                    state.symptom_question_active = False
-                    state.version += 1
+                    # An explicit UI edit needs no inference. Keep adapters up to date.
+                    advance_message = self._advance(state)
                     label = {'present':'Present', 'absent':'Absent', 'uncertain':'Not sure'}[request.status]
+                    message = f"Saved: {old.kg_name} — {label}. You can change this again in Symptom log."
+                    if self._search_driven():
+                        # Informed search drives the interview: continue with its next question (or the result).
+                        message += "\n\n" + advance_message
+                        state.symptom_question_active = state.status == SessionStatus.RUNNING and state.last_question is not None
+                    else:
+                        # Random / mock fixtures: do not replace the conversation with a random test question.
+                        state.symptom_question_active = False
+                    state.version += 1
                     state.ai_trace = {'response_mode':'explicit-record-update'}
-                    return self._commit(state, f"Saved: {old.kg_name} — {label}. You can change this again in Symptom log.", scope, request, fingerprint, started)
+                    return self._commit(state, message, scope, request, fingerprint, started)
             state.version += 1
             message = self._advance(state)
             message, trace = self.dialogue.phrase_question(state, message)
@@ -188,6 +208,14 @@ class ChatbotService:
             logger.info("answer %s -> %s (round %d)", request.symptom.kg_name, request.answer, state.round)
         else:
             logger.info("correct %s -> %s", request.kg_id, request.status)
+
+    def _search_driven(self):
+        return self.mode in ("kg", "ddxplus", "recall773")
+
+    @staticmethod
+    def _question_text(question, again=False):
+        lead = "To continue: are" if again else "Are"
+        return f"{lead} you experiencing {question.kg_name}? You can answer Yes, No, Not sure, or describe it in your own words."
 
     def _answer(self, state, answer, text):
         question = state.last_question
@@ -231,7 +259,7 @@ class ChatbotService:
             state.stop_reason = "no_candidates"
         elif state.round >= self.max_rounds:
             state.stop_reason = "max_rounds"
-        elif len(state.candidate_diseases) <= settings.finish_candidate_threshold:
+        elif len(state.candidate_diseases) <= self.finish_threshold:
             state.stop_reason = "candidate_threshold"
         else:
             t = perf_counter()
@@ -251,13 +279,14 @@ class ChatbotService:
         if state.stop_reason:
             state.status = SessionStatus.COMPLETE
             logger.info("STOP reason=%s (round %d/%d, %d candidates, threshold <= %d)", state.stop_reason, state.round,
-                        self.max_rounds, len(state.candidate_diseases), settings.finish_candidate_threshold)
+                        self.max_rounds, len(state.candidate_diseases), self.finish_threshold)
             if state.stop_reason == "candidate_threshold":
                 state.drug_recommendations = self.drugs.recommend(state.candidate_diseases)
                 logger.info("drugs -> %d recommendations", len(state.drug_recommendations))
-                return "The demonstration reached its candidate threshold. Review the evidence below; this is not a diagnosis. You can correct evidence or add more information."
-            return "The demonstration stopped: " + state.stop_reason.replace("_"," ") + ". Evidence is insufficient for a conclusion. You can still correct or add information."
-        return f"Are you experiencing {state.last_question.kg_name}? You can answer Yes, No, Not sure, or describe it in your own words."
+                return "Consultation complete. Review the possible conditions; this is not a diagnosis. You can correct your answers or add more information."
+            return ("The consultation ended without a clear result (" + state.stop_reason.replace("_", " ") + "). "
+                    "Evidence is insufficient for a conclusion; please consider seeing a doctor. You can still correct or add information.")
+        return self._question_text(state.last_question)
 
     def _commit(self, state, message, scope, request, fingerprint, started):
         intent=state.ai_trace.get('intent','report')

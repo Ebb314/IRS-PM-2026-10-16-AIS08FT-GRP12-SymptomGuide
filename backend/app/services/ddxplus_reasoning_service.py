@@ -106,9 +106,15 @@ class DDXPlusData:
 
 class DDXPlusRecallService(RecallService):
     def __init__(self, data: DDXPlusData, top_k=10, mass=0.95, temperature=1.0, hard_filter=False,
-                 confident=0.8, min_candidates=3):
+                 confident=0.8, min_candidates=3, stop_top3_mass=None):
         self.data, self.top_k, self.mass, self.temperature, self.hard_filter = data, top_k, mass, temperature, hard_filter
         self.confident, self.min_candidates = confident, min(min_candidates, top_k)
+        # Top-3 differential stop (recall773): when the three best diseases hold >= stop_top3_mass of the
+        # probability, exactly those three are returned and the interview ends (finish_threshold = 3);
+        # otherwise at least 4 candidates are kept so the conversation continues.
+        self.stop_top3_mass = stop_top3_mass
+        if stop_top3_mass is not None:
+            self.finish_threshold = 3
         self.source = f"{data.source_tag}/{data.model.backend}"
 
     def recall(self, positive, negative):
@@ -132,13 +138,27 @@ class DDXPlusRecallService(RecallService):
             ranked = filter_candidates(ranked, state, self.data.disease_symptoms)
             _recall_log.info("hard filter removed %d diseases with a denied symptom", before - len(ranked))
         chosen, total = [], 0.0
-        keep_at_least = self.min_candidates if ranked and ranked[0]["score"] < self.confident else 1
-        for item in ranked[: self.top_k]:
-            chosen.append(item)
-            total += item["score"]
-            if total >= self.mass and len(chosen) >= keep_at_least:
-                break
-        if ranked:
+        if self.stop_top3_mass is not None:
+            top3 = sum(r["score"] for r in ranked[:3])
+            if top3 >= self.stop_top3_mass:
+                chosen, total = ranked[:3], top3
+            else:
+                # Not converged: the usual probability nucleus (capped at top_k), never fewer than 4.
+                for item in ranked[: self.top_k]:
+                    chosen.append(item)
+                    total += item["score"]
+                    if total >= self.mass and len(chosen) >= 4:
+                        break
+            _recall_log.info("top-3 mass %.3f %s stop threshold %.2f -> %d candidates", top3,
+                             ">=" if top3 >= self.stop_top3_mass else "<", self.stop_top3_mass, len(chosen))
+        else:
+            keep_at_least = self.min_candidates if ranked and ranked[0]["score"] < self.confident else 1
+            for item in ranked[: self.top_k]:
+                chosen.append(item)
+                total += item["score"]
+                if total >= self.mass and len(chosen) >= keep_at_least:
+                    break
+        if ranked and self.stop_top3_mass is None:
             _recall_log.info("candidates=%d (cumulative mass %.3f; top-1 %.3f %s confident %.2f -> keep at least %d; cap %d)",
                              len(chosen), total, ranked[0]["score"], "<" if ranked[0]["score"] < self.confident else ">=",
                              self.confident, keep_at_least, self.top_k)

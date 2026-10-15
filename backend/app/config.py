@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent
 
 @dataclass(frozen=True)
 class Settings:
-    app_name: str = "Symptom Guide - Dialogue Lab"
+    app_name: str = "Symptom Guide"
     ai_profile: str = os.getenv("AI_PROFILE", "offline")
     dialogue_engine: str = os.getenv('DIALOGUE_ENGINE','agent')
     local_model_path: str = os.getenv("LOCAL_MODEL_PATH", str(BASE_DIR.parents[1] / "models" / "Qwen3-4B-Instruct-2507"))
@@ -54,7 +54,11 @@ class Settings:
     recall773_top_k: int = int(os.getenv("RECALL773_TOP_K", "10"))
     recall773_mass: float = float(os.getenv("RECALL773_MASS", "0.95"))
     recall773_confident: float = float(os.getenv("RECALL773_CONFIDENT", "0.8"))
-    disease_symptom_table: str = os.getenv("DISEASE_SYMPTOM_TABLE", "")
+    # Stop when the top-3 diseases hold this much probability; the result is a top-3 differential.
+    recall773_stop_top3_mass: float = float(os.getenv("RECALL773_STOP_TOP3_MASS", "0.9"))
+    # Exported by scripts/export_disease_symptom_table.py; used automatically when present.
+    disease_symptom_table: str = os.getenv("DISEASE_SYMPTOM_TABLE", str(BASE_DIR / "data" / "recall773" / "disease_symptom_frequency.csv")
+                                           if (BASE_DIR / "data" / "recall773" / "disease_symptom_frequency.csv").is_file() else "")
     cors_origins: tuple = ("http://localhost:5173", "http://127.0.0.1:5173")
 
 settings = Settings()

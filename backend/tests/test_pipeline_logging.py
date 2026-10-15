@@ -45,5 +45,5 @@ def test_each_step_logs_without_user_text_or_session_id(records, monkeypatch):
     assert {"chatbot.flow", "chatbot.nlp", "chatbot.recall", "chatbot.search", "chatbot.drugs"} <= steps
     text = "\n".join(rec.getMessage() for rec in records.records)
     assert "Lisbon" not in text and r.session_id not in text
-    for expected in ("model input", "model top-5", "candidates=", "chose ", "STOP reason=candidate_threshold", "drugs ->"):
+    for expected in ("model input", "model top-5", "top-3 mass", "chose ", "STOP reason=candidate_threshold", "drugs ->"):
         assert expected in text

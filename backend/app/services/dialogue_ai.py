@@ -96,7 +96,7 @@ class DialogueAI:
             return "Your recorded evidence: "+(summary or "none yet")+". You can correct any item in the evidence panel.",{
                 "intent":intent,"response_mode":"structured-summary","citations":[],"validation":"rendered-from-state"}
         if intent=="out_of_scope":
-            return "I can explain this prototype and its recorded evidence, but cannot reveal system instructions or provide a diagnosis.",{
+            return "I can explain this assistant and its recorded evidence, but cannot reveal system instructions or provide a diagnosis.",{
                 "intent":intent,"response_mode":"scope-boundary","citations":[]}
         query=text
         target,generic=self.knowledge_target(text,state) if intent=='knowledge' else (None,False)
@@ -121,7 +121,7 @@ class DialogueAI:
             supported_ids={d['id'] for d in supported}
             hits=[h for h in hits if h['id'] in supported_ids] or supported
         if not hits:
-            return "I do not have a supporting passage for that question in this demonstration knowledge base.",{
+            return "I do not have a supporting passage for that question in the built-in knowledge base.",{
                 "intent":intent,"response_mode":"abstention","citations":[]}
         if intent=="explain" and state.last_question:
             context.append("Pending question: "+state.last_question.kg_name+". Rationale: "+state.last_question.rationale)
@@ -129,12 +129,12 @@ class DialogueAI:
             "prompt_version":"grounded-dialogue-v3","validation":"source-extract",**topic_trace}
         fallback=hits[0]["text"]
         if self.generator is None: return fallback,trace
-        system=("You explain an academic symptom chatbot. Answer only from SOURCES. "
+        system=("You explain a symptom-checking chatbot. Answer only from SOURCES. "
             "Never diagnose, prescribe or claim mock scores are probabilities. "
             "If the sources do not answer the question say that you do not know. "
             "Return JSON only with keys answer (one short paragraph) and citations (source IDs). "
             'Use at least one source ID. No additional keys. '
-            'Example format: {"answer":"The prototype stores confirmed evidence.","citations":["project-scope"]}. '
+            'Example format: {"answer":"The assistant stores confirmed evidence.","citations":["project-scope"]}. '
             'Use the supplied sources instead of the example when answering.')
         try:
             raw,meta=self.generator.generate(system,json.dumps({"QUESTION":query if target else text,"CONTEXT":context,
