@@ -1,0 +1,16 @@
+disease_symptom_id,disease_symptom_name,ddxplus_id,ddxplus_name,mondo_id,relationship
+DSA_0016,acute otitis media,DDX_003,Acute otitis media,MONDO:0024330,same_unique_ontology_concept; original output labels remain separate
+DSA_0038,anemia,DDX_008,Anemia,MONDO:0002280,same_unique_ontology_concept; original output labels remain separate
+DSA_0060,atrial fibrillation,DDX_009,Atrial fibrillation,MONDO:0004981,same_unique_ontology_concept; original output labels remain separate
+DSA_0130,chronic sinusitis,DDX_016,Chronic rhinosinusitis,MONDO:0006031,same_unique_ontology_concept; original output labels remain separate
+DSA_0157,croup,DDX_018,Croup,MONDO:0005722,same_unique_ontology_concept; original output labels remain separate
+DSA_0249,flu,DDX_024,Influenza,MONDO:0005812,same_unique_ontology_concept; original output labels remain separate
+DSA_0297,guillain barre syndrome,DDX_022,Guillain-Barré syndrome,MONDO:0016218,same_unique_ontology_concept; original output labels remain separate
+DSA_0463,myasthenia gravis,DDX_028,Myasthenia gravis,MONDO:0009688,same_unique_ontology_concept; original output labels remain separate
+DSA_0465,myocarditis,DDX_029,Myocarditis,MONDO:0004496,same_unique_ontology_concept; original output labels remain separate
+DSA_0542,pericarditis,DDX_033,Pericarditis,MONDO:0005904,same_unique_ontology_concept; original output labels remain separate
+DSA_0565,pneumonia,DDX_034,Pneumonia,MONDO:0005249,same_unique_ontology_concept; original output labels remain separate
+DSA_0609,pulmonary embolism,DDX_036,Pulmonary embolism,MONDO:0005279,same_unique_ontology_concept; original output labels remain separate
+DSA_0630,sarcoidosis,DDX_039,Sarcoidosis,MONDO:0019338,same_unique_ontology_concept; original output labels remain separate
+DSA_0725,tuberculosis,DDX_044,Tuberculosis,MONDO:0018076,same_unique_ontology_concept; original output labels remain separate
+DSA_0769,whooping cough,DDX_048,Whooping cough,MONDO:0005077,same_unique_ontology_concept; original output labels remain separate

@@ -1,0 +1,106 @@
+{
+  "fever_unknown": {
+    "model": "ddxplus_tristate_v1",
+    "supported_diseases": 49,
+    "known_present": [
+      "E_201",
+      "E_66"
+    ],
+    "known_absent": [],
+    "candidates": [
+      {
+        "disease_id": "DDX_014",
+        "disease_name": "Bronchospasm / acute asthma exacerbation",
+        "icd10": "J45",
+        "score": 6.9091477394104,
+        "kg_candidate_node_indices": []
+      },
+      {
+        "disease_id": "DDX_011",
+        "disease_name": "Bronchiectasis",
+        "icd10": "J47",
+        "score": 5.943362236022949,
+        "kg_candidate_node_indices": [
+          39493
+        ]
+      },
+      {
+        "disease_id": "DDX_044",
+        "disease_name": "Tuberculosis",
+        "icd10": "a15",
+        "score": 5.580264091491699,
+        "kg_candidate_node_indices": [
+          32505
+        ]
+      },
+      {
+        "disease_id": "DDX_037",
+        "disease_name": "Pulmonary neoplasm",
+        "icd10": "c34",
+        "score": 5.181148529052734,
+        "kg_candidate_node_indices": []
+      },
+      {
+        "disease_id": "DDX_000",
+        "disease_name": "Acute COPD exacerbation / infection",
+        "icd10": "j44.1",
+        "score": 5.157020092010498,
+        "kg_candidate_node_indices": []
+      }
+    ],
+    "score_type": "uncalibrated matching logit"
+  },
+  "fever_denied": {
+    "model": "ddxplus_tristate_v1",
+    "supported_diseases": 49,
+    "known_present": [
+      "E_201",
+      "E_66"
+    ],
+    "known_absent": [
+      "E_91"
+    ],
+    "candidates": [
+      {
+        "disease_id": "DDX_014",
+        "disease_name": "Bronchospasm / acute asthma exacerbation",
+        "icd10": "J45",
+        "score": 7.104909420013428,
+        "kg_candidate_node_indices": []
+      },
+      {
+        "disease_id": "DDX_011",
+        "disease_name": "Bronchiectasis",
+        "icd10": "J47",
+        "score": 6.384990692138672,
+        "kg_candidate_node_indices": [
+          39493
+        ]
+      },
+      {
+        "disease_id": "DDX_044",
+        "disease_name": "Tuberculosis",
+        "icd10": "a15",
+        "score": 5.617232799530029,
+        "kg_candidate_node_indices": [
+          32505
+        ]
+      },
+      {
+        "disease_id": "DDX_037",
+        "disease_name": "Pulmonary neoplasm",
+        "icd10": "c34",
+        "score": 5.573740005493164,
+        "kg_candidate_node_indices": []
+      },
+      {
+        "disease_id": "DDX_000",
+        "disease_name": "Acute COPD exacerbation / infection",
+        "icd10": "j44.1",
+        "score": 5.4736328125,
+        "kg_candidate_node_indices": []
+      }
+    ],
+    "score_type": "uncalibrated matching logit"
+  }
+}

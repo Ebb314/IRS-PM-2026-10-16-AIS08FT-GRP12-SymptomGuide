@@ -1,0 +1,774 @@
+disease,disease_index,primekg_name,primekg_id,link,has_drug_relations
+abdominal aortic aneurysm,0,,,,False
+abdominal hernia,1,,,,False
+abscess of nose,2,,,,False
+abscess of the lung,3,,,,False
+abscess of the pharynx,4,,,,False
+acanthosis nigricans,5,acanthosis nigricans (disease),PRIMEKG:38504,direct,False
+acariasis,6,,,,False
+achalasia,7,achalasia (disease),PRIMEKG:31271,direct,False
+acne,8,acne (disease),PRIMEKG:33703,direct,True
+actinic keratosis,9,actinic keratosis (disease),PRIMEKG:83756,direct,True
+acute bronchiolitis,10,,,,False
+acute bronchitis,11,,,,False
+acute bronchospasm,12,,,,False
+acute fatty liver of pregnancy (aflp),13,,,,False
+acute glaucoma,14,,,,False
+acute kidney injury,15,,,,False
+acute otitis media,16,infectious otitis media,PRIMEKG:83829,direct,True
+acute pancreatitis,17,,,,False
+acute respiratory distress syndrome (ards),18,,,,False
+acute sinusitis,19,,,,False
+acute stress reaction,20,,,,False
+adhesive capsulitis of the shoulder,21,,,,False
+adjustment reaction,22,,,,False
+adrenal adenoma,23,adrenal cortex adenoma,PRIMEKG:33671,direct,False
+adrenal cancer,24,adrenal gland cancer,PRIMEKG:36860,direct,True
+alcohol abuse,25,,,,False
+alcohol intoxication,26,,,,False
+alcohol withdrawal,27,alcohol withdrawal,PRIMEKG:38038,direct,True
+alcoholic liver disease,28,,,,False
+allergy,29,,,,False
+allergy to animals,30,,,,False
+alopecia,31,alopecia,PRIMEKG:36531,direct,True
+alzheimer disease,32,Alzheimer disease,PRIMEKG:28780,exact_name,True
+amblyopia,33,amblyopia (disease),PRIMEKG:35981,direct,False
+amyloidosis,34,amyloidosis (disease),PRIMEKG:33591,direct,True
+amyotrophic lateral sclerosis (als),35,,,,False
+anal fissure,36,,,,False
+anal fistula,37,anal fistula (disease),PRIMEKG:33628,direct,False
+anemia,38,anemia (disease),PRIMEKG:33632,direct,True
+anemia due to chronic kidney disease,39,,,,False
+anemia due to malignancy,40,,,,False
+anemia of chronic disease,41,,,,False
+angina,42,,,,False
+ankylosing spondylitis,43,ankylosing spondylitis,PRIMEKG:39820,exact_name,True
+anxiety,44,anxiety,PRIMEKG:84019,direct,True
+aortic valve disease,45,aortic valve disease,PRIMEKG:31047,exact_name,False
+aphakia,46,,,,False
+aphthous ulcer,47,canker sore,PRIMEKG:33666,direct,True
+aplastic anemia,48,aplastic anemia,PRIMEKG:36344,direct,True
+appendicitis,49,appendicitis,PRIMEKG:83886,direct,True
+arrhythmia,50,,,,False
+arthritis of the hip,51,,,,False
+ascending cholangitis,52,,,,False
+asperger syndrome,53,,,,False
+aspergillosis,54,aspergillosis,PRIMEKG:33216,exact_name,True
+asthma,55,asthma,PRIMEKG:33675,direct,True
+astigmatism,56,astigmatism (disease),PRIMEKG:33565,direct,False
+atelectasis,57,,,,False
+athlete's foot,58,tinea pedis,PRIMEKG:83753,direct,True
+atonic bladder,59,,,,False
+atrial fibrillation,60,atrial fibrillation (disease),PRIMEKG:33618,direct,True
+atrial flutter,61,atrial flutter (disease),PRIMEKG:33698,direct,False
+atrophic skin condition,62,,,,False
+atrophic vaginitis,63,postmenopausal atrophic vaginitis,PRIMEKG:84027,direct,True
+atrophy of the corpus cavernosum,64,,,,False
+attention deficit hyperactivity disorder (adhd),65,,,,False
+autism,66,autism (disease),PRIMEKG:84310,direct,True
+autonomic nervous system disorder,67,,,,False
+avascular necrosis,68,avascular necrosis,PRIMEKG:32646,exact_name,False
+balanitis,69,,,,False
+bell palsy,70,,,,False
+benign kidney cyst,71,,,,False
+benign paroxysmal positional vertical (bppv),72,,,,False
+benign prostatic hyperplasia (bph),73,,,,False
+benign vaginal discharge (leukorrhea),74,,,,False
+bipolar disorder,75,bipolar disorder,PRIMEKG:38242,exact_name,True
+birth trauma,76,,,,False
+bladder cancer,77,,,,False
+bladder disorder,78,,,,False
+bladder obstruction,79,,,,False
+blepharitis,80,,,,False
+blepharospasm,81,blepharospasm,PRIMEKG:30324,direct,True
+bone cancer,82,,,,False
+bone disorder,83,,,,False
+bone spur of the calcaneous,84,,,,False
+brachial neuritis,85,,,,False
+brain cancer,86,brain cancer,PRIMEKG:36492,direct,True
+breast cancer,87,breast cancer,PRIMEKG:36691,direct,True
+breast cyst,88,,,,False
+breast infection (mastitis),89,,,,False
+broken tooth,90,,,,False
+bunion,91,,,,False
+burn,92,burn,PRIMEKG:84122,direct,True
+bursitis,93,bursitis,PRIMEKG:36272,direct,True
+callus,94,,,,False
+carbon monoxide poisoning,95,,,,False
+carcinoid syndrome,96,carcinoid syndrome,PRIMEKG:33104,direct,True
+cardiac arrest,97,cardiac arrest,PRIMEKG:84058,direct,True
+cardiomyopathy,98,,,,False
+carpal tunnel syndrome,99,carpal tunnel syndrome,PRIMEKG:28831,exact_name,False
+cat scratch disease,100,cat-scratch disease,PRIMEKG:84076,direct,True
+cataract,101,cataract,PRIMEKG:27202,exact_name,False
+celiac disease,102,celiac disease,PRIMEKG:38941,direct,True
+cellulitis or abscess of mouth,103,,,,False
+central atherosclerosis,104,,,,False
+central retinal artery or vein occlusion,105,,,,False
+cerebral edema,106,,,,False
+cerebral palsy,107,cerebral palsy,PRIMEKG:33667,direct,False
+cervical cancer,108,cervical cancer,PRIMEKG:31107,direct,True
+cervical disorder,109,,,,False
+cervicitis,110,cervicitis (disease),PRIMEKG:36015,direct,False
+chalazion,111,,,,False
+chickenpox,112,chickenpox,PRIMEKG:84029,direct,True
+chlamydia,113,,,,False
+cholecystitis,114,cholecystitis,PRIMEKG:37628,direct,True
+choledocholithiasis,115,choledocholithiasis,PRIMEKG:83921,direct,True
+cholesteatoma,116,cholesteatoma (disease),PRIMEKG:38007,direct,False
+chondromalacia of the patella,117,,,,False
+chorioretinitis,118,chorioretinitis (disease),PRIMEKG:35501,direct,True
+chronic back pain,119,,,,False
+chronic constipation,120,,,,False
+chronic glaucoma,121,,,,False
+chronic inflammatory demyelinating polyneuropathy (cidp),122,,,,False
+chronic kidney disease,123,,,,False
+chronic knee pain,124,,,,False
+chronic obstructive pulmonary disease (copd),125,chronic obstructive pulmonary disease,PRIMEKG:37617,direct,True
+chronic otitis media,126,,,,False
+chronic pain disorder,127,,,,False
+chronic pancreatitis,128,,,,False
+chronic rheumatic fever,129,,,,False
+chronic sinusitis,130,,,,False
+chronic ulcer,131,,,,False
+cirrhosis,132,,,,False
+coagulation (bleeding) disorder,133,,,,False
+cold sore,134,herpes labialis,PRIMEKG:84166,direct,True
+colonic polyp,135,,,,False
+colorectal cancer,136,colorectal cancer,PRIMEKG:28849,direct,True
+common cold,137,common cold,PRIMEKG:83897,direct,True
+complex regional pain syndrome,138,complex regional pain syndrome,PRIMEKG:32316,exact_name,False
+concussion,139,,,,False
+conduct disorder,140,,,,False
+conductive hearing loss,141,,,,False
+congenital heart defect,142,,,,False
+congenital malformation syndrome,143,,,,False
+conjunctivitis,144,conjunctivitis,PRIMEKG:36088,exact_name,True
+conjunctivitis due to allergy,145,,,,False
+conjunctivitis due to bacteria,146,,,,False
+conjunctivitis due to virus,147,,,,False
+connective tissue disorder,148,,,,False
+contact dermatitis,149,contact dermatitis,PRIMEKG:37770,direct,True
+conversion disorder,150,,,,False
+cornea infection,151,,,,False
+corneal abrasion,152,,,,False
+corneal disorder,153,,,,False
+coronary atherosclerosis,154,,,,False
+cranial nerve palsy,155,,,,False
+crohn disease,156,Crohn disease,PRIMEKG:37784,exact_name,True
+croup,157,croup,PRIMEKG:84254,direct,True
+crushing injury,158,,,,False
+cryptococcosis,159,cryptococcosis,PRIMEKG:32601,direct,True
+cryptorchidism,160,cryptorchidism (disease),PRIMEKG:30073,direct,True
+cushing syndrome,161,Cushing syndrome,PRIMEKG:39600,direct,True
+cyst of the eyelid,162,,,,False
+cystic fibrosis,163,cystic fibrosis,PRIMEKG:28714,direct,True
+cysticercosis,164,cysticercosis,PRIMEKG:32593,direct,True
+cystitis,165,cystitis,PRIMEKG:35682,direct,True
+de quervain disease,166,,,,False
+decubitus ulcer,167,,,,False
+deep vein thrombosis (dvt),168,,,,False
+degenerative disc disease,169,,,,False
+delirium,170,delirium,PRIMEKG:37565,direct,True
+dementia,171,dementia (disease),PRIMEKG:37573,direct,True
+dengue fever,172,dengue disease,PRIMEKG:32349,direct,False
+dental caries,173,,,,False
+depression,174,,,,False
+dermatitis due to sun exposure,175,,,,False
+developmental disability,176,,,,False
+deviated nasal septum,177,,,,False
+diabetes,178,diabetes mellitus (disease),PRIMEKG:33575,direct,True
+diabetes insipidus,179,diabetes insipidus,PRIMEKG:38244,direct,True
+diabetic ketoacidosis,180,diabetic ketoacidosis,PRIMEKG:29113,direct,True
+diabetic kidney disease,181,diabetic nephropathy,PRIMEKG:36286,direct,True
+diabetic peripheral neuropathy,182,,,,False
+diabetic retinopathy,183,diabetic retinopathy,PRIMEKG:36325,direct,True
+diaper rash,184,,,,False
+dislocation of the ankle,185,,,,False
+dislocation of the elbow,186,,,,False
+dislocation of the finger,187,,,,False
+dislocation of the foot,188,,,,False
+dislocation of the hip,189,,,,False
+dislocation of the knee,190,,,,False
+dislocation of the patella,191,,,,False
+dislocation of the shoulder,192,,,,False
+dislocation of the vertebra,193,,,,False
+dislocation of the wrist,194,,,,False
+dissociative disorder,195,,,,False
+diverticulitis,196,,,,False
+diverticulosis,197,,,,False
+down syndrome,198,Down syndrome,PRIMEKG:32076,direct,False
+drug abuse,199,,,,False
+drug abuse (barbiturates),200,,,,False
+drug abuse (cocaine),201,,,,False
+drug abuse (methamphetamine),202,,,,False
+drug abuse (opioids),203,,,,False
+drug poisoning due to medication,204,,,,False
+drug reaction,205,,,,False
+drug withdrawal,206,,,,False
+dry eye of unknown cause,207,,,,False
+dumping syndrome,208,dumping syndrome,PRIMEKG:84033,direct,True
+dyshidrosis,209,dyshidrosis,PRIMEKG:84264,direct,True
+dysthymic disorder,210,dysthymic disorder,PRIMEKG:83760,direct,True
+ear drum damage,211,,,,False
+ear wax impaction,212,,,,False
+eating disorder,213,,,,False
+ectopic pregnancy,214,,,,False
+ectropion,215,ectropion (disease),PRIMEKG:33652,direct,False
+eczema,216,atopic eczema,PRIMEKG:36129,direct,True
+edward syndrome,217,,,,False
+emphysema,218,pulmonary emphysema,PRIMEKG:35897,direct,True
+empyema,219,,,,False
+encephalitis,220,,,,False
+endocarditis,221,endocarditis,PRIMEKG:33670,exact_name,True
+endometrial cancer,222,endometrial cancer,PRIMEKG:30827,direct,True
+endometrial hyperplasia,223,endometrial hyperplasia,PRIMEKG:83957,exact_name,False
+endometriosis,224,endometriosis (disease),PRIMEKG:33680,direct,True
+endophthalmitis,225,,,,False
+envenomation from spider or animal bite,226,,,,False
+ependymoma,227,ependymoma,PRIMEKG:33502,direct,False
+epididymitis,228,epididymitis (disease),PRIMEKG:36258,direct,False
+epidural hemorrhage,229,,,,False
+epilepsy,230,epilepsy,PRIMEKG:35641,direct,True
+erectile dysfunction,231,erectile dysfunction (disease),PRIMEKG:37604,direct,True
+erythema multiforme,232,erythema multiforme,PRIMEKG:83788,exact_name,True
+esophageal cancer,233,esophageal cancer,PRIMEKG:29402,direct,True
+esophageal varices,234,esophageal varices,PRIMEKG:39692,direct,True
+esophagitis,235,esophagitis (disease),PRIMEKG:33714,direct,True
+essential tremor,236,,,,False
+eustachian tube dysfunction (ear disorder),237,,,,False
+extrapyramidal effect of drugs,238,,,,False
+eye alignment disorder,239,,,,False
+factitious disorder,240,,,,False
+female genitalia infection,241,,,,False
+female infertility of unknown cause,242,,,,False
+fetal alcohol syndrome,243,fetal alcohol syndrome,PRIMEKG:33152,direct,False
+fibroadenoma,244,,,,False
+fibrocystic breast disease,245,breast fibrocystic disease,PRIMEKG:36735,direct,True
+fibromyalgia,246,fibromyalgia,PRIMEKG:83918,direct,True
+flat feet,247,,,,False
+floaters,248,,,,False
+flu,249,influenza,PRIMEKG:37766,direct,True
+fluid overload,250,,,,False
+folate deficiency,251,,,,False
+food allergy,252,,,,False
+foreign body in the ear,253,,,,False
+foreign body in the eye,254,,,,False
+foreign body in the gastrointestinal tract,255,,,,False
+foreign body in the nose,256,,,,False
+foreign body in the throat,257,,,,False
+foreign body in the vagina,258,,,,False
+fracture of the ankle,259,,,,False
+fracture of the arm,260,,,,False
+fracture of the facial bones,261,,,,False
+fracture of the finger,262,,,,False
+fracture of the foot,263,,,,False
+fracture of the hand,264,,,,False
+fracture of the jaw,265,,,,False
+fracture of the leg,266,,,,False
+fracture of the neck,267,,,,False
+fracture of the patella,268,,,,False
+fracture of the pelvis,269,,,,False
+fracture of the rib,270,,,,False
+fracture of the shoulder,271,,,,False
+fracture of the skull,272,,,,False
+fracture of the vertebra,273,,,,False
+friedrich ataxia,274,,,,False
+frostbite,275,,,,False
+fungal infection of the hair,276,,,,False
+fungal infection of the skin,277,,,,False
+g6pd enzyme deficiency,278,,,,False
+galactorrhea of unknown cause,279,,,,False
+gallstone,280,,,,False
+ganglion cyst,281,,,,False
+gas gangrene,282,,,,False
+gastritis,283,gastritis,PRIMEKG:33601,exact_name,True
+gastroduodenal ulcer,284,,,,False
+gastroesophageal reflux disease (gerd),285,,,,False
+gastrointestinal hemorrhage,286,,,,False
+gastroparesis,287,gastroparesis (disease),PRIMEKG:83984,direct,True
+genital herpes,288,genital herpes,PRIMEKG:84194,direct,True
+gestational diabetes,289,gestational diabetes,PRIMEKG:84167,direct,True
+glaucoma,290,glaucoma,PRIMEKG:29229,exact_name,True
+glucocorticoid deficiency,291,glucocorticoid deficiency,PRIMEKG:27317,exact_name,False
+goiter,292,goiter (disease),PRIMEKG:33657,direct,True
+gonorrhea,293,gonorrhea,PRIMEKG:35983,direct,True
+gout,294,gout,PRIMEKG:83790,direct,True
+granuloma inguinale,295,granuloma inguinale,PRIMEKG:37862,direct,True
+graves disease,296,Graves disease,PRIMEKG:38784,direct,True
+guillain barre syndrome,297,,,,False
+gum disease,298,,,,False
+gynecomastia,299,gynecomastia,PRIMEKG:36151,exact_name,True
+hammer toe,300,,,,False
+hashimoto thyroiditis,301,Hashimoto thyroiditis,PRIMEKG:29894,direct,True
+head and neck cancer,302,head and neck cancer,PRIMEKG:36050,direct,True
+head injury,303,,,,False
+headache after lumbar puncture,304,,,,False
+heart attack,305,myocardial infarction (disease),PRIMEKG:37180,direct,True
+heart block,306,,,,False
+heart contusion,307,,,,False
+heart failure,308,heart failure,PRIMEKG:37659,direct,True
+heat exhaustion,309,,,,False
+heat stroke,310,,,,False
+hemangioma,311,hemangioma,PRIMEKG:33562,exact_name,True
+hemarthrosis,312,,,,False
+hematoma,313,,,,False
+hemiplegia,314,,,,False
+hemochromatosis,315,hemochromatosis,PRIMEKG:28176,exact_name,False
+hemolytic anemia,316,,,,False
+hemophilia,317,hemophilia,PRIMEKG:27361,exact_name,True
+hemorrhoids,318,,,,False
+hepatic encephalopathy,319,hepatic encephalopathy,PRIMEKG:36266,direct,True
+hepatitis due to a toxin,320,,,,False
+herniated disk,321,,,,False
+herpangina,322,,,,False
+hiatal hernia,323,hiatus hernia (disease),PRIMEKG:30802,direct,False
+hidradenitis suppurativa,324,hidradenitis suppurativa,PRIMEKG:39739,direct,True
+high blood pressure,325,hypertensive disorder,PRIMEKG:33577,direct,True
+hirschsprung disease,326,Hirschsprung disease,PRIMEKG:32178,direct,False
+hirsutism,327,,,,False
+histoplasmosis,328,histoplasmosis,PRIMEKG:35956,direct,True
+hormone disorder,329,,,,False
+hpv,330,,,,False
+human immunodeficiency virus infection (hiv),331,,,,False
+huntington disease,332,Huntington disease,PRIMEKG:31245,direct,True
+hydatidiform mole,333,hydatidiform mole,PRIMEKG:32513,exact_name,False
+hydrocele of the testicle,334,,,,False
+hydrocephalus,335,hydrocephalus,PRIMEKG:36429,direct,True
+hydronephrosis,336,,,,False
+hypercalcemia,337,hypercalcemia disease,PRIMEKG:33656,direct,True
+hypercholesterolemia,338,,,,False
+hyperemesis gravidarum,339,hyperemesis gravidarum (disease),PRIMEKG:83750,direct,True
+hypergammaglobulinemia,340,,,,False
+hyperhidrosis,341,,,,False
+hyperkalemia,342,,,,False
+hyperlipidemia,343,hyperlipidemia,PRIMEKG:33658,exact_name,True
+hypernatremia,344,,,,False
+hyperopia,345,,,,False
+hyperosmotic hyperketotic state,346,,,,False
+hypertension of pregnancy,347,,,,False
+hypertensive heart disease,348,,,,False
+hypertrophic obstructive cardiomyopathy (hocm),349,,,,False
+hypocalcemia,350,,,,False
+hypoglycemia,351,hypoglycemia,PRIMEKG:83885,direct,True
+hypokalemia,352,potassium deficiency disease,PRIMEKG:33679,direct,True
+hyponatremia,353,,,,False
+hypothermia,354,,,,False
+hypothyroidism,355,hypothyroidism,PRIMEKG:36469,exact_name,True
+hypovolemia,356,,,,False
+idiopathic absence of menstruation,357,,,,False
+idiopathic excessive menstruation,358,,,,False
+idiopathic infrequent menstruation,359,,,,False
+idiopathic irregular menstrual cycle,360,,,,False
+idiopathic nonmenstrual bleeding,361,,,,False
+idiopathic painful menstruation,362,,,,False
+ileus,363,,,,False
+impetigo,364,impetigo,PRIMEKG:36198,direct,True
+impulse control disorder,365,,,,False
+indigestion,366,dyspepsia,PRIMEKG:83889,direct,True
+induced abortion,367,,,,False
+infection of open wound,368,,,,False
+infectious gastroenteritis,369,,,,False
+ingrown toe nail,370,,,,False
+inguinal hernia,371,,,,False
+injury of the ankle,372,,,,False
+injury to internal organ,373,,,,False
+injury to the abdomen,374,,,,False
+injury to the arm,375,,,,False
+injury to the face,376,,,,False
+injury to the finger,377,,,,False
+injury to the hand,378,,,,False
+injury to the hip,379,,,,False
+injury to the knee,380,,,,False
+injury to the leg,381,,,,False
+injury to the shoulder,382,,,,False
+injury to the spinal cord,383,,,,False
+injury to the trunk,384,,,,False
+insect bite,385,,,,False
+insulin overdose,386,,,,False
+interstitial lung disease,387,,,,False
+intertrigo (skin condition),388,,,,False
+intestinal cancer,389,,,,False
+intestinal disease,390,,,,False
+intestinal malabsorption,391,,,,False
+intestinal obstruction,392,intestinal obstruction,PRIMEKG:36785,exact_name,True
+intracerebral hemorrhage,393,,,,False
+intracranial abscess,394,intracranial abscess,PRIMEKG:84247,direct,True
+intracranial hemorrhage,395,,,,False
+intussusception,396,intussusception,PRIMEKG:29608,direct,False
+iridocyclitis,397,iridocyclitis (disease),PRIMEKG:37607,direct,True
+iron deficiency anemia,398,iron deficiency anemia,PRIMEKG:84087,direct,True
+irritable bowel syndrome,399,irritable bowel syndrome,PRIMEKG:83976,direct,True
+ischemia of the bowel,400,,,,False
+ischemic heart disease,401,myocardial ischemia,PRIMEKG:37786,direct,True
+itching of unknown cause,402,,,,False
+jaw disorder,403,,,,False
+joint effusion,404,,,,False
+juvenile rheumatoid arthritis,405,,,,False
+kaposi sarcoma,406,Kaposi's sarcoma (disease),PRIMEKG:32589,direct,True
+kidney cancer,407,,,,False
+kidney disease due to longstanding hypertension,408,,,,False
+kidney failure,409,,,,False
+kidney stone,410,,,,False
+knee ligament or meniscus tear,411,,,,False
+labyrinthitis,412,,,,False
+lactose intolerance,413,lactose intolerance,PRIMEKG:29771,exact_name,True
+laryngitis,414,,,,False
+lateral epicondylitis (tennis elbow),415,,,,False
+leukemia,416,leukemia (disease),PRIMEKG:33635,direct,False
+lewy body dementia,417,Lewy body dementia,PRIMEKG:29296,direct,True
+lice,418,,,,False
+lichen planus,419,lichen planus,PRIMEKG:32619,exact_name,True
+lichen simplex,420,,,,False
+lipoma,421,,,,False
+liver cancer,422,liver cancer,PRIMEKG:36634,direct,True
+liver disease,423,,,,False
+lumbago,424,,,,False
+lung cancer,425,lung cancer,PRIMEKG:31116,direct,True
+lung contusion,426,,,,False
+lyme disease,427,Lyme disease,PRIMEKG:32950,direct,True
+lymphadenitis,428,lymphadenitis (disease),PRIMEKG:36042,direct,False
+lymphangitis,429,,,,False
+lymphedema,430,lymphedema,PRIMEKG:37759,direct,True
+lymphogranuloma venereum,431,lymphogranuloma venereum,PRIMEKG:84007,direct,True
+lymphoma,432,lymphoma,PRIMEKG:35970,direct,True
+macular degeneration,433,macular degeneration,PRIMEKG:28869,exact_name,True
+magnesium deficiency,434,,,,False
+malaria,435,malaria,PRIMEKG:33128,direct,True
+male genitalia infection,436,,,,False
+malignant hypertension,437,malignant hypertension,PRIMEKG:35930,exact_name,True
+marijuana abuse,438,,,,False
+mastectomy,439,,,,False
+mastoiditis,440,mastoiditis (disease),PRIMEKG:94554,direct,False
+meckel diverticulum,441,,,,False
+melanoma,442,melanoma,PRIMEKG:33653,exact_name,True
+meniere disease,443,Meniere disease,PRIMEKG:29887,direct,True
+meningioma,444,meningioma (disease),PRIMEKG:33215,direct,False
+meningitis,445,meningitis (disease),PRIMEKG:35974,direct,True
+menopause,446,,,,False
+metabolic disorder,447,,,,False
+metastatic cancer,448,,,,False
+migraine,449,migraine disorder,PRIMEKG:37768,direct,True
+missed abortion,450,,,,False
+mitral valve disease,451,,,,False
+mittelschmerz,452,,,,False
+molluscum contagiosum,453,,,,False
+mononeuritis,454,,,,False
+mononucleosis,455,,,,False
+moyamoya disease,456,Moyamoya disease,PRIMEKG:29366,exact_name,False
+mucositis,457,,,,False
+multiple myeloma,458,,,,False
+multiple sclerosis,459,multiple sclerosis,PRIMEKG:37722,direct,True
+mumps,460,,,,False
+muscle spasm,461,,,,False
+muscular dystrophy,462,muscular dystrophy,PRIMEKG:31181,exact_name,True
+myasthenia gravis,463,myasthenia gravis,PRIMEKG:31650,exact_name,True
+myelodysplastic syndrome,464,myelodysplastic syndrome,PRIMEKG:28813,direct,True
+myocarditis,465,myocarditis,PRIMEKG:36041,direct,True
+myoclonus,466,,,,False
+myopia,467,myopia,PRIMEKG:28206,exact_name,False
+myositis,468,myositis,PRIMEKG:36751,exact_name,True
+narcolepsy,469,narcolepsy,PRIMEKG:28391,exact_name,True
+nasal polyp,470,nasal cavity polyp,PRIMEKG:83888,direct,True
+necrotizing fasciitis,471,,,,False
+neonatal jaundice,472,,,,False
+nerve impingement near the shoulder,473,,,,False
+neuralgia,474,neuralgia,PRIMEKG:39261,direct,True
+neurofibromatosis,475,neurofibromatosis,PRIMEKG:27275,exact_name,True
+neuropathy due to drugs,476,,,,False
+neurosis,477,neurotic disorder,PRIMEKG:37703,direct,True
+nonalcoholic liver disease (nash),478,,,,False
+noninfectious gastroenteritis,479,,,,False
+normal pressure hydrocephalus,480,normal pressure hydrocephalus,PRIMEKG:30790,direct,False
+nose disorder,481,,,,False
+obesity,482,obesity disorder,PRIMEKG:33593,direct,True
+obsessive compulsive disorder (ocd),483,,,,False
+obstructive sleep apnea (osa),484,,,,False
+omphalitis,485,omphalitis,PRIMEKG:35640,direct,True
+onychomycosis,486,tinea unguium,PRIMEKG:83929,direct,True
+open wound due to trauma,487,,,,False
+open wound from surgical incision,488,,,,False
+open wound of the abdomen,489,,,,False
+open wound of the arm,490,,,,False
+open wound of the back,491,,,,False
+open wound of the cheek,492,,,,False
+open wound of the chest,493,,,,False
+open wound of the ear,494,,,,False
+open wound of the eye,495,,,,False
+open wound of the face,496,,,,False
+open wound of the finger,497,,,,False
+open wound of the foot,498,,,,False
+open wound of the hand,499,,,,False
+open wound of the head,500,,,,False
+open wound of the jaw,501,,,,False
+open wound of the knee,502,,,,False
+open wound of the lip,503,,,,False
+open wound of the mouth,504,,,,False
+open wound of the neck,505,,,,False
+open wound of the nose,506,,,,False
+open wound of the shoulder,507,,,,False
+oppositional disorder,508,,,,False
+optic neuritis,509,,,,False
+oral leukoplakia,510,oral mucosa leukoplakia,PRIMEKG:39707,direct,True
+oral mucosal lesion,511,,,,False
+oral thrush (yeast infection),512,,,,False
+orbital cellulitis,513,,,,False
+orthostatic hypotension,514,orthostatic hypotension,PRIMEKG:28149,exact_name,True
+osteoarthritis,515,osteoarthritis,PRIMEKG:33609,exact_name,True
+osteochondroma,516,,,,False
+osteochondrosis,517,,,,False
+osteomyelitis,518,osteomyelitis (disease),PRIMEKG:33588,direct,True
+osteoporosis,519,osteoporosis,PRIMEKG:29614,direct,True
+otitis externa (swimmer's ear),520,,,,False
+otitis media,521,otitis media (disease),PRIMEKG:33563,direct,False
+otosclerosis,522,otosclerosis,PRIMEKG:27956,exact_name,False
+ovarian cancer,523,ovarian cancer,PRIMEKG:31477,direct,True
+ovarian cyst,524,ovarian cyst (disease),PRIMEKG:33560,direct,False
+ovarian torsion,525,,,,False
+overflow incontinence,526,,,,False
+pain after an operation,527,,,,False
+pain disorder affecting the neck,528,,,,False
+pancreatic cancer,529,,,,False
+panic attack,530,,,,False
+panic disorder,531,,,,False
+parasitic disease,532,,,,False
+parathyroid adenoma,533,parathyroid gland adenoma,PRIMEKG:37457,direct,False
+parkinson disease,534,Parkinson disease,PRIMEKG:28547,exact_name,True
+paronychia,535,paronychia (disease),PRIMEKG:37559,direct,True
+paroxysmal supraventricular tachycardia,536,,,,False
+paroxysmal ventricular tachycardia,537,,,,False
+pelvic fistula,538,,,,False
+pelvic inflammatory disease,539,pelvic inflammatory disease,PRIMEKG:37161,direct,True
+pelvic organ prolapse,540,,,,False
+pemphigus,541,pemphigus,PRIMEKG:38016,direct,True
+pericarditis,542,pericarditis (disease),PRIMEKG:35955,direct,True
+peripheral arterial disease,543,peripheral arterial disease,PRIMEKG:39798,direct,True
+peripheral arterial embolism,544,,,,False
+peripheral nerve disorder,545,,,,False
+perirectal infection,546,,,,False
+peritonitis,547,peritonitis,PRIMEKG:36334,exact_name,True
+peritonsillar abscess,548,peritonsillar abscess,PRIMEKG:84295,direct,True
+persistent vomiting of unknown cause,549,,,,False
+personality disorder,550,personality disorder,PRIMEKG:36021,exact_name,False
+peyronie disease,551,Peyronie disease,PRIMEKG:29528,direct,True
+pharyngitis,552,pharyngitis,PRIMEKG:39609,direct,True
+phimosis,553,,,,False
+pilonidal cyst,554,,,,False
+pinguecula,555,,,,False
+pinworm infection,556,,,,False
+pituitary adenoma,557,pituitary adenoma,PRIMEKG:31063,exact_name,False
+pituitary disorder,558,,,,False
+pityriasis rosea,559,,,,False
+placenta previa,560,,,,False
+placental abruption,561,placental abruption (disease),PRIMEKG:83943,direct,False
+plantar fasciitis,562,,,,False
+pleural effusion,563,,,,False
+pneumoconiosis,564,,,,False
+pneumonia,565,pneumonia,PRIMEKG:35552,direct,True
+pneumothorax,566,pneumothorax (disease),PRIMEKG:33597,direct,True
+poisoning due to analgesics,567,,,,False
+poisoning due to anticonvulsants,568,,,,False
+poisoning due to antidepressants,569,,,,False
+poisoning due to antihypertensives,570,,,,False
+poisoning due to antimicrobial drugs,571,,,,False
+poisoning due to antipsychotics,572,,,,False
+poisoning due to ethylene glycol,573,,,,False
+poisoning due to gas,574,,,,False
+poisoning due to opioids,575,,,,False
+poisoning due to sedatives,576,,,,False
+polycystic kidney disease,577,polycystic kidney disease,PRIMEKG:28262,exact_name,True
+polycystic ovarian syndrome (pcos),578,,,,False
+polycythemia vera,579,acquired polycythemia vera,PRIMEKG:29118,direct,True
+polymyalgia rheumatica,580,polymyalgia rheumatica,PRIMEKG:84043,direct,True
+post-traumatic stress disorder (ptsd),581,,,,False
+postoperative infection,582,,,,False
+postpartum depression,583,postpartum depression,PRIMEKG:84226,direct,True
+preeclampsia,584,preeclampsia,PRIMEKG:33512,direct,True
+pregnancy,585,,,,False
+premature atrial contractions (pacs),586,,,,False
+premature ovarian failure,587,premature menopause,PRIMEKG:84094,direct,True
+premature rupture of amniotic membrane,588,,,,False
+premature ventricular contractions (pvcs),589,,,,False
+premenstrual tension syndrome,590,,,,False
+presbyacusis,591,,,,False
+presbyopia,592,,,,False
+priapism,593,priapism,PRIMEKG:83894,direct,True
+primary immunodeficiency,594,,,,False
+primary insomnia,595,,,,False
+primary kidney disease,596,,,,False
+primary thrombocythemia,597,,,,False
+problem during pregnancy,598,,,,False
+prostate cancer,599,prostate cancer,PRIMEKG:35966,direct,True
+prostatitis,600,prostatitis (disease),PRIMEKG:36243,direct,True
+protein deficiency,601,,,,False
+pseudohypoparathyroidism,602,,,,False
+pseudotumor cerebri,603,pseudotumor cerebri,PRIMEKG:31072,direct,True
+psoriasis,604,psoriasis,PRIMEKG:38024,direct,True
+psychosexual disorder,605,,,,False
+psychotic disorder,606,psychotic disorder,PRIMEKG:33572,direct,True
+pterygium,607,,,,False
+pulmonary congestion,608,,,,False
+pulmonary embolism,609,pulmonary embolism (disease),PRIMEKG:33699,direct,True
+pulmonary eosinophilia,610,pulmonary eosinophilia,PRIMEKG:39506,direct,True
+pulmonary fibrosis,611,pulmonary fibrosis,PRIMEKG:35471,direct,True
+pulmonary hypertension,612,pulmonary hypertension,PRIMEKG:38437,exact_name,True
+pulmonic valve disease,613,,,,False
+pyelonephritis,614,pyelonephritis,PRIMEKG:37128,exact_name,True
+pyloric stenosis,615,pyloric stenosis (disease),PRIMEKG:36274,direct,False
+pyogenic skin infection,616,,,,False
+raynaud disease,617,Raynaud disease,PRIMEKG:28194,direct,True
+reactive arthritis,618,reactive arthritis,PRIMEKG:32464,direct,False
+rectal disorder,619,,,,False
+restless leg syndrome,620,restless legs syndrome,PRIMEKG:38121,direct,True
+retinal detachment,621,retinal detachment,PRIMEKG:28553,direct,False
+retinopathy due to high blood pressure,622,,,,False
+rhabdomyolysis,623,,,,False
+rheumatic fever,624,rheumatic fever,PRIMEKG:32807,direct,True
+rheumatoid arthritis,625,rheumatoid arthritis,PRIMEKG:29078,direct,True
+rocky mountain spotted fever,626,Rocky mountain spotted fever,PRIMEKG:84077,direct,True
+rosacea,627,rosacea,PRIMEKG:39828,direct,True
+rotator cuff injury,628,,,,False
+salivary gland disorder,629,,,,False
+sarcoidosis,630,sarcoidosis,PRIMEKG:32967,direct,True
+scabies,631,scabies,PRIMEKG:36448,direct,True
+scar,632,,,,False
+scarlet fever,633,scarlet fever,PRIMEKG:83973,direct,True
+schizophrenia,634,schizophrenia,PRIMEKG:28313,exact_name,True
+sciatica,635,,,,False
+scleritis,636,scleritis (disease),PRIMEKG:36377,direct,False
+scleroderma,637,scleroderma (disease),PRIMEKG:33027,direct,True
+scoliosis,638,scoliosis,PRIMEKG:33606,direct,False
+scurvy,639,scurvy,PRIMEKG:29448,direct,True
+seasonal allergies (hay fever),640,,,,False
+sebaceous cyst,641,,,,False
+seborrheic dermatitis,642,seborrheic dermatitis,PRIMEKG:33651,exact_name,True
+seborrheic keratosis,643,seborrheic keratosis,PRIMEKG:31850,direct,True
+sensorineural hearing loss,644,sensorineural hearing loss disorder,PRIMEKG:33564,direct,False
+sepsis,645,,,,False
+septic arthritis,646,bacterial arthritis,PRIMEKG:39805,direct,True
+shingles (herpes zoster),647,,,,False
+sialoadenitis,648,,,,False
+sick sinus syndrome,649,,,,False
+sickle cell anemia,650,sickle cell anemia,PRIMEKG:28921,direct,True
+sickle cell crisis,651,,,,False
+sinus bradycardia,652,,,,False
+sjogren syndrome,653,Sjogren syndrome,PRIMEKG:28764,direct,True
+skin cancer,654,,,,False
+skin disorder,655,skin disease,PRIMEKG:36644,direct,True
+skin pigmentation disorder,656,,,,False
+skin polyp,657,,,,False
+smoking or tobacco addiction,658,,,,False
+social phobia,659,social phobia,PRIMEKG:83904,direct,True
+soft tissue sarcoma,660,soft tissue sarcoma,PRIMEKG:36078,direct,True
+somatization disorder,661,,,,False
+spermatocele,662,,,,False
+spherocytosis,663,spherocytosis,PRIMEKG:27542,exact_name,False
+spina bifida,664,spina bifida,PRIMEKG:33617,exact_name,False
+spinal stenosis,665,spinal stenosis,PRIMEKG:33637,direct,False
+spinocerebellar ataxia,666,spinocerebellar ataxia,PRIMEKG:27402,exact_name,False
+spondylitis,667,,,,False
+spondylolisthesis,668,spondylolisthesis (disease),PRIMEKG:31237,direct,False
+spondylosis,669,,,,False
+spontaneous abortion,670,,,,False
+sporotrichosis,671,sporotrichosis,PRIMEKG:39809,direct,True
+sprain or strain,672,,,,False
+stenosis of the tear duct,673,,,,False
+stomach cancer,674,gastric cancer,PRIMEKG:29945,direct,True
+strep throat,675,,,,False
+stress incontinence,676,,,,False
+stricture of the esophagus,677,,,,False
+stroke,678,stroke disorder,PRIMEKG:33598,direct,True
+stye,679,,,,False
+subacute thyroiditis,680,,,,False
+subarachnoid hemorrhage,681,subarachnoid hemorrhage (disease),PRIMEKG:39532,direct,True
+subconjunctival hemorrhage,682,,,,False
+subdural hemorrhage,683,,,,False
+substance-related mental disorder,684,,,,False
+syndrome of inappropriate secretion of adh (siadh),685,,,,False
+syphilis,686,syphilis,PRIMEKG:35601,exact_name,True
+syringomyelia,687,syringomyelia,PRIMEKG:30147,exact_name,False
+systemic lupus erythematosis (sle),688,,,,False
+teething syndrome,689,,,,False
+temporary or benign blood in urine,690,,,,False
+temporomandibular joint disorder,691,,,,False
+tendinitis,692,tendinitis,PRIMEKG:35992,direct,True
+tension headache,693,,,,False
+testicular cancer,694,testicular cancer,PRIMEKG:35616,direct,True
+testicular disorder,695,,,,False
+testicular torsion,696,spermatic cord torsion,PRIMEKG:28241,direct,False
+thalassemia,697,,,,False
+thoracic aortic aneurysm,698,,,,False
+thoracic outlet syndrome,699,thoracic outlet syndrome,PRIMEKG:32481,direct,False
+threatened pregnancy,700,,,,False
+thrombocytopenia,701,thrombocytopenia,PRIMEKG:27626,exact_name,True
+thrombophlebitis,702,,,,False
+thyroid cancer,703,thyroid cancer,PRIMEKG:36944,direct,True
+thyroid disease,704,thyroid gland disease,PRIMEKG:36252,direct,True
+thyroid nodule,705,,,,False
+tic (movement) disorder,706,,,,False
+tietze syndrome,707,,,,False
+tinnitus of unknown cause,708,,,,False
+tonsillar hypertrophy,709,,,,False
+tonsillitis,710,tonsillitis,PRIMEKG:35546,direct,True
+tooth abscess,711,,,,False
+tooth disorder,712,,,,False
+torticollis,713,inherited torticollis (disease),PRIMEKG:29177,direct,False
+tourette syndrome,714,Tourette syndrome,PRIMEKG:31283,direct,True
+toxic multinodular goiter,715,,,,False
+toxoplasmosis,716,toxoplasmosis,PRIMEKG:37826,exact_name,True
+tracheitis,717,,,,False
+transient ischemic attack,718,transient ischemic attack (disease),PRIMEKG:36312,direct,True
+trichiasis,719,,,,False
+trichinosis,720,Trichinellosis,PRIMEKG:32815,direct,True
+trichomonas infection,721,trichomoniasis,PRIMEKG:37884,direct,True
+tricuspid valve disease,722,,,,False
+trigeminal neuralgia,723,trigeminal neuralgia,PRIMEKG:30449,direct,True
+trigger finger (finger disorder),724,,,,False
+tuberculosis,725,tuberculosis,PRIMEKG:32505,direct,False
+tuberous sclerosis,726,tuberous sclerosis,PRIMEKG:30967,exact_name,True
+turner syndrome,727,Turner syndrome,PRIMEKG:32829,direct,True
+typhoid fever,728,typhoid fever,PRIMEKG:33474,direct,True
+ulcerative colitis,729,ulcerative colitis (disease),PRIMEKG:37785,direct,True
+urethral disorder,730,,,,False
+urethral stricture,731,urethral stricture (disease),PRIMEKG:33684,direct,False
+urethral valves,732,,,,False
+urethritis,733,urethritis (disease),PRIMEKG:38100,direct,True
+urge incontinence,734,,,,False
+urinary tract infection,735,,,,False
+urinary tract obstruction,736,,,,False
+uterine atony,737,,,,False
+uterine cancer,738,,,,False
+uterine fibroids,739,,,,False
+uveitis,740,uveitis,PRIMEKG:33654,exact_name,True
+vacterl syndrome,741,,,,False
+vaginal cyst,742,,,,False
+vaginal yeast infection,743,,,,False
+vaginismus,744,,,,False
+vaginitis,745,vaginitis (disease),PRIMEKG:36199,direct,True
+valley fever,746,coccidioidomycosis,PRIMEKG:32651,direct,True
+varicocele of the testicles,747,,,,False
+varicose veins,748,,,,False
+vasculitis,749,vasculitis,PRIMEKG:36123,direct,True
+venous insufficiency,750,venous insufficiency (disease),PRIMEKG:33602,direct,True
+vertebrobasilar insufficiency,751,vertebrobasilar insufficiency,PRIMEKG:84020,direct,True
+vesicoureteral reflux,752,vesicoureteral reflux,PRIMEKG:29400,exact_name,False
+viral exanthem,753,,,,False
+viral hepatitis,754,,,,False
+viral warts,755,,,,False
+vitamin a deficiency,756,vitamin A deficiency (disease),PRIMEKG:84142,direct,True
+vitamin b12 deficiency,757,vitamin B12 deficiency,PRIMEKG:35646,direct,True
+vitamin d deficiency,758,,,,False
+vitreous degeneration,759,,,,False
+vitreous hemorrhage,760,,,,False
+vocal cord polyp,761,,,,False
+volvulus,762,,,,False
+von willebrand disease,763,von Willebrand disease (hereditary or acquired),PRIMEKG:39535,direct,True
+vulvar cancer,764,vulva cancer,PRIMEKG:36196,direct,True
+vulvar disorder,765,,,,False
+vulvodynia,766,,,,False
+wernicke korsakoff syndrome,767,Wernicke-Korsakoff syndrome,PRIMEKG:30715,direct,True
+white blood cell disease,768,,,,False
+whooping cough,769,pertussis,PRIMEKG:84032,direct,True
+wilson disease,770,Wilson disease,PRIMEKG:31502,direct,True
+yeast infection,771,,,,False
+zenker diverticulum,772,,,,False

@@ -1,14 +1,14 @@
 import hashlib
 import json
-import logging
 from time import perf_counter
 from app.config import settings
+from app.logging_setup import get_logger, names, set_session, user_text
 from app.models.chat_models import (
     ChatResponse, ChatMessage, ExtractedSymptom, Symptom, SessionStatus,
 )
 from app.services.remote_adapters import AdapterError
 
-logger = logging.getLogger(__name__)
+logger = get_logger("flow")
 
 class InvalidAnswerError(ValueError):
     pass
@@ -44,10 +44,13 @@ class ChatbotService:
         with self.sessions.transaction():
             cached = self.sessions.replay(scope, request.request_id)
             if cached:
+                logger.info("%s replayed from cache (duplicate request_id)", action)
                 if cached[0] != fingerprint:
                     raise InvalidAnswerError("Request ID was already used for a different payload")
                 return ChatResponse.model_validate_json(cached[1])
             state = self.sessions.create() if action == "start" else self.sessions.get(scope)
+            set_session(state.session_id)
+            self._log_request(action, request, state)
             if action != "start" and state.version != request.expected_version:
                 raise InvalidAnswerError("Session changed. Reload the session before submitting again.")
             if state.version >= 100:
@@ -71,10 +74,10 @@ class ChatbotService:
                             state.asked_symptoms.append(state.last_question.kg_id)
                         if action=='message': state.round+=1
                         advance_message=self._advance(state)
-                    # kg mode: informed search drives the interview, so its question is
+                    # kg / ddxplus modes: informed search drives the interview, so its question is
                     # asked explicitly with Yes / No / Not sure buttons after the LLM reply.
-                    ask_kg=self.mode=='kg' and state.status==SessionStatus.RUNNING and state.last_question is not None
-                    append_kg=self.mode=='kg' and bool(observations)
+                    ask_kg=self.mode in ('kg','ddxplus','recall773') and state.status==SessionStatus.RUNNING and state.last_question is not None
+                    append_kg=self.mode in ('kg','ddxplus','recall773') and bool(observations)
                     state.nlp_engine='conversation-agent-v1'
                     t = perf_counter()
                     message,trace=self.dialogue.reply(request.message,state,analysis,app_will_ask=append_kg)
@@ -86,6 +89,7 @@ class ChatbotService:
                     state.version+=1
                     return self._commit(state,message,scope,request,fingerprint,started)
                 intent, intent_trace = self.dialogue.classify(request.message,state)
+                logger.info("intent=%s", intent)
                 state.ai_trace['routing'] = intent_trace
                 state.ai_trace["intent"] = intent
                 if intent != "report":
@@ -177,6 +181,14 @@ class ChatbotService:
             state.ai_trace["generation"] = trace
             return self._commit(state, message, scope, request, fingerprint, started)
 
+    def _log_request(self, action, request, state):
+        if action in ("start", "message"):
+            logger.info("%s mode=%s round=%d text=%s", action, self.mode, state.round, user_text(request.message))
+        elif action == "answer":
+            logger.info("answer %s -> %s (round %d)", request.symptom.kg_name, request.answer, state.round)
+        else:
+            logger.info("correct %s -> %s", request.kg_id, request.status)
+
     def _answer(self, state, answer, text):
         question = state.last_question
         if question is None:
@@ -205,12 +217,16 @@ class ChatbotService:
         state.stop_reason = None
         state.drug_recommendations = []
         state.last_question = None
+        logger.info("state round=%d/%d present=%s absent=%s unsure=%s asked=%d", state.round, self.max_rounds,
+                    names(state.positive_symptoms), names(state.negative_symptoms),
+                    names(state.uncertain_symptoms), len(state.asked_symptoms))
         t = perf_counter()
         state.candidate_diseases = self.recall.recall(state.positive_symptoms, state.negative_symptoms)
         known = {e.kg_id for e in state.evidence if e.status != "uncertain"}
         if any(not set(c.evidence_ids).issubset(known) for c in state.candidate_diseases):
             raise AdapterError("Recall returned evidence IDs not present in the session")
         state.timings_ms["recall"] = round((perf_counter()-t)*1000,3)
+        logger.info("recall -> %d candidates (%.1f ms)", len(state.candidate_diseases), state.timings_ms["recall"])
         if not state.candidate_diseases:
             state.stop_reason = "no_candidates"
         elif state.round >= self.max_rounds:
@@ -228,12 +244,17 @@ class ChatbotService:
                 if node is None or q.kg_id in known or q.kg_id in excluded:
                     raise AdapterError("Search returned an unknown or already answered symptom")
                 state.last_question = q.model_copy(update={"kg_name": node.kg_name})
+                logger.info("next question: %s (h=%s, %.1f ms)", node.kg_name, getattr(q, "heuristic_score", None),
+                            state.timings_ms["search"])
             else:
                 state.stop_reason = "no_questions"
         if state.stop_reason:
             state.status = SessionStatus.COMPLETE
+            logger.info("STOP reason=%s (round %d/%d, %d candidates, threshold <= %d)", state.stop_reason, state.round,
+                        self.max_rounds, len(state.candidate_diseases), settings.finish_candidate_threshold)
             if state.stop_reason == "candidate_threshold":
                 state.drug_recommendations = self.drugs.recommend(state.candidate_diseases)
+                logger.info("drugs -> %d recommendations", len(state.drug_recommendations))
                 return "The demonstration reached its candidate threshold. Review the evidence below; this is not a diagnosis. You can correct evidence or add more information."
             return "The demonstration stopped: " + state.stop_reason.replace("_"," ") + ". Evidence is insufficient for a conclusion. You can still correct or add information."
         return f"Are you experiencing {state.last_question.kg_name}? You can answer Yes, No, Not sure, or describe it in your own words."
@@ -252,8 +273,9 @@ class ChatbotService:
         self.sessions.save(state)
         response = self._response(state)
         self.sessions.record(scope, request.request_id, fingerprint, response)
-        # Do not log message content or session tokens.
-        logger.info("chat_completed mode=%s version=%s round=%s duration_ms=%s", self.mode, state.version, state.round, state.timings_ms["total"])
+        # Do not log message content or session tokens (sid is a hash; see app/logging_setup.py).
+        logger.info("done status=%s version=%s round=%s question=%s timings_ms=%s", getattr(state.status, "value", state.status),
+                    state.version, state.round, state.last_question.kg_name if state.last_question else None, state.timings_ms)
         return response
 
     def _response(self, state):

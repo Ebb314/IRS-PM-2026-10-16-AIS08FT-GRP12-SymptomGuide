@@ -1,0 +1,9 @@
+{
+  "selected_model": "ce",
+  "validation": {
+    "ce": 0.7446406783151407,
+    "ce_pairwise": 0.7440319522918385
+  },
+  "selection_metric": "mean validation macro_MRR for same 3 positives with 0 and 2 negatives",
+  "negative_policy": "synthetic_zero_assumption"
+}

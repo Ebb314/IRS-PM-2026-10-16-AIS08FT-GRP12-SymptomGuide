@@ -1,0 +1,161 @@
+node_id,node_name,node_type
+DSS_0003,Depressive or psychotic symptoms,symptom
+DSS_0019,Lump in throat,symptom
+DSS_0020,Throat feels tight,symptom
+DSS_0024,Groin mass,symptom
+DSS_0027,Suprapubic pain,symptom
+DSS_0030,Emotional symptoms,symptom
+DSS_0031,Elbow weakness,symptom
+DSS_0032,Back weakness,symptom
+DSS_0035,Swelling of scrotum,symptom
+DSS_0038,Pus draining from ear,symptom
+DSS_0040,Mass in scrotum,symptom
+DSS_0041,White discharge from eye,symptom
+DSS_0042,Irritable infant,symptom
+DSS_0048,Feeling ill,symptom
+DSS_0052,Diarrhea,symptom
+DSS_0059,Lower abdominal pain,symptom
+DSS_0060,Vaginal discharge,symptom
+DSS_0069,Arm stiffness or tightness,symptom
+DSS_0074,Toothache,symptom
+DSS_0077,Acne or pimples,symptom
+DSS_0082,Eye deviation,symptom
+DSS_0090,Foreign body sensation in eye,symptom
+DSS_0097,Pain during pregnancy,symptom
+DSS_0098,Pelvic pain,symptom
+DSS_0100,Infant spitting up,symptom
+DSS_0102,Regurgitation,symptom
+DSS_0103,Burning abdominal pain,symptom
+DSS_0105,Symptoms of infants,symptom
+DSS_0108,Neck mass,symptom
+DSS_0112,Neck swelling,symptom
+DSS_0115,Bowlegged or knock-kneed,symptom
+DSS_0118,Knee weakness,symptom
+DSS_0120,Knee swelling,symptom
+DSS_0122,Knee lump or mass,symptom
+DSS_0126,Leg swelling,symptom
+DSS_0129,Smoking problems,symptom
+DSS_0133,Problems with shape or size of breast,symptom
+DSS_0136,Scanty menstrual flow,symptom
+DSS_0137,Vaginal pain,symptom
+DSS_0138,Vaginal redness,symptom
+DSS_0139,Vulvar irritation,symptom
+DSS_0143,Bleeding or discharge from nipple,symptom
+DSS_0145,Plugged feeling in ear,symptom
+DSS_0146,Itchy ear(s),symptom
+DSS_0147,Frontal headache,symptom
+DSS_0149,Neck stiffness or tightness,symptom
+DSS_0153,Itchiness of eye,symptom
+DSS_0155,Eye burns or stings,symptom
+DSS_0156,Itchy eyelid,symptom
+DSS_0157,Feeling cold,symptom
+DSS_0162,Focal weakness,symptom
+DSS_0167,Side pain,symptom
+DSS_0172,Arm cramps or spasms,symptom
+DSS_0173,Shoulder swelling,symptom
+DSS_0175,Leg cramps or spasms,symptom
+DSS_0178,Lower body pain,symptom
+DSS_0179,Problems during pregnancy,symptom
+DSS_0180,Spotting or bleeding during pregnancy,symptom
+DSS_0182,Upper abdominal pain,symptom
+DSS_0186,Kidney mass,symptom
+DSS_0187,Swollen abdomen,symptom
+DSS_0188,Symptoms of prostate,symptom
+DSS_0190,Difficulty breathing,symptom
+DSS_0191,Rib pain,symptom
+DSS_0195,Hand or finger lump or mass,symptom
+DSS_0200,Regurgitation (second variant),symptom
+DSS_0207,Shoulder cramps or spasms,symptom
+DSS_0209,Pain or soreness of breast,symptom
+DSS_0212,Rectal bleeding,symptom
+DSS_0213,Constipation,symptom
+DSS_0216,Wrist weakness,symptom
+DSS_0220,Skin on leg or foot looks infected,symptom
+DSS_0222,Congestion in chest,symptom
+DSS_0224,Pus in urine,symptom
+DSS_0226,Low back weakness,symptom
+DSS_0231,Elbow cramps or spasms,symptom
+DSS_0232,Feeling hot and cold,symptom
+DSS_0233,Blood clots during menstrual periods,symptom
+DSS_0234,Absence of menstruation,symptom
+DSS_0235,Pulling at ears,symptom
+DSS_0236,Gum pain,symptom
+DSS_0237,Redness in ear,symptom
+DSS_0238,Fluid retention,symptom
+DSS_0239,Flu-like syndrome,symptom
+DSS_0241,Painful sinuses,symptom
+DSS_0243,Recent pregnancy,symptom
+DSS_0244,Uterine contractions,symptom
+DSS_0245,Burning chest pain,symptom
+DSS_0246,Back cramps or spasms,symptom
+DSS_0247,Stiffness all over,symptom
+DSS_0248,"Muscle cramps, contractures, or spasms",symptom
+DSS_0249,Low back cramps or spasms,symptom
+DSS_0250,Back mass or lump,symptom
+DSS_0252,Long menstrual periods,symptom
+DSS_0259,Mass on eyelid,symptom
+DSS_0260,Swollen eye,symptom
+DSS_0261,Eyelid swelling,symptom
+DSS_0262,Eyelid lesion or rash,symptom
+DSS_0267,Hurts to breath,symptom
+DSS_0270,Skin on arm or hand looks infected,symptom
+DSS_0271,Skin irritation,symptom
+DSS_0272,Itchy scalp,symptom
+DSS_0273,Hip swelling,symptom
+DSS_0275,Foot or toe cramps or spasms,symptom
+DSS_0277,Bumps on penis,symptom
+DSS_0279,Foot or toe lump or mass,symptom
+DSS_0280,Skin rash,symptom
+DSS_0281,Mass or swelling around the anus,symptom
+DSS_0282,Low back swelling,symptom
+DSS_0284,Hip lump or mass,symptom
+DSS_0285,Drainage in throat,symptom
+DSS_0286,Dry or flaky scalp,symptom
+DSS_0287,Premenstrual tension or irritability,symptom
+DSS_0289,Feet turned in,symptom
+DSS_0291,Pelvic pressure,symptom
+DSS_0292,Elbow swelling,symptom
+DSS_0294,Early or late onset of menopause,symptom
+DSS_0295,Mass on ear,symptom
+DSS_0296,Bleeding from ear,symptom
+DSS_0299,Throat irritation,symptom
+DSS_0300,Itching of the anus,symptom
+DSS_0304,Lip sore,symptom
+DSS_0305,Vulvar sore,symptom
+DSS_0307,Mouth pain,symptom
+DSS_0308,Arm weakness,symptom
+DSS_0309,Leg lump or mass,symptom
+DSS_0311,Discharge in stools,symptom
+DSS_0312,Penis pain,symptom
+DSS_0316,Neck cramps or spasms,symptom
+DSS_0317,Pupils unequal,symptom
+DSS_0321,Skin oiliness,symptom
+DSS_0323,Bladder mass,symptom
+DSS_0324,Knee cramps or spasms,symptom
+DSS_0327,Posture problems,symptom
+DSS_0331,Penis redness,symptom
+DSS_0332,Penile discharge,symptom
+DSS_0333,Shoulder lump or mass,symptom
+DSS_0336,Hysterical behavior,symptom
+DSS_0337,Arm lump or mass,symptom
+DSS_0338,Nightmares,symptom
+DSS_0340,Pain in gums,symptom
+DSS_0342,Diaper rash,symptom
+DSS_0344,Vaginal bleeding after menopause,symptom
+DSS_0346,Mass on vulva,symptom
+DSS_0348,Itching of scrotum,symptom
+DSS_0349,Postpartum problems of the breast,symptom
+DSS_0352,Elbow lump or mass,symptom
+DSS_0354,Throat redness,symptom
+DSS_0357,Redness in or around nose,symptom
+DSS_0359,Foot or toe weakness,symptom
+DSS_0360,Hand or finger cramps or spasms,symptom
+DSS_0361,Back stiffness or tightness,symptom
+DSS_0362,Wrist lump or mass,symptom
+DSS_0363,Skin pain,symptom
+DSS_0364,Low back stiffness or tightness,symptom
+DSS_0366,Skin on head or neck looks infected,symptom
+DSS_0370,Lump over jaw,symptom
+DSS_0372,Hip weakness,symptom
+DSS_0373,Back swelling,symptom
+DSS_0374,Ankle stiffness or tightness,symptom

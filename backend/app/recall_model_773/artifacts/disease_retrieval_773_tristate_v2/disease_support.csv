@@ -1,0 +1,774 @@
+disease_id,disease_name,unique_records,train_rows,val_rows,test_rows,independently_tested
+DSA_0000,abdominal aortic aneurysm,40,31,4,5,True
+DSA_0001,abdominal hernia,265,202,34,29,True
+DSA_0002,abscess of nose,151,119,17,15,True
+DSA_0003,abscess of the lung,5,4,1,0,False
+DSA_0004,abscess of the pharynx,164,131,16,17,True
+DSA_0005,acanthosis nigricans,9,9,0,0,False
+DSA_0006,acariasis,10,8,2,0,False
+DSA_0007,achalasia,25,22,1,2,True
+DSA_0008,acne,306,250,28,28,True
+DSA_0009,actinic keratosis,808,655,67,86,True
+DSA_0010,acute bronchiolitis,1204,969,116,119,True
+DSA_0011,acute bronchitis,1213,991,116,106,True
+DSA_0012,acute bronchospasm,812,651,78,83,True
+DSA_0013,acute fatty liver of pregnancy (aflp),2,2,0,0,False
+DSA_0014,acute glaucoma,148,124,11,13,True
+DSA_0015,acute kidney injury,808,636,85,87,True
+DSA_0016,acute otitis media,537,425,51,61,True
+DSA_0017,acute pancreatitis,1207,966,134,107,True
+DSA_0018,acute respiratory distress syndrome (ards),300,238,34,28,True
+DSA_0019,acute sinusitis,828,675,85,68,True
+DSA_0020,acute stress reaction,799,654,73,72,True
+DSA_0021,adhesive capsulitis of the shoulder,33,27,5,1,True
+DSA_0022,adjustment reaction,311,260,21,30,True
+DSA_0023,adrenal adenoma,8,7,0,1,True
+DSA_0024,adrenal cancer,1,1,0,0,False
+DSA_0025,alcohol abuse,313,252,35,26,True
+DSA_0026,alcohol intoxication,160,120,13,27,True
+DSA_0027,alcohol withdrawal,520,409,56,55,True
+DSA_0028,alcoholic liver disease,99,90,4,5,True
+DSA_0029,allergy,803,647,82,74,True
+DSA_0030,allergy to animals,11,8,1,2,True
+DSA_0031,alopecia,173,140,17,16,True
+DSA_0032,alzheimer disease,172,131,20,21,True
+DSA_0033,amblyopia,16,13,2,1,True
+DSA_0034,amyloidosis,2,2,0,0,False
+DSA_0035,amyotrophic lateral sclerosis (als),14,10,4,0,False
+DSA_0036,anal fissure,141,117,12,12,True
+DSA_0037,anal fistula,8,7,0,1,True
+DSA_0038,anemia,157,122,17,18,True
+DSA_0039,anemia due to chronic kidney disease,34,29,3,2,True
+DSA_0040,anemia due to malignancy,6,4,1,1,True
+DSA_0041,anemia of chronic disease,8,7,1,0,False
+DSA_0042,angina,826,670,73,83,True
+DSA_0043,ankylosing spondylitis,479,378,52,49,True
+DSA_0044,anxiety,1198,963,113,122,True
+DSA_0045,aortic valve disease,284,218,27,39,True
+DSA_0046,aphakia,4,3,0,1,True
+DSA_0047,aphthous ulcer,137,108,16,13,True
+DSA_0048,aplastic anemia,32,25,5,2,True
+DSA_0049,appendicitis,808,638,93,77,True
+DSA_0050,arrhythmia,124,101,14,9,True
+DSA_0051,arthritis of the hip,1210,973,136,101,True
+DSA_0052,ascending cholangitis,19,15,3,1,True
+DSA_0053,asperger syndrome,173,133,22,18,True
+DSA_0054,aspergillosis,1,1,0,0,False
+DSA_0055,asthma,814,656,86,72,True
+DSA_0056,astigmatism,156,123,15,18,True
+DSA_0057,atelectasis,34,26,4,4,True
+DSA_0058,athlete's foot,180,148,13,19,True
+DSA_0059,atonic bladder,21,16,1,4,True
+DSA_0060,atrial fibrillation,68,56,7,5,True
+DSA_0061,atrial flutter,134,108,11,15,True
+DSA_0062,atrophic skin condition,283,223,30,30,True
+DSA_0063,atrophic vaginitis,162,128,22,12,True
+DSA_0064,atrophy of the corpus cavernosum,13,13,0,0,False
+DSA_0065,attention deficit hyperactivity disorder (adhd),310,245,30,35,True
+DSA_0066,autism,306,237,30,39,True
+DSA_0067,autonomic nervous system disorder,19,14,3,2,True
+DSA_0068,avascular necrosis,6,4,0,2,True
+DSA_0069,balanitis,298,238,31,29,True
+DSA_0070,bell palsy,534,427,62,45,True
+DSA_0071,benign kidney cyst,90,70,11,9,True
+DSA_0072,benign paroxysmal positional vertical (bppv),285,237,19,29,True
+DSA_0073,benign prostatic hyperplasia (bph),1206,972,117,117,True
+DSA_0074,benign vaginal discharge (leukorrhea),525,415,54,56,True
+DSA_0075,bipolar disorder,537,427,57,53,True
+DSA_0076,birth trauma,3,3,0,0,False
+DSA_0077,bladder cancer,66,49,5,12,True
+DSA_0078,bladder disorder,303,253,27,23,True
+DSA_0079,bladder obstruction,155,120,17,18,True
+DSA_0080,blepharitis,802,658,66,78,True
+DSA_0081,blepharospasm,3,1,1,1,True
+DSA_0082,bone cancer,22,19,1,2,True
+DSA_0083,bone disorder,91,73,7,11,True
+DSA_0084,bone spur of the calcaneous,13,11,1,1,True
+DSA_0085,brachial neuritis,824,638,87,99,True
+DSA_0086,brain cancer,140,112,12,16,True
+DSA_0087,breast cancer,6,5,0,1,True
+DSA_0088,breast cyst,9,7,2,0,False
+DSA_0089,breast infection (mastitis),309,247,25,37,True
+DSA_0090,broken tooth,80,65,11,4,True
+DSA_0091,bunion,12,9,2,1,True
+DSA_0092,burn,30,24,3,3,True
+DSA_0093,bursitis,1208,956,122,130,True
+DSA_0094,callus,322,261,26,35,True
+DSA_0095,carbon monoxide poisoning,37,31,3,3,True
+DSA_0096,carcinoid syndrome,1,1,0,0,False
+DSA_0097,cardiac arrest,155,125,17,13,True
+DSA_0098,cardiomyopathy,156,114,19,23,True
+DSA_0099,carpal tunnel syndrome,819,661,80,78,True
+DSA_0100,cat scratch disease,2,1,1,0,False
+DSA_0101,cataract,484,399,28,57,True
+DSA_0102,celiac disease,43,33,7,3,True
+DSA_0103,cellulitis or abscess of mouth,62,50,6,6,True
+DSA_0104,central atherosclerosis,8,8,0,0,False
+DSA_0105,central retinal artery or vein occlusion,37,29,6,2,True
+DSA_0106,cerebral edema,36,30,2,4,True
+DSA_0107,cerebral palsy,47,37,2,8,True
+DSA_0108,cervical cancer,31,25,2,4,True
+DSA_0109,cervical disorder,9,6,1,2,True
+DSA_0110,cervicitis,184,150,18,16,True
+DSA_0111,chalazion,524,422,47,55,True
+DSA_0112,chickenpox,37,27,4,6,True
+DSA_0113,chlamydia,47,36,4,7,True
+DSA_0114,cholecystitis,1204,972,125,107,True
+DSA_0115,choledocholithiasis,288,238,27,23,True
+DSA_0116,cholesteatoma,6,6,0,0,False
+DSA_0117,chondromalacia of the patella,37,28,4,5,True
+DSA_0118,chorioretinitis,22,18,2,2,True
+DSA_0119,chronic back pain,805,639,80,86,True
+DSA_0120,chronic constipation,827,643,98,86,True
+DSA_0121,chronic glaucoma,522,414,53,55,True
+DSA_0122,chronic inflammatory demyelinating polyneuropathy (cidp),6,4,1,1,True
+DSA_0123,chronic kidney disease,8,5,0,3,True
+DSA_0124,chronic knee pain,150,124,11,15,True
+DSA_0125,chronic obstructive pulmonary disease (copd),812,657,87,68,True
+DSA_0126,chronic otitis media,521,412,49,60,True
+DSA_0127,chronic pain disorder,528,425,59,44,True
+DSA_0128,chronic pancreatitis,149,121,12,16,True
+DSA_0129,chronic rheumatic fever,77,61,5,11,True
+DSA_0130,chronic sinusitis,507,412,49,46,True
+DSA_0131,chronic ulcer,1,1,0,0,False
+DSA_0132,cirrhosis,163,134,10,19,True
+DSA_0133,coagulation (bleeding) disorder,24,20,3,1,True
+DSA_0134,cold sore,79,65,9,5,True
+DSA_0135,colonic polyp,168,140,12,16,True
+DSA_0136,colorectal cancer,15,13,0,2,True
+DSA_0137,common cold,813,616,108,89,True
+DSA_0138,complex regional pain syndrome,1217,982,125,110,True
+DSA_0139,concussion,1191,940,115,136,True
+DSA_0140,conduct disorder,517,424,44,49,True
+DSA_0141,conductive hearing loss,485,381,48,56,True
+DSA_0142,congenital heart defect,11,8,1,2,True
+DSA_0143,congenital malformation syndrome,6,5,0,1,True
+DSA_0144,conjunctivitis,825,657,78,90,True
+DSA_0145,conjunctivitis due to allergy,1215,960,121,134,True
+DSA_0146,conjunctivitis due to bacteria,44,35,5,4,True
+DSA_0147,conjunctivitis due to virus,521,420,53,48,True
+DSA_0148,connective tissue disorder,2,2,0,0,False
+DSA_0149,contact dermatitis,823,637,96,90,True
+DSA_0150,conversion disorder,7,5,1,1,True
+DSA_0151,cornea infection,816,668,69,79,True
+DSA_0152,corneal abrasion,307,249,31,27,True
+DSA_0153,corneal disorder,524,417,46,61,True
+DSA_0154,coronary atherosclerosis,100,79,6,15,True
+DSA_0155,cranial nerve palsy,172,136,19,17,True
+DSA_0156,crohn disease,273,220,25,28,True
+DSA_0157,croup,807,661,66,80,True
+DSA_0158,crushing injury,37,27,6,4,True
+DSA_0159,cryptococcosis,1,1,0,0,False
+DSA_0160,cryptorchidism,3,2,1,0,False
+DSA_0161,cushing syndrome,2,2,0,0,False
+DSA_0162,cyst of the eyelid,7,5,1,1,True
+DSA_0163,cystic fibrosis,8,8,0,0,False
+DSA_0164,cysticercosis,11,8,1,2,True
+DSA_0165,cystitis,1219,965,116,138,True
+DSA_0166,de quervain disease,62,46,8,8,True
+DSA_0167,decubitus ulcer,8,5,2,1,True
+DSA_0168,deep vein thrombosis (dvt),89,66,8,15,True
+DSA_0169,degenerative disc disease,810,639,68,103,True
+DSA_0170,delirium,460,374,42,44,True
+DSA_0171,dementia,175,143,12,20,True
+DSA_0172,dengue fever,1,1,0,0,False
+DSA_0173,dental caries,1185,936,121,128,True
+DSA_0174,depression,830,660,74,96,True
+DSA_0175,dermatitis due to sun exposure,293,229,33,31,True
+DSA_0176,developmental disability,825,655,83,87,True
+DSA_0177,deviated nasal septum,488,394,50,44,True
+DSA_0178,diabetes,1,1,0,0,False
+DSA_0179,diabetes insipidus,2,1,1,0,False
+DSA_0180,diabetic ketoacidosis,526,438,56,32,True
+DSA_0181,diabetic kidney disease,1,1,0,0,False
+DSA_0182,diabetic peripheral neuropathy,294,240,30,24,True
+DSA_0183,diabetic retinopathy,295,242,27,26,True
+DSA_0184,diaper rash,809,676,70,63,True
+DSA_0185,dislocation of the ankle,9,6,3,0,False
+DSA_0186,dislocation of the elbow,65,47,12,6,True
+DSA_0187,dislocation of the finger,15,11,1,3,True
+DSA_0188,dislocation of the foot,3,1,1,1,True
+DSA_0189,dislocation of the hip,3,2,1,0,False
+DSA_0190,dislocation of the knee,3,3,0,0,False
+DSA_0191,dislocation of the patella,2,2,0,0,False
+DSA_0192,dislocation of the shoulder,38,30,4,4,True
+DSA_0193,dislocation of the vertebra,11,10,1,0,False
+DSA_0194,dislocation of the wrist,10,6,1,3,True
+DSA_0195,dissociative disorder,23,21,2,0,False
+DSA_0196,diverticulitis,1214,962,114,138,True
+DSA_0197,diverticulosis,518,413,57,48,True
+DSA_0198,down syndrome,39,27,8,4,True
+DSA_0199,drug abuse,471,371,46,54,True
+DSA_0200,drug abuse (barbiturates),33,27,2,4,True
+DSA_0201,drug abuse (cocaine),214,172,15,27,True
+DSA_0202,drug abuse (methamphetamine),155,127,10,18,True
+DSA_0203,drug abuse (opioids),486,394,46,46,True
+DSA_0204,drug poisoning due to medication,93,76,7,10,True
+DSA_0205,drug reaction,811,654,82,75,True
+DSA_0206,drug withdrawal,93,77,5,11,True
+DSA_0207,dry eye of unknown cause,787,640,71,76,True
+DSA_0208,dumping syndrome,3,3,0,0,False
+DSA_0209,dyshidrosis,25,22,1,2,True
+DSA_0210,dysthymic disorder,317,242,37,38,True
+DSA_0211,ear drum damage,819,657,82,80,True
+DSA_0212,ear wax impaction,529,433,45,51,True
+DSA_0213,eating disorder,302,241,34,27,True
+DSA_0214,ectopic pregnancy,177,138,15,24,True
+DSA_0215,ectropion,13,9,2,2,True
+DSA_0216,eczema,1207,951,114,142,True
+DSA_0217,edward syndrome,2,2,0,0,False
+DSA_0218,emphysema,6,4,1,1,True
+DSA_0219,empyema,3,3,0,0,False
+DSA_0220,encephalitis,24,15,4,5,True
+DSA_0221,endocarditis,33,27,2,4,True
+DSA_0222,endometrial cancer,26,20,3,3,True
+DSA_0223,endometrial hyperplasia,15,12,1,2,True
+DSA_0224,endometriosis,267,222,21,24,True
+DSA_0225,endophthalmitis,37,28,4,5,True
+DSA_0226,envenomation from spider or animal bite,302,249,32,21,True
+DSA_0227,ependymoma,6,6,0,0,False
+DSA_0228,epididymitis,320,254,20,46,True
+DSA_0229,epidural hemorrhage,2,1,1,0,False
+DSA_0230,epilepsy,56,46,7,3,True
+DSA_0231,erectile dysfunction,478,373,50,55,True
+DSA_0232,erythema multiforme,16,14,1,1,True
+DSA_0233,esophageal cancer,19,16,1,2,True
+DSA_0234,esophageal varices,1,1,0,0,False
+DSA_0235,esophagitis,1215,996,112,107,True
+DSA_0236,essential tremor,74,61,5,8,True
+DSA_0237,eustachian tube dysfunction (ear disorder),810,656,81,73,True
+DSA_0238,extrapyramidal effect of drugs,32,27,3,2,True
+DSA_0239,eye alignment disorder,289,234,20,35,True
+DSA_0240,factitious disorder,4,2,1,1,True
+DSA_0241,female genitalia infection,79,63,9,7,True
+DSA_0242,female infertility of unknown cause,15,11,1,3,True
+DSA_0243,fetal alcohol syndrome,3,3,0,0,False
+DSA_0244,fibroadenoma,42,34,6,2,True
+DSA_0245,fibrocystic breast disease,7,7,0,0,False
+DSA_0246,fibromyalgia,503,409,40,54,True
+DSA_0247,flat feet,13,12,1,0,False
+DSA_0248,floaters,15,11,2,2,True
+DSA_0249,flu,521,411,53,57,True
+DSA_0250,fluid overload,171,130,24,17,True
+DSA_0251,folate deficiency,13,10,2,1,True
+DSA_0252,food allergy,285,226,33,26,True
+DSA_0253,foreign body in the ear,18,14,2,2,True
+DSA_0254,foreign body in the eye,155,118,25,12,True
+DSA_0255,foreign body in the gastrointestinal tract,45,37,6,2,True
+DSA_0256,foreign body in the nose,1,1,0,0,False
+DSA_0257,foreign body in the throat,70,55,5,10,True
+DSA_0258,foreign body in the vagina,4,3,0,1,True
+DSA_0259,fracture of the ankle,36,31,5,0,False
+DSA_0260,fracture of the arm,391,311,34,46,True
+DSA_0261,fracture of the facial bones,290,232,31,27,True
+DSA_0262,fracture of the finger,8,7,0,1,True
+DSA_0263,fracture of the foot,14,9,5,0,False
+DSA_0264,fracture of the hand,98,83,8,7,True
+DSA_0265,fracture of the jaw,33,32,0,1,True
+DSA_0266,fracture of the leg,531,449,35,47,True
+DSA_0267,fracture of the neck,23,19,3,1,True
+DSA_0268,fracture of the patella,32,21,7,4,True
+DSA_0269,fracture of the pelvis,86,73,6,7,True
+DSA_0270,fracture of the rib,791,627,82,82,True
+DSA_0271,fracture of the shoulder,83,67,6,10,True
+DSA_0272,fracture of the skull,17,16,0,1,True
+DSA_0273,fracture of the vertebra,156,125,16,15,True
+DSA_0274,friedrich ataxia,2,2,0,0,False
+DSA_0275,frostbite,3,3,0,0,False
+DSA_0276,fungal infection of the hair,1212,997,125,90,True
+DSA_0277,fungal infection of the skin,533,430,43,60,True
+DSA_0278,g6pd enzyme deficiency,1,1,0,0,False
+DSA_0279,galactorrhea of unknown cause,8,8,0,0,False
+DSA_0280,gallstone,812,616,96,100,True
+DSA_0281,ganglion cyst,530,428,55,47,True
+DSA_0282,gas gangrene,1,1,0,0,False
+DSA_0283,gastritis,527,429,51,47,True
+DSA_0284,gastroduodenal ulcer,526,411,60,55,True
+DSA_0285,gastroesophageal reflux disease (gerd),302,245,31,26,True
+DSA_0286,gastrointestinal hemorrhage,1214,945,136,133,True
+DSA_0287,gastroparesis,74,62,6,6,True
+DSA_0288,genital herpes,81,60,13,8,True
+DSA_0289,gestational diabetes,17,16,1,0,False
+DSA_0290,glaucoma,313,251,41,21,True
+DSA_0291,glucocorticoid deficiency,4,3,1,0,False
+DSA_0292,goiter,19,15,2,2,True
+DSA_0293,gonorrhea,40,33,4,3,True
+DSA_0294,gout,1211,969,114,128,True
+DSA_0295,granuloma inguinale,2,2,0,0,False
+DSA_0296,graves disease,92,70,11,11,True
+DSA_0297,guillain barre syndrome,13,7,2,4,True
+DSA_0298,gum disease,803,632,100,71,True
+DSA_0299,gynecomastia,65,53,7,5,True
+DSA_0300,hammer toe,8,6,1,1,True
+DSA_0301,hashimoto thyroiditis,1,1,0,0,False
+DSA_0302,head and neck cancer,166,129,21,16,True
+DSA_0303,head injury,129,105,12,12,True
+DSA_0304,headache after lumbar puncture,77,57,4,16,True
+DSA_0305,heart attack,810,649,91,70,True
+DSA_0306,heart block,476,375,50,51,True
+DSA_0307,heart contusion,2,2,0,0,False
+DSA_0308,heart failure,813,625,98,90,True
+DSA_0309,heat exhaustion,138,115,7,16,True
+DSA_0310,heat stroke,1,1,0,0,False
+DSA_0311,hemangioma,514,405,53,56,True
+DSA_0312,hemarthrosis,6,6,0,0,False
+DSA_0313,hematoma,15,11,3,1,True
+DSA_0314,hemiplegia,310,251,23,36,True
+DSA_0315,hemochromatosis,3,2,0,1,True
+DSA_0316,hemolytic anemia,8,7,0,1,True
+DSA_0317,hemophilia,8,8,0,0,False
+DSA_0318,hemorrhoids,818,652,76,90,True
+DSA_0319,hepatic encephalopathy,19,15,2,2,True
+DSA_0320,hepatitis due to a toxin,163,131,17,15,True
+DSA_0321,herniated disk,828,655,93,80,True
+DSA_0322,herpangina,302,245,34,23,True
+DSA_0323,hiatal hernia,815,670,71,74,True
+DSA_0324,hidradenitis suppurativa,36,31,2,3,True
+DSA_0325,high blood pressure,1,1,0,0,False
+DSA_0326,hirschsprung disease,4,4,0,0,False
+DSA_0327,hirsutism,7,5,2,0,False
+DSA_0328,histoplasmosis,2,2,0,0,False
+DSA_0329,hormone disorder,10,10,0,0,False
+DSA_0330,hpv,3,3,0,0,False
+DSA_0331,human immunodeficiency virus infection (hiv),1,1,0,0,False
+DSA_0332,huntington disease,1,1,0,0,False
+DSA_0333,hydatidiform mole,18,14,1,3,True
+DSA_0334,hydrocele of the testicle,140,109,16,15,True
+DSA_0335,hydrocephalus,72,60,8,4,True
+DSA_0336,hydronephrosis,165,128,15,22,True
+DSA_0337,hypercalcemia,6,5,1,0,False
+DSA_0338,hypercholesterolemia,8,7,0,1,True
+DSA_0339,hyperemesis gravidarum,815,666,74,75,True
+DSA_0340,hypergammaglobulinemia,1,1,0,0,False
+DSA_0341,hyperhidrosis,12,10,1,1,True
+DSA_0342,hyperkalemia,503,423,36,44,True
+DSA_0343,hyperlipidemia,2,2,0,0,False
+DSA_0344,hypernatremia,18,17,1,0,False
+DSA_0345,hyperopia,36,32,3,1,True
+DSA_0346,hyperosmotic hyperketotic state,3,2,1,0,False
+DSA_0347,hypertension of pregnancy,36,25,4,7,True
+DSA_0348,hypertensive heart disease,804,617,99,88,True
+DSA_0349,hypertrophic obstructive cardiomyopathy (hocm),4,2,1,1,True
+DSA_0350,hypocalcemia,13,9,3,1,True
+DSA_0351,hypoglycemia,1215,973,109,133,True
+DSA_0352,hypokalemia,387,298,41,48,True
+DSA_0353,hyponatremia,312,244,35,33,True
+DSA_0354,hypothermia,6,5,1,0,False
+DSA_0355,hypothyroidism,33,30,1,2,True
+DSA_0356,hypovolemia,287,235,29,23,True
+DSA_0357,idiopathic absence of menstruation,292,229,30,33,True
+DSA_0358,idiopathic excessive menstruation,832,671,76,85,True
+DSA_0359,idiopathic infrequent menstruation,10,9,1,0,False
+DSA_0360,idiopathic irregular menstrual cycle,815,655,89,71,True
+DSA_0361,idiopathic nonmenstrual bleeding,25,22,3,0,False
+DSA_0362,idiopathic painful menstruation,805,628,86,91,True
+DSA_0363,ileus,292,231,29,32,True
+DSA_0364,impetigo,523,409,51,63,True
+DSA_0365,impulse control disorder,167,130,25,12,True
+DSA_0366,indigestion,291,228,30,33,True
+DSA_0367,induced abortion,157,125,18,14,True
+DSA_0368,infection of open wound,7,6,0,1,True
+DSA_0369,infectious gastroenteritis,1212,968,134,110,True
+DSA_0370,ingrown toe nail,469,376,41,52,True
+DSA_0371,inguinal hernia,373,307,34,32,True
+DSA_0372,injury of the ankle,132,108,10,14,True
+DSA_0373,injury to internal organ,34,28,3,3,True
+DSA_0374,injury to the abdomen,14,13,0,1,True
+DSA_0375,injury to the arm,1209,953,135,121,True
+DSA_0376,injury to the face,279,224,28,27,True
+DSA_0377,injury to the finger,5,5,0,0,False
+DSA_0378,injury to the hand,71,59,7,5,True
+DSA_0379,injury to the hip,8,8,0,0,False
+DSA_0380,injury to the knee,20,16,2,2,True
+DSA_0381,injury to the leg,1206,953,131,122,True
+DSA_0382,injury to the shoulder,317,255,31,31,True
+DSA_0383,injury to the spinal cord,8,6,0,2,True
+DSA_0384,injury to the trunk,803,634,67,102,True
+DSA_0385,insect bite,516,420,47,49,True
+DSA_0386,insulin overdose,1,1,0,0,False
+DSA_0387,interstitial lung disease,336,277,37,22,True
+DSA_0388,intertrigo (skin condition),42,36,1,5,True
+DSA_0389,intestinal cancer,16,13,1,2,True
+DSA_0390,intestinal disease,186,154,19,13,True
+DSA_0391,intestinal malabsorption,66,54,9,3,True
+DSA_0392,intestinal obstruction,288,222,31,35,True
+DSA_0393,intracerebral hemorrhage,466,362,56,48,True
+DSA_0394,intracranial abscess,3,3,0,0,False
+DSA_0395,intracranial hemorrhage,151,129,11,11,True
+DSA_0396,intussusception,3,2,0,1,True
+DSA_0397,iridocyclitis,301,229,34,38,True
+DSA_0398,iron deficiency anemia,530,428,51,51,True
+DSA_0399,irritable bowel syndrome,323,269,23,31,True
+DSA_0400,ischemia of the bowel,97,73,9,15,True
+DSA_0401,ischemic heart disease,797,621,86,90,True
+DSA_0402,itching of unknown cause,312,256,30,26,True
+DSA_0403,jaw disorder,168,135,14,19,True
+DSA_0404,joint effusion,292,238,31,23,True
+DSA_0405,juvenile rheumatoid arthritis,13,12,0,1,True
+DSA_0406,kaposi sarcoma,1,1,0,0,False
+DSA_0407,kidney cancer,24,19,2,3,True
+DSA_0408,kidney disease due to longstanding hypertension,7,6,0,1,True
+DSA_0409,kidney failure,161,130,10,21,True
+DSA_0410,kidney stone,792,622,78,92,True
+DSA_0411,knee ligament or meniscus tear,64,50,6,8,True
+DSA_0412,labyrinthitis,504,410,58,36,True
+DSA_0413,lactose intolerance,41,38,2,1,True
+DSA_0414,laryngitis,522,412,53,57,True
+DSA_0415,lateral epicondylitis (tennis elbow),175,136,22,17,True
+DSA_0416,leukemia,6,4,2,0,False
+DSA_0417,lewy body dementia,23,18,0,5,True
+DSA_0418,lice,14,13,1,0,False
+DSA_0419,lichen planus,1,1,0,0,False
+DSA_0420,lichen simplex,18,16,2,0,False
+DSA_0421,lipoma,517,420,44,53,True
+DSA_0422,liver cancer,18,14,2,2,True
+DSA_0423,liver disease,1209,962,119,128,True
+DSA_0424,lumbago,69,48,11,10,True
+DSA_0425,lung cancer,47,38,4,5,True
+DSA_0426,lung contusion,6,4,2,0,False
+DSA_0427,lyme disease,86,67,7,12,True
+DSA_0428,lymphadenitis,290,231,31,28,True
+DSA_0429,lymphangitis,1,1,0,0,False
+DSA_0430,lymphedema,315,256,25,34,True
+DSA_0431,lymphogranuloma venereum,5,4,0,1,True
+DSA_0432,lymphoma,41,35,4,2,True
+DSA_0433,macular degeneration,817,648,77,92,True
+DSA_0434,magnesium deficiency,7,6,1,0,False
+DSA_0435,malaria,5,3,1,1,True
+DSA_0436,male genitalia infection,40,32,4,4,True
+DSA_0437,malignant hypertension,83,74,8,1,True
+DSA_0438,marijuana abuse,1210,975,127,108,True
+DSA_0439,mastectomy,4,4,0,0,False
+DSA_0440,mastoiditis,43,34,5,4,True
+DSA_0441,meckel diverticulum,1,1,0,0,False
+DSA_0442,melanoma,156,118,23,15,True
+DSA_0443,meniere disease,160,131,13,16,True
+DSA_0444,meningioma,7,7,0,0,False
+DSA_0445,meningitis,159,125,18,16,True
+DSA_0446,menopause,28,19,3,6,True
+DSA_0447,metabolic disorder,9,4,3,2,True
+DSA_0448,metastatic cancer,19,13,2,4,True
+DSA_0449,migraine,203,162,21,20,True
+DSA_0450,missed abortion,260,201,31,28,True
+DSA_0451,mitral valve disease,304,239,33,32,True
+DSA_0452,mittelschmerz,29,24,3,2,True
+DSA_0453,molluscum contagiosum,313,257,31,25,True
+DSA_0454,mononeuritis,530,420,58,52,True
+DSA_0455,mononucleosis,159,122,20,17,True
+DSA_0456,moyamoya disease,2,1,1,0,False
+DSA_0457,mucositis,156,122,19,15,True
+DSA_0458,multiple myeloma,19,14,3,2,True
+DSA_0459,multiple sclerosis,825,665,76,84,True
+DSA_0460,mumps,8,7,1,0,False
+DSA_0461,muscle spasm,522,411,55,56,True
+DSA_0462,muscular dystrophy,12,9,1,2,True
+DSA_0463,myasthenia gravis,50,35,6,9,True
+DSA_0464,myelodysplastic syndrome,2,2,0,0,False
+DSA_0465,myocarditis,1,1,0,0,False
+DSA_0466,myoclonus,6,6,0,0,False
+DSA_0467,myopia,292,230,27,35,True
+DSA_0468,myositis,41,34,5,2,True
+DSA_0469,narcolepsy,79,52,12,15,True
+DSA_0470,nasal polyp,164,139,12,13,True
+DSA_0471,necrotizing fasciitis,2,2,0,0,False
+DSA_0472,neonatal jaundice,17,11,3,3,True
+DSA_0473,nerve impingement near the shoulder,159,128,17,14,True
+DSA_0474,neuralgia,529,432,40,57,True
+DSA_0475,neurofibromatosis,9,7,2,0,False
+DSA_0476,neuropathy due to drugs,12,9,1,2,True
+DSA_0477,neurosis,801,646,78,77,True
+DSA_0478,nonalcoholic liver disease (nash),18,13,2,3,True
+DSA_0479,noninfectious gastroenteritis,1206,968,114,124,True
+DSA_0480,normal pressure hydrocephalus,7,3,1,3,True
+DSA_0481,nose disorder,1218,982,119,117,True
+DSA_0482,obesity,2,2,0,0,False
+DSA_0483,obsessive compulsive disorder (ocd),286,236,26,24,True
+DSA_0484,obstructive sleep apnea (osa),1196,968,113,115,True
+DSA_0485,omphalitis,1,1,0,0,False
+DSA_0486,onychomycosis,309,240,36,33,True
+DSA_0487,open wound due to trauma,1,1,0,0,False
+DSA_0488,open wound from surgical incision,4,3,0,1,True
+DSA_0489,open wound of the abdomen,2,1,0,1,True
+DSA_0490,open wound of the arm,7,6,1,0,False
+DSA_0491,open wound of the back,6,4,0,2,True
+DSA_0492,open wound of the cheek,1,1,0,0,False
+DSA_0493,open wound of the chest,1,1,0,0,False
+DSA_0494,open wound of the ear,17,14,2,1,True
+DSA_0495,open wound of the eye,16,12,4,0,False
+DSA_0496,open wound of the face,1,1,0,0,False
+DSA_0497,open wound of the finger,4,3,0,1,True
+DSA_0498,open wound of the foot,27,17,5,5,True
+DSA_0499,open wound of the hand,4,3,0,1,True
+DSA_0500,open wound of the head,1,1,0,0,False
+DSA_0501,open wound of the jaw,1,1,0,0,False
+DSA_0502,open wound of the knee,1,1,0,0,False
+DSA_0503,open wound of the lip,12,9,2,1,True
+DSA_0504,open wound of the mouth,29,25,2,2,True
+DSA_0505,open wound of the neck,15,11,3,1,True
+DSA_0506,open wound of the nose,8,6,1,1,True
+DSA_0507,open wound of the shoulder,2,2,0,0,False
+DSA_0508,oppositional disorder,389,310,44,35,True
+DSA_0509,optic neuritis,5,3,1,1,True
+DSA_0510,oral leukoplakia,2,2,0,0,False
+DSA_0511,oral mucosal lesion,492,391,47,54,True
+DSA_0512,oral thrush (yeast infection),529,426,50,53,True
+DSA_0513,orbital cellulitis,80,66,6,8,True
+DSA_0514,orthostatic hypotension,146,125,12,9,True
+DSA_0515,osteoarthritis,796,646,61,89,True
+DSA_0516,osteochondroma,82,69,4,9,True
+DSA_0517,osteochondrosis,42,32,3,7,True
+DSA_0518,osteomyelitis,75,60,8,7,True
+DSA_0519,osteoporosis,272,234,22,16,True
+DSA_0520,otitis externa (swimmer's ear),808,659,72,77,True
+DSA_0521,otitis media,807,649,72,86,True
+DSA_0522,otosclerosis,3,2,1,0,False
+DSA_0523,ovarian cancer,9,8,1,0,False
+DSA_0524,ovarian cyst,293,243,26,24,True
+DSA_0525,ovarian torsion,34,24,6,4,True
+DSA_0526,overflow incontinence,81,62,11,8,True
+DSA_0527,pain after an operation,806,648,83,75,True
+DSA_0528,pain disorder affecting the neck,266,207,31,28,True
+DSA_0529,pancreatic cancer,84,71,6,7,True
+DSA_0530,panic attack,67,55,5,7,True
+DSA_0531,panic disorder,810,659,69,82,True
+DSA_0532,parasitic disease,27,18,6,3,True
+DSA_0533,parathyroid adenoma,8,7,0,1,True
+DSA_0534,parkinson disease,315,252,40,23,True
+DSA_0535,paronychia,277,215,32,30,True
+DSA_0536,paroxysmal supraventricular tachycardia,261,204,25,32,True
+DSA_0537,paroxysmal ventricular tachycardia,517,430,44,43,True
+DSA_0538,pelvic fistula,2,2,0,0,False
+DSA_0539,pelvic inflammatory disease,804,639,77,88,True
+DSA_0540,pelvic organ prolapse,291,229,28,34,True
+DSA_0541,pemphigus,2,2,0,0,False
+DSA_0542,pericarditis,38,31,3,4,True
+DSA_0543,peripheral arterial disease,101,78,9,14,True
+DSA_0544,peripheral arterial embolism,47,39,5,3,True
+DSA_0545,peripheral nerve disorder,1215,969,122,124,True
+DSA_0546,perirectal infection,41,32,7,2,True
+DSA_0547,peritonitis,179,155,13,11,True
+DSA_0548,peritonsillar abscess,85,68,13,4,True
+DSA_0549,persistent vomiting of unknown cause,87,68,12,7,True
+DSA_0550,personality disorder,816,659,81,76,True
+DSA_0551,peyronie disease,12,12,0,0,False
+DSA_0552,pharyngitis,11,9,2,0,False
+DSA_0553,phimosis,35,26,5,4,True
+DSA_0554,pilonidal cyst,168,133,16,19,True
+DSA_0555,pinguecula,5,5,0,0,False
+DSA_0556,pinworm infection,36,26,4,6,True
+DSA_0557,pituitary adenoma,10,9,1,0,False
+DSA_0558,pituitary disorder,10,7,2,1,True
+DSA_0559,pityriasis rosea,41,35,2,4,True
+DSA_0560,placenta previa,5,5,0,0,False
+DSA_0561,placental abruption,4,4,0,0,False
+DSA_0562,plantar fasciitis,87,81,1,5,True
+DSA_0563,pleural effusion,480,400,35,45,True
+DSA_0564,pneumoconiosis,6,4,1,1,True
+DSA_0565,pneumonia,1212,964,126,122,True
+DSA_0566,pneumothorax,155,119,19,17,True
+DSA_0567,poisoning due to analgesics,35,24,7,4,True
+DSA_0568,poisoning due to anticonvulsants,10,6,2,2,True
+DSA_0569,poisoning due to antidepressants,8,8,0,0,False
+DSA_0570,poisoning due to antihypertensives,3,2,0,1,True
+DSA_0571,poisoning due to antimicrobial drugs,34,31,2,1,True
+DSA_0572,poisoning due to antipsychotics,2,1,1,0,False
+DSA_0573,poisoning due to ethylene glycol,7,5,1,1,True
+DSA_0574,poisoning due to gas,69,53,9,7,True
+DSA_0575,poisoning due to opioids,3,3,0,0,False
+DSA_0576,poisoning due to sedatives,46,38,3,5,True
+DSA_0577,polycystic kidney disease,118,97,10,11,True
+DSA_0578,polycystic ovarian syndrome (pcos),148,121,16,11,True
+DSA_0579,polycythemia vera,14,11,2,1,True
+DSA_0580,polymyalgia rheumatica,47,37,8,2,True
+DSA_0581,post-traumatic stress disorder (ptsd),492,406,39,47,True
+DSA_0582,postoperative infection,42,31,3,8,True
+DSA_0583,postpartum depression,306,242,34,30,True
+DSA_0584,preeclampsia,204,168,19,17,True
+DSA_0585,pregnancy,13,10,1,2,True
+DSA_0586,premature atrial contractions (pacs),81,66,5,10,True
+DSA_0587,premature ovarian failure,17,13,1,3,True
+DSA_0588,premature rupture of amniotic membrane,2,1,1,0,False
+DSA_0589,premature ventricular contractions (pvcs),159,131,15,13,True
+DSA_0590,premenstrual tension syndrome,42,39,2,1,True
+DSA_0591,presbyacusis,23,17,2,4,True
+DSA_0592,presbyopia,70,55,6,9,True
+DSA_0593,priapism,4,3,0,1,True
+DSA_0594,primary immunodeficiency,13,7,2,4,True
+DSA_0595,primary insomnia,77,63,7,7,True
+DSA_0596,primary kidney disease,16,10,3,3,True
+DSA_0597,primary thrombocythemia,1,1,0,0,False
+DSA_0598,problem during pregnancy,820,650,94,76,True
+DSA_0599,prostate cancer,104,77,17,10,True
+DSA_0600,prostatitis,510,398,60,52,True
+DSA_0601,protein deficiency,16,11,3,2,True
+DSA_0602,pseudohypoparathyroidism,6,5,1,0,False
+DSA_0603,pseudotumor cerebri,16,14,1,1,True
+DSA_0604,psoriasis,825,688,65,72,True
+DSA_0605,psychosexual disorder,87,60,20,7,True
+DSA_0606,psychotic disorder,802,637,88,77,True
+DSA_0607,pterygium,76,63,4,9,True
+DSA_0608,pulmonary congestion,304,246,23,35,True
+DSA_0609,pulmonary embolism,791,630,87,74,True
+DSA_0610,pulmonary eosinophilia,84,65,13,6,True
+DSA_0611,pulmonary fibrosis,67,58,5,4,True
+DSA_0612,pulmonary hypertension,284,232,23,29,True
+DSA_0613,pulmonic valve disease,1,1,0,0,False
+DSA_0614,pyelonephritis,803,655,72,76,True
+DSA_0615,pyloric stenosis,5,4,1,0,False
+DSA_0616,pyogenic skin infection,834,680,75,79,True
+DSA_0617,raynaud disease,3,3,0,0,False
+DSA_0618,reactive arthritis,1,1,0,0,False
+DSA_0619,rectal disorder,808,646,84,78,True
+DSA_0620,restless leg syndrome,156,116,23,17,True
+DSA_0621,retinal detachment,154,134,9,11,True
+DSA_0622,retinopathy due to high blood pressure,47,33,5,9,True
+DSA_0623,rhabdomyolysis,12,9,0,3,True
+DSA_0624,rheumatic fever,1,1,0,0,False
+DSA_0625,rheumatoid arthritis,518,427,44,47,True
+DSA_0626,rocky mountain spotted fever,1,1,0,0,False
+DSA_0627,rosacea,521,425,50,46,True
+DSA_0628,rotator cuff injury,39,31,5,3,True
+DSA_0629,salivary gland disorder,11,10,1,0,False
+DSA_0630,sarcoidosis,161,131,19,11,True
+DSA_0631,scabies,83,73,5,5,True
+DSA_0632,scar,91,65,16,10,True
+DSA_0633,scarlet fever,37,29,5,3,True
+DSA_0634,schizophrenia,811,654,89,68,True
+DSA_0635,sciatica,521,412,51,58,True
+DSA_0636,scleritis,16,11,2,3,True
+DSA_0637,scleroderma,170,122,25,23,True
+DSA_0638,scoliosis,86,67,11,8,True
+DSA_0639,scurvy,1,1,0,0,False
+DSA_0640,seasonal allergies (hay fever),816,638,79,99,True
+DSA_0641,sebaceous cyst,821,643,102,76,True
+DSA_0642,seborrheic dermatitis,800,652,80,68,True
+DSA_0643,seborrheic keratosis,782,636,68,78,True
+DSA_0644,sensorineural hearing loss,529,426,48,55,True
+DSA_0645,sepsis,824,671,82,71,True
+DSA_0646,septic arthritis,21,17,2,2,True
+DSA_0647,shingles (herpes zoster),244,201,23,20,True
+DSA_0648,sialoadenitis,318,254,37,27,True
+DSA_0649,sick sinus syndrome,120,96,12,12,True
+DSA_0650,sickle cell anemia,136,106,18,12,True
+DSA_0651,sickle cell crisis,808,663,77,68,True
+DSA_0652,sinus bradycardia,814,644,93,77,True
+DSA_0653,sjogren syndrome,32,26,3,3,True
+DSA_0654,skin cancer,519,418,45,56,True
+DSA_0655,skin disorder,520,420,50,50,True
+DSA_0656,skin pigmentation disorder,805,663,66,76,True
+DSA_0657,skin polyp,807,647,82,78,True
+DSA_0658,smoking or tobacco addiction,792,624,79,89,True
+DSA_0659,social phobia,309,251,32,26,True
+DSA_0660,soft tissue sarcoma,89,59,13,17,True
+DSA_0661,somatization disorder,20,17,1,2,True
+DSA_0662,spermatocele,22,16,3,3,True
+DSA_0663,spherocytosis,2,2,0,0,False
+DSA_0664,spina bifida,37,23,6,8,True
+DSA_0665,spinal stenosis,1207,971,121,115,True
+DSA_0666,spinocerebellar ataxia,6,5,0,1,True
+DSA_0667,spondylitis,292,217,36,39,True
+DSA_0668,spondylolisthesis,514,416,46,52,True
+DSA_0669,spondylosis,1216,962,114,140,True
+DSA_0670,spontaneous abortion,1212,963,111,138,True
+DSA_0671,sporotrichosis,1,1,0,0,False
+DSA_0672,sprain or strain,1212,950,146,116,True
+DSA_0673,stenosis of the tear duct,23,13,4,6,True
+DSA_0674,stomach cancer,65,57,4,4,True
+DSA_0675,strep throat,1210,985,119,106,True
+DSA_0676,stress incontinence,91,75,8,8,True
+DSA_0677,stricture of the esophagus,32,25,3,4,True
+DSA_0678,stroke,478,380,50,48,True
+DSA_0679,stye,832,668,89,75,True
+DSA_0680,subacute thyroiditis,12,10,2,0,False
+DSA_0681,subarachnoid hemorrhage,45,38,4,3,True
+DSA_0682,subconjunctival hemorrhage,143,111,18,14,True
+DSA_0683,subdural hemorrhage,44,36,4,4,True
+DSA_0684,substance-related mental disorder,88,70,6,12,True
+DSA_0685,syndrome of inappropriate secretion of adh (siadh),3,3,0,0,False
+DSA_0686,syphilis,8,6,1,1,True
+DSA_0687,syringomyelia,6,5,1,0,False
+DSA_0688,systemic lupus erythematosis (sle),46,36,2,8,True
+DSA_0689,teething syndrome,290,214,39,37,True
+DSA_0690,temporary or benign blood in urine,803,649,83,71,True
+DSA_0691,temporomandibular joint disorder,172,144,14,14,True
+DSA_0692,tendinitis,533,422,46,65,True
+DSA_0693,tension headache,158,134,7,17,True
+DSA_0694,testicular cancer,2,1,0,1,True
+DSA_0695,testicular disorder,17,12,2,3,True
+DSA_0696,testicular torsion,39,32,4,3,True
+DSA_0697,thalassemia,1,1,0,0,False
+DSA_0698,thoracic aortic aneurysm,86,71,5,10,True
+DSA_0699,thoracic outlet syndrome,48,36,5,7,True
+DSA_0700,threatened pregnancy,818,663,80,75,True
+DSA_0701,thrombocytopenia,68,51,11,6,True
+DSA_0702,thrombophlebitis,292,227,26,39,True
+DSA_0703,thyroid cancer,5,4,1,0,False
+DSA_0704,thyroid disease,7,7,0,0,False
+DSA_0705,thyroid nodule,78,64,8,6,True
+DSA_0706,tic (movement) disorder,39,33,3,3,True
+DSA_0707,tietze syndrome,171,142,8,21,True
+DSA_0708,tinnitus of unknown cause,159,129,16,14,True
+DSA_0709,tonsillar hypertrophy,171,139,17,15,True
+DSA_0710,tonsillitis,286,232,32,22,True
+DSA_0711,tooth abscess,529,432,47,50,True
+DSA_0712,tooth disorder,511,414,53,44,True
+DSA_0713,torticollis,159,126,15,18,True
+DSA_0714,tourette syndrome,13,10,2,1,True
+DSA_0715,toxic multinodular goiter,23,17,4,2,True
+DSA_0716,toxoplasmosis,3,1,0,2,True
+DSA_0717,tracheitis,70,55,10,5,True
+DSA_0718,transient ischemic attack,525,419,46,60,True
+DSA_0719,trichiasis,12,12,0,0,False
+DSA_0720,trichinosis,1,1,0,0,False
+DSA_0721,trichomonas infection,161,134,17,10,True
+DSA_0722,tricuspid valve disease,1,1,0,0,False
+DSA_0723,trigeminal neuralgia,78,60,8,10,True
+DSA_0724,trigger finger (finger disorder),42,31,9,2,True
+DSA_0725,tuberculosis,10,8,1,1,True
+DSA_0726,tuberous sclerosis,3,2,1,0,False
+DSA_0727,turner syndrome,1,1,0,0,False
+DSA_0728,typhoid fever,1,1,0,0,False
+DSA_0729,ulcerative colitis,269,227,18,24,True
+DSA_0730,urethral disorder,151,120,13,18,True
+DSA_0731,urethral stricture,157,125,12,20,True
+DSA_0732,urethral valves,14,8,4,2,True
+DSA_0733,urethritis,299,247,23,29,True
+DSA_0734,urge incontinence,293,231,31,31,True
+DSA_0735,urinary tract infection,815,644,72,99,True
+DSA_0736,urinary tract obstruction,532,438,42,52,True
+DSA_0737,uterine atony,194,163,14,17,True
+DSA_0738,uterine cancer,2,2,0,0,False
+DSA_0739,uterine fibroids,288,231,27,30,True
+DSA_0740,uveitis,4,4,0,0,False
+DSA_0741,vacterl syndrome,1,1,0,0,False
+DSA_0742,vaginal cyst,1215,987,109,119,True
+DSA_0743,vaginal yeast infection,494,400,48,46,True
+DSA_0744,vaginismus,31,23,4,4,True
+DSA_0745,vaginitis,821,652,86,83,True
+DSA_0746,valley fever,6,2,3,1,True
+DSA_0747,varicocele of the testicles,530,428,54,48,True
+DSA_0748,varicose veins,101,77,8,16,True
+DSA_0749,vasculitis,163,131,13,19,True
+DSA_0750,venous insufficiency,168,137,17,14,True
+DSA_0751,vertebrobasilar insufficiency,5,5,0,0,False
+DSA_0752,vesicoureteral reflux,7,5,1,1,True
+DSA_0753,viral exanthem,492,399,48,45,True
+DSA_0754,viral hepatitis,20,14,4,2,True
+DSA_0755,viral warts,289,231,23,35,True
+DSA_0756,vitamin a deficiency,1,1,0,0,False
+DSA_0757,vitamin b12 deficiency,24,20,2,2,True
+DSA_0758,vitamin d deficiency,4,4,0,0,False
+DSA_0759,vitreous degeneration,169,144,13,12,True
+DSA_0760,vitreous hemorrhage,24,20,1,3,True
+DSA_0761,vocal cord polyp,21,16,3,2,True
+DSA_0762,volvulus,5,3,1,1,True
+DSA_0763,von willebrand disease,2,2,0,0,False
+DSA_0764,vulvar cancer,3,2,0,1,True
+DSA_0765,vulvar disorder,44,35,5,4,True
+DSA_0766,vulvodynia,1218,961,126,131,True
+DSA_0767,wernicke korsakoff syndrome,3,3,0,0,False
+DSA_0768,white blood cell disease,313,250,34,29,True
+DSA_0769,whooping cough,13,13,0,0,False
+DSA_0770,wilson disease,3,3,0,0,False
+DSA_0771,yeast infection,291,239,24,28,True
+DSA_0772,zenker diverticulum,3,2,0,1,True

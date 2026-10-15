@@ -1,0 +1,175 @@
+{
+  "version": "original_773_tristate_v2",
+  "selected_model": "ce",
+  "disease_labels": 773,
+  "symptom_types": 377,
+  "input_dimensions": 754,
+  "negative_policy": "synthetic_zero_assumption",
+  "clinical_negative_labels_verified": false,
+  "authorization": "User accepted simulated negatives on 2026-10-15",
+  "input_states": [
+    "positive",
+    "negative",
+    "unknown"
+  ],
+  "negative_views_fraction": 0.25,
+  "max_simulated_negatives_per_view": 3,
+  "auxiliary_pair_weight": 0.05,
+  "auxiliary_pair_view_fraction": 0.25,
+  "train_classes": 773,
+  "test_classes": 617,
+  "reference_kg_nodes_sha256": "6a4ce3a4e02f62d9c05d783432e265d17d5a2b9ce65569a8ddf6f52a6506acb0",
+  "verification": "14 source tests passed; 3 isolated bundle checks passed; package demo returned Top-10 with acknowledged positive, negative and unknown states",
+  "files": [
+    {
+      "path": "check_bundle.py",
+      "sha256": "ECD6483F0B9D2C8976AF67C2E0EE1859CA2249711CBEB699B9DDC51E97555902",
+      "bytes": 1398
+    },
+    {
+      "path": "demo.py",
+      "sha256": "6C79BE51D9168C8346567A72B58B75ACEAE6682CECD8627E89CF70AE4743FD48",
+      "bytes": 488
+    },
+    {
+      "path": "DISEASE_RETRIEVAL_773_TRISTATE_README.md",
+      "sha256": "D3665A7B1BE3698D3B7AB86B8BF392CDF2DC2A01A8D6A4B9D41BD6AE1790B753",
+      "bytes": 5519
+    },
+    {
+      "path": "DISEASE_RETRIEVAL_773_TRISTATE_RESULTS.md",
+      "sha256": "1FFBB3DF9EAC9549CCF3ED55CD154BCF56B3C0565A6A6C474CA000D103337149",
+      "bytes": 2933
+    },
+    {
+      "path": "disease_retrieval_773_tristate.py",
+      "sha256": "0557559FAF3718D0289383EADD21709CA03EDF6E1F70606BDDAE20A378830D5C",
+      "bytes": 16257
+    },
+    {
+      "path": "disease_retrieval_773.py",
+      "sha256": "CC775DD36116F2B1A043386E6D33FEE5D2C3524298F2F0B35707EAE5326C3313",
+      "bytes": 15341
+    },
+    {
+      "path": "DISEASE_RETRIEVAL_DESIGN_STORY.md",
+      "sha256": "4775953282FB71EABA721891303273421D837A70D40E6B2275DF33CEBA1D6119",
+      "bytes": 10438
+    },
+    {
+      "path": "disease_retrieval.py",
+      "sha256": "24A0A518F5E219751DB746594895FEF5563EA2C979A02A42E643718698B240AD",
+      "bytes": 9727
+    },
+    {
+      "path": "environment.json",
+      "sha256": "CF46958CBE43F74299101BC8ACB05149EFE623A63335C1BCB1F702EB5A19799C",
+      "bytes": 118
+    },
+    {
+      "path": "PROJECT_OVERVIEW.md",
+      "sha256": "509E96AC3C9CC9719E3774602A407ED33F4B208804A019DEA5D243E7F6FBE02E",
+      "bytes": 12949
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "1F813D44DD21E07C15D789CEB81A20503CDC11F061C3D13B0164F80C04D62F6A",
+      "bytes": 61
+    },
+    {
+      "path": "START_HERE.md",
+      "sha256": "4F748E5B5168DC3313F3DA95EEABC43DE02403D9B2BF2B976485EF177F271C1F",
+      "bytes": 3378
+    },
+    {
+      "path": "symptom_evidence.py",
+      "sha256": "75EB569B7F95E434E822E89E04D1ED801ED9ABAB0F755ABD97E98FFB8957A9F6",
+      "bytes": 3143
+    },
+    {
+      "path": "SYNTHETIC_NEGATIVE_POLICY.md",
+      "sha256": "9F5CB16B8722B0F2BE5863A76AE27F7D61A0129C26EDA7B22372BD221F7FC7C3",
+      "bytes": 2228
+    },
+    {
+      "path": "artifacts/disease_retrieval_773_tristate_v2/audit.json",
+      "sha256": "7B80A076C7BBC053B5E51D3657F8300CBC64F4D9DD20E465E487256149513921",
+      "bytes": 9142
+    },
+    {
+      "path": "artifacts/disease_retrieval_773_tristate_v2/base_data_audit.json",
+      "sha256": "88D348421524E4280B1302838CE38F7E7C0F8EA9B05282A031F3E499F26CE33D",
+      "bytes": 8827
+    },
+    {
+      "path": "artifacts/disease_retrieval_773_tristate_v2/ce_pairwise.pt",
+      "sha256": "6CB76AB5BAE1CBA4EEA32C6FC3627484BE6F2A667A6C6F63C21D24A0F2FB790E",
+      "bytes": 620357
+    },
+    {
+      "path": "artifacts/disease_retrieval_773_tristate_v2/ce.pt",
+      "sha256": "DA2C9FE661C6EF0B35B3498C71C89691AC945FAA8FBF09BA9BB798F361A00B69",
+      "bytes": 619874
+    },
+    {
+      "path": "artifacts/disease_retrieval_773_tristate_v2/config.json",
+      "sha256": "2245AB50A29EA66A182C3CED3B37FD4EDFBC426F2D3E00D8DAA4524C6C83F16B",
+      "bytes": 1247
+    },
+    {
+      "path": "artifacts/disease_retrieval_773_tristate_v2/disease_support.csv",
+      "sha256": "25D59F8918CF35147113D75B33B134D80FF940B688E8D1C2B3D6059433A308D7",
+      "bytes": 35515
+    },
+    {
+      "path": "artifacts/disease_retrieval_773_tristate_v2/metrics.json",
+      "sha256": "14F1395A8A0208BC1E7BC300C4AD6D5F18CE25DC0EA935FDC4FA5D4FBA56594D",
+      "bytes": 30956
+    },
+    {
+      "path": "artifacts/disease_retrieval_773_tristate_v2/negative_support.json",
+      "sha256": "90A5B47FCB6476FFE5938EA57657C1F9F31199AF4C6B993985399420F372D101",
+      "bytes": 12926
+    },
+    {
+      "path": "artifacts/disease_retrieval_773_tristate_v2/selection.json",
+      "sha256": "42AB240781C2B6B2E91812C42054554B9E162A7218C007A9419CC7D284814DB7",
+      "bytes": 272
+    },
+    {
+      "path": "artifacts/disease_retrieval_773_tristate_v2/vocabulary.json",
+      "sha256": "694A05C71DFC75FD5BB4D36963C6FAF33E9D10AA995A4A501EBAB9EDB9C3769F",
+      "bytes": 615111
+    },
+    {
+      "path": "data/unified_catalog/cross_dataset_disease_links.csv",
+      "sha256": "71E39E1F5CC80C0068DA8B937329A4A52E0C02C1B9A9CC969214BB779A1BE0FF",
+      "bytes": 2034
+    },
+    {
+      "path": "data/unified_catalog/original_model_mapping.json",
+      "sha256": "58B8F0B1A33E2E6DF0E981B861D20EEF7398DC54D6C77A8BE49F491997D937FE",
+      "bytes": 583829
+    },
+    {
+      "path": "data/unified_catalog/sources.json",
+      "sha256": "6A1200AFCFD72C41926A626F6F6471EA809374793A04980674DD1D398070A97F",
+      "bytes": 265
+    },
+    {
+      "path": "data/unified_catalog/summary.json",
+      "sha256": "96ADBDA977C485F6EF22B1F14DF1D52E627AA08B5E985F31351AED6923B570AB",
+      "bytes": 1233
+    },
+    {
+      "path": "data/unified_catalog/unified_diseases.csv",
+      "sha256": "72ADFA3C9DD8DA2C1E3A38C2D3840E0B64AB363E17DFF9F0E9EE3CE1754BDBF5",
+      "bytes": 2231089
+    },
+    {
+      "path": "data/unified_catalog/unified_evidences.csv",
+      "sha256": "7DDF79121979AF2A3955BFFB3EC22402C441ACD71B4FAB0A1D4736E473B0E195",
+      "bytes": 2494194
+    }
+  ]
+}

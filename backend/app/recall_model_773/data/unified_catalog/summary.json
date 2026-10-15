@@ -1,0 +1,30 @@
+{
+  "disease_symptom": {
+    "source_rows": 773,
+    "unique_mondo_concept": 434,
+    "ambiguous_ontology": 1,
+    "kg_exact_name_candidates": 278,
+    "kg_direct_or_exact_candidates": 410,
+    "kg_links_including_group_membership": 425,
+    "distinct_resolved_mondo_concepts": 434,
+    "labels_sharing_resolved_concepts": 0
+  },
+  "ddxplus": {
+    "source_rows": 49,
+    "unique_mondo_concept": 27,
+    "ambiguous_ontology": 0,
+    "kg_exact_name_candidates": 14,
+    "kg_direct_or_exact_candidates": 27,
+    "kg_links_including_group_membership": 27,
+    "distinct_resolved_mondo_concepts": 27,
+    "labels_sharing_resolved_concepts": 0
+  },
+  "cross_dataset_unique_concept_links": 15,
+  "original_symptom_types": 377,
+  "original_symptoms_with_hpo_candidate": 309,
+  "original_symptom_review_flags": 97,
+  "ddxplus_evidence_types": 223,
+  "ddxplus_explicit_topic_bridge_candidates": 5,
+  "policy": "Canonical name/EXACT synonyms only; ambiguous candidates retained; grouped membership never treated as exact equivalence; no fuzzy auto-merges.",
+  "training_policy": "Original 773 labels and 377 features preserved. Catalog interoperability does not imply mixed patient training or KG-informed loss."
+}
