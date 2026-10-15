@@ -4,7 +4,7 @@ from pathlib import Path
 from datetime import datetime,timezone
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'backend'))
-from app.services.nlp_service import NLPService
+from app.services.nlp_service import NLPService, MODIFIER_TERMS
 from app.services.random_reasoning_service import RandomRecallService,RandomSearchService
 from app.services.dialogue_ai import DialogueAI
 from app.models.chat_models import SessionState,Symptom
@@ -23,8 +23,10 @@ def main():
             for status,template in templates:
                 text=template.format(node.kg_name);result=nlp.analyze(text)
                 predicted={e.kg_id:e.status for e in result.evidence}
-                expected={} if status in {'family','history'} else {node.kg_id:status}
-                valid=predicted==expected and (status not in {'family','history'} or any(e.kg_id==node.kg_id for e in result.excluded))
+                # Clinical-modifier terms (Severe, Acute, Left...) are deliberately never matched as symptoms.
+                modifier=node.kg_name.casefold() in MODIFIER_TERMS
+                expected={} if status in {'family','history'} or modifier else {node.kg_id:status}
+                valid=predicted==expected and (modifier or status not in {'family','history'} or any(e.kg_id==node.kg_id for e in result.excluded))
                 row={'id':node.kg_id,'name':node.kg_name,'case':status,'text':text,'expected':expected,'predicted':predicted,'pass':valid}
                 handle.write(json.dumps(row,ensure_ascii=False)+'\n')
                 if valid:passed[status]+=1

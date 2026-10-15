@@ -61,6 +61,19 @@ class Recall773Data:
                 self.kg_to_absent[row["group_head_id"]].append(feature)
             if row["node_name"].casefold() != feature.casefold():
                 self.questions[row["node_name"]].append(feature)
+        # Hand-reviewed synonyms: other chatbot terms that mean the same model symptom (e.g. the colloquial
+        # "sore throat" alias resolves to Pharyngitis, while the model symptom is linked to Pharyngalgia).
+        synonym_file = MAPPING_DIR / "synonym_map.csv"
+        if synonym_file.is_file():
+            by_name = {n.kg_name: k for k, n in nodes.items()}
+            with open(synonym_file, encoding="utf-8", newline="") as f:
+                for row in csv.DictReader(f):
+                    node_id = by_name.get(row["node_name"])
+                    if node_id is None or row["feature"] not in self.evidence_to_name:
+                        raise ValueError(f"synonym_map.csv: unknown node or model symptom in {row}")
+                    if row["feature"] not in self.kg_to_evidence[node_id]:
+                        self.kg_to_evidence[node_id].append(row["feature"])
+                        self.kg_to_absent[node_id].append(row["feature"])
         self.primekg_name: Dict[str, str] = {}
         with open(MAPPING_DIR / "disease_map.csv", encoding="utf-8", newline="") as f:
             for row in csv.DictReader(f):
@@ -104,12 +117,12 @@ class Recall773Data:
 
 def build_recall773_services(nodes: dict, kg_reasoning_file: str, top_k=10, mass=0.95, temperature=1.0,
                              per_disease=5, table_file: Optional[str] = None, whitelist_path: Optional[str] = None,
-                             backend="auto", confident=0.8, variant=None):
+                             backend="auto", confident=0.8, variant=None, stop_top3_mass=0.9):
     if all(k.startswith("DEMO:") for k in nodes):
         raise ValueError("REASONING_MODE=recall773 requires the full KG vocabulary (kg_nodes.csv), not the DEMO list.")
     data = Recall773Data(load_recall773_model(backend, variant), nodes, table_file or None)
     data.source_tag = f"recall773-tristate-v2-{data.model.variant}"
     kg = load_kg_data(str(kg_reasoning_file))
-    return (DDXPlusRecallService(data, top_k, mass, temperature, False, confident),
+    return (DDXPlusRecallService(data, top_k, mass, temperature, False, confident, stop_top3_mass=stop_top3_mass),
             DDXPlusSearchService(data, nodes, load_symptom_whitelist(whitelist_path)),
             DDXPlusDrugService(data, KGDrugService(kg, per_disease)))

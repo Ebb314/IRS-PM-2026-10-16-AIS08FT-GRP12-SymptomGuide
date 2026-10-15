@@ -1,0 +1,1614 @@
+{
+ "provenance": "Hand-authored clinical vignettes and robustness probes for the recall773 mode (Group 12). Gold diseases and patient symptom sets were written from general clinical knowledge, independently of the model's disease-symptom table, so interviews are not circular. Not real patient data and not a clinical validation set.",
+ "dimensions": {
+  "A": "Retrieval Accuracy",
+  "Q": "Questioning Efficiency",
+  "R": "Robustness",
+  "E": "Explainability",
+  "S": "Overall Task Performance (safety and usefulness)"
+ },
+ "clinical_cases": [
+  {
+   "id": "A01",
+   "category": "respiratory",
+   "gold": "flu",
+   "acceptable": [
+    "common cold",
+    "acute bronchitis"
+   ],
+   "opening_text": "I have a fever and a cough, and I ache all over.",
+   "patient_symptoms": [
+    "fever",
+    "cough",
+    "ache all over",
+    "chills",
+    "fatigue",
+    "headache",
+    "sore throat",
+    "nasal congestion",
+    "muscle pain"
+   ],
+   "opening_symptoms": [
+    "fever",
+    "cough"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A02",
+   "category": "respiratory",
+   "gold": "common cold",
+   "acceptable": [
+    "acute sinusitis",
+    "seasonal allergies (hay fever)",
+    "flu"
+   ],
+   "opening_text": "I have a runny nose, I keep sneezing and I have a sore throat.",
+   "patient_symptoms": [
+    "coryza",
+    "sneezing",
+    "sore throat",
+    "nasal congestion",
+    "cough",
+    "headache"
+   ],
+   "opening_symptoms": [
+    "coryza",
+    "sneezing"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A03",
+   "category": "respiratory",
+   "gold": "strep throat",
+   "acceptable": [
+    "tonsillitis",
+    "pharyngitis",
+    "peritonsillar abscess"
+   ],
+   "opening_text": "I have a very sore throat and a fever.",
+   "patient_symptoms": [
+    "sore throat",
+    "fever",
+    "difficulty in swallowing",
+    "swollen lymph nodes",
+    "headache",
+    "swollen or red tonsils"
+   ],
+   "opening_symptoms": [
+    "sore throat",
+    "fever"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A04",
+   "category": "respiratory",
+   "gold": "pneumonia",
+   "acceptable": [
+    "acute bronchitis"
+   ],
+   "opening_text": "I have a cough with sputum, a fever and shortness of breath.",
+   "patient_symptoms": [
+    "cough",
+    "coughing up sputum",
+    "fever",
+    "shortness of breath",
+    "chills",
+    "sharp chest pain",
+    "fatigue",
+    "breathing fast"
+   ],
+   "opening_symptoms": [
+    "cough",
+    "coughing up sputum"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A05",
+   "category": "respiratory",
+   "gold": "asthma",
+   "acceptable": [
+    "acute bronchospasm",
+    "chronic obstructive pulmonary disease (copd)"
+   ],
+   "opening_text": "I have wheezing and shortness of breath.",
+   "patient_symptoms": [
+    "wheezing",
+    "shortness of breath",
+    "chest tightness",
+    "cough",
+    "difficulty breathing"
+   ],
+   "opening_symptoms": [
+    "wheezing",
+    "shortness of breath"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A06",
+   "category": "respiratory",
+   "gold": "acute bronchitis",
+   "acceptable": [
+    "common cold",
+    "pneumonia"
+   ],
+   "opening_text": "I have a cough with phlegm and congestion in my chest.",
+   "patient_symptoms": [
+    "cough",
+    "coughing up sputum",
+    "congestion in chest",
+    "sore throat",
+    "fatigue",
+    "nasal congestion",
+    "wheezing"
+   ],
+   "opening_symptoms": [
+    "cough",
+    "coughing up sputum"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A07",
+   "category": "digestive",
+   "gold": "infectious gastroenteritis",
+   "acceptable": [
+    "noninfectious gastroenteritis"
+   ],
+   "opening_text": "I have diarrhea and vomiting.",
+   "patient_symptoms": [
+    "diarrhea",
+    "vomiting",
+    "nausea",
+    "sharp abdominal pain",
+    "fever",
+    "decreased appetite"
+   ],
+   "opening_symptoms": [
+    "diarrhea",
+    "vomiting"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A08",
+   "category": "digestive",
+   "gold": "appendicitis",
+   "acceptable": [],
+   "opening_text": "I have sharp abdominal pain in my lower belly and nausea.",
+   "patient_symptoms": [
+    "sharp abdominal pain",
+    "lower abdominal pain",
+    "nausea",
+    "vomiting",
+    "fever",
+    "decreased appetite"
+   ],
+   "opening_symptoms": [
+    "sharp abdominal pain",
+    "lower abdominal pain"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A09",
+   "category": "digestive",
+   "gold": "gastroesophageal reflux disease (gerd)",
+   "acceptable": [
+    "esophagitis",
+    "hiatal hernia",
+    "indigestion"
+   ],
+   "opening_text": "I have heartburn and regurgitation after meals.",
+   "patient_symptoms": [
+    "heartburn",
+    "regurgitation",
+    "burning chest pain",
+    "difficulty in swallowing",
+    "cough",
+    "sore throat"
+   ],
+   "opening_symptoms": [
+    "heartburn",
+    "regurgitation"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A10",
+   "category": "digestive",
+   "gold": "gallstone",
+   "acceptable": [
+    "cholecystitis",
+    "choledocholithiasis"
+   ],
+   "opening_text": "I have upper abdominal pain and nausea after fatty meals.",
+   "patient_symptoms": [
+    "upper abdominal pain",
+    "sharp abdominal pain",
+    "nausea",
+    "vomiting",
+    "back pain"
+   ],
+   "opening_symptoms": [
+    "upper abdominal pain",
+    "sharp abdominal pain"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A11",
+   "category": "digestive",
+   "gold": "irritable bowel syndrome",
+   "acceptable": [
+    "chronic constipation"
+   ],
+   "opening_text": "I have stomach bloating, constipation and diarrhea on and off.",
+   "patient_symptoms": [
+    "stomach bloating",
+    "abdominal distention",
+    "constipation",
+    "diarrhea",
+    "sharp abdominal pain",
+    "flatulence",
+    "changes in stool appearance"
+   ],
+   "opening_symptoms": [
+    "stomach bloating",
+    "abdominal distention"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A12",
+   "category": "cardiovascular",
+   "gold": "heart attack",
+   "acceptable": [
+    "angina",
+    "coronary atherosclerosis",
+    "ischemic heart disease"
+   ],
+   "opening_text": "I have sharp chest pain, I am sweating and I have shortness of breath.",
+   "patient_symptoms": [
+    "sharp chest pain",
+    "chest tightness",
+    "sweating",
+    "shortness of breath",
+    "nausea",
+    "arm pain",
+    "dizziness"
+   ],
+   "opening_symptoms": [
+    "sharp chest pain",
+    "chest tightness"
+   ],
+   "red_flag": true
+  },
+  {
+   "id": "A13",
+   "category": "cardiovascular",
+   "gold": "angina",
+   "acceptable": [
+    "coronary atherosclerosis",
+    "ischemic heart disease",
+    "heart attack"
+   ],
+   "opening_text": "I get chest tightness when I walk that goes away when I rest.",
+   "patient_symptoms": [
+    "chest tightness",
+    "sharp chest pain",
+    "shortness of breath"
+   ],
+   "opening_symptoms": [
+    "chest tightness",
+    "sharp chest pain"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A14",
+   "category": "cardiovascular",
+   "gold": "atrial fibrillation",
+   "acceptable": [
+    "arrhythmia",
+    "paroxysmal supraventricular tachycardia",
+    "atrial flutter"
+   ],
+   "opening_text": "I have palpitations and an irregular heartbeat.",
+   "patient_symptoms": [
+    "palpitations",
+    "irregular heartbeat",
+    "increased heart rate",
+    "dizziness",
+    "shortness of breath",
+    "fatigue"
+   ],
+   "opening_symptoms": [
+    "palpitations",
+    "irregular heartbeat"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A15",
+   "category": "cardiovascular",
+   "gold": "deep vein thrombosis (dvt)",
+   "acceptable": [
+    "thrombophlebitis",
+    "venous insufficiency"
+   ],
+   "opening_text": "My leg is swollen and I have leg pain.",
+   "patient_symptoms": [
+    "leg swelling",
+    "leg pain",
+    "skin swelling",
+    "peripheral edema"
+   ],
+   "opening_symptoms": [
+    "leg swelling",
+    "leg pain"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A16",
+   "category": "neurological",
+   "gold": "migraine",
+   "acceptable": [],
+   "opening_text": "I have a headache with nausea and spots in my vision.",
+   "patient_symptoms": [
+    "headache",
+    "nausea",
+    "vomiting",
+    "diminished vision",
+    "spots or clouds in vision",
+    "dizziness"
+   ],
+   "opening_symptoms": [
+    "headache",
+    "nausea"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A17",
+   "category": "neurological",
+   "gold": "tension headache",
+   "acceptable": [
+    "migraine"
+   ],
+   "opening_text": "I have a headache and neck pain when I am stressed.",
+   "patient_symptoms": [
+    "headache",
+    "frontal headache",
+    "neck pain",
+    "neck stiffness or tightness",
+    "anxiety and nervousness"
+   ],
+   "opening_symptoms": [
+    "headache",
+    "frontal headache"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A18",
+   "category": "neurological",
+   "gold": "stroke",
+   "acceptable": [
+    "transient ischemic attack",
+    "intracerebral hemorrhage"
+   ],
+   "opening_text": "I am slurring words and I have weakness in one arm.",
+   "patient_symptoms": [
+    "slurring words",
+    "focal weakness",
+    "arm weakness",
+    "difficulty speaking",
+    "symptoms of the face",
+    "loss of sensation",
+    "headache",
+    "dizziness"
+   ],
+   "opening_symptoms": [
+    "slurring words",
+    "focal weakness"
+   ],
+   "red_flag": true
+  },
+  {
+   "id": "A19",
+   "category": "neurological",
+   "gold": "benign paroxysmal positional vertical (bppv)",
+   "acceptable": [
+    "labyrinthitis",
+    "meniere disease"
+   ],
+   "opening_text": "I feel dizzy when I turn my head and I have nausea.",
+   "patient_symptoms": [
+    "dizziness",
+    "nausea",
+    "vomiting"
+   ],
+   "opening_symptoms": [
+    "dizziness",
+    "nausea"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A20",
+   "category": "neurological",
+   "gold": "meningitis",
+   "acceptable": [
+    "encephalitis"
+   ],
+   "opening_text": "I have a severe headache, a fever and a stiff neck.",
+   "patient_symptoms": [
+    "headache",
+    "fever",
+    "neck stiffness or tightness",
+    "vomiting",
+    "nausea",
+    "sleepiness"
+   ],
+   "opening_symptoms": [
+    "headache",
+    "fever"
+   ],
+   "red_flag": true
+  },
+  {
+   "id": "A21",
+   "category": "urinary",
+   "gold": "urinary tract infection",
+   "acceptable": [
+    "cystitis",
+    "pyelonephritis",
+    "urethritis"
+   ],
+   "opening_text": "I have painful urination and frequent urination.",
+   "patient_symptoms": [
+    "painful urination",
+    "frequent urination",
+    "suprapubic pain",
+    "blood in urine",
+    "unusual color or odor to urine",
+    "lower abdominal pain"
+   ],
+   "opening_symptoms": [
+    "painful urination",
+    "frequent urination"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A22",
+   "category": "urinary",
+   "gold": "kidney stone",
+   "acceptable": [
+    "pyelonephritis",
+    "hydronephrosis"
+   ],
+   "opening_text": "I have side pain and blood in my urine.",
+   "patient_symptoms": [
+    "side pain",
+    "blood in urine",
+    "back pain",
+    "nausea",
+    "vomiting",
+    "painful urination",
+    "sharp abdominal pain"
+   ],
+   "opening_symptoms": [
+    "side pain",
+    "blood in urine"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A23",
+   "category": "urinary",
+   "gold": "benign prostatic hyperplasia (bph)",
+   "acceptable": [
+    "prostatitis",
+    "prostate cancer"
+   ],
+   "opening_text": "I have hesitancy when I urinate and I wake up at night to urinate.",
+   "patient_symptoms": [
+    "hesitancy",
+    "excessive urination at night",
+    "frequent urination",
+    "retention of urine",
+    "symptoms of prostate"
+   ],
+   "opening_symptoms": [
+    "hesitancy",
+    "excessive urination at night"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A24",
+   "category": "eye_ent",
+   "gold": "conjunctivitis",
+   "acceptable": [
+    "conjunctivitis due to bacteria",
+    "conjunctivitis due to virus",
+    "conjunctivitis due to allergy"
+   ],
+   "opening_text": "My eye is red and itchy with a white discharge.",
+   "patient_symptoms": [
+    "eye redness",
+    "itchiness of eye",
+    "white discharge from eye",
+    "lacrimation",
+    "swollen eye"
+   ],
+   "opening_symptoms": [
+    "eye redness",
+    "itchiness of eye"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A25",
+   "category": "eye_ent",
+   "gold": "acute otitis media",
+   "acceptable": [
+    "otitis media",
+    "otitis externa (swimmer's ear)",
+    "chronic otitis media"
+   ],
+   "opening_text": "I have ear pain and a fever.",
+   "patient_symptoms": [
+    "ear pain",
+    "fever",
+    "diminished hearing",
+    "fluid in ear",
+    "plugged feeling in ear"
+   ],
+   "opening_symptoms": [
+    "ear pain",
+    "fever"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A26",
+   "category": "skin",
+   "gold": "eczema",
+   "acceptable": [
+    "contact dermatitis",
+    "psoriasis",
+    "seborrheic dermatitis"
+   ],
+   "opening_text": "I have itchy skin with a dry, scaly rash.",
+   "patient_symptoms": [
+    "itching of skin",
+    "skin rash",
+    "skin dryness, peeling, scaliness, or roughness",
+    "abnormal appearing skin",
+    "skin irritation"
+   ],
+   "opening_symptoms": [
+    "itching of skin",
+    "skin rash"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A27",
+   "category": "skin",
+   "gold": "chickenpox",
+   "acceptable": [
+    "viral exanthem",
+    "shingles (herpes zoster)"
+   ],
+   "opening_text": "I have an itchy skin rash and a fever.",
+   "patient_symptoms": [
+    "skin rash",
+    "itching of skin",
+    "fever",
+    "skin lesion",
+    "fatigue",
+    "headache"
+   ],
+   "opening_symptoms": [
+    "skin rash",
+    "itching of skin"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A28",
+   "category": "musculoskeletal",
+   "gold": "sciatica",
+   "acceptable": [
+    "herniated disk",
+    "degenerative disc disease",
+    "lumbago",
+    "chronic back pain",
+    "spinal stenosis"
+   ],
+   "opening_text": "I have low back pain that goes down my leg.",
+   "patient_symptoms": [
+    "low back pain",
+    "back pain",
+    "leg pain",
+    "paresthesia",
+    "loss of sensation"
+   ],
+   "opening_symptoms": [
+    "low back pain",
+    "back pain"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A29",
+   "category": "musculoskeletal",
+   "gold": "gout",
+   "acceptable": [
+    "septic arthritis"
+   ],
+   "opening_text": "My big toe is swollen and very painful.",
+   "patient_symptoms": [
+    "foot or toe pain",
+    "foot or toe swelling",
+    "joint pain",
+    "joint swelling"
+   ],
+   "opening_symptoms": [
+    "foot or toe pain",
+    "foot or toe swelling"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A30",
+   "category": "musculoskeletal",
+   "gold": "osteoarthritis",
+   "acceptable": [
+    "chronic knee pain",
+    "knee ligament or meniscus tear"
+   ],
+   "opening_text": "I have knee pain and knee stiffness in the morning.",
+   "patient_symptoms": [
+    "knee pain",
+    "knee stiffness or tightness",
+    "knee swelling",
+    "joint pain",
+    "problems with movement"
+   ],
+   "opening_symptoms": [
+    "knee pain",
+    "knee stiffness or tightness"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A31",
+   "category": "mental",
+   "gold": "depression",
+   "acceptable": [
+    "dysthymic disorder"
+   ],
+   "opening_text": "I feel depressed, I have insomnia and I have no energy.",
+   "patient_symptoms": [
+    "depression",
+    "insomnia",
+    "fatigue",
+    "decreased appetite",
+    "low self-esteem",
+    "depressive or psychotic symptoms"
+   ],
+   "opening_symptoms": [
+    "depression",
+    "insomnia"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A32",
+   "category": "mental",
+   "gold": "panic attack",
+   "acceptable": [
+    "panic disorder",
+    "anxiety"
+   ],
+   "opening_text": "I feel anxious and nervous and I have palpitations.",
+   "patient_symptoms": [
+    "anxiety and nervousness",
+    "palpitations",
+    "shortness of breath",
+    "sweating",
+    "dizziness",
+    "chest tightness",
+    "fears and phobias"
+   ],
+   "opening_symptoms": [
+    "anxiety and nervousness",
+    "palpitations"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A33",
+   "category": "endocrine",
+   "gold": "hypothyroidism",
+   "acceptable": [
+    "hashimoto thyroiditis",
+    "thyroid disease"
+   ],
+   "opening_text": "I always feel cold, I am tired and I have weight gain.",
+   "patient_symptoms": [
+    "feeling cold",
+    "fatigue",
+    "weight gain",
+    "constipation",
+    "skin dryness, peeling, scaliness, or roughness",
+    "depression"
+   ],
+   "opening_symptoms": [
+    "feeling cold",
+    "fatigue"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A34",
+   "category": "endocrine",
+   "gold": "diabetes",
+   "acceptable": [
+    "diabetes insipidus",
+    "diabetic ketoacidosis"
+   ],
+   "opening_text": "I have excessive thirst and I urinate a lot.",
+   "patient_symptoms": [
+    "thirst",
+    "polyuria",
+    "frequent urination",
+    "recent weight loss",
+    "fatigue",
+    "diminished vision"
+   ],
+   "opening_symptoms": [
+    "thirst",
+    "polyuria"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A35",
+   "category": "blood",
+   "gold": "anemia",
+   "acceptable": [
+    "iron deficiency anemia",
+    "vitamin b12 deficiency"
+   ],
+   "opening_text": "I feel tired and weak and I look pale.",
+   "patient_symptoms": [
+    "fatigue",
+    "weakness",
+    "pallor",
+    "dizziness",
+    "shortness of breath"
+   ],
+   "opening_symptoms": [
+    "fatigue",
+    "weakness"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A36",
+   "category": "dental",
+   "gold": "dental caries",
+   "acceptable": [
+    "tooth abscess",
+    "tooth disorder",
+    "gum disease"
+   ],
+   "opening_text": "I have a toothache and pain in my gums.",
+   "patient_symptoms": [
+    "toothache",
+    "pain in gums",
+    "facial pain",
+    "jaw swelling"
+   ],
+   "opening_symptoms": [
+    "toothache",
+    "pain in gums"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A37",
+   "category": "womens_health",
+   "gold": "vaginal yeast infection",
+   "acceptable": [
+    "vaginitis",
+    "yeast infection",
+    "benign vaginal discharge (leukorrhea)"
+   ],
+   "opening_text": "I have vaginal itching and vaginal discharge.",
+   "patient_symptoms": [
+    "vaginal itching",
+    "vaginal discharge",
+    "vulvar irritation",
+    "vaginal redness",
+    "pain during intercourse"
+   ],
+   "opening_symptoms": [
+    "vaginal itching",
+    "vaginal discharge"
+   ],
+   "red_flag": false
+  },
+  {
+   "id": "A38",
+   "category": "digestive",
+   "gold": "hemorrhoids",
+   "acceptable": [
+    "anal fissure"
+   ],
+   "opening_text": "I have blood in my stool and pain of the anus.",
+   "patient_symptoms": [
+    "blood in stool",
+    "pain of the anus",
+    "rectal bleeding",
+    "itching of the anus",
+    "mass or swelling around the anus"
+   ],
+   "opening_symptoms": [
+    "blood in stool",
+    "pain of the anus"
+   ],
+   "red_flag": false
+  }
+ ],
+ "robustness_cases": [
+  {
+   "id": "R01",
+   "type": "colloquial",
+   "text": "I've been throwing up and I have the runs.",
+   "expect": {
+    "vomiting": "present",
+    "diarrhea": "present"
+   }
+  },
+  {
+   "id": "R02",
+   "type": "colloquial",
+   "text": "My tummy hurts and I feel sick to my stomach.",
+   "expect": {
+    "sharp abdominal pain": "present",
+    "nausea": "present"
+   }
+  },
+  {
+   "id": "R03",
+   "type": "colloquial",
+   "text": "I can't catch my breath.",
+   "expect": {
+    "shortness of breath": "present"
+   }
+  },
+  {
+   "id": "R04",
+   "type": "typo",
+   "text": "I have a feaver and a cogh.",
+   "expect": {
+    "fever": "present",
+    "cough": "present"
+   }
+  },
+  {
+   "id": "R05",
+   "type": "spelling_variant",
+   "text": "I have diarrhoea.",
+   "expect": {
+    "diarrhea": "present"
+   }
+  },
+  {
+   "id": "R06",
+   "type": "negation",
+   "text": "I have a cough but no fever.",
+   "expect": {
+    "cough": "present",
+    "fever": "absent"
+   }
+  },
+  {
+   "id": "R07",
+   "type": "negation",
+   "text": "I dont have a headache, but I have nausea.",
+   "expect": {
+    "headache": "absent",
+    "nausea": "present"
+   }
+  },
+  {
+   "id": "R08",
+   "type": "uncertainty",
+   "text": "I have a sore throat and I'm not sure if I have a fever.",
+   "expect": {
+    "sore throat": "present",
+    "fever": "uncertain"
+   }
+  },
+  {
+   "id": "R09",
+   "type": "other_person",
+   "text": "My father has a cough. I have a headache.",
+   "expect": {
+    "headache": "present"
+   },
+   "forbid": [
+    "cough"
+   ]
+  },
+  {
+   "id": "R10",
+   "type": "history",
+   "text": "I had a cough last year. Now I have a headache.",
+   "expect": {
+    "headache": "present"
+   },
+   "forbid": [
+    "cough"
+   ]
+  },
+  {
+   "id": "R11",
+   "type": "no_symptom",
+   "text": "Hello, can you help me?",
+   "expect": {},
+   "expect_no_candidates": true
+  },
+  {
+   "id": "R12",
+   "type": "out_of_scope",
+   "text": "What is the weather in Singapore today?",
+   "expect": {},
+   "expect_no_candidates": true
+  },
+  {
+   "id": "R13",
+   "type": "formatting",
+   "text": "FEVER!!! COUGH???",
+   "expect": {
+    "fever": "present",
+    "cough": "present"
+   }
+  },
+  {
+   "id": "R14",
+   "type": "filler_words",
+   "text": "Well, um, I guess I have a headache and, like, some nausea.",
+   "expect": {
+    "headache": "present",
+    "nausea": "present"
+   }
+  },
+  {
+   "id": "R15",
+   "type": "lay_term",
+   "text": "I feel dizzy.",
+   "expect": {
+    "dizziness": "present"
+   }
+  },
+  {
+   "id": "R16",
+   "type": "lay_term",
+   "text": "I have a runny nose.",
+   "expect": {
+    "coryza": "present"
+   }
+  },
+  {
+   "id": "R17",
+   "type": "lay_term",
+   "text": "I have a sore throat.",
+   "expect": {
+    "sore throat": "present"
+   }
+  },
+  {
+   "id": "R18",
+   "type": "modifier",
+   "text": "I have a severe headache.",
+   "expect": {
+    "headache": "present"
+   }
+  },
+  {
+   "id": "R19",
+   "type": "self_correction",
+   "text": "I have a fever. Actually, no fever.",
+   "expect": {
+    "fever": "absent"
+   }
+  },
+  {
+   "id": "R20",
+   "type": "lay_term",
+   "text": "My skin is itchy.",
+   "expect": {
+    "itching of skin": "present"
+   }
+  }
+ ],
+ "heldout_robustness_cases": [
+  {
+   "id": "H01",
+   "type": "colloquial",
+   "text": "I keep puking and my stomach is upset.",
+   "expect": {
+    "vomiting": "present"
+   }
+  },
+  {
+   "id": "H02",
+   "type": "colloquial",
+   "text": "I've had loose stools since yesterday.",
+   "expect": {
+    "diarrhea": "present"
+   }
+  },
+  {
+   "id": "H03",
+   "type": "colloquial",
+   "text": "My head is killing me.",
+   "expect": {
+    "headache": "present"
+   }
+  },
+  {
+   "id": "H04",
+   "type": "colloquial",
+   "text": "I'm really out of breath.",
+   "expect": {
+    "shortness of breath": "present"
+   }
+  },
+  {
+   "id": "H05",
+   "type": "colloquial",
+   "text": "My nose is stuffed up.",
+   "expect": {
+    "nasal congestion": "present"
+   }
+  },
+  {
+   "id": "H06",
+   "type": "colloquial",
+   "text": "I feel lightheaded.",
+   "expect": {
+    "dizziness": "present"
+   }
+  },
+  {
+   "id": "H07",
+   "type": "colloquial",
+   "text": "It hurts when I pee.",
+   "expect": {
+    "painful urination": "present"
+   }
+  },
+  {
+   "id": "H08",
+   "type": "colloquial",
+   "text": "My joints ache.",
+   "expect": {
+    "joint pain": "present"
+   }
+  },
+  {
+   "id": "H09",
+   "type": "typo",
+   "text": "I have a bad hedache.",
+   "expect": {
+    "headache": "present"
+   }
+  },
+  {
+   "id": "H10",
+   "type": "typo",
+   "text": "I have been vomitting.",
+   "expect": {
+    "vomiting": "present"
+   }
+  },
+  {
+   "id": "H11",
+   "type": "typo",
+   "text": "I feel nausious.",
+   "expect": {
+    "nausea": "present"
+   }
+  },
+  {
+   "id": "H12",
+   "type": "spelling_variant",
+   "text": "I have oedema.",
+   "expect": {
+    "skin swelling": "present"
+   }
+  },
+  {
+   "id": "H13",
+   "type": "negation",
+   "text": "I havent had any fever.",
+   "expect": {
+    "fever": "absent"
+   }
+  },
+  {
+   "id": "H14",
+   "type": "negation",
+   "text": "No cough, but my throat is sore.",
+   "expect": {
+    "cough": "absent",
+    "sore throat": "present"
+   }
+  },
+  {
+   "id": "H15",
+   "type": "negation",
+   "text": "I don't think I have diarrhea anymore.",
+   "expect": {
+    "diarrhea": "absent"
+   }
+  },
+  {
+   "id": "H16",
+   "type": "uncertainty",
+   "text": "Maybe I have chills, I can't tell.",
+   "expect": {
+    "chills": "uncertain"
+   }
+  },
+  {
+   "id": "H17",
+   "type": "other_person",
+   "text": "My son is vomiting. I have a fever.",
+   "expect": {
+    "fever": "present"
+   },
+   "forbid": [
+    "vomiting"
+   ]
+  },
+  {
+   "id": "H18",
+   "type": "false_friend",
+   "text": "I was sitting on the couch when my back started to hurt.",
+   "expect": {},
+   "forbid": [
+    "cough"
+   ]
+  },
+  {
+   "id": "H19",
+   "type": "modifier",
+   "text": "I have mild chronic fatigue.",
+   "expect": {
+    "fatigue": "present"
+   }
+  },
+  {
+   "id": "H20",
+   "type": "lay_term",
+   "text": "My eyes are watery and itchy.",
+   "expect": {
+    "itchiness of eye": "present"
+   }
+  }
+ ],
+ "blind_robustness_cases": [
+  {
+   "id": "B01",
+   "type": "colloquial",
+   "text": "My head has been absolutely pounding since this morning",
+   "expect": {
+    "headache": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B02",
+   "type": "colloquial",
+   "text": "I keep feeling like I'm about to throw up",
+   "expect": {
+    "nausea": "present"
+   },
+   "forbid": [
+    "vomiting"
+   ]
+  },
+  {
+   "id": "B03",
+   "type": "colloquial",
+   "text": "I'm running to the bathroom to pee like every hour",
+   "expect": {
+    "frequent urination": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B04",
+   "type": "colloquial",
+   "text": "It really burns when I pee",
+   "expect": {
+    "painful urination": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B05",
+   "type": "colloquial",
+   "text": "The whole room spins whenever I stand up",
+   "expect": {
+    "dizziness": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B06",
+   "type": "colloquial",
+   "text": "I can't catch my breath after walking up the stairs",
+   "expect": {
+    "shortness of breath": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B07",
+   "type": "colloquial",
+   "text": "I'm completely wiped out all the time, zero energy",
+   "expect": {
+    "fatigue": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B08",
+   "type": "colloquial",
+   "text": "My nose is all stuffed up and I can't stop sneezing",
+   "expect": {
+    "nasal congestion": "present",
+    "sneezing": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B09",
+   "type": "colloquial",
+   "text": "I've had the runs since yesterday",
+   "expect": {
+    "diarrhea": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B10",
+   "type": "colloquial",
+   "text": "I lie awake for hours every night and just can't drop off",
+   "expect": {
+    "insomnia": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B11",
+   "type": "colloquial",
+   "text": "My heart keeps racing and fluttering in my chest",
+   "expect": {
+    "palpitations": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B12",
+   "type": "colloquial",
+   "text": "I've got an itchy red rash all over my arms",
+   "expect": {
+    "skin rash": "present",
+    "itching of skin": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B13",
+   "type": "colloquial",
+   "text": "My knees ache and puff up after I go for a walk",
+   "expect": {
+    "knee pain": "present",
+    "knee swelling": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B14",
+   "type": "colloquial",
+   "text": "My eyes are bloodshot and keep watering",
+   "expect": {
+    "eye redness": "present",
+    "lacrimation": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B15",
+   "type": "typo",
+   "text": "I've had a bad caugh for about a week",
+   "expect": {
+    "cough": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B16",
+   "type": "typo",
+   "text": "I've had a high fevr since last night",
+   "expect": {
+    "fever": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B17",
+   "type": "typo",
+   "text": "I've been vomitting all night",
+   "expect": {
+    "vomiting": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B18",
+   "type": "typo",
+   "text": "I've had really bad diarrhoea since Monday",
+   "expect": {
+    "diarrhea": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B19",
+   "type": "typo",
+   "text": "I feel nauseus after every meal",
+   "expect": {
+    "nausea": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B20",
+   "type": "typo",
+   "text": "I have a really sore throte today",
+   "expect": {
+    "sore throat": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B21",
+   "type": "negation",
+   "text": "I have a cough but no fever",
+   "expect": {
+    "cough": "present",
+    "fever": "absent"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B22",
+   "type": "negation",
+   "text": "I dont have a headache or anything",
+   "expect": {
+    "headache": "absent"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B23",
+   "type": "negation",
+   "text": "Havent had any diarrhea, just constipation",
+   "expect": {
+    "diarrhea": "absent",
+    "constipation": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B24",
+   "type": "negation",
+   "text": "No dizziness at all, but my neck is really stiff",
+   "expect": {
+    "dizziness": "absent",
+    "neck stiffness or tightness": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B25",
+   "type": "negation",
+   "text": "My throat is sore but I'm not coughing",
+   "expect": {
+    "sore throat": "present",
+    "cough": "absent"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B26",
+   "type": "negation",
+   "text": "I haven't vomited, though I do feel queasy",
+   "expect": {
+    "vomiting": "absent",
+    "nausea": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B27",
+   "type": "uncertainty",
+   "text": "I think maybe I have a slight fever",
+   "expect": {
+    "fever": "uncertain"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B28",
+   "type": "uncertainty",
+   "text": "Not sure if this counts, but my ankles might be a bit swollen",
+   "expect": {
+    "ankle swelling": "uncertain"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B29",
+   "type": "uncertainty",
+   "text": "I might be wheezing a little at night, it's hard to tell",
+   "expect": {
+    "wheezing": "uncertain"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B30",
+   "type": "uncertainty",
+   "text": "My back hurts, and I'm not sure if there's blood in my urine",
+   "expect": {
+    "back pain": "present",
+    "blood in urine": "uncertain"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B31",
+   "type": "other_person",
+   "text": "My son has a fever, but I just have a runny nose",
+   "expect": {
+    "coryza": "present"
+   },
+   "forbid": [
+    "fever"
+   ]
+  },
+  {
+   "id": "B32",
+   "type": "other_person",
+   "text": "My wife has been coughing all week; I've only got a headache",
+   "expect": {
+    "headache": "present"
+   },
+   "forbid": [
+    "cough"
+   ]
+  },
+  {
+   "id": "B33",
+   "type": "history",
+   "text": "I had a rash last year, but now my problem is joint pain",
+   "expect": {
+    "joint pain": "present"
+   },
+   "forbid": [
+    "skin rash"
+   ]
+  },
+  {
+   "id": "B34",
+   "type": "history",
+   "text": "Years ago I used to get bad headaches; today it's my lower back that hurts",
+   "expect": {
+    "low back pain": "present"
+   },
+   "forbid": [
+    "headache"
+   ]
+  },
+  {
+   "id": "B35",
+   "type": "false_friend",
+   "text": "I'm sick of my job and lately I keep getting heartburn",
+   "expect": {
+    "heartburn": "present"
+   },
+   "forbid": [
+    "nausea",
+    "feeling ill"
+   ]
+  },
+  {
+   "id": "B36",
+   "type": "false_friend",
+   "text": "My boss is a pain in the neck, but my actual problem is a toothache",
+   "expect": {
+    "toothache": "present"
+   },
+   "forbid": [
+    "neck pain"
+   ]
+  },
+  {
+   "id": "B37",
+   "type": "false_friend",
+   "text": "Now that the cold weather is here my hands are dry and cracking",
+   "expect": {
+    "skin dryness, peeling, scaliness, or roughness": "present"
+   },
+   "forbid": [
+    "feeling cold",
+    "coryza"
+   ]
+  },
+  {
+   "id": "B38",
+   "type": "plain",
+   "text": "I have a headache and a fever.",
+   "expect": {
+    "headache": "present",
+    "fever": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B39",
+   "type": "plain",
+   "text": "I have chest tightness and shortness of breath.",
+   "expect": {
+    "chest tightness": "present",
+    "shortness of breath": "present"
+   },
+   "forbid": []
+  },
+  {
+   "id": "B40",
+   "type": "plain",
+   "text": "I have ear pain and a sore throat.",
+   "expect": {
+    "ear pain": "present",
+    "sore throat": "present"
+   },
+   "forbid": []
+  }
+ ],
+ "probe_sets": {
+  "robustness_cases": "development set: used while fixing the NLP (2026-10-15)",
+  "heldout_robustness_cases": "written before the fixes; seen while writing the lay lexicon, so optimistic",
+  "blind_robustness_cases": "written by an independent agent that saw only the model symptom list; never used for tuning"
+ }
+}

@@ -85,7 +85,7 @@ def _build_chatbot_service():
         recall, search, drugs = build_recall773_services(nlp.nodes, settings.kg_reasoning_file, settings.recall773_top_k,
             settings.recall773_mass, 1.0, settings.kg_drugs_per_disease, settings.disease_symptom_table or None,
             settings.recall_symptom_whitelist or None, settings.recall773_backend, settings.recall773_confident,
-            settings.recall773_variant or None)
+            settings.recall773_variant or None, settings.recall773_stop_top3_mass)
     else:
         raise ValueError("REASONING_MODE must be mock, random, remote, kg, ddxplus or recall773")
     service = ChatbotService(nlp, SQLiteSessionService(settings.db_file), recall, search, drugs, mode=settings.reasoning_mode, dialogue=dialogue)
@@ -102,7 +102,7 @@ def _log_startup(service, seconds):
     log.info("llm: %s", generator.name if generator else "none (offline templates)")
     log.info("reasoning: mode=%s recall=%s search=%s drugs=%s max_rounds=%d stop at <= %d candidates",
              service.mode, type(service.recall).__name__, type(service.search).__name__, type(service.drugs).__name__,
-             service.max_rounds, settings.finish_candidate_threshold)
+             service.max_rounds, service.finish_threshold)
     data = getattr(service.recall, "data", None)
     model = getattr(data, "model", None)
     if model is not None:

@@ -9,7 +9,7 @@ from app.logging_setup import setup_logging
 
 setup_logging()
 
-app = FastAPI(title=settings.app_name, version="2.1.0", description="Academic dialogue prototype. Mock mode is for integration testing, not clinical use.")
+app = FastAPI(title=settings.app_name, version="2.1.0", description="Symptom-checking dialogue API. Not a medical device; results are not diagnoses.")
 app.add_middleware(CORSMiddleware, allow_origins=list(settings.cors_origins), allow_methods=["GET","POST","DELETE"], allow_headers=["Content-Type"])
 app.include_router(router, prefix=settings.api_prefix)
 
