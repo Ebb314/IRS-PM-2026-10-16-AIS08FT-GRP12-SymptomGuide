@@ -1,3 +1,4 @@
+
 # Generated local environments and private sessions
 .venv/
 venv/
@@ -9,10 +10,17 @@ __pycache__/
 *.pyo
 *.pyd
 .DS_Store
-backend/runtime/
-.env
-frontend/.env
-frontend/dist/
-models/
 
-backend/logs/
+# Backend
+/SystemCode/backend/runtime/
+/SystemCode/backend/logs/
+
+# Environment files
+.env
+/SystemCode/frontend/.env
+
+# Frontend build output
+/SystemCode/frontend/dist/
+
+# Local models
+models/
