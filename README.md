@@ -93,6 +93,8 @@ The two evaluation scripts write their results to `evaluation/`. The dataset CSV
 - **LLM:** Qwen3-8B, served locally by Ollama. Conversation text never leaves the user's computer.
 
 ## Video link
+Video in this repository is out-dated and only used as backup. New videos has been uploaded to Youtube as curriculum suggests. Links are as following:
+
 Promotion: https://youtu.be/eZuSNAlF7Gw
 
 System Introdution: https://youtu.be/UtVS3Dz3Vko
