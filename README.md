@@ -92,6 +92,10 @@ The two evaluation scripts write their results to `evaluation/`. The dataset CSV
 - **Recall model training data:** Disease and symptoms dataset 2023 (Mendeley Data). The data are synthetic.
 - **LLM:** Qwen3-8B, served locally by Ollama. Conversation text never leaves the user's computer.
 
+## Video link
+Promotion: https://youtu.be/eZuSNAlF7Gw
+System Introdution: https://youtu.be/UtVS3Dz3Vko
+
 ## Team (Group 12)
 
 | Name | Student ID |
